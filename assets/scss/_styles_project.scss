@@ -1,9 +1,28 @@
-
 .navbar-brand__logo.navbar-logo > svg {
- height: 100px;
+  height: 40px;
 }
 
 .td-sidebar-toc {
- position: relative;
- top: 7em;
+  position: relative;
+  top: 7em;
+}
+
+.td-content {
+  margin-top: 64px;
+}
+
+@media (max-width: 767px) {
+  nav.td-navbar {
+    flex-direction: column;
+    height: 100px;
+  }
+
+  .td-navbar .navbar-nav {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .td-content {
+    margin-top: 0;
+  }
 }
