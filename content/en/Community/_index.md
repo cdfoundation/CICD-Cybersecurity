@@ -93,13 +93,13 @@ You can use the included [Dockerfile](https://docs.docker.com/engine/reference/b
 1. Build the docker image:
 
    ```bash
-   docker-compose build
+   docker compose build
    ```
 
 1. Run the built image:
 
    ```bash
-   docker-compose up
+   docker compose up
    ```
 
 1. Open the address `http://localhost:1313` in your web browser to load the
@@ -114,14 +114,14 @@ To clean up your system and delete the container image:
 1. Remove the produced images
 
    ```bash
-   docker-compose rm
+   docker compose rm
    ```
 
 ### Quick start with Netlify
 
 Here's a quick guide to updating the docs. It assumes you're familiar with the GitHub workflow and you're happy to use the automated preview of your doc updates:
 
-1. Fork the [CI/CD Cybersecurity][https://github.com/cdfoundation/CICD-Cybersecurity/] on GitHub.
+1. Fork the [CI/CD Cybersecurity](https://github.com/cdfoundation/CICD-Cybersecurity/) on GitHub.
 1. Make your changes and send a pull request (PR).
 1. If you're not yet ready for a review, add "WIP" to the PR name to indicate 
   it's a work in progress. (**Don't** add the Hugo property 
@@ -153,7 +153,7 @@ If you've just spotted something you'd like to change while using the docs, Docs
 
 ### Creating an issue
 
-If you've found a problem in the best practices content, but you're not sure how to fix it yourself, please create an issue in the [CI/CD Cybersecurity][https://github.com/cdfoundation/CICD-Cybersecurity/issues].
+If you've found a problem in the best practices content, but you're not sure how to fix it yourself, please create an issue in the [CI/CD Cybersecurity repository](https://github.com/cdfoundation/CICD-Cybersecurity/issues).
 
 You can also create an issue about a specific page by clicking the **Create Issue** button in the top right hand corner of the page.
 
