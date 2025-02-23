@@ -68,7 +68,8 @@ The effort should be open to all involved in the field of CI/CD, AI, and Securit
 * Safeer C M ([@safeercm](https://github.com/safeercm)), DevOps and SRE Consultant
 * Adam Roper ([@roperscrossroads](https://github.com/roperscrossroads)), Platforms & Infrastructure Specialist
 * Shiv Ganesan ([@ganshiv](https://github.com/ganshiv)), DevSecOps and Platform Engineer
-* Alex Wiecehrt ([@AlexanderWiechert](https://github.com/AlexanderWiechert)), DevOps and Cloud Solution Architect  
+* Alex Wiecehrt ([@AlexanderWiechert](https://github.com/AlexanderWiechert)), DevOps and Cloud Solution Architect 
+* Ann Marie Fred ([@amfred](https://github.com/amfred)), SPSE at Red Hat
 
 ## New Members
 
