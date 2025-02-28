@@ -1,4 +1,3 @@
-
 ---
 title: "Phase 2: Build and Deploy"
 linkTitle: "Build and Deploy"
