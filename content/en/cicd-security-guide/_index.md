@@ -15,9 +15,17 @@ This guide delves into the integration of automated security testing, vulnerabil
 
 This CI/CD Cybersecurity Guide has been segmented into three 3 major chapters:
 
-- Code and Prebuild - this section includes security tooling for the earliest points in the CI/CD workflow.
-- Build and Deploy - this section covers security tooling for both the build step and deployment step, regardless of where the deployment is occuring (test or production).
-- Post Deploy - security does not stop after the binaries have been deployed. This section covers continuous vulnerability management and Dynamic Application Security Testing (DAST).
+[//]: # (- Code and Prebuild - this section includes security tooling for the earliest points in the CI/CD workflow.)
+
+[//]: # (- Build and Deploy - this section covers security tooling for both the build step and deployment step, regardless of where the deployment is occuring &#40;test or production&#41;.)
+
+[//]: # (- Post Deploy - security does not stop after the binaries have been deployed. This section covers continuous vulnerability management and Dynamic Application Security Testing &#40;DAST&#41;.)
+
+|                   |                                                                                                                                                                        |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Code and Prebuild | This section includes security tooling for the earliest points in the CI/CD workflow.                                                                                  |
+| Build and Deploy  | This section covers security tooling for both the build step and deployment step, regardless of where the deployment is occuring (test or production).                 |
+| Post Deploy       | Security does not stop after the binaries have been deployed. This section covers continuous vulnerability management and Dynamic Application Security Testing (DAST). |
 
 For more information on Security Frameworks or Public Security Policy, visit the [OpenSSF Public Policy](https://openssf.org/public-policy/) or [EU Cybersecurity Resilience Act](https://openssf.org/public-policy/eu-cyber-resilience-act/) pages. 
 

@@ -12,11 +12,23 @@ Integrating security into these phases ensures that your code is not only functi
 
 To secure your build and deployment pipelines, you can leverage:
 
-- Reproducible and Deterministic Builds - Ensure that software artifacts can be independently verified and reproduced to prevent tampering.
-- Automated Threat Detection and Compliance Enforcement - Integrate continuous security analysis to detect misconfigurations, vulnerabilities, and unauthorized dependencies before deployment.
-- Policy-Enforced Deployments - Enforce verifiable security policies ensuring only compliant, attested software reaches production.
-- Trusted Execution Environments (TEEs) - Secure build environments against tampering using hardware-backed execution environments.
-- Cryptographic Attestation- Use digital signatures and cryptographic proofs to verify the authenticity and integrity of builds and deployments.
+[//]: # (- Reproducible and Deterministic Builds - Ensure that software artifacts can be independently verified and reproduced to prevent tampering.)
+
+[//]: # (- Automated Threat Detection and Compliance Enforcement - Integrate continuous security analysis to detect misconfigurations, vulnerabilities, and unauthorized dependencies before deployment.)
+
+[//]: # (- Policy-Enforced Deployments - Enforce verifiable security policies ensuring only compliant, attested software reaches production.)
+
+[//]: # (- Trusted Execution Environments &#40;TEEs&#41; - Secure build environments against tampering using hardware-backed execution environments.)
+
+[//]: # (- Cryptographic Attestation- Use digital signatures and cryptographic proofs to verify the authenticity and integrity of builds and deployments.)
+
+|                                                       |                                                                                                                                       |
+|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Reproducible and Deterministic Builds                 | Ensure that software artifacts can be independently verified and reproduced to prevent tampering.                                     |
+| Automated Threat Detection and Compliance Enforcement | Integrate continuous security analysis to detect misconfigurations, vulnerabilities, and unauthorized dependencies before deployment. |
+| Policy-Enforced Deployments                           | Enforce verifiable security policies ensuring only compliant, attested software reaches production.                                   |
+| Trusted Execution Environments (TEEs)                 | Secure build environments against tampering using hardware-backed execution environments.                                             |
+| Cryptographic Attestation                             | Use digital signatures and cryptographic proofs to verify the authenticity and integrity of builds and deployments.                   |
 
 This page explores the key security tools and best practices for the build and deploy phase, ensuring your applications are delivered securely and maintain resilience in production environments. Learn how to protect your software, infrastructure, and users by embedding security into every step of your delivery process.
 
