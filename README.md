@@ -8,10 +8,12 @@ The CI/CD Cybersecurity SIG will play a pivotal role in advancing CI/CD security
 
 ## Why This SIG Is Needed
 
+
 There is a pressing need for stronger security measures within CI/CD, as underscored by industry trends and research:
 - Rising Vulnerabilities: In 2024 alone, over 500,000 new vulnerabilities were discovered, many of which remain unaddressed for extended periods, often exceeding a year. A slow response to these vulnerabilities can be costly: IBM estimates that delays in vulnerability remediation cost enterprises an average of $5.5 million annually.
-- Expanding Threat Landscape with AI: The push to develop AI-driven solutions has introduced new security challenges. This trend has broadened the attack surface, necessitating additional tooling to secure models and pipelines related to Large Language Models (LLMs) and AI workloads.
-The evolution of CI/CD pipelines is crucial to address these mounting security concerns. While organizations like the CNCF and OpenSSF are incubating innovative security tools, discussions on integrating these tools within CI/CD pipelines remain limited.
+-	Expanding Threat Landscape with AI: The push to develop AI-driven solutions has introduced new security challenges. This trend has broadened the attack surface, necessitating additional tooling to secure models and pipelines related to Large Language Models (LLMs) and AI workloads.
+-	Supply Chain Attacks: Modern CI/CD pipelines increasingly rely on third-party dependencies and open-source components, making them vulnerable to software supply chain attacks. Threats like dependency hijacking, poisoned packages, and unauthorized code injections compromise software integrity, necessitating robust security controls to mitigate these risks.
+- Lack of Security Integration into CI/CD: The evolution of CI/CD pipelines is crucial to address these mounting security concerns. While organizations like the CNCF and OpenSSF are incubating innovative security tools, discussions on integrating these tools within CI/CD pipelines remain limited. Many development teams struggle to implement security best practices, leaving critical gaps in the software delivery lifecycle.There is a pressing need for stronger security measures within CI/CD, as underscored by industry trends and research:
 
 ## SIG Goals and Objectives
 
