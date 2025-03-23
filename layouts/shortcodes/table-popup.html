@@ -1,0 +1,24 @@
+<!-- table modal -->
+<button class="modal-open" onclick="openModal()">Open {{ .Params.table_name }}</button>
+<div id="table-modal" class="modal">
+    <button class="modal-close" onclick="closeModal()">Close {{ .Params.table_name }}</button>
+    {{.Inner}}
+</div>
+
+<script>
+  // Open modal
+  function openModal() {
+    document.getElementById("table-modal").style.display = "block";
+    // Ensures the site footer is not shown if front of the modal. Remove if this is not an issue or
+    // there is no footer. "site-footer" id can also be changed appropriately.
+    // document.getElementById("site-footer").style.display = "hidden";
+  }
+
+  // Close modal
+  function closeModal() {
+    // prevents flashing last modal image while new id is loading on open
+    // document.getElementById("modalTable").innerHTML = "";
+    document.getElementById("table-modal").style.display = "none";
+    // document.getElementById("site-footer").style.display = "block";
+  }
+</script>

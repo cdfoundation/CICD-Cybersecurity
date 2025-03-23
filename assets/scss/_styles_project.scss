@@ -50,3 +50,72 @@
     padding-bottom: 42px;
   }
 }
+
+/* table modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: white;
+}
+
+.modal-open {
+  color: #ffffff;
+  background-color: #2d63c8;
+  border: 1px solid #2d63c8;
+  padding: 10px;
+  cursor: pointer
+}
+
+.modal-open:hover {
+  color: #2d63c8;
+  background-color: #ffffff;
+}
+
+/* modal table content */
+.modal-table-content {
+  position: relative;
+  margin: auto;
+  padding: 32px 16px 48px;
+  overflow: auto;
+  display: block;
+  white-space: nowrap;
+}
+
+/* close button for popup table */
+.modal-close {
+  color: black;
+  background-color: white;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  font-size: 2em;
+  font-weight: bold;
+  height: 1em;
+  width: 1em;
+  text-indent: 10em;
+  overflow: hidden;
+  border: 0;
+}
+
+.modal-close::after {
+  position: absolute;
+  line-height: 0.5;
+  top: 0.2em;
+  left: 0.1em;
+  text-indent: 0;
+  content: "\00D7"
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
