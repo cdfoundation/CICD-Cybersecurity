@@ -31,6 +31,12 @@
   padding: 0;
 }
 
+@media (min-width: 992px) {
+  .td-content > .lead, .td-content > p, .td-content > table {
+    max-width: 95%;
+  }
+}
+
 @media (max-width: 767px) {
   nav.td-navbar {
     flex-direction: column;

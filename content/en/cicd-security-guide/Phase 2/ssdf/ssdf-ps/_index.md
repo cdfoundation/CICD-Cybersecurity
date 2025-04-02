@@ -6,7 +6,33 @@ description: >
  Protect the Software (PS) CI/CD Steps
 ---
 
-
 ### Protect the Software (PS)
 
+#### PS.1 Protect All Forms of Code from Unauthorized Access and Tampering
 
+Help prevent unauthorized changes to code, both inadvertent and intentional, which could circumvent or negate the intended security characteristics of the software. For code that is not intended to be publicly accessible, this helps prevent theft of the software and may make it more difficult or time-consuming for attackers to find vulnerabilities in the software.
+
+#### Open-Source Tools to Achieve:
+
+<table style="width:100%">
+    <tr>
+        <th width="60%">Tasks</th>
+        <th width="20%">Tools</th>
+        <th width="20%">Readiness</th>
+    </tr>
+    <tr>
+        <td rowspan="3"><strong>PS.1.1</strong>: Store all forms of code – including source code, executable code, and configuration-as-code –  based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.</td>
+        <td>Tool 1</td>
+        <td>95%</td>
+    </tr>
+    <tr>
+        <td>Tool 2</td>
+        <td>75%</td>
+    </tr>
+    <tr>
+        <td>Tool 3</td>
+        <td>50%</td>
+    </tr>
+</table>
+
+<br />
