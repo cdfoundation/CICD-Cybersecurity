@@ -24,41 +24,41 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
     <tr>
         <td rowspan="3"><strong>PO.3.1</strong>: Specify which tools or tool types must or should be included in each toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</td>
         <td>Tool 1</td>
-        <td>95%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle" style="color: #63E6BE;"></i></td>
     </tr>
     <tr>
         <td>Tool 2</td>
-        <td>75%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle-half-stroke" style="color: #FFD43B;"></i></td>
     </tr>
     <tr>
         <td>Tool 3</td>
-        <td>50%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle" style="color: #63E6BE;"></i></td>
     </tr>
     <tr>
         <td rowspan="3"><strong>PO.3.2</strong>: Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</td>
         <td>Tool 1</td>
-        <td>95%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle" style="color: #63E6BE;"></i></td>
     </tr>
     <tr>
         <td>Tool 2</td>
-        <td>75%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle" style="color: #63E6BE;"></i></td>
     </tr>
     <tr>
         <td>Tool 3</td>
-        <td>50%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle-half-stroke" style="color: #FFD43B;"></i></td>
     </tr>
      <tr>
         <td rowspan="3"><strong>PO.3.3</strong>: Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization.</td>
         <td>Tool 1</td>
-        <td>95%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle" style="color: #63E6BE;"></i></td>
     </tr>
     <tr>
         <td>Tool 2</td>
-        <td>75%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle-half-stroke" style="color: #FFD43B;"></i></td>
     </tr>
     <tr>
         <td>Tool 3</td>
-        <td>50%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle-half-stroke" style="color: #FFD43B;"></i></td>
     </tr>
 </table>
 

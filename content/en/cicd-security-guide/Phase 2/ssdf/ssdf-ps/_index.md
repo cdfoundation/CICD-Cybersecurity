@@ -16,22 +16,22 @@ Help prevent unauthorized changes to code, both inadvertent and intentional, whi
 
 <table style="width:100%">
     <tr>
-        <th width="60%">Tasks</th>
-        <th width="20%">Tools</th>
-        <th width="20%">Readiness</th>
+        <th style="width: 60%">Tasks</th>
+        <th style="width: 20%">Tools</th>
+        <th style="width: 20%">Readiness</th>
     </tr>
     <tr>
         <td rowspan="3"><strong>PS.1.1</strong>: Store all forms of code – including source code, executable code, and configuration-as-code –  based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.</td>
         <td>Tool 1</td>
-        <td>95%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle" style="color: #63E6BE;"></i></td>
     </tr>
     <tr>
         <td>Tool 2</td>
-        <td>75%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle" style="color: #63E6BE;"></i></td>
     </tr>
     <tr>
         <td>Tool 3</td>
-        <td>50%</td>
+        <td style="text-align: center;"><i class="fa-solid fa-circle-half-stroke" style="color: #FFD43B;"></i></td>
     </tr>
 </table>
 
