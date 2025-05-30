@@ -1,5 +1,5 @@
-baseURL = "/"
-title = "CI/CD Cybersecurity"
+baseURL = "https://cicd-cybersecurity.netlify.app/"
+title = "CI/CD Cybersecurity SIG | CD Foundation"
 
 enableRobotsTXT = true
 
@@ -30,6 +30,15 @@ taxonomyCloudTitle = ["Tag Cloud", "Categories"]
 # set taxonomyPageHeader = [] to hide taxonomies on the page headers
 taxonomyPageHeader = ["tags", "categories"]
 
+# SEO Configuration
+[params.seo]
+  title_separator = " | "
+  description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
+  keywords = ["CI/CD security", "DevSecOps", "cybersecurity", "continuous integration", "continuous delivery", "software security", "pipeline security", "NIST framework", "secure software development"]
+  author = "CD Foundation CI/CD Cybersecurity SIG"
+  image = "/images/cicd-cybersecurity-og.png"
+  twitter_card = "summary_large_image"
+  twitter_site = "@CDeliveryFdn"
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -57,12 +66,12 @@ id = "UA-00000000-0"
 [languages]
   [languages.en]
     contentDir = "content/en"
-    title = ""
+    title = "CI/CD Cybersecurity SIG | CD Foundation"
     languageName = "English"
     # Weight used for sorting.
     weight = 1
     [languages.en.params]
-      description = "CD Foundation CICD Cybersecurity"
+      description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
 
 # Languages section MUST come before this!
 # Declare and configure Docsy theme.
@@ -112,7 +121,7 @@ section = ["HTML", "print", "RSS"]
 copyright = "CD Foundation | Apache-2.0 license"
 
 # First one is picked as the Twitter card image if not set on page.
-# images = ["images/project-illustration.png"]
+images = ["https://cd.foundation/wp-content/uploads/sites/78/2023/07/CDF-Home-Social-1024x536.png"]
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
@@ -130,7 +139,7 @@ version = "0.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://example.com"
+url_latest_version = "https://cicd-cybersecurity.netlify.app"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/cdfoundation/CICD-Cybersecurity"
