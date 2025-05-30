@@ -1,0 +1,65 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 text-center">
+      <h1 class="display-1 text-primary">404</h1>
+      <h2 class="mb-4">Page Not Found</h2>
+      <p class="lead mb-4">
+        Sorry, the page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+      </p>
+      
+      <div class="mb-5">
+        <h3>Popular Pages</h3>
+        <div class="list-group list-group-flush">
+          <a href="/" class="list-group-item list-group-item-action">
+            <strong>Home</strong> - CI/CD Cybersecurity SIG Overview
+          </a>
+          <a href="/cicd-security-guide/" class="list-group-item list-group-item-action">
+            <strong>Security Guide</strong> - Learn about CI/CD security phases
+          </a>
+          <a href="/community/" class="list-group-item list-group-item-action">
+            <strong>Community</strong> - Join our community and contribute
+          </a>
+          <a href="/resources/" class="list-group-item list-group-item-action">
+            <strong>Resources</strong> - Tools and documentation
+          </a>
+        </div>
+      </div>
+      
+      <div class="mb-4">
+        <a href="/" class="btn btn-primary btn-lg me-3">
+          <i class="fas fa-home"></i> Go Home
+        </a>
+        <a href="javascript:history.back()" class="btn btn-outline-secondary btn-lg">
+          <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+      </div>
+      
+      <div class="mt-5">
+        <h4>Need Help?</h4>
+        <p>
+          If you believe this is an error, please 
+          <a href="https://github.com/cdfoundation/CICD-Cybersecurity/issues/new" target="_blank" rel="noopener">
+            report it on GitHub
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Page Not Found - CI/CD Cybersecurity SIG",
+  "description": "The requested page could not be found on the CI/CD Cybersecurity SIG website.",
+  "url": "{{ .Site.BaseURL }}{{ .RelPermalink }}",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
+{{ end }} 
