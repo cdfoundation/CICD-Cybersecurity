@@ -24,8 +24,8 @@ Ensure that everyone inside and outside of the organization involved in the SDLC
 
 <table style="width:100%">
   <tr>
-    <th style="width: 60%">Tasks</th>
-    <th style="width: 40%">Tools</th>
+    <th style="width: 50%">Tasks</th>
+    <th style="width: 50%">Tools</th>
   </tr>
   <tr>
     <td rowspan="2">
@@ -55,8 +55,8 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
 
 <table style="width:100%">
   <tr>
-    <th style="width: 60%">Tasks</th>
-    <th style="width: 40%">Tools</th>
+    <th style="width: 50%">Tasks</th>
+    <th style="width: 50%">Tools</th>
   </tr>
   <tr>
     <td rowspan="3">
@@ -299,8 +299,8 @@ Help ensure that the software resulting from the SDLC meets the organization’s
 
 <table style="width:100%">
   <tr>
-    <th style="width: 60%">Tasks</th>
-    <th style="width: 40%">Tools</th>
+    <th style="width: 50%">Tasks</th>
+    <th style="width: 50%">Tools</th>
   </tr>
   <tr>
     <td rowspan="2">
@@ -381,8 +381,8 @@ Ensure that all components of the environments for software development are stro
 
 <table style="width:100%">
   <tr>
-    <th style="width: 60%">Tasks</th>
-    <th style="width: 40%">Tools</th>
+    <th style="width: 50%">Tasks</th>
+    <th style="width: 50%">Tools</th>
   </tr>
   <tr>
     <td rowspan="2">
