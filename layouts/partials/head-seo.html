@@ -1,0 +1,122 @@
+<!-- SEO Meta Tags -->
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.seo.description }}{{ end }}">
+<meta name="keywords" content="{{ if .Params.keywords }}{{ delimit .Params.keywords ", " }}{{ else }}{{ delimit .Site.Params.seo.keywords ", " }}{{ end }}">
+<meta name="author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.seo.author }}{{ end }}">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ .Site.Params.seo.title_separator }}{{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.seo.description }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="{{ .Site.Language.Lang }}">
+
+{{ if .Params.images }}
+  {{ range first 1 .Params.images }}
+    <meta property="og:image" content="{{ . | absURL }}">
+  {{ end }}
+{{ else if .Site.Params.images }}
+  {{ range first 1 .Site.Params.images }}
+    <meta property="og:image" content="{{ . | absURL }}">
+  {{ end }}
+{{ end }}
+
+{{ if .IsPage }}
+  <meta property="article:author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.seo.author }}{{ end }}">
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ if .Lastmod }}
+    <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ end }}
+  {{ if .Params.tags }}
+    {{ range .Params.tags }}
+      <meta property="article:tag" content="{{ . }}">
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="{{ .Site.Params.seo.twitter_card }}">
+<meta name="twitter:site" content="{{ .Site.Params.seo.twitter_site }}">
+<meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ .Site.Params.seo.title_separator }}{{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.seo.description }}{{ end }}">
+
+{{ if .Params.images }}
+  {{ range first 1 .Params.images }}
+    <meta name="twitter:image" content="{{ . | absURL }}">
+  {{ end }}
+{{ else if .Site.Params.images }}
+  {{ range first 1 .Site.Params.images }}
+    <meta name="twitter:image" content="{{ . | absURL }}">
+  {{ end }}
+{{ end }}
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ if .IsPage }}Article{{ else }}Organization{{ end }}",
+  {{ if .IsPage }}
+  "headline": "{{ .Title }}",
+  "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.seo.description }}{{ end }}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.seo.author }}{{ end }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  {{ if .Lastmod }}
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  {{ end }}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  {{ if .Params.images }}
+  {{ range first 1 .Params.images }}
+  "image": "{{ . | absURL }}",
+  {{ end }}
+  {{ else if .Site.Params.images }}
+  {{ range first 1 .Site.Params.images }}
+  "image": "{{ . | absURL }}",
+  {{ end }}
+  {{ end }}
+  {{ else }}
+  "name": "{{ .Site.Title }}",
+  "description": "{{ .Site.Params.seo.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  {{ if .Site.Params.images }}
+  {{ range first 1 .Site.Params.images }}
+  "logo": "{{ . | absURL }}",
+  {{ end }}
+  {{ end }}
+  "sameAs": [
+    "{{ .Site.Params.github_repo }}",
+    "https://cd.foundation/"
+  ],
+  {{ end }}
+  "keywords": "{{ delimit .Site.Params.seo.keywords ", " }}"
+}
+</script>
+
+<!-- Additional SEO Meta Tags -->
+<meta name="theme-color" content="#1e3a8a">
+<meta name="msapplication-TileColor" content="#1e3a8a">
+
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com">
+
+<!-- DNS Prefetch for external resources -->
+<link rel="dns-prefetch" href="//github.com">
+<link rel="dns-prefetch" href="//netlify.app">
+<link rel="dns-prefetch" href="//cd.foundation"> 

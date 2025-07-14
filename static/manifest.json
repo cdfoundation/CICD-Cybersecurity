@@ -1,0 +1,40 @@
+{
+  "name": "CI/CD Cybersecurity SIG | CD Foundation",
+  "short_name": "CI/CD Security",
+  "description": "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices from the CD Foundation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["productivity", "developer", "security"],
+  "screenshots": [
+    {
+      "src": "/images/cicd-cybersecurity-screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "CI/CD Cybersecurity SIG Homepage"
+    }
+  ]
+} 
