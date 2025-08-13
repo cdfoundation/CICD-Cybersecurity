@@ -206,7 +206,7 @@ Reuse Existing, Well-Secured Software When Feasible Instead of Duplicating Funct
   </tr>
   <tr>
     <td>
-      <a href="https://www.sonatype.com/products/nexus-community-edition-download">Sonartype Nexus OSS</a>
+      <a href="https://www.sonatype.com/products/nexus-community-edition-download">Sonatype Nexus OSS</a>
       <p>Prevents use of components that fail security requirements or policy checks.</p>
     </td>
   </tr>
@@ -531,8 +531,10 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
        <p>PW.6.1: Use compiler, interpreter, and build tools that offer features to improve executable security</p><br>
        <p>PW.6.2: Determine which compiler, interpreter, and build tool features should be used and how each should be configured, then implement and use the approved configurations.</p>
     </td>
+    </tr>
+    <tr>
     <td>
-      <a href="https://sigstore.dev">Sigstore Cosign/a>
+      <a href="https://sigstore.dev">Sigstore Cosign</a>
       <p>Signs and verifies the integrity/authenticity of source code and pre-built dependencies before compiling.</p>
     </td>
   </tr>
@@ -581,115 +583,249 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   </table>
 
 
-### PW.7: Review and/or Analyze Human-Readable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements
+**PW.7** 
 
-Help identify vulnerabilities so that they can be corrected before the software is released to prevent exploitation. Using automated methods lowers the effort and resources needed to detect vulnerabilities. Human-readable code includes source code, scripts, and any other form of code that an organization deems humanreadable.
-Help identify vulnerabilities so that they can be corrected before the software is released to prevent exploitation. Using automated methods lowers the effort and resources needed to detect vulnerabilities. Human-readable code includes source code, scripts, and any other form of code that an organization deems humanreadable.
+<strong>Review and/or Analyze Human-Readable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements:</strong> Help identify vulnerabilities so that they can be corrected before the software is released to prevent exploitation. Using automated methods lowers the effort and resources needed to detect vulnerabilities. Human-readable code includes source code, scripts, and any other form of code that an organization deems humanreadable.
+
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 50%">Tasks</th>
-    <th style="width: 50%">Tools</th>
+    <th style="width: 30%">Tasks</th>
+    <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="11">
-      <strong>PW.7.1:</strong>
-      <p>
-        Determine whether code review (a person looks directly at the code to find issues) and/or code analysis (tools are used to find issues in code, either in a fully automated way or in conjunction with a person) should be used, as defined by the organization.
-      </p>
+    <td rowspan="50">
+       <p>PW.7.1 Determine whether code review (a person looks directly at the code to find issues) and/or code analysis (tools are used to find issues in code, either in a fully automated way or in conjunction with a person) should be used, as defined by the organization.</p><br>
+       <p>PW.7.2: Perform the code review and/or code analysis based on the organization’s secure coding standards, and record and triage all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p>
     </td>
+   </tr>
+   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+      <p>Scans project dependencies (e.g., Maven, npm, Python) against the NVD for known CVEs before build, enabling early remediation of vulnerable libraries.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">OWASP ZAP</a>
+      <p>Primarily a dynamic application security testing (DAST) tool, but in a pre-build sense, it’s not generally used — can be run against local development builds for early runtime flaw detection. Limited PW.7 pre-build applicability.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube</a>
+      <p>Performs SAST and code quality checks for many languages, detecting vulnerabilities, bugs, and code smells before compilation or integration.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://retirejs.github.io/">Retire.js</a>
+      <p>Scans JavaScript code and package manifests for known vulnerable libraries before packaging.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://fossa.com/product/open-source-vulnerability-management">Fossa</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://www.veracode.com/">Veracode</a>
+      <a href="https://fossa.com/product/open-source-vulnerability-management">Fossa Community Edition</a>
+      <p>Performs dependency scanning for license and vulnerability issues before build. Commercial SaaS version is proprietary.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/semgrep/semgrep">Semgrep</a>
+      <p>Lightweight, customizable SAST tool. Uses rules to detect security issues and anti-patterns in source code before build.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
+      <p>Scans Python source for common security issues before build (e.g., insecure function usage, hardcoded passwords).</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/Checkmarx/kics">Checkmarx KICS</a>
+      <a href="https://kics.io">Checkmarx KICS</a>
+      <p>Static analysis tool for IaC (Terraform, Kubernetes YAML, etc.) to find misconfigurations before deployment.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/danmar/cppcheck">Cppcheck for C++</a>
+      <p>Static analysis for C/C++ source to catch undefined behavior, memory issues, and common security flaws before compilation.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/find-sec-bugs/find-sec-bugs">FindSecBugs</a>
+      <p>A plugin for SpotBugs to detect Java-specific security vulnerabilities before build.</p>
     </td>
-  </tr>
-  <tr>
-    <td rowspan="6">
-      <strong>PW.7.2:</strong>
-      <p>
-        Perform the code review and/or code analysis based on the organization’s secure coding standards, and record and triage all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.
-      </p>
-    </td>
-    <td>
-      <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube (Community Edition)</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://semgrep.dev/">Semgrep</a>
-    </td>
-  </tr>
-  <tr>
+   <tr> 
     <td>
       <a href="https://codeql.github.com/">GitHub CodeQL</a>
+      <p>Performs deep semantic code analysis using a query language to detect vulnerabilities before build. Excellent for automated SAST in CI pipelines.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://pmd.github.io/">PMD</a>
+      <p>Scans Java, Apex, JavaScript, XML, and other code for bugs, unused code, and potential security issues before compilation.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://spotbugs.github.io/">SpotBugs</a>
+      <p>Static analysis for Java bytecode; detects bug patterns and potential vulnerabilities pre-build (when run on compiled class files in CI before packaging).</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://danger.systems/js/">Danger JC</a>
+      <p>Automates pull request checks — enforces security/contribution guidelines, prevents insecure patterns from merging into code before build.</p>
     </td>
   </tr>
 </table>
 
 <br>
+
+
+**PW.8** 
+
+<strong>Test Executable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements: </strong> Help identify vulnerabilities so that they can be corrected before the software is released in order to prevent exploitation. Using automated methods lowers the effort and resources needed to detect vulnerabilities and improves traceability and repeatability. Executable code includes binaries, directly executed bytecode and source code, and any other form of code that an organization deems executable.
+
+
+<br>
+
+<table style="width:100%">
+  <tr>
+    <th style="width: 30%">Tasks</th>
+    <th style="width: 70%">Tools</th>
+  </tr>
+  <tr>
+    <td rowspan="50">
+       <p>PW.8.1: Determine whether executable code testing should be performed to find vulnerabilities not identified by previous reviews, analysis, or testing and, if so, which types of testing should be used.</p><br>
+       <p>PW.8.2: Scope the testing, design the tests, perform the testing, and document the results, including recording and triaging all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+      <a href="https://semgrep.dev">Semgrep</a>
+      <p>	SAST engine that scans source code against security rules before build, catching vulnerabilities early.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://bandit.readthedocs.io">Bandit (Python)</a>
+      <p>Static analysis for Python code to find common security issues before packaging.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://find-sec-bugs.github.io">FindSecBugs</a>
+      <p>Security plugin for SpotBugs to detect vulnerabilities in Java/Scala/Groovy code pre-build.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="http://cppcheck.sourceforge.net">Cppcheck</a>
+      <p>Static analysis for C/C++ to detect security flaws before compilation artifacts are built.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://pmd.github.io">PMD</a>
+      <p>Rule-based static analysis for Java, Apex, JavaScript, and XML for vulnerabilities and coding issues.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://spotbugs.github.io">SpotBugs</a>
+      <p>General bug and vulnerability detection in Java code before build output.</p>
+    </td>
+  </tr>
+ <tr>
+    <td>
+      <a href="https://codeql.github.com">GitHub CodeQL</a>
+      <p>Semantic code analysis to find vulnerabilities before build.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+      <p>SCA tool that identifies vulnerable dependencies in manifests before packaging.</p>
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <a href="https://retirejs.github.io/retire.js/">Retire.js</a>
+      <p>Scans JavaScript and Node.js dependencies for known vulnerabilities before release.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/anchore/grype">Grype</a>
+      <p>SSCA tool for scanning source code dependencies and base images pre-build for CVEs.</p>
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <a href="https://github.com/anchore/syft">Syft</a>
+      <p>Generates SBOMs from source code before build to verify component inventory.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://kics.io">Checkmarx KICS</a>
+      <p>Scans Infrastructure-as-Code files for misconfigurations before deployment.</p>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <a href="https://gitleaks.io">Gitleaks</a>
+      <p>Searches code and git history for secrets before build.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://trufflesecurity.com">TruffleHog</a>
+      <p>Searches code and git history for secrets before build.</p>
+    </td>
+  </tr>
+  </table>
+
+  **PW.9** 
+
+<strong>Configure Software to Have Secure Settings by Default:</strong> Help improve the security of the software at the time of installation to reduce the likelihood of the software being deployed with weak security settings, putting it at greater risk of compromise.
+
+<br>
+
+<table style="width:100%">
+  <tr>
+    <th style="width: 30%">Tasks</th>
+    <th style="width: 70%">Tools</th>
+  </tr>
+  <tr>
+    <td rowspan="50">
+       <p>PW.9.1: Define a secure baseline by determining how to configure each setting that has an effect on security or a security-related setting so that the default  settings are secure and do not weaken the security functions provided by the platform, network infrastructure, or services.</p><br>
+       <p>PW.9.2: Implement the default settings (or groups of default settings, if  applicable), and document each setting for software administrators.</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+      <a href="https://kics.io">KICS (Checkmarx)</a>
+      <p>Finds misconfigurations and insecure defaults in IaC files before build.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.openpolicyagent.org">Open Policy Agent (OPA)</a>
+      <p>Policy-as-code engine to enforce secure configuration rules in pre-build pipelines.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://yamllint.readthedocs.io">Yamllint</a>
+      <p>Validates YAML configuration files, ensuring structure correctness before further security rule checks.</p>
+    </td>
+  </tr>
+  </table>
