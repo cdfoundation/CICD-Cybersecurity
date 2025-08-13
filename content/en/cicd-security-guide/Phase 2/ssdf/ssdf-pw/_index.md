@@ -177,6 +177,51 @@ To satisfy SSDF PW.1 in a build and deploy context using open-source tools, the 
       <p>Ensure that deployed workloads meet security requirements for mutual authentication and zero trust and bind workload identity to build-time provenance for deployment integrity.</p>
    </td> 
  </tr> 
+
+  <tr>
+      <a href="https://owasp.org/www-project-threat-dragon/">OWASP Threat Dragon</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-amass/">OWASP Amass</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool">Microsoft Threat Modeling Tool</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://cairis.org/index.html">CAIRIS</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://threagile.io/">Threagile</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-threat-dragon/">OWASP Threat Dragon</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://open-needs.org/">Open-Needs</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://rmtoo.florath.net/">rmtoo</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.openrmf.io/">OpenRMF® OSS</a>
+    </td>
+  </tr>
 </table>
     
 
@@ -259,6 +304,56 @@ To satisfy SSDF PW.2 in a the build and deploy context using open-source tools, 
   <td>
       <a href="https://kube-score.com">kube-score</a>
       <p>Review Kubernetes manifests for design compliance before deployment.Ensures pod security settings match approved deployment designs.</p>
+    </td>
+  </tr>   
+  <tr>
+    <td>
+      <a href="https://github.com/dependabot">Dependabot</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.openrmf.io/">OpenRMF</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://eslint.org/">ESLint</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://bounty.github.com/targets/lgtm.html">LGTM</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/anchore/grype">Grype</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/quay/clair">Clair</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://trivy.dev/">Trivy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.checkov.io/">Checkov</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://terrasolid.com/products/terrascan/">Terrascan</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.gerritcodereview.com/">Gerrit</a>
     </td>
   </tr>   
  </table>
@@ -353,6 +448,241 @@ To satisfy SSDF PW.4 in a build and deploy context using open-source tools, the 
       <p>Ensures deployed OS images meet hardened defaults.</p>
   </td>
   </tr>
+  <tr>
+    <td>
+      <a href="https://cyclonedx.org/">CycloneDX</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opensbom-generator/spdx-sbom-generator">SPDX</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://artifacthub.io/">ArtifactHub</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://jfrog.com/community/download-artifactory-oss/">JFrog Artifactory OSS</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.sonatype.com/products/nexus-community-edition-download">Sonartype Nexus OSS</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://goharbor.io/">Harbor</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits">GitHub Signing</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://docs.gitlab.com/ee/user/project/repository/signed_commits/">GitLab Signing</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://confluence.atlassian.com/bitbucketserver/using-gpg-keys-913477014.html">Bitbucket</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://codeql.github.com/">GitHub CodeQL</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.aquasec.com/products/trivy/">AquaSec Trivy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/dependabot">Dependabot</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/jfrog/frogbot">FrogBot</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://openssf.org/projects/allstar/">Allstar</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-samm/">OWASP SAMM</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-defectdojo/">OWASP Defectdojo</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://git-scm.com/">Git</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://about.gitea.com/">Gitea</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://about.gitlab.com/">GitLab (Community Edition)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://eclipseide.org/">Eclipse</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA (Community Edition)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://junit.org/">JUnit</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://nunit.org/">NUnit</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://docs.pytest.org/en/stable/index.html">Pytest</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.selenium.dev/">Selenium</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://playwright.dev/">Playwright</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.zaproxy.org/">OWASP ZAP</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://testng.org/">TestNG</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://cucumber.io/">Cucumber</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://trivy.dev/latest/">Aqua Trivy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/quay/clair">Clair</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/anchore/grype">Grype</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://semgrep.dev/">Semgrep</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://brakemanscanner.org/">Brakeman</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://gitleaks.io/">Gitleaks</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://trufflesecurity.com/">TruffleHog</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.sigstore.dev/">Sigstore</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://oss-review-toolkit.github.io/ort/">OSS Review Toolkit (ORT)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://fossa.com/">FOSSA (Community Edition)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://scancode-toolkit.readthedocs.io/en/stable/">ScanCode Toolkit</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/tern-tools/tern">Tern</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://openpolicyagent.org/">Open Policy Agent (OPA)</a>
+  </td>
+  </tr>
 </table>
     
 
@@ -435,6 +765,52 @@ To satisfy SSDF PW.5 in a build and deploy context using open-source tools, the 
     <td>
       <a href="https://tekton.dev/docs/chains">Tekton Chains </a>
       <p>Ties repository artifacts back to secure build pipelines.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://semgrep.dev/">Semgrep</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://findbugs.sourceforge.net/">FindBugs</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://spotbugs.readthedocs.io/">SpotBugs</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.zaproxy.org/">OWASP ZAP</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/Arachni/arachni">Arachni</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://snyk.io/">Snyk</a>
     </td>
   </tr>
  </table>
@@ -597,7 +973,94 @@ To satisfy SSDF PW.7 in a build and deploy context using open-source tools, the 
       <p>Provides verifiable audit trail for security review completion.</p>
   </td>
   </tr>
+  <tr>
+    <td>
+      <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.zaproxy.org/">OWASP ZAP</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://retirejs.github.io/">Retire.js</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://fossa.com/product/open-source-vulnerability-management">Fossa</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.veracode.com/">Veracode</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/semgrep/semgrep">Semgrep</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/Checkmarx/kics">Checkmarx KICS</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/danmar/cppcheck">Cppcheck for C++</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/find-sec-bugs/find-sec-bugs">FindSecBugs</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube (Community Edition)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://semgrep.dev/">Semgrep</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://codeql.github.com/">GitHub CodeQL</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://pmd.github.io/">PMD</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://spotbugs.github.io/">SpotBugs</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://danger.systems/js/">Danger JC</a>
+  </td>
+  </tr>
  </table>
+
+<br>
 
 
 **PW.8**
