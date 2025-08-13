@@ -23,6 +23,7 @@ To satisfy SSDF PW.1 in a post-deployment context using open-source tools, the f
 - Keeping a tamper-proof record of every software component in each release
 
 - Ensuring provenance data remains accessible for audits, investigations, and vulnerability response
+
 - Allowing acquirers and downstream users to independently verify the origin and integrity of every component
 
 
