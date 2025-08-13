@@ -3,7 +3,7 @@ title: "Protect the Organization (PO)"
 linkTitle: "Protect the Organization (PO)"
 weight: 5
 description: >
- Protect the Organization (PO) Post Deployment
+ Protect the Organization (PO) Post Deployment CI/CD Steps
 ---
 
 
@@ -33,10 +33,12 @@ To satisfy SSDF PO.1 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="4">
+    <td rowspan="50">
       <p>P.O.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
       <p>PO.1.2 Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time. </p>
     </td>
+    </tr>
+    <tr>
     <td>
       <a href="https://www.openpolicyagent.org/"> Open Policy Agent</a>
       </a>
@@ -85,11 +87,13 @@ To satisfy SSDF PO.2 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="8">
+    <td rowspan="50">
       <p>PO.2.1: Create new roles and alter responsibilities for existing roles as needed to encompass all parts of the SDLC. Periodically review and maintain the defined roles and responsibilities, updating them as needed.</p><br>
       <p>PO.2.2: Provide role-based training for all personnel with responsibilities that contribute to secure development. Periodically review personnel proficiency and role-based training, and update the training as needed. </p><br>
       <p>PO.2.3: Obtain upper management or authorizing official commitment to secure development, and convey that commitment to all with development related roles and  responsibilities. </p>
     </td>
+   </tr>
+   <tr> 
     <td>
       <a href="https://git-scm.com/">Git</a>
       <p>Tracks authorship and code reviewers, and tags releases and documents who triggered them. </p>
@@ -167,11 +171,13 @@ To satisfy SSDF PO.3 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="13"
+    <td rowspan="50"
       <p>PO.3.1: Specify which tools or tool types must or should be included in each  toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p><br>
       <p>PO.3.2: Follow recommended security practices to deploy, operate, and maintain tools and toolchains. </p><br>
       <p>PO.3.3: Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization. </p>
     </td>
+    </tr>
+    <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency Track</a>
       <p>Continuously monitors SBOMs for newly disclosed CVEs in deployed software. </p>
@@ -278,10 +284,12 @@ To satisfy SSDF PO.4 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="14"
+    <td rowspan="50"
       <p>PO.4.1: Define criteria for software security checks and track throughout the SDLC.</p><br>
       <p>PO.4.2: Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p><br>
    </td>
+   </tr>
+   <tr>
     <td>
       <a href="https://falco.org/">Falco</a>
       <p>Runtime security detection for containers and hosts; generates event logs for suspicious behavior.</p>
@@ -392,10 +400,12 @@ To satisfy SSDF PO.5 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="14"
-      <p>PO.4.1: Define criteria for software security checks and track throughout the SDLC.</p><br>
-      <p>PO.4.2: Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p><br>
+    <td rowspan="50"
+      <p>PO.5.1: Separate and protect each environment involved in software development.</p><br>
+      <p>PO.5.2: Secure and harden development endpoints (i.e., endpoints for software designers, developers, testers, builders, etc.) to perform development-related tasks using a risk-based approach.</p><br>
    </td>
+   </tr>
+   <tr>
     <td>
       <a href="https://www.inspec.io">Inspec</a>
       <p>Runs ongoing compliance scans against development and build servers; enforce CIS/NIST benchmarks.</p>
