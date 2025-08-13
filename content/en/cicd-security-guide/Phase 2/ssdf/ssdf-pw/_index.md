@@ -34,7 +34,7 @@ To satisfy SSDF PW.1 in a build and deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="24">
+    <td rowspan="50">
       <p>PW.1.1: Use forms of risk modeling, such as threat modeling, attack modeling, or attack surface mapping to help assess the security risk for the software.</p><br>
       <p>PW.1.2: Track and maintain the software’s security requirements, risks, and design decisions.</p><br>
       <p>PW.1.3: Where appropriate, build in support for using standardized security features and services (e.g., enabling software to integrate with existing log management, identity management, access control, and vulnerability management systems) instead of creating proprietary implementations of security features and services. </p>
@@ -177,49 +177,46 @@ To satisfy SSDF PW.1 in a build and deploy context using open-source tools, the 
       <p>Ensure that deployed workloads meet security requirements for mutual authentication and zero trust and bind workload identity to build-time provenance for deployment integrity.</p>
    </td> 
  </tr> 
-
-  <tr>
+ <tr>
+   <td>
       <a href="https://owasp.org/www-project-threat-dragon/">OWASP Threat Dragon</a>
+       <p>Embeds threat models into CI/CD, ensuring security requirements are tied to architectural components before build. (Meets PW.1.1 and PW.1.2) </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-amass/">OWASP Amass</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool">Microsoft Threat Modeling Tool</a>
+      <p>Helps to refine security requirements around network exposure and asset inventory. (Meets PW.1.1) </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://cairis.org/index.html">CAIRIS</a>
+       <p>Integrates security requirements into system models, which can then be validated in build & deploy. (Meets PW.1.1) </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://threagile.io/">Threagile</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://owasp.org/www-project-threat-dragon/">OWASP Threat Dragon</a>
+        <p>Embeds threat models into CI/CD, ensuring security requirements are tied to architectural components before build. (Meets PW.1.1)</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://open-needs.org/">Open-Needs</a>
+      <p>Requirements management tool for defining, tracking, and validating security requirements. Documents security requirements and links them to commits and build outputs.(Meets PW.1.1 and PW.1.2)</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://rmtoo.florath.net/">rmtoo</a>
+          <p>Requirements management tool using plain text and version control for traceability. Supports traceability from design through build, ensuring requirements are carried into final artifacts.(Meets PW.1.2)</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.openrmf.io/">OpenRMF® OSS</a>
+      <p>Open-source compliance and risk management framework tool for tracking RMF (NIST 800-37) controls. Security requirements map to formal compliance controls that can be verified in build & deploy artifacts. (Meets PW1.2) </p>
     </td>
   </tr>
 </table>
@@ -248,7 +245,7 @@ To satisfy SSDF PW.2 in a the build and deploy context using open-source tools, 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="10">
+    <td rowspan="50">
       <p>PW.2.1: Have 1) a qualified person (or people) who were not involved with the design and/or 2) automated processes instantiated in the toolchain review the software design to confirm and enforce that it meets all of the security requirements and satisfactorily addresses the identified risk information.
     </td>
   </tr>
@@ -266,7 +263,7 @@ To satisfy SSDF PW.2 in a the build and deploy context using open-source tools, 
  </tr>  
   <tr>
       <td>
-      <a href="https://www.checkov.io">Checkovn</a>
+      <a href="https://www.checkov.io">Checkov</a>
       <p>Enforce network segmentation rules, encryption requirements, and secure defaults.</p>
     </td>
   </tr>
@@ -309,52 +306,43 @@ To satisfy SSDF PW.2 in a the build and deploy context using open-source tools, 
   <tr>
     <td>
       <a href="https://github.com/dependabot">Dependabot</a>
+      <p>Automated dependency update PRs with vulnerability alerts. Helps verify dependencies meet security requirements (e.g., no known CVEs, minimum versions). </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.openrmf.io/">OpenRMF</a>
+      <p>Open Risk Management Framework tracking tool. Can map design-level security requirements to NIST 800-53 controls and verify those controls are implemented in build configs. </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://eslint.org/">ESLint</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://bounty.github.com/targets/lgtm.html">LGTM</a>
-    </td>
+      <p>Runs in CI/CD pipelines or as a pre-commit hook to block merges if code violates the approved security or architectural rules before build.</p>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
+      <p>SBOM-driven vulnerability scanner for images/filesystems. Validates that dependencies in the build match security baselines and are free from disallowed components. </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/quay/clair">Clair</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://trivy.dev/">Trivy</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://www.checkov.io/">Checkov</a>
+      <p>Static vulnerability analysis for container images. Confirms final images meet design security requirements before deployment. </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://terrasolid.com/products/terrascan/">Terrascan</a>
+      <p>IaC scanning and policy enforcement (OPA-based). Enforces approved security design in Terraform, Kubernetes, Docker, and AWS CloudFormation configs before deploy.  </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.gerritcodereview.com/">Gerrit</a>
-    </td>
+      <p>Code review and approval workflow tool. Enforces human review against design and security requirements before merge to release branches.  </p>
+  </td>
   </tr>   
  </table>
     
@@ -387,7 +375,7 @@ To satisfy SSDF PW.4 in a build and deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="10">
+    <td rowspan="50">
       <p>PW.4.1: Acquire and maintain well-secured software components (e.g., software libraries, modules, middleware, frameworks) from commercial, opensource, and other third-party developers for use by the organization’s software.</p><br>
       <p>PW.4.2: Create and maintain well-secured software components in-house following SDLC processes to meet common internal software development needs that cannot be better met by third-party software components.</p> <br>
       <p>PW.4.3: Moved to PW.1.3</p> <br>
@@ -451,236 +439,211 @@ To satisfy SSDF PW.4 in a build and deploy context using open-source tools, the 
   <tr>
     <td>
       <a href="https://cyclonedx.org/">CycloneDX</a>
+      <p>SBOM format for documenting exact components/configurations in final build; helps verify secure defaults are present.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/opensbom-generator/spdx-sbom-generator">SPDX</a>
+      <p>SBOM standard to record all components, licenses, and provenance; can confirm inclusion of hardened dependencies.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://artifacthub.io/">ArtifactHub</a>
+      <p>Catalog of verified Helm charts, OLM operators, etc.; can enforce use of curated, secure-by-default packages.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://jfrog.com/community/download-artifactory-oss/">JFrog Artifactory OSS</a>
+      <p>Repository manager for storing signed, verified artifacts with access controls.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.sonatype.com/products/nexus-community-edition-download">Sonartype Nexus OSS</a>
+      <p>Host artifacts and enforce policy checks before they’re promoted.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://goharbor.io/">Harbor</a>
+      <p>OCI registry with vulnerability scanning, content signing, and policy enforcement for images.</p>
     </td>
   </tr>
-  <tr>
-    <td>
-      <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits">GitHub Signing</a>
-    </td>
-  </tr>
-  <tr>
+ <tr>
     <td>
       <a href="https://docs.gitlab.com/ee/user/project/repository/signed_commits/">GitLab Signing</a>
+      <p>Commit/tag signing in GitLab CE for provenance.</p>
     </td>
   </tr>
-  <tr>
-    <td>
-      <a href="https://confluence.atlassian.com/bitbucketserver/using-gpg-keys-913477014.html">Bitbucket</a>
-    </td>
-  </tr>
-  <tr>
+ <tr>
     <td>
       <a href="https://codeql.github.com/">GitHub CodeQL</a>
+      <p>Detects code patterns violating security requirements.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.aquasec.com/products/trivy/">AquaSec Trivy</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/dependabot">Dependabot</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/jfrog/frogbot">FrogBot</a>
+      <p>Scans container images, IaC, and configs for insecure defaults.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://openssf.org/projects/allstar/">Allstar</a>
+      <p>GitHub App enforcing security policies in repos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-samm/">OWASP SAMM</a>
+      <p>Security maturity model to guide secure default practices.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS</a>
+      <p>Application security requirements to verify secure defaults.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-defectdojo/">OWASP Defectdojo</a>
+      <p>Central vulnerability tracking; ensures issues found in builds are fixed before release.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://git-scm.com/">Git</a>
+      <p>Detects known-vulnerable dependencies in builds.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://about.gitea.com/">Gitea</a>
+      <p>Self-hosted Git service with signing/policy support.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://about.gitlab.com/">GitLab (Community Edition)</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://code.visualstudio.com/">Visual Studio Code</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://eclipseide.org/">Eclipse</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA (Community Edition)</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://junit.org/">JUnit</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://nunit.org/">NUnit</a>
+      <p>Git platform with signing, scanning, CI/CD policy integration.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://docs.pytest.org/en/stable/index.html">Pytest</a>
+      <p>Automated testing to confirm defaults work.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.selenium.dev/">Selenium</a>
+      <p>Functional/UI test automation to verify secure settings.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://playwright.dev/">Playwright</a>
+      <p>Functional/UI test automation to verify secure settings.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">OWASP ZAP</a>
+      <p>DAST scanner to verify app defaults are not exploitable.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://testng.org/">TestNG</a>
+      <p>	Java test framework for security/functional checks</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://cucumber.io/">Cucumber</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://trivy.dev/latest/">Aqua Trivy</a>
+      <p>BDD framework for verifying functional + security requirements.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/quay/clair">Clair</a>
+      <p>Image vulnerability scanner for OCI registries.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
+      <p>SBOM-driven vuln scanner for builds and images</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
+      <p>Detects insecure code patterns/defaults in Python.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://semgrep.dev/">Semgrep</a>
+      <p>Finds policy-violating patterns in code.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://brakemanscanner.org/">Brakeman</a>
+      <p>Detects Rails-specific security issues/defaults.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://gitleaks.io/">Gitleaks</a>
+      <p>Detects secrets in code (prevents default creds exposure).</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://trufflesecurity.com/">TruffleHog</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://www.sigstore.dev/">Sigstore</a>
-    </td>
+      <p>Finds secrets in repos/history to avoid insecure defaults.</p>
+     </td> 
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+      <p>Detects known-vulnerable dependencies in builds.></p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://oss-review-toolkit.github.io/ort/">OSS Review Toolkit (ORT)</a>
+      <p>Automates license/security checks; blocks noncompliant components.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://fossa.com/">FOSSA (Community Edition)</a>
+      <p>License/dependency scanning; ensures compliance with default policies.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://scancode-toolkit.readthedocs.io/en/stable/">ScanCode Toolkit</a>
+      <p>Detects license, copyright, and security metadata in artifacts.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/tern-tools/tern">Tern</a>
+      <p>Container image inspection for dependency/component details.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://openpolicyagent.org/">Open Policy Agent (OPA)</a>
+      <p>Policy-as-code for build & deploy; blocks insecure defaults in configs/manifests.</p>
   </td>
   </tr>
 </table>
@@ -709,7 +672,7 @@ To satisfy SSDF PW.5 in a build and deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="10">
+    <td rowspan="50">
       <p>PW.5.1: Follow all secure coding practices that are appropriate to the development languages and environment to meet the organization’s requirements.</p>
     </td>
   </tr>
@@ -771,46 +734,49 @@ To satisfy SSDF PW.5 in a build and deploy context using open-source tools, the 
   <tr>
     <td>
       <a href="https://semgrep.dev/">Semgrep</a>
+      <p>	Runs as part of the CI pipeline to automatically scan code for security flaws, policy violations, and unsafe patterns before artifacts are built. Supports rule-as-code to enforce secure build policies.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
+      <p>Python-focused static analyzer that checks for insecure functions, weak crypto, and common security issues before packaging or deployment.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://findbugs.sourceforge.net/">FindBugs</a>
+      <p>Legacy Java static analysis; can be used to flag known insecure code patterns before build. Superseded by SpotBugs.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://spotbugs.readthedocs.io/">SpotBugs</a>
+      <p>Modern replacement for FindBugs. Java bytecode scanner to enforce safe code practices before compiling final artifacts.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube</a>
+      <p>Comprehensive SAST platform; can be integrated in CI/CD to enforce quality gates, stopping builds that fail security rules.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">OWASP ZAP</a>
+      <p>Runs against built/staged applications in pre-deployment environments to detect exploitable vulnerabilities, ensuring no insecure version is promoted.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Arachni/arachni">Arachni</a>
+      <p>Web application vulnerability scanner that can be part of a build’s QA stage to ensure secure release readiness.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://snyk.io/">Snyk</a>
+      <p>Scans for known-vulnerable dependencies in the build, blocking insecure versions from being deployed.</p>
     </td>
   </tr>
  </table>
@@ -926,7 +892,7 @@ To satisfy SSDF PW.7 in a build and deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="8">
+    <td rowspan="50">
       <p>PW.7.1: Determine whether code review (a person looks directly at the code to find issues) and/or code analysis (tools are used to find issues in code, either in a fully automated way or in conjunction with a person) should be used, as defined by the organization.</p><br>
       <p>PW.7.2: Perform the code review and/or code analysis based on the organization’s secure coding standards, and record and triage all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p> 
     </td>
@@ -976,86 +942,73 @@ To satisfy SSDF PW.7 in a build and deploy context using open-source tools, the 
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+      <p>Continuously scans dependencies in each build for new CVEs. Can run on every commit or nightly in CI/CD.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">OWASP ZAP</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube</a>
+      <p>Can be automated in CI/CD to re-test staging environments for vulnerabilities as new code is deployed.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://retirejs.github.io/">Retire.js</a>
+      <p>Focused on JavaScript libraries; detects newly disclosed vulnerabilities in frontend/back-end packages during builds.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://fossa.com/product/open-source-vulnerability-management">Fossa</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://www.veracode.com/">Veracode</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/semgrep/semgrep">Semgrep</a>
+      <p>Scans dependencies for vulnerabilities and license issues, integrating with builds to catch new findings.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
+      <p>Runs in CI/CD for Python projects to catch newly introduced security issues.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Checkmarx/kics">Checkmarx KICS</a>
+      <p>Detecting Known Vulnerabilities – Compares IaC components and configurations against known security best practices and compliance frameworks (CIS Benchmarks, NIST, PCI-DSS).</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/danmar/cppcheck">Cppcheck for C++</a>
+      <p>Re-scans C/C++ code after every build to ensure no new issues were introduced.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/find-sec-bugs/find-sec-bugs">FindSecBugs</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube (Community Edition)</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://semgrep.dev/">Semgrep</a>
+      <p>Extension to SpotBugs that catches security flaws in Java bytecode continuously during the build cycle.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://codeql.github.com/">GitHub CodeQL</a>
+      <p>Performs continuous security queries on code with each pull request or scheduled scan.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://pmd.github.io/">PMD</a>
+      <p>Runs code quality and security rule checks on every commit/build.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://spotbugs.github.io/">SpotBugs</a>
+      <p>Java static analysis integrated into the build pipeline for continuous vulnerability detection.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://danger.systems/js/">Danger JC</a>
+      <a href="https://danger.systems/js/">Danger JS</a>
+      <p>Automates security-related PR review rules, preventing unsafe code from merging.</p>
   </td>
   </tr>
  </table>
@@ -1226,4 +1179,4 @@ To satisfy SSDF PW.9 in a build and deploy context using open-source tools, the 
     </td>
   </tr>  
  </table>
-    .
+
