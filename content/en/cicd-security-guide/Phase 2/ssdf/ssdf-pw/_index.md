@@ -796,7 +796,7 @@ To satisfy SSDF PW.6 in a build and deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="12">
+    <td rowspan="50">
       <p>PW.6.1: Use compiler, interpreter, and build tools that offer features to improve executable security.</p> <br>
       <p>PW.6.2: Determine which compiler, interpreter, and build tool features should be used and how each should be configured, then implement and use the approved configurations.</p>
     </td>
@@ -867,6 +867,42 @@ To satisfy SSDF PW.6 in a build and deploy context using open-source tools, the 
       <p> Block commits/builds that contain secrets; run in CI and as pre-commit hooks.</p>
     </td>
   </tr>
+   <tr>
+    <td>
+      <a href="https://reproducible-builds.org">Reproducible Builds</a>
+      <p>Provides methods, guidelines, and supporting tools for deterministic builds, ensuring integrity and verifiability of source-to-binary outputs.</p>
+    </td>
+  </tr> 
+   <tr>
+    <td>
+      <a href="https://bazel.build">Bazel</a>
+      <p>Build system with hermetic (sandboxed) execution and explicit dependency tracking, preventing hidden or unverified dependencies.</p>
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <a href="https://mesonbuild.com">Meson</a>
+      <p>High-speed, deterministic build system that supports reproducibility and strict configuration-as-code.</p>
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <a href="https://maven.apache.org">Apache Maven</a>
+      <p>Enforces controlled dependency resolution and supports reproducible builds for Java and JVM-based projects.</p>
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <a href="https://www.yoctoproject.org">Yocto Project</a>
+      <p>Creates reproducible, controlled build environments for embedded Linux images, preventing environmental drift.</p>
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <a href="https://source.android.com">AOSP Build System</a>
+      <p>Uses prebuilt toolchains and sandboxed environments for secure, reproducible Android builds.</p>
+    </td>
+  </tr>  
  </table>
     
 
