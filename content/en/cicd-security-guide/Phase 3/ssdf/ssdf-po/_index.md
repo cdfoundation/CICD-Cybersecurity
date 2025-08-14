@@ -53,7 +53,7 @@ To satisfy SSDF PO.1 in a post-deployment context using open-source tools, the f
   </tr>
    <tr>
     <td>
-      <a href="https://Ortelius.io">Ortelius</a>
+      <a href="https://Ortelius.io">Ortelius Evidence Store</a>
       <p> Associate and version security requirement metadata per service and deployment, enabling continuous visibility.</p>
     </td>
   </tr>

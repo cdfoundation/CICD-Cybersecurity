@@ -38,7 +38,7 @@ To satisfy SSDF PS.1 in a post-deployment context using open-source tools, the f
       <p>PS.1.1: Store all forms of code including source code, executable code, and configuration-as-code based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.</p>
     </td>
     <td>
-      <a href="https://docs.sigstore.dev/cosign/"> cosign Sigstore</a>
+      <a href="https://docs.sigstore.dev/cosign/"> Cosign Sigstore</a>
       </a>
       <p>Sign and verify container images, binaries, and other artifacts.</p>
     </td>
@@ -117,7 +117,7 @@ To satisfy SSDF PS.1 in a post-deployment context using open-source tools, the f
   </tr> 
  <tr>
     <td>
-      <a href="https://ortelius.io">Ortelius</a>
+      <a href="https://ortelius.io">Ortelius Evidence Store</a>
       <p>Tracks which version of a service is deployed where, and links to its signed SBOM.</p>
     </td>
   </tr> 
