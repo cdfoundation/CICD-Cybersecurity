@@ -177,6 +177,24 @@ To satisfy SSDF RV.2 in a code and prebuild context using open-source tools, the
       <p>Exposes the blast radius of each vulnerability across live environments.</p>
     </td> 
   </tr> 
+<tr>
+      <td>
+      <a href="https://vuls.io/">Vulns</a>
+      <p>Agentless vulnerability scanner that analyzes installed packages and maps to CVE data with CVSS scoring. Provides severity, exploitability, and remediation recommendations; can integrate with patch workflows.</p>
+    </td> 
+  </tr> 
+<tr>
+      <td>
+      <a href="https://dependencytrack.org/">Dependency-Track</a>
+      <p>Continuous SBOM-based component analysis platform. Enriches vulnerabilities with metadata (severity, exploitability, policy impact).</p>
+    </td> 
+  </tr> 
+<tr>
+      <td>
+      <a href="https://cyclonedx.org/capabilities/vex/">VEX</a>
+      <p>VEX bridges the gap between identifying potential vulnerabilities (SBOM) and determining their actual risk in a specific environment. Allows organizations to prioritize remediation efforts by focusing on vulnerabilities that are truly exploitable and require immediate attention.</p>
+    </td> 
+  </tr> 
 </table>
   
 <br>
