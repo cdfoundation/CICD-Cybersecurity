@@ -54,7 +54,7 @@ To satisfy SSDF RV.1 in a code and prebuild context using open-source tools, the
   <tr>
       <td>
       <a href="https://semgrep.dev">Semgrep</a>
-      <p>Rule-based SAST in PRs/CI for previously undetected vulnerabilities.</p>
+      <p>Rule-based SAST in PRs/CI for previously undetected vulnerabilities. Static analysis tool used for searching code, finding bugs, and enforcing code standards at various stages of the development cycle (editor, commit, and continuous integration - CI). </p>
     </td> 
   </tr>
   <tr>
@@ -79,6 +79,18 @@ To satisfy SSDF RV.1 in a code and prebuild context using open-source tools, the
       <td>
       <a href="https://github.com/anchore/grype">Grype</a>
       <p>Scan source directories or Software Bill of Materials (from Syft) for vulnerabilities. Accurate matching via SBOM + flexible CI integration.</p>
+    </td> 
+  </tr>  
+ <tr>
+      <td>
+      <a href="https://www.sonarsource.com/">SonarQube Community</a>
+      <p>Developers can continuously inspect code quality to detect bugs, code smells, and security vulnerabilities without executing the code.</p>
+    </td> 
+  </tr>  
+<tr>
+      <td>
+      <a href="https://codeql.github.com/">CodeQL</a>
+      <p>Developed by GitHub, developers and security researchers can analyze codebases for security vulnerabilities, bugs, and other code quality issues.</p>
     </td> 
   </tr>  
 </table>
