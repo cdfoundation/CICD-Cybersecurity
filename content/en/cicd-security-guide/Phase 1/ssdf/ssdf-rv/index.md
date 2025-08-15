@@ -92,7 +92,13 @@ To satisfy SSDF RV.1 in a code and prebuild context using open-source tools, the
       <a href="https://codeql.github.com/">CodeQL</a>
       <p>Developed by GitHub, developers and security researchers can analyze codebases for security vulnerabilities, bugs, and other code quality issues.</p>
     </td> 
-  </tr>  
+  </tr> 
+<tr>
+      <td>
+      <a href="https://bandit.readthedocs.io/">Bandit (Python)</a>
+      <p>A static analysis tool designed to identify common security vulnerabilities in Python code.</p>
+    </td> 
+  </tr> 
 </table>
     
 
