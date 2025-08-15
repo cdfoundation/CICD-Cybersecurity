@@ -99,6 +99,30 @@ To satisfy SSDF RV.1 in a code and prebuild context using open-source tools, the
       <p>A static analysis tool designed to identify common security vulnerabilities in Python code.</p>
     </td> 
   </tr> 
+<tr>
+      <td>
+      <a href="https://brakemanscanner.org/">Brakeman (Rails)</a>
+      <p>Vulnerability scanner specifically designed for Ruby on Rails applications.</p>
+    </td> 
+  </tr> 
+<tr>
+      <td>
+      <a href="https://find-sec-bugs.github.io/">FindSecBugs (Java)</a>
+      <p>Static code analysis tool designed for Java applications, used to identify potential security vulnerabilities within the code.</p>
+    </td> 
+  </tr> 
+<tr>
+      <td>
+      <a href="https://gitleaks.io/">Gitleaks</a>
+      <p>Prevent hardcoded secrets in code and configs.</p>
+    </td> 
+  </tr> 
+<tr>
+      <td>
+      <a href="https://www.conftest.dev/">Conftest</a>
+      <p>Conftest is a utility to help you write tests against structured configuration data.</p>
+    </td> 
+  </tr> 
 </table>
     
 
