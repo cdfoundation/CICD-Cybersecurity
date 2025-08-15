@@ -253,5 +253,83 @@ To satisfy SSDF RV.3 in a code and prebuild context using open-source tools, the
       <p>Monitor repo hygiene signals (Branch protection, dependency-pinning, fuzzing, etc.) and bake improvements into SDLC. Preventative controls aligned to root-cause themes.</p>
     </td> 
   </tr>
+<tr>
+      <td>
+      <a href="https://codeql.github.com/">Codeql</a>
+      <p>Query codebases to trace vulnerability origins (e.g., find all injection points).</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://www.sonarsource.com/">SonarQube Community</a>
+      <p>Identifies code quality/security rule violations that may indicate systemic coding issues.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://www.defectdojo.org/">DefectDojo</a>
+      <p>Aggregates scanner results so patterns in vulnerability types are easier to spot.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://dependencytrack.org/">Dependency-Track</a>
+      <p>Tracks vulnerable components and shows recurring dependency-related issues.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/anchore/grype">Grype</a>
+      <p>A vulnerability scanner for container images and file systems.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/anchore/syft">Syft</a>
+      <p>Correlates SBOMs across releases to identify repeated dependency issues.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://bandit.readthedocs.io/">Bandit (Python)</a>
+      <p>Language-specific security scanner to identify same flaw across multiple files.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://brakemanscanner.org/">Brakeman (Rails)</a>
+      <p>Finds repeated insecure coding practices in Rails apps.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://pre-commit.com/">pre-commit</a>
+      <p>Enforces code quality/security hooks before commits.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://typicode.github.io/husky/">Husky</a>
+      <p>Git hook automation for JavaScript/TypeScript projects to enforce checks.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://www.checkov.io/">Checkov</a>
+      <p>Prevents misconfigurations from being deployed by embedding into existing developer workflows.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://aquasecurity.github.io/tfsec/">tfsec</a>
+      <p>Adds IaC guardrails to prevent insecure configurations at commit time.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://kics.io/">kics</a>
+      <p>Finds security vulnerabilities, compliance issues, and infrastructure misconfigurations.</p>
+    </td> 
+  </tr>
 </table>
 
