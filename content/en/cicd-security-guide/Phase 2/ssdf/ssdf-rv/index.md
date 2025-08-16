@@ -49,6 +49,72 @@ To satisfy SSDF RV.1 in a build and deploy context using open-source tools, the 
       <p>Continuously synchronizes Software Bill of Material versions of built artifacts to OSV.dev reporting on vulnerabilities discovered post-build.</p>
     </td> 
   </tr>
+<tr>
+      <td>
+      <a href="https://osv.dev">OSV Vulnerability Database</a>
+      <p>Queries the OSV.dev vulnerability database for open-source package CVEs.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/anchore/grype">Grype</a>
+      <p>Scans container images and SBOMs for known vulnerabilities.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://vulners.com">Vulners CLI/API</a>
+      <p>Aggregates multiple public vulnerability feeds.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/intel/cve-bin-tool">cve-bin-tool</a>
+      <p>Checks installed binaries for known CVEs.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/semgrep/semgrep">Semgrep</a>
+      <p>SAST for multiple languages; customizable rules. Run on merge to main branch.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/PyCQA/bandit">Bandit</a>
+      <p>Python security linting. Add to Python project build stage.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://www.sonarsource.com/products/sonarqube/">SonarQube Community Edition</a>
+      <p>SAST & quality checks. Run in build step; block deploy if high-severity issues found.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://www.zaproxy.org">OWASP ZAP</a>
+      <p>DAST; quick passive scan on deployed staging app.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://docs.github.com/en/code-security/">GitHub Security Policy</a>
+      <p>Public policy location for reporters.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://disclose.io">Disclose.io templates</a>
+      <p>Vulnerability Disclosure Program.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/ossf/oss-vulnerability-guide">OpenSSF Vulnerability Disclosure Guide</a>
+      <p>Playbook for implementing disclosure.</p>
+    </td> 
+  </tr>
 
 </table>
     
