@@ -250,5 +250,71 @@ To satisfy SSDF RV.3 in a build and deploy context using open-source tools, the 
       <p>Write org-specific rules to detect the root-cause pattern; scan repos to eradicate classes of bugs.</p>
     </td>
   </tr>
+<tr>
+      <td>
+      <a href="https://codeql.github.com">CodeQL</a>
+      <p>Deep code queries to identify the precise coding constructs leading to vulns.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://www.sonarsource.com/products/sonarqube/downloads/">SonarQube CE</a>
+      <p>Provides issue traces, rule violations, and hotspots including root cause indicators.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/DefectDojo/django-DefectDojo">DefectDojo</a>
+      <p>Tracks vulns + metadata, allows attaching root cause notes per issue.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/DependencyTrack/dependency-track">Dependency-Track</a>
+      <p>Long-term tracking of vulnerable components to see recurring dependency issues.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/grafeas/grafeas">Grafeas</a>
+      <p>Metadata API for tracking security events across builds/releases.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/fkie-cad/cwe_checker">cwe-checker</a>
+      <p>Detects weakness patterns (CWEs) in binaries, useful for compiled artifacts.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/joernio/joern">Joern</a>
+      <p>Open-source code analysis platform for hunting bug patterns at scale.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://owaspsamm.org">OpenSAMM (OWASP Software Assurance Maturity Model)</a>
+      <p>Framework to improve secure dev lifecycle practices.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/ossf/scorecard">OpenSSF Scorecards</a>
+      <p>Automates repo security health checks (branch protection, dependency pinning, CI hardening).</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/usnistgov/OSCAL">OSCAL (NIST)</a>
+      <p>Standard for documenting compliance + SDLC security improvements.</p>
+    </td>
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/ossf/allstar">Allstar (by OpenSSF)</a>
+      <p>Enforces security policies across GitHub orgs/repos.</p>
+    </td>
+  </tr>
 </table>
 
