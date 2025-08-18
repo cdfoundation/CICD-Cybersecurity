@@ -164,6 +164,54 @@ To satisfy SSDF RV.2 in a build and deploy context using open-source tools, the 
       <p>Exposes the blast radius of each vulnerability across live environments.</p>
     </td> 
   </tr>
+<tr>
+      <td>
+      <a href="https://github.com/DefectDojo/django-DefectDojo">DefectDojo</a>
+      <p>Centralizes vulnerabilities from SAST/DAST/SCA tools; adds risk scoring.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/DependencyTrack/dependency-track">OWASP Dependency-Track</a>
+      <p>SBOM-based vuln tracking, includes CVSS scoring and metadata.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://www.first.org/epss/">EPSS (Exploit Prediction Scoring System)</a>
+      <p>Rates probability of exploitation for CVEs (risk-based prioritization).</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://vulners.com">Vulners API</a>
+      <p>Provides exploit links, PoCs, and additional context per CVE.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://www.first.org/cvss/calculator/">CVSS Calculator (FIRST)</a>
+      <p>Standardized impact scoring to support triage decisions.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://sigstore.dev">Sigstore / Cosign</a>
+      <p>Sign remediated builds before deploying (trusted delivery mechanism).</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://coreruleset.org">OWASP ModSecurity CRS</a>
+      <p>Temporary WAF rules to mitigate unpatched web vulns.</p>
+    </td> 
+  </tr>
+<tr>
+      <td>
+      <a href="https://github.com/falcosecurity/falco">Falco</a>
+      <p>Runtime detection and mitigation for unpatched container/Kubernetes issues.</p>
+    </td> 
+  </tr>
 </table>
   
 <br>
