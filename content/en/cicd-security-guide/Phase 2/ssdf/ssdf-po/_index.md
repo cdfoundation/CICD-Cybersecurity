@@ -100,6 +100,12 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
       <p>OPA-based admission controller to enforce compliance on Kubernetes clusters before allowing deployment.</p>
     </td>
   </tr>
+  <tr>
+    <td>
+      <a href="https://conforma.dev/">Conforma</a>
+      <p>Securely verify supply chain artifacts and enforce policies about how they were built and tested. Built with Sigstore and Open Policy Agent, it can verify SLSA provenance compliance with extensible policies.</p>
+    </td>
+  </tr>
   </table>
 
 
