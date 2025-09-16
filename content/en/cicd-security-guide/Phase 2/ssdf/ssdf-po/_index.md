@@ -426,7 +426,7 @@ To satisfy SSDF PO.5 in a Build and Deploy context using open-source tools, the 
     <tr>
     <td>
       <a href="https://tekton.dev/">Tekton Pipelines</a>
-      <p>GitOps deployment with RBAC and signed commit enforcement for production deploys.</p>
+      <p>Kubernetes-native CI/CD framework with RBAC.</p>
     </td>
   </tr>
    <tr>
