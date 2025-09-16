@@ -34,7 +34,7 @@ To satisfy SSDF PO.1 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td rowspan="50">
-      <p>P.O.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
+      <p>PO.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
       <p>PO.1.2 Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time. </p>
     </td>
     </tr>
