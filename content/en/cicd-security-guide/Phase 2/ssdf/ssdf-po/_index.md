@@ -267,6 +267,12 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
       <p>Generates SBOMs for build artifacts to track components used in the toolchain.</p>
      </td>
   </tr> 
+  <tr>
+    <td>
+      <a href="https://hermetoproject.github.io/hermeto/">Hermeto</a>
+      <p>Pre-fetches dependencies for hermetic builds, generates SBOMs, and ensures reproducible, network-isolated container builds with verifiable checksums.</p>
+     </td>
+  </tr>
    <tr>
   <td>
      <a href="https://github.com/quay/clair">Clair</a>
@@ -296,7 +302,7 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
       <a href="https://www.elastic.co/beats/auditbeat">Auditbeat</a>
       <p>Monitors and logs CI/CD toolchain activity for integrity and compliance.</p>
      </td>
-  </tr>     
+  </tr>
  </table>
 
 
