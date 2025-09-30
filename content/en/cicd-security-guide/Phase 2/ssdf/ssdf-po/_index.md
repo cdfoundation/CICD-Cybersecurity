@@ -1,15 +1,15 @@
 ---
-title: "Protect the Organization (PO)"
-linkTitle: "Protect the Organization (PO)"
+title: "Prepare the Organization (PO)"
+linkTitle: "Prepare the Organization (PO)"
 weight: 5
 description: >
- Protect the Organization (PO) for the Build and Deploy CI/CD Steps
+ Prepare the Organization (PO) for the Build and Deploy CI/CD Steps
 ---
 
 
 
 
-### Protect the Organization (PO)
+### Prepare the Organization (PO)
 Organizations should ensure that their people, processes, and technology are prepared to perform secure software development at the organization level. Many organizations will find some PO practices to also be applicable to subsets of their software development, like individual development groups or projects.
 
 <br>
@@ -38,7 +38,7 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
   </tr>
   <tr>
     <td rowspan="50">
-      <p>P.O.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
+      <p>PO.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
       <p>PO.1.2 Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time. </p>
     </td>
     </tr>
@@ -98,6 +98,12 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
     <td>
       <a href="https://sigstore.dev/">Sigstore  Cosign</a>
       <p>OPA-based admission controller to enforce compliance on Kubernetes clusters before allowing deployment.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://conforma.dev/">Conforma</a>
+      <p>Securely verify supply chain artifacts and enforce policies about how they were built and tested. Built with Sigstore and Open Policy Agent, it can verify SLSA provenance compliance with extensible policies.</p>
     </td>
   </tr>
   </table>
@@ -261,6 +267,12 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
       <p>Generates SBOMs for build artifacts to track components used in the toolchain.</p>
      </td>
   </tr> 
+  <tr>
+    <td>
+      <a href="https://hermetoproject.github.io/hermeto/">Hermeto</a>
+      <p>Pre-fetches dependencies for hermetic builds, generates SBOMs, and ensures reproducible, network-isolated container builds with verifiable checksums.</p>
+     </td>
+  </tr>
    <tr>
   <td>
      <a href="https://github.com/quay/clair">Clair</a>
@@ -290,7 +302,7 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
       <a href="https://www.elastic.co/beats/auditbeat">Auditbeat</a>
       <p>Monitors and logs CI/CD toolchain activity for integrity and compliance.</p>
      </td>
-  </tr>     
+  </tr>
  </table>
 
 
@@ -420,7 +432,7 @@ To satisfy SSDF PO.5 in a Build and Deploy context using open-source tools, the 
     <tr>
     <td>
       <a href="https://tekton.dev/">Tekton Pipelines</a>
-      <p>GitOps deployment with RBAC and signed commit enforcement for production deploys.</p>
+      <p>Kubernetes-native CI/CD framework with RBAC.</p>
     </td>
   </tr>
    <tr>

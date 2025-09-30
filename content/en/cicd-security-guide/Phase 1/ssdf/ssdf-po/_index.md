@@ -1,13 +1,13 @@
 ---
-title: "Protect the Organization (PO)"
-linkTitle: "Protect the Organization (PO)"
+title: "Prepare the Organization (PO)"
+linkTitle: "Prepare the Organization (PO)"
 weight: 5
 description: >
- Protect the Organization (PO) CI/CD Steps
+ Prepare the Organization (PO) CI/CD Steps
 ---
 
 
-## Protect the Organization (PO)
+## Prepare the Organization (PO)
 
 Organizations should ensure that their people,
 processes, and technology are prepared to perform secure software development at the

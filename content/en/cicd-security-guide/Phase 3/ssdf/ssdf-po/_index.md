@@ -1,13 +1,13 @@
 ---
-title: "Protect the Organization (PO)"
-linkTitle: "Protect the Organization (PO)"
+title: "Prepare the Organization (PO)"
+linkTitle: "Prepare the Organization (PO)"
 weight: 5
 description: >
- Protect the Organization (PO) Post Deployment CI/CD Steps
+ Prepare the Organization (PO) Post Deployment CI/CD Steps
 ---
 
 
-### Protect the Organization (PO)
+### Prepare the Organization (PO)
 Organizations should ensure that their people, processes, and technology are prepared to perform secure software development at the organization level. Many organizations will find some PO practices to also be applicable to subsets of their software development, like individual development groups or projects.
 
 <br>
@@ -34,7 +34,7 @@ To satisfy SSDF PO.1 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td rowspan="50">
-      <p>P.O.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
+      <p>PO.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
       <p>PO.1.2 Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time. </p>
     </td>
     </tr>

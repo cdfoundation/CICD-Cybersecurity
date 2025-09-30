@@ -169,13 +169,19 @@ To satisfy SSDF PW.1 in a build and deploy context using open-source tools, the 
     <td>
       <a href="https://www.openpolicyagent.org/">OPA</a>
       <p>Enforce security design requirements at build time (e.g., dependency approval, CVE thresholds). Apply consistent policy enforcement from build pipelines to runtime.</p>
-   </td> 
+   </td>
  </tr>
  <tr>
     <td>
       <a href=" https://spiffe.io/">SPIFFE/SPIRE</a>
       <p>Ensure that deployed workloads meet security requirements for mutual authentication and zero trust and bind workload identity to build-time provenance for deployment integrity.</p>
-   </td> 
+   </td>
+ </tr>
+ <tr>
+    <td>
+      <a href="https://hermetoproject.github.io/hermeto/">Hermeto</a>
+      <p>Pre-fetches dependencies for hermetic builds, generates SBOMs, and ensures reproducible builds with explicit dependency tracking and verifiable checksums.</p>
+   </td>
  </tr> 
  <tr>
    <td>
@@ -902,7 +908,13 @@ To satisfy SSDF PW.6 in a build and deploy context using open-source tools, the 
       <a href="https://source.android.com">AOSP Build System</a>
       <p>Uses prebuilt toolchains and sandboxed environments for secure, reproducible Android builds.</p>
     </td>
-  </tr>  
+  </tr>
+  <tr>
+    <td>
+      <a href="https://hermetoproject.github.io/hermeto/">Hermeto</a>
+      <p>CLI tool for pre-fetching dependencies to support hermetic builds, generating SBOMs, and ensuring network-isolated container builds with reproducible dependency management.</p>
+    </td>
+  </tr>
  </table>
     
 
