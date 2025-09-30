@@ -269,6 +269,11 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
   </tr> 
   <tr>
     <td>
+      <a href="https://konflux-ci.dev/docs/building/hermetic-builds/">Hermetic builds with Konflux-ci</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://hermetoproject.github.io/hermeto/">Hermeto</a>
       <p>Pre-fetches dependencies for hermetic builds, generates SBOMs, and ensures reproducible, network-isolated container builds with verifiable checksums.</p>
      </td>
@@ -297,6 +302,12 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
       <p>agent.org/	Enforces security rules on CI/CD and deployment workflows to prevent unsafe actions</p>
      </td>
   </tr> 
+  <tr>
+    <td>
+      <a href="https://konflux-ci.dev/">Konflux-ci software factory for Tekton</a>
+      <p>Implements the <a href="https://in-toto.io/docs/what-is-in-toto/">In-toto framework</a> using pipelines-as-code</p>
+    </td>
+  </tr>
   <tr>
     <td>
       <a href="https://www.elastic.co/beats/auditbeat">Auditbeat</a>
