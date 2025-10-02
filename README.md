@@ -80,6 +80,7 @@ The effort should be open to all involved in the field of CI/CD, AI, and Securit
 * Ann Marie Fred ([@amfred](https://github.com/amfred)), SPSE at Red Hat
 * Minyi Chen ([@minyihc](https://github.com/minyihc)), Fidelity Investments
 * Rajiv Singh ([@iamrajiv](https://github.com/iamrajiv)), A.P. Moller - Maersk
+* Christine Belzie ([@CBID2](https://github.com/CBID2)), Open Source Contributor
 
 ## New Members
 
