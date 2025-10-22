@@ -1,9 +1,9 @@
 +++
-title = "CI/CD Cybersecurity SIG | CD Foundation"
-linkTitle = "CI/CD Cybersecurity SIG"
-description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle from the CD Foundation's CI/CD Cybersecurity Special Interest Group."
+title = "CI/CD Cybersecurity Guide | CD Foundation"
+linkTitle = "CI/CD Cybersecurity Guide"
+description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle from the CD Foundation."
 keywords = ["CI/CD security", "DevSecOps", "cybersecurity", "continuous integration", "continuous delivery", "software security", "pipeline security", "NIST framework", "secure software development", "CD Foundation", "DevOps security", "container security", "vulnerability management"]
-images = ["https://cd.foundation/wp-content/uploads/sites/78/2023/07/CDF-Home-Social-1024x536.png"]
+images = ["https://cd.foundation/wp-content/uploads/sites/35/2023/07/CDF-Home-Social-1024x536.png"]
 author = "CD Foundation CI/CD Cybersecurity SIG"
 +++
 
@@ -15,7 +15,7 @@ author = "CD Foundation CI/CD Cybersecurity SIG"
 }
 
 .td-navbar {
-	height: 64px;
+	height: 64 px;
 }
 
 .td-footer {
@@ -26,7 +26,7 @@ author = "CD Foundation CI/CD Cybersecurity SIG"
 {{< blocks/cover title="CI/CD Cybersecurity SIG" height="min" >}}
 <div class="mx-auto">
 	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/cicd-security-guide" >}}">
-		Learn More <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+		CI/CD Cybersecurity Guide <i class="fas fa-arrow-alt-circle-right ml-2"></i>
 	</a>
 </div>
 
@@ -38,12 +38,13 @@ Embed cybersecurity into your CI/CD pipelines to establish robust industry-stand
 {{% cdf/pad %}}
 <strong>CI/CD Cybersecurity SIG from The Continuous Delivery Foundation</strong>
 
-The CI/CD Cybersecurity SIG will play a pivotal role in advancing CI/CD security and supporting organizations in meeting modern cybersecurity demands. With focused efforts on integration frameworks, best practices, and emerging tooling, this SIG will address the critical need to embed security into every stage of the CI/CD pipeline, ensuring a resilient and secure software development lifecycle.
+This CI/CD Cybersecurity Guide was put together by the Continuous Delivery Foundation’s CI/CD Cybersecurity SIG, which plays a pivotal role in advancing CI/CD security and supporting organizations in meeting modern cybersecurity demands. The group focuses its efforts on integration frameworks, best practices, and emerging tooling, to address the critical need to embed security into every stage of the CI/CD pipeline, ensuring a resilient and secure software development lifecycle.
 
-The mission of the SIG is to identify open-source security tools that seamlessly integrate into various stages of the CI/CD pipeline, enhancing cybersecurity throughout the software development lifecycle with speed and efficiency. As vulnerabilities continue to rise, it's crucial to evolve pipelines with robust security measures that establish stronger safeguards, protecting software from costly and devastating cyber breaches.
-
-[Continuous Delivery Foundation](https://cd.foundation/) (CDF) serves as the vendor-neutral home of many of the fastest-growing projects for continuous integration/continuous delivery (CI/CD). It fosters vendor-neutral collaboration between the industry’s top developers, end users and vendors to further CI/CD practices and industry specifications. Its mission is to grow and sustain projects that are part of the broad and growing continuous delivery ecosystem. The CDF is part of the [Linux Foundation](https://www.linuxfoundation.org/) home to both the [CNCF](https://www.cncf.io/) and [OpenSSF](https://openssf.org).
-
+	<div class="mx-auto">
+	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "https://cd.foundation/cybersecurity/" >}}">
+		More about the SIG <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+	</a>
+	</div>
 
 {{% /cdf/pad %}}
 {{% /blocks/section %}}
@@ -51,22 +52,24 @@ The mission of the SIG is to identify open-source security tools that seamlessly
 
 {{% blocks/lead color="orange" %}}
 
-<h3>The Phases of CI/CD where Security is Needed</h3>
+<h3>Three Cybersecurity Phases</h3>
+
+	CI/CD Cybersecurity Guide is segmented into three 3 major chapters:
 
 {{% /blocks/lead %}}
 
 
 {{< blocks/section type="row" color="white">}}
 
-{{% blocks/feature icon="fa-solid fa-code" title="Code and Prebuild" url="cicd-security-guide/phase-1/" %}}
+{{% blocks/feature icon="fa-solid fa-code" title="1. Code and Prebuild" url="cicd-security-guide/phase-1/" %}}
 Building security into Code and Prebuild steps of the CI/CD pipeline.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-solid fa-hammer" title="Build and Deploy" url="cicd-security-guide/phase-2/" %}}
+{{% blocks/feature icon="fa-solid fa-hammer" title="2. Build and Deploy" url="cicd-security-guide/phase-2/" %}}
 Building security into the Build and Deploy steps of the CI/CD pipeline.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-solid fa-triangle-exclamation" title="Post Deploy" url="cicd-security-guide/phase-3/" %}}
+{{% blocks/feature icon="fa-solid fa-triangle-exclamation" title="3. Post Deploy" url="cicd-security-guide/phase-3/" %}}
 Building security into Post Deploy steps such as testing, SBOM generation, and continuous vulnerabiity management.
 {{% /blocks/feature %}}
 
@@ -75,97 +78,28 @@ Building security into Post Deploy steps such as testing, SBOM generation, and c
 
 
 {{% blocks/lead color="orange" %}}
-
-<h3>Who Does CI/CD Cybersecurity Help?</h3>
-
-{{% /blocks/lead %}}
-
-{{% blocks/section type="row" color="white" %}}
-{{% cardpane %}}
-{{< blocks/feature icon="fa-globe-americas" title="As CEO" >}}
-
-{{% cdf/pad %}}“Identifying vulnerabilities early in the CI/CD process isn’t just about security—it’s about efficiency. It saves time, reduces costs, and prevents disruptions that can cripple a business. ”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{< blocks/feature icon="fa-globe-americas" title="As CEO" >}}
-
-{{% cdf/pad %}}“Security is the foundation of customer trust. Integrating it into our CI/CD pipelines ensures we deliver not just great products, but also the peace of mind our customers deserve.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{< blocks/feature icon="fa-globe-americas" title="As CEO" >}}
-
-{{% cdf/pad %}}“The faster we innovate, the more important it is to secure our pipelines. Integrated security allows us to move quickly without cutting corners on safety.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{% /cardpane %}}
-{{% cardpane %}}
-{{< blocks/feature icon="fa-bolt" title="As CTO" >}}
-
-{{% cdf/pad %}}“Incorporating security into CI/CD pipelines isn’t just a best practice—it’s a competitive advantage. It allows us to deliver secure, reliable products faster than anyone else in the market.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{< blocks/feature icon="fa-bolt" title="As CTO" >}}
-
-{{% cdf/pad %}}“As a leader, it’s my responsibility to ensure our development processes are not only efficient but also secure. Integrating security into CI/CD reflects our commitment to excellence at every stage.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{< blocks/feature icon="fa-bolt" title="As CTO" >}}
-
-{{% cdf/pad %}}“Cyber threats evolve constantly. By embedding security into our CI/CD pipelines, we stay one step ahead, proactively safeguarding our products, customers, and reputation”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{% /cardpane %}}
-{{% cardpane %}}
-{{< blocks/feature icon="fa-capsules" title="As a Product Manager" >}}
-
-{{% cdf/pad %}}“I strive to balance speed with quality. Security in CI/CD ensures we can release quickly without sacrificing the integrity of our product.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{< blocks/feature icon="fa-calendar" title="As a Delivery Manager" >}}
-
-{{% cdf/pad %}}“By embedding security into the CI/CD process, we eliminate last-minute bottlenecks and streamline delivery, allowing us to keep pace with the market while staying secure.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{< blocks/feature icon="fa-bullhorn" title="As a DevOps Engineer" >}}
-
-{{% cdf/pad %}}“DevOps is about delivering value quickly and safely. Integrating security into CI/CD pipelines ensures we achieve both, without compromise.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{% /cardpane %}}
-{{% cardpane %}}
-{{< blocks/feature icon="fa-fire" title="As CISO" >}}
-
-{{% cdf/pad %}}“Meeting regulatory standards is non-negotiable, and integrating security into CI/CD pipelines ensures we maintain compliance while staying agile and innovative.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{< blocks/feature icon="fa-clipboard-check" title="As Production Control" >}}
-
-{{% cdf/pad %}}“Integrating security into CI/CD pipelines helps us deliver stable, secure releases, minimizing disruptions in production and ensuring smooth operations.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{< blocks/feature icon="fa-coffee" title="As a Software Developer" >}}
-
-{{% cdf/pad %}}“I need security in the pipeline because software dependencies are so complex that I cannot prevent every vulnerability from getting through even with the best development practices.”{{% /cdf/pad %}}
-{{< /blocks/feature >}}
-{{% /cardpane %}}
-
-{{% /blocks/section %}}
-
-{{% blocks/lead color="orange" %}}
-<h3>Get Involved in the SIG</h3>
+<h3>Contribute to the Guide</h3>
 {{% /blocks/lead %}}
 {{% blocks/section type="section" color="white" %}}
 {{% cdf/pad %}}
-Join the SIG and bring your knowledge to build cybersecurity into CI/CD workflows.
+Join us and bring your knowledge to build cybersecurity into CI/CD workflows.
 
-- [Join the GitHub Repository](https://github.com/cdfoundation/CICD-Cybersecurity/) -  Add your name to the Read.me.
-- [Add yourself to the Mailing List](https://lists.cd.foundation/g/CICD-Cybersecurity) - Signup to be notified of meetings and events.
-- [Join the CDF Slack Channel](https://cdeliveryfdn.slack.com/?redir=%2Farchives%2FC082V7WN9K4%3Fname%3DC082V7WN9K4) -  Join the CDF Slack Channel and the sig-cicd-cybersecurity thread for daily information.
-- [Attend a Meetup or Event](/resources/) - Join or start a Meetup in your local area. Bring this discussion to a Jenkins Meetups. Submit a talk at other Linux Foundation events.
+- [Join the GitHub Repository](https://github.com/cdfoundation/CICD-Cybersecurity/): Add your name to the Read.me.
+- [Add yourself to the Mailing List](https://lists.cd.foundation/g/CICD-Cybersecurity): Signup to be notified of meetings and events.
+- [Join the CDF Slack Channel](https://cdeliveryfdn.slack.com/?redir=%2Farchives%2FC082V7WN9K4%3Fname%3DC082V7WN9K4): Join the CDF Slack Channel and the sig-cicd-cybersecurity thread for daily information.
+- [Attend a Meetup or Event](/resources/): Join or start a Meetup in your local area. Bring this discussion to a Jenkins Meetups. Submit a talk at other Linux Foundation events.
 {{% /cdf/pad %}}
 
 {{% /blocks/section %}}
 
 {{% blocks/lead color="orange" %}}
-<h3>Learn About CI/CD Cybersecurity</h3>
+<h3>About the CD Foundation</h3>
 {{% /blocks/lead %}}
 {{% blocks/section type="section" color="white" %}}
 {{% cdf/pad %}}
-Explore the information based on what you want to learn:
 
-- [Phase One: Code and PreBuild](cicd-security-guide/phase-1 ) - Tools and practices for adding security to repos, code and prebuild CI/CD steps
-- [Phase Two: Build and Deploy](cicd-security-guide/phase-2) - Tools and practices for adding security to your build and deploy CI/CD steps.
-  your team's current state.
-- [Phase Three: Post Deploy](cicd-seurity-guide/phase-3) -  Tools and practices for adding security to your post deploy CI/CD steps for continuous vulnerability management and control.
+[Continuous Delivery Foundation (CDF)](https://cd.foundation/) serves as the vendor-neutral home of many of the fastest-growing projects for continuous integration/continuous delivery (CI/CD). It fosters vendor-neutral collaboration between the industry’s top developers, end users and vendors to further CI/CD practices and industry specifications. Its mission is to grow and sustain projects that are part of the broad and growing continuous delivery ecosystem. The CDF is part of [https://www.linuxfoundation.org/](https://cd.foundation/) home to both the [CNCF](https://www.cncf.io/) and [OpenSSF](https://openssf.org/).
+
 
 {{% /cdf/pad %}}
 
