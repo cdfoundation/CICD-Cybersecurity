@@ -45,8 +45,7 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
    <tr>
     <td>
       <a href="https://www.openpolicyagent.org/"> Open Policy Agent</a>
-      </a>
-      <p>Enforces security and compliance policies during build and deployment (e.g., blocking deployments if SBOM scan fails).</p>
+      <p>General-purpose policy engine using Rego to enforce policies across services, CI/CD, and infrastructure.</p>
     </td>
   </tr>
   <tr>
@@ -64,7 +63,6 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
      <tr>
     <td>
       <a href="https://kyverno.io/"> Kyverno</a>
-      </a>
       <p>Kubernetes-native policy engine to enforce secure configurations at deploy time.</p>
     </td>
   </tr>
@@ -83,8 +81,7 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
     </tr>
      <tr>
     <td>
-      <a href="    https://github.com/quay/clair">Clair</a>
-      </a>
+      <a href="https://github.com/quay/clair">Clair</a>
       <p>Static analysis for container images to ensure they meet security requirements before push to registry.</p>
     </td>
   </tr>
@@ -96,8 +93,8 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
   </tr>
   <tr>
     <td>
-      <a href="https://sigstore.dev/">Sigstore  Cosign</a>
-      <p>OPA-based admission controller to enforce compliance on Kubernetes clusters before allowing deployment.</p>
+      <a href="https://sigstore.dev/">Sigstore Cosign</a>
+      <p>Sign and verify container images and other build artifacts to ensure integrity and provenance.</p>
     </td>
   </tr>
   <tr>
@@ -270,6 +267,7 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
   <tr>
     <td>
       <a href="https://konflux-ci.dev/docs/building/hermetic-builds/">Hermetic builds with Konflux-ci</a>
+      <p>Build with pinned, pre-fetched dependencies in isolated environments to enable reproducible, verifiable builds.</p>
     </td>
   </tr>
   <tr>
@@ -299,7 +297,7 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
   <tr>
     <td>
       <a href="https://www.openpolicyagent.org/">Open Policy Agent (OPA)</a>
-      <p>agent.org/	Enforces security rules on CI/CD and deployment workflows to prevent unsafe actions</p>
+      <p>Enforce policy as code in CI/CD and deployment workflows using Rego to prevent unsafe actions.</p>
      </td>
   </tr> 
   <tr>
@@ -372,7 +370,7 @@ To satisfy SSDF PO.4 in a Build and Deploy context using open-source tools, the 
   </tr>
   <tr>
     <td>
-      <a href="    https://github.com/anchore/grype">Grype</a>
+      <a href="https://github.com/anchore/grype">Grype</a>
       <p>Maintains consistent vulnerability scanning for all build artifacts.</p>
     </td>
   </tr>
@@ -455,7 +453,7 @@ To satisfy SSDF PO.5 in a Build and Deploy context using open-source tools, the 
    <tr>
     <td>
       <a href="https://www.vaultproject.io/">Vault by HashiCorp</a>
-      <p>Protects secrets in build and deploy environments, preventing leakage in pipelines</p>
+      <p>Protects secrets in build and deploy environments, preventing leakage in pipelines.</p>
     </td>
   </tr>
    <tr>
@@ -472,7 +470,7 @@ To satisfy SSDF PO.5 in a Build and Deploy context using open-source tools, the 
   </tr>
    <tr>
     <td>
-      <a href="https://www.inspec.io">Inspec</a>
+      <a href="https://www.chef.io/products/chef-inspec">InSpec</a>
       <p>Runs ongoing compliance scans against development and build servers; enforce CIS/NIST benchmarks.</p>
     </td>
   </tr>
@@ -491,7 +489,7 @@ To satisfy SSDF PO.5 in a Build and Deploy context using open-source tools, the 
    <tr>
     <td>
       <a href="https://falco.org/">Falco</a>
-      <p>	Runtime security for build and deploy environments to detect malicious behavior or unauthorized activity.</p>
+      <p>Runtime security for build and deploy environments to detect malicious behavior or unauthorized activity.</p>
     </td>
   </tr> 
  <tr>
