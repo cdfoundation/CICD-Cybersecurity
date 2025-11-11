@@ -1,0 +1,355 @@
+{{ if .Site.Params.offlineSearch -}}
+<div class="td-search">
+  <div class="td-search__wrapper">
+    <input 
+      class="td-search__input" 
+      id="search-input" 
+      type="search" 
+      placeholder="{{ T "ui_search_placeholder" }}" 
+      aria-label="Search"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+    >
+    <button class="td-search__clear" id="search-clear" aria-label="Clear search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="td-search__results" id="search-results" style="display: none;">
+    <div class="td-search__results-header">
+      <span id="search-results-count"></span>
+    </div>
+    <div class="td-search__results-list" id="search-results-list"></div>
+    <div class="td-search__results-footer">
+      <small>{{ T "ui_search_powered_by" }} <a href="https://lunrjs.com/" target="_blank" rel="noopener">Lunr.js</a></small>
+    </div>
+  </div>
+</div>
+
+<style>
+.td-search {
+  position: relative;
+  width: 100%;
+}
+
+.td-search__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.td-search__input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.td-search__input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.td-search__clear {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #6c757d;
+  display: none;
+}
+
+.td-search__clear:hover {
+  color: #495057;
+}
+
+.td-search__results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 1050;
+}
+
+.td-search__results-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  font-weight: 500;
+}
+
+.td-search__results-list {
+  padding: 0.5rem 0;
+}
+
+.td-search__result-item {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.td-search__result-item:hover {
+  background-color: #f8f9fa;
+}
+
+.td-search__result-item:last-child {
+  border-bottom: none;
+}
+
+.td-search__result-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #007bff;
+  margin-bottom: 0.25rem;
+  text-decoration: none;
+  display: block;
+}
+
+.td-search__result-title:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.td-search__result-content {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.td-search__result-breadcrumb {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+.td-search__results-footer {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  text-align: right;
+}
+
+.td-search__highlight {
+  background-color: #fff3cd;
+  font-weight: 500;
+  padding: 0 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .td-search__results {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    border-radius: 0;
+    max-height: 100vh;
+  }
+}
+</style>
+
+<script>
+(function() {
+  let searchIndex = null;
+  let searchData = null;
+  let searchInput = null;
+  let searchResults = null;
+  let searchResultsList = null;
+  let searchResultsCount = null;
+  let searchClear = null;
+
+  function initSearch() {
+    searchInput = document.getElementById('search-input');
+    searchResults = document.getElementById('search-results');
+    searchResultsList = document.getElementById('search-results-list');
+    searchResultsCount = document.getElementById('search-results-count');
+    searchClear = document.getElementById('search-clear');
+
+    if (!searchInput) return;
+
+    // Load search index
+    fetch('{{ "index.json" | relURL }}')
+      .then(response => response.json())
+      .then(data => {
+        searchData = data;
+        
+        // Build Lunr index
+        searchIndex = lunr(function() {
+          this.ref('href');
+          this.field('title', { boost: 10 });
+          this.field('content', { boost: 5 });
+          this.field('description', { boost: 7 });
+          this.field('tags', { boost: 3 });
+          
+          data.forEach(doc => {
+            this.add(doc);
+          });
+        });
+
+        console.log('Search index loaded with', data.length, 'documents');
+      })
+      .catch(err => {
+        console.error('Failed to load search index:', err);
+      });
+
+    // Event listeners
+    searchInput.addEventListener('input', handleSearch);
+    searchInput.addEventListener('focus', handleSearchFocus);
+    searchClear.addEventListener('click', clearSearch);
+    
+    // Close results when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.td-search')) {
+        hideResults();
+      }
+    });
+
+    // Keyboard navigation
+    searchInput.addEventListener('keydown', handleKeyboard);
+  }
+
+  function handleSearch(e) {
+    const query = e.target.value.trim();
+    
+    if (query.length === 0) {
+      hideResults();
+      searchClear.style.display = 'none';
+      return;
+    }
+
+    searchClear.style.display = 'block';
+
+    if (!searchIndex) {
+      searchResultsList.innerHTML = '<div style="padding: 1rem;">Loading search index...</div>';
+      searchResults.style.display = 'block';
+      return;
+    }
+
+    if (query.length < 2) {
+      hideResults();
+      return;
+    }
+
+    performSearch(query);
+  }
+
+  function performSearch(query) {
+    try {
+      // Perform search with wildcards for partial matching
+      const searchQuery = query.split(' ')
+        .map(term => term + '*')
+        .join(' ');
+      
+      const results = searchIndex.search(searchQuery);
+      displayResults(results, query);
+    } catch (err) {
+      console.error('Search error:', err);
+      searchResultsList.innerHTML = '<div style="padding: 1rem; color: #dc3545;">Search error. Please try different keywords.</div>';
+      searchResults.style.display = 'block';
+    }
+  }
+
+  function displayResults(results, query) {
+    if (results.length === 0) {
+      searchResultsCount.textContent = 'No results found';
+      searchResultsList.innerHTML = '<div style="padding: 1rem; color: #6c757d;">Try different keywords or check spelling</div>';
+      searchResults.style.display = 'block';
+      return;
+    }
+
+    searchResultsCount.textContent = `${results.length} result${results.length !== 1 ? 's' : ''} found`;
+    
+    const html = results.slice(0, 10).map(result => {
+      const doc = searchData.find(d => d.href === result.ref);
+      if (!doc) return '';
+
+      const title = highlightText(doc.title, query);
+      const content = highlightText(truncate(doc.content, 150), query);
+      const breadcrumb = doc.breadcrumb || '';
+
+      return `
+        <div class="td-search__result-item">
+          ${breadcrumb ? `<div class="td-search__result-breadcrumb">${breadcrumb}</div>` : ''}
+          <a href="${doc.href}" class="td-search__result-title">${title}</a>
+          <div class="td-search__result-content">${content}</div>
+        </div>
+      `;
+    }).join('');
+
+    searchResultsList.innerHTML = html;
+    searchResults.style.display = 'block';
+  }
+
+  function highlightText(text, query) {
+    if (!text) return '';
+    
+    const terms = query.toLowerCase().split(' ').filter(t => t.length > 1);
+    let highlighted = text;
+    
+    terms.forEach(term => {
+      const regex = new RegExp(`(${escapeRegex(term)})`, 'gi');
+      highlighted = highlighted.replace(regex, '<span class="td-search__highlight">$1</span>');
+    });
+    
+    return highlighted;
+  }
+
+  function truncate(text, length) {
+    if (!text || text.length <= length) return text;
+    return text.substr(0, length).trim() + '...';
+  }
+
+  function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function clearSearch() {
+    searchInput.value = '';
+    hideResults();
+    searchClear.style.display = 'none';
+    searchInput.focus();
+  }
+
+  function hideResults() {
+    searchResults.style.display = 'none';
+  }
+
+  function handleSearchFocus() {
+    if (searchInput.value.trim().length >= 2) {
+      searchResults.style.display = 'block';
+    }
+  }
+
+  function handleKeyboard(e) {
+    if (e.key === 'Escape') {
+      clearSearch();
+    }
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSearch);
+  } else {
+    initSearch();
+  }
+})();
+</script>
+{{- end }}s

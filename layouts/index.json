@@ -1,0 +1,14 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range where .Site.Pages "Kind" "page" -}}
+  {{- if not .Params.private -}}
+    {{- $.Scratch.Add "index" (dict 
+      "href" .RelPermalink 
+      "title" .Title 
+      "description" (.Description | default .Summary | plainify | htmlUnescape) 
+      "content" (.Plain | htmlUnescape)
+      "tags" .Params.tags
+      "breadcrumb" (partial "breadcrumb-text.html" .)
+    ) -}}
+  {{- end -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
