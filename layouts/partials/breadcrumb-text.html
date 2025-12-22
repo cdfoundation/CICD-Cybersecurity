@@ -1,0 +1,8 @@
+{{- $breadcrumb := slice -}}
+{{- $current := . -}}
+{{- range $index, $element := .Ancestors.Reverse -}}
+  {{- if ne .Type "page" -}}
+    {{- $breadcrumb = $breadcrumb | append .Title -}}
+  {{- end -}}
+{{- end -}}
+{{- delimit $breadcrumb " › " -}}

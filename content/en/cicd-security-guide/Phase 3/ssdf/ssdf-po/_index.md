@@ -251,6 +251,12 @@ To satisfy SSDF PO.3 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td>
+      <a href="https://konflux-ci.dev/">Konflux-ci software factory for Tekton</a>
+      <p>Implements the <a href="https://in-toto.io/docs/what-is-in-toto/">In-toto framework</a> using pipelines-as-code for supply chain security validation</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
       <p>Track vulnerabilities and assign remediation tasks; integrate with scanners for continuous updates.</p>
     </td>
