@@ -8,7 +8,7 @@ layout: docs
 ---
 ## Introduction
 
-As software moves from development to production, the build and deploy stages play a pivotal role in maintaining the integrity, security, and provenance of your application. These phases involve compiling, packaging, and preparing your application for its live environment, making them prime targets for supply chain attacks, unauthorized modifications, and hidden vulnerabilities.
+As software moves from development to production, the build and deploy stages play a pivotal role in maintaining the integrity, security, and provenance of your application. These phases involve compiling, packaging, and preparing your application for its live environment, making them prime targets for supply chain attacks, unauthorized modifications, and hidden vulnerabilities.  
 
 Integrating security into these phases ensures that your code is not only functional but also safeguarded against threats. From dynamic analysis during builds to automated scans for container security and misconfigurations, the right tools can help identify risks before deployment. Moreover, secure deployment pipelines prevent unauthorized changes, enforce compliance, and enable safe rollouts. Compliance for Build and Deploy steps include:
 
