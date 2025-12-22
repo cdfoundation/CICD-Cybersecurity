@@ -1,15 +1,13 @@
 ---
-title: "Prepare the Organization (PO)"
-linkTitle: "Prepare the Organization (PO)"
+title: "2.1 Prepare the Organization (PO)"
+linkTitle: "2.1 Prepare the Organization (PO)"
 weight: 5
 description: >
- Prepare the Organization (PO) for the Build and Deploy CI/CD Steps
+ 2.1 Prepare the Organization (PO) for the Build and Deploy CI/CD Steps
 ---
 
 
-
-
-### Prepare the Organization (PO)
+### 2.1 Prepare the Organization (PO) Build and Deploy Tasks
 Organizations should ensure that their people, processes, and technology are prepared to perform secure software development at the organization level. Many organizations will find some PO practices to also be applicable to subsets of their software development, like individual development groups or projects.
 
 <br>

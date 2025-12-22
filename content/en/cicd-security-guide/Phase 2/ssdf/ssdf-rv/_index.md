@@ -1,14 +1,14 @@
 ---
-title: "Respond to Vulnerabilities (RV)"
-linkTitle: "Respond to Vulnerabilities (RV)"
+title: "2.4 Respond to Vulnerabilities (RV)"
+linkTitle: "2.4 Respond to Vulnerabilities (RV)"
 weight: 8
 description: >
- Respond to Vulnerabilities (RV) for Build and Deploy CI/CD Steps
+ 2.4 Respond to Vulnerabilities (RV) for Build and Deploy CI/CD Steps
 ---
 
 
 
-### Respond to Vulnerabilities (RV)
+### 2.4 Respond to Vulnerabilities (RV) for Build and Deploy Tasks
 
 Respond to Vulnerabilities (RV): Organizations should identify residual vulnerabilities
 in their software releases and respond appropriately to address those vulnerabilities and prevent similar ones from occurring in the future.

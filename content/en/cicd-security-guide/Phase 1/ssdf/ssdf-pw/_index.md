@@ -1,15 +1,14 @@
 ---
-title: "Produce Well-Secured Software (PW)"
-linkTitle: "Produce Well-Secured Software (PW)"
+title: "1.3 Produce Well-Secured Software (PW)"
+linkTitle: "1.3 Produce Well-Secured Software (PW)"
 weight: 7
 description: >
- Produce Well-Secured Software (PW) during the code and pre-build CI/CD Steps
+ 1.3 Produce Well-Secured Software (PW) during the code and pre-build Tasks
 ---
 
-## Produce Well-Secured Software (PW)
+## 1.3 Produce Well-Secured Software (PW) Tasks for Code and Prebuild
 
-Organizations should produce well-secured
-software with minimal security vulnerabilities in its releases.
+Organizations should produce well-secured software with minimal security vulnerabilities in its releases.
 
 <br>
 

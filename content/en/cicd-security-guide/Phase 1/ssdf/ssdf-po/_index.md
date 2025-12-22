@@ -1,18 +1,15 @@
 ---
-title: "Prepare the Organization (PO)"
-linkTitle: "Prepare the Organization (PO)"
+title: "1.1 Prepare the Organization (PO)"
+linkTitle: "1.1 Prepare the Organization (PO)"
 weight: 5
 description: >
- Prepare the Organization (PO) CI/CD Steps
+ 1.1 Prepare the Organization (PO) Phase 1 Tasks
 ---
 
 
-## Prepare the Organization (PO)
+## 1.1 Prepare the Organization (PO) for Code and Prebuild Tasks
 
-Organizations should ensure that their people,
-processes, and technology are prepared to perform secure software development at the
-organization level. Many organizations will find some PO practices to also be applicable
-to subsets of their software development, like individual development groups or projects.
+Organizations should ensure that their people, processes, and technology are prepared to perform secure software development at the organization level. Many organizations will find some PO practices to also be applicable to subsets of their software development, like individual development groups or projects.
 
 <br>
 

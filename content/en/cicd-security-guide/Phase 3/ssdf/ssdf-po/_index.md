@@ -1,13 +1,13 @@
 ---
-title: "Prepare the Organization (PO)"
-linkTitle: "Prepare the Organization (PO)"
+title: "3.1 Prepare the Organization (PO)"
+linkTitle: "3.1 Prepare the Organization (PO)"
 weight: 5
 description: >
- Prepare the Organization (PO) Post Deployment CI/CD Steps
+ 3.1 Prepare the Organization (PO) Post Deploy CI/CD Steps
 ---
 
 
-### Prepare the Organization (PO)
+### 3.1 Prepare the Organization (PO) Post Deploy Tasks
 Organizations should ensure that their people, processes, and technology are prepared to perform secure software development at the organization level. Many organizations will find some PO practices to also be applicable to subsets of their software development, like individual development groups or projects.
 
 <br>

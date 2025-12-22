@@ -1,13 +1,13 @@
 ---
-title: "Produce Well-Secured Software (PW)"
-linkTitle: "Produce Well-Secured Software (PW)"
+title: "2.3 Produce Well-Secured Software (PW)"
+linkTitle: "2.3 Produce Well-Secured Software (PW)"
 weight: 7
 description: >
- Produce Well-Secured Software (PW) in the Build and Deploy CI/CD Steps
+ 2.3 Produce Well-Secured Software (PW) in the Build and Deploy CI/CD Steps
 ---
 
 
-### Produce Well-Secured Software (PW)
+### 2.3 Produce Well-Secured Software (PW) for Build and Deploy Tasks
 
 Organizations should produce well-secured software with minimal security vulnerabilities in its releases.
 

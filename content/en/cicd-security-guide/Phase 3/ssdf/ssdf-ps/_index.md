@@ -1,12 +1,12 @@
 ---
-title: "Protect the Software (PS)"
-linkTitle: "Protect the Software (PS)"
+title: "3.2 Protect the Software (PS)"
+linkTitle: "3.2 Protect the Software (PS)"
 weight: 6
 description: >
- Protect the Software (PS) Post-Deployment CI/CD Steps
+ 3.2 Protect the Software (PS) Post Deploy CI/CD Steps
 ---
 
-### Protect the Software (PS)
+### 3.2 Protect the Software (PS) for Post Deploy Tasks
 Protect the Software (PS): Organizations should protect all components of their
 software from tampering and unauthorized access.
 
