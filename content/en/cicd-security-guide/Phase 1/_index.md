@@ -9,20 +9,16 @@ layout: docs
 
 ## Introduction
 
-Integrating security into every stage of the Software Development Life Cycle (SDLC) is more critical than ever. The code and prebuild stage is foundational to creating secure, reliable, and high-performing applications. Failing to address vulnerabilities early can lead to costly fixes, data breaches, and reputational damage down the line.  
+Integrating security into every stage of the Software Development Life Cycle (SDLC) is more critical than ever. The code and prebuild stage is foundational to creating secure, reliable, and high-performing applications. Failing to address vulnerabilities early can lead to costly fixes, data breaches, and reputational damage down the line.
+
 
 This section provides a comprehensive guide to the essential security tools that developers and DevOps teams should use during the code and prebuild phase to ensure vulnerabilities are identified and mitigated before they can cause harm. From Static Application Security Testing (SAST) to dependency scanning and secure CI/CD pipelines, the right tools can help you adopt a proactive approach to software security while maintaining development velocity. Following are guidelines from industry frameworks with suggested open source tooling needed to achieve the compliance goals. For example:
 
 -- Ensure source code integrity and provenance
-
 -- Prevent unauthorized access to repositories and pipelines
-
 -- Detect insecure code patterns early - shift left
-
 -- Identify vulnerable open-source dependencies
-
 -- Generate SBOMs as early as possible
-
 -- Establish traceability from commit → artifact → deployment
 
 ### Key Phase 1 Security Activities
