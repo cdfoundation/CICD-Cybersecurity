@@ -81,7 +81,7 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
     </td>
   </tr>
   <tr>
-    <td rowspan="7">
+    <td rowspan="39">
       <strong>PO.3.2</strong>:
       <p>Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p>
       <div style="height: 16px"></div>
@@ -122,12 +122,6 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
     </td>
   </tr>
   <tr>
-    <td rowspan="10">
-      <strong>PO.3.2</strong>:
-      <p>Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">Implement the technologies and processes needed for reproducible builds.</p>
-    </td>
     <td>
       <a href="https://konflux-ci.dev/docs/building/hermetic-builds/">Hermetic builds with Konflux-ci</a>
     </td>
@@ -243,8 +237,15 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
       <a href="https://slsa.dev/">SLSA Framework</a>
     </td>
   </tr>
+  </table>
+  
+<table style="width:100%">
   <tr>
-    <td rowspan="7">
+    <th style="width: 50%">Tasks</th>
+    <th style="width: 50%">Tools</th>
+  </tr>
+  <tr>
+    <td rowspan="10">
       <strong>PO.3.3</strong>:
       <p>Configure tools to generate artifacts of their support of secure  software development practices as defined by the organization.</p>
       <div style="height: 16px"></div>

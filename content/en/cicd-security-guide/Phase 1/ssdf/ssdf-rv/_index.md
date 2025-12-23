@@ -122,6 +122,11 @@ To satisfy SSDF RV.1 in a code and prebuild context using open-source tools, the
       <p>Conftest is a utility to help you write tests against structured configuration data.</p>
     </td> 
   </tr> 
+  <tr>
+    <td>
+      <a href="https://hoppr.dev/">Hoppr</a>
+      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+     </td>
 </table>
     
 

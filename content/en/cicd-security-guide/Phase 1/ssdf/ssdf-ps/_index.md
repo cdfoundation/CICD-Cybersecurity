@@ -25,7 +25,7 @@ For code that is not intended to be publicly accessible, this helps prevent thef
     <th style="width: 50%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="5">
+    <td rowspan="30">
       <strong>PS.1.1:</strong>
       <p>
         Store all forms of code – including source code, executable code, and configuration-as-code –  based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.
@@ -60,17 +60,7 @@ For code that is not intended to be publicly accessible, this helps prevent thef
     </td>
   </tr>
   <tr>
-    <td rowspan="9">
-      <strong>PS.1.1:</strong>
-      <p>
-        Store all forms of code – including source code, executable code, and configuration-as-code –  based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Use version control features of the repository to track all changes made to the code with accountability to the individual account.
-      </p>
-    </td>
-    <td>
+     <td>
       <a href="https://git-scm.com/">Git</a>
     </td>
   </tr>
@@ -115,17 +105,7 @@ For code that is not intended to be publicly accessible, this helps prevent thef
     </td>
   </tr>
   <tr>
-    <td rowspan="7">
-      <strong>PS.1.1:</strong>
-      <p>
-        Store all forms of code – including source code, executable code, and configuration-as-code –  based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Use commit signing for code repositories to sign code.
-      </p>
-    </td>
-    <td>
+  <td>
       <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits">GitHub Signing Commits</a>
     </td>
   </tr>
@@ -160,16 +140,6 @@ For code that is not intended to be publicly accessible, this helps prevent thef
     </td>
   </tr>
   <tr>
-    <td rowspan="6">
-      <strong>PS.1.1:</strong>
-      <p>
-        Store all forms of code – including source code, executable code, and configuration-as-code –  based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Have the code owner review and approve all changes made to the code by others.
-      </p>
-    </td>
     <td>
       <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners/">Github CODEOWNERS</a>
     </td>
@@ -200,16 +170,6 @@ For code that is not intended to be publicly accessible, this helps prevent thef
     </td>
   </tr>
   <tr>
-    <td rowspan="1">
-      <strong>PS.1.1:</strong>
-      <p>
-        Store all forms of code – including source code, executable code, and configuration-as-code –  based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Use cryptography (e.g., cryptographic hashes) to help protect file integrity
-      </p>
-    </td>
     <td>
       <a href="https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits/">GitHub About Commits</a>
     </td>
@@ -230,7 +190,7 @@ Help software acquirers ensure that the software they acquire is legitimate and 
     <th style="width: 50%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="3">
+    <td rowspan="10">
       <strong>PS.2.1:</strong>
       <p>
         Make software integrity verification information available to software acquirers.
@@ -254,16 +214,6 @@ Help software acquirers ensure that the software they acquire is legitimate and 
     </td>
   </tr>
   <tr>
-    <td rowspan="5">
-      <strong>PS.2.1:</strong>
-      <p>
-        Make software integrity verification information available to software acquirers.
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Use an established certificate authority for code signing so that consumers’ operating systems or other tools and services can confirm the validity of signatures before use. Periodically review the code signing processes, including certificate renewal, rotation, revocation, and protection.
-      </p>
-    </td>
     <td>
       <a href="https://letsencrypt.org/">Let's Encrypt</a>
     </td>
@@ -305,7 +255,7 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
   </tr>
 
   <tr>
-    <td rowspan="3">
+    <td rowspan="7">
       <strong>PS.3.1:</strong>
       <p>
         Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.
@@ -330,16 +280,6 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
     </td>
   </tr>
   <tr>
-    <td rowspan="4">
-      <strong>PS.3.1:</strong>
-      <p>
-        Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Store and protect release integrity verification information and provenance data, such as by keeping it in a separate location from the release files or by signing the data.
-      </p>
-    </td>
     <td>
       <a href="https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization/">GitHub Repository Roles for an Organization</a>
     </td>
@@ -360,7 +300,7 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
     </td>
   </tr>
   <tr>
-    <td rowspan="4">
+    <td rowspan="26">
       <strong>PS.3.2:</strong>
       <p>
         Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a Software Bill of Materials (SBOM)).
@@ -388,18 +328,7 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
       <a href="https://spdx.dev/">SPDX</a>
     </td>
   </tr>
-  <tr>
-    <td rowspan="10">
-      <strong>PS.3.2:</strong>
-      <p>
-        Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a Software Bill of Materials (SBOM)).
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Make the provenance data available to the organization’s operations and response teams to aid them in mitigating software vulnerabilities.
-      </p>
-    </td>
-    <td>
+  <td>
       <a href="https://openssf.org/projects/bomctl/">bomctl</a>
   </tr>
   <tr>
@@ -437,6 +366,10 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
   </tr>
   <tr>
     <td>
+      <a href="https://hoppr.dev/">Hoppr</a>
+      </td>
+  <tr>
+    <td>
       <a href="https://github.com/tern-tools/tern/">Tern</a>
     </td>
   </tr>
@@ -446,16 +379,6 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
     </td>
   </tr>
   <tr>
-    <td rowspan="3">
-      <strong>PS.3.2:</strong>
-      <p>
-        Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a Software Bill of Materials (SBOM)).
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Protect the integrity of provenance data, and provide a way for recipients to verify provenance data integrity.
-      </p>
-    </td>
     <td>
       <a href="https://github.com/google/aoss-verifier/">aoss-verifier</a>
     </td>
@@ -471,16 +394,6 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
     </td>
   </tr>
   <tr>
-    <td rowspan="7">
-      <strong>PS.3.2:</strong>
-      <p>
-        Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a Software Bill of Materials (SBOM)).
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Update the provenance data every time any of the software’s components are updated.
-      </p>
-    </td>
     <td>
       <a href="https://docs.github.com/en/actions/">GitHub Actions</a>
     </td>
@@ -515,6 +428,6 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
       <a href="https://www.mend.io/renovate/">Renovate</a>
     </td>
   </tr>
-</table>
+ </table>
 
 <br>

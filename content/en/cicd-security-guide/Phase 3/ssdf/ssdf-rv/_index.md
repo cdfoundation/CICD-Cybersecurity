@@ -39,7 +39,7 @@ To satisfy SSDF RV.1 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="9">
+    <td rowspan="50">
       <p>RV.1.1: Gather information from software acquirers, users, and public sources on potential vulnerabilities in the software and third-party components that the software uses, and investigate all credible reports.</p><br>
       <p>RV.1.2: Review, analyze, and/or test the software’s code to identify or  confirm the presence of previously undetected vulnerabilities.</p><br>
       <p>RV.1.3: Have a policy that addresses vulnerability disclosure and remediation, and implement the roles, responsibilities, and processes needed to support that policy.</p>
@@ -87,13 +87,19 @@ To satisfy SSDF RV.1 in a post-deployment context using open-source tools, the f
       <p>Helps teams prioritize remediation by filtering out non-exploitable vulnerabilities.</p>
     </td>
   </tr>
-  <tr>
+ <tr>
     <td>
       <a href="https://github.com/anchore/syft">Syft</a>
       <p>MFeed live SBOMs into scanners like Dependency-Track or Grype.</p>
     </td>
-  </tr>
-</table>
+ </tr>
+ <tr>
+   <td>
+      <a href="https://hoppr.dev/">Hoppr</a>
+      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+    </td>
+</tr>
+  </table>
     
 
 **RV.2**

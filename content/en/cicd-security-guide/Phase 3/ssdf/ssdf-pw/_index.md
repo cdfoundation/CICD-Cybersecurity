@@ -100,6 +100,11 @@ To satisfy SSDF PW.1 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td>
+      <a href="https://hoppr.dev/">Hoppr</a>
+      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+     </td>
+  <tr>
+    <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency-Track</a>
       <p>Continuously tracks SBOMs for new vulnerabilities</p>
     </td>

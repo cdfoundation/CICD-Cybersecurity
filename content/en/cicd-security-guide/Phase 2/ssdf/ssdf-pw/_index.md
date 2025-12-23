@@ -652,6 +652,13 @@ To satisfy SSDF PW.4 in a build and deploy context using open-source tools, the 
       <p>Policy-as-code for build & deploy; blocks insecure defaults in configs/manifests.</p>
   </td>
   </tr>
+ <tr>
+    <td>
+      <a href="https://github.com/kpcyrd/rebuilderd">rebuildered</a>
+      <p>rebuilderd independently verifies binary packages can be reproduced from source, which is a strong mechanism for third-party component integrity/validation and for preserving/verifying release integrity evidence.</p>
+     </td>
+     </tr>
+
 </table>
     
 
@@ -915,6 +922,11 @@ To satisfy SSDF PW.6 in a build and deploy context using open-source tools, the 
       <p>CLI tool for pre-fetching dependencies to support hermetic builds, generating SBOMs, and ensuring network-isolated container builds with reproducible dependency management.</p>
     </td>
   </tr>
+  <tr>
+    <td>
+      <a href="https://hoppr.dev/">Hoppr</a>
+      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+     </td>
  </table>
     
 

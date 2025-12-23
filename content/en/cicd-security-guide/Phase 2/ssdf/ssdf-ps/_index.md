@@ -385,6 +385,18 @@ To satisfy SSDF PS.3 in a build and deploy context using open-source tools, the 
       <p>Retain build provenance in a transparency log so deployed releases can be cross-verified with archived originals</p>
     </td>
   </tr> 
+ <tr>
+    <td>
+      <a href="https://github.com/kpcyrd/rebuilderd">rebuildered</a>
+      <p>rebuilderd independently verifies binary packages can be reproduced from source, which is a strong mechanism for third-party component integrity/validation and for preserving/verifying release integrity evidence.</p>
+     </td>
+ </tr> 
+<tr>
+    <td>
+      <a href="https://github.com/testifysec">TestifySec</a>
+      <p>TestifySec’s approach is evidence/attestations/policy verification around builds; their Witness tool is used to create and verify attestations and enforce policies—i.e., provenance generation + policy verification.</p>
+     </td>
+  </tr>  
 </table>
 
 

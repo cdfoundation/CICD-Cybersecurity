@@ -161,7 +161,7 @@ To satisfy SSDF PS.2 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="16">
+    <td rowspan="17">
       PS.2.1: Make software integrity verification information available to software acquirers.
     </td>
     <td>
@@ -226,6 +226,11 @@ To satisfy SSDF PS.2 in a post-deployment context using open-source tools, the f
  </tr>
  <tr>
     <td>
+      <a href="https://hoppr.dev/">Hoppr</a>
+      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+     </td>
+ <tr>
+    <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency-Track</a>
       <p>Continuously monitors SBOMs for new CVEs in preserved releases.</p>
     </td>
@@ -287,7 +292,7 @@ To satisfy SSDF PS.3 in a post-deployment context using open-source tools, the f
   <tr>
     <td rowspan="13">
       <p>PS.3.1: Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.</p><br>
-      <p> PS.3.2: Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials [SBOM]).</p>
+      <p> PS.3.2: Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials -SBOM).</p>
     </td>
     <td>
       <a href="https://github.com/anchore/syft/"> Syft</a>
@@ -359,6 +364,12 @@ To satisfy SSDF PS.3 in a post-deployment context using open-source tools, the f
     <td>
       <a href="https://cyclonedx.org/capabilities/bomlink/">CycloneDX BOM Portal (OSS)</a>
       <p>Host and validate SBOMs in a web-accessible interface.</p>
+     </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://hoppr.dev/">Hoppr</a>
+      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
      </td>
   </tr>
 </table>
