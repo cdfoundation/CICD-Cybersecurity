@@ -3,11 +3,11 @@ title: "Phase 3: Post Deploy"
 linkTitle: "Post Deploy"
 weight: 40
 description: >
-  Security Compliance for Post Deployment
+  Security Compliance for Post Deploy
 layout: docs
 
 ---
-## Introduction
+## Phase 3 - Post Deploy
 
 Phase 3, Post Deploy, extends CI/CD cybersecurity beyond deployment into live, running systems. While earlier phases focus on preventing vulnerabilities from entering the pipeline, Phase 3 assumes that risk continues after release. New vulnerabilities are disclosed daily, configurations drift, and threat actors target production environments directly.
 

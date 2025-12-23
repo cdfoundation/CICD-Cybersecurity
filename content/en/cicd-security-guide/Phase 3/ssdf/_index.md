@@ -1,6 +1,6 @@
 ---
 title: "3.0 Secure Software Development Framework Phase 3 Tasks"
-linkTitle: "3.0 Phase 3 Secure Software Development Framework Phase 3 Tasks"
+linkTitle: "3.0 Secure Software Development Framework Phase 3 Tasks"
 weight: 4
 description: >
  3.0 Secure Software Development Framework Post Build CI/CD Steps

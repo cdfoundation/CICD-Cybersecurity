@@ -6,7 +6,7 @@ description: >
   Security Compliance for Build and Deploy
 layout: docs
 ---
-## Introduction
+## Phase 2 - Build and Deploy
 
 As software moves from development to production, the build and deploy stages play a pivotal role in maintaining the integrity, security, and provenance of your application. Phase 2 covers security controls and practices applied during the build and deployment stages of the CI/CD pipeline. These controls ensure that software artifacts are created, verified, and released in a trusted, repeatable, and policy-enforced manner before reaching runtime environments. Phase 2 focuses on preventing compromised or non-compliant artifacts from being deployed, establishing trust in the software supply chain before software enters live environments.
 

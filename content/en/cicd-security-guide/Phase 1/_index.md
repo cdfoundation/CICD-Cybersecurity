@@ -7,7 +7,7 @@ description: >
 layout: docs
 ---
 
-## Introduction to Phase 1 - Code and Prebuild
+## Phase 1 - Code and Prebuild
 
 Integrating security into every stage of the Software Development Life Cycle (SDLC) is more critical than ever. The code and prebuild stage is foundational to creating secure, reliable, and high-performing applications. Failing to address vulnerabilities early can lead to costly fixes, data breaches, and reputational damage down the line.
 
