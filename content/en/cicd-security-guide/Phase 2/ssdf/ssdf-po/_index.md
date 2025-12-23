@@ -288,12 +288,6 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
   </tr>
   <tr>
     <td>
-      <a href="https://www.defectdojo.org/">DefectDojo</a>
-      <p>Centralizes and tracks security testing results for build and deploy toolchains.</p>
-     </td>
-  </tr>   
-  <tr>
-    <td>
       <a href="https://www.openpolicyagent.org/">Open Policy Agent (OPA)</a>
       <p>Enforce policy as code in CI/CD and deployment workflows using Rego to prevent unsafe actions.</p>
      </td>
