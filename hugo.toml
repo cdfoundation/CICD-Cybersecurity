@@ -2,51 +2,57 @@ baseURL = "https://cicd-cybersecurity.netlify.app/"
 title = "CI/CD Cybersecurity SIG | CD Foundation"
 
 enableRobotsTXT = true
-
-# Will give values to .Lastmod etc.
 enableGitInfo = true
 
 # Language settings
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
-# You can add your own taxonomies
 [taxonomies]
 tag = "tags"
 category = "categories"
 
 [params.taxonomy]
-# set taxonomyCloud = [] to hide taxonomy clouds
 taxonomyCloud = ["tags", "categories"]
 taxonomyCloudTitle = ["Tag Cloud", "Categories"]
 taxonomyPageHeader = ["tags", "categories"]
 
 # SEO Configuration
 [params.seo]
-  title_separator = " | "
-  description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
-  keywords = ["CI/CD security", "DevSecOps", "cybersecurity", "continuous integration", "continuous delivery", "software security", "pipeline security", "NIST framework", "secure software development"]
-  author = "CD Foundation CI/CD Cybersecurity SIG"
-  image = "/images/cicd-cybersecurity-og.png"
-  twitter_card = "summary_large_image"
-  twitter_site = "@CDeliveryFdn"
+title_separator = " | "
+description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
+keywords = [
+  "CI/CD security",
+  "DevSecOps",
+  "cybersecurity",
+  "continuous integration",
+  "continuous delivery",
+  "software security",
+  "pipeline security",
+  "NIST framework",
+  "secure software development"
+]
+author = "CD Foundation CI/CD Cybersecurity SIG"
+image = "/images/cicd-cybersecurity-og.png"
+twitter_card = "summary_large_image"
+twitter_site = "@CDeliveryFdn"
 
-# Highlighting config
+# Syntax highlighting
 pygmentsCodeFences = true
 pygmentsUseClasses = false
 pygmentsUseClassic = false
 pygmentsStyle = "tango"
 
-# Image processing configuration.
+# Image processing
 [imaging]
 resampleFilter = "CatmullRom"
 quality = 75
 anchor = "smart"
 
+# Analytics
 [services]
-[services.googleAnalytics]
-# Comment out to disable GA tracking
-# id = "G-XXXXXXXXXX"
+  [services.googleAnalytics]
+  # id = "G-XXXXXXXXXX"
 
 # Language configuration
 [languages]
@@ -58,27 +64,30 @@ anchor = "smart"
     [languages.en.params]
       description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
 
-# Declare and configure Docsy theme
+# Docsy theme
 [module]
-  proxy = "direct"
-  [module.hugoVersion]
-    extended = true
-    min = "0.99.0"
-  [[module.imports]]
-    path = "github.com/google/docsy"
-    disable = false
-  [[module.imports]]
-    path = "github.com/google/docsy/dependencies"
-    disable = false
+proxy = "direct"
 
+  [module.hugoVersion]
+  extended = true
+  min = "0.99.0"
+
+  [[module.imports]]
+  path = "github.com/google/docsy"
+
+  [[module.imports]]
+  path = "github.com/google/docsy/dependencies"
+
+# 🔑 GOLDMARK CONFIG — THIS FIXES THE <pre> ISSUE
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.highlight]
-      style = "tango"
 
-# Output formats - UPDATED FOR SEARCH
+  [markup.highlight]
+    style = "tango"
+
+# Output formats
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "print", "RSS"]
@@ -92,20 +101,17 @@ archived_version = false
 version = "0.0"
 url_latest_version = "https://cicd-cybersecurity.netlify.app"
 
-# Repository configuration
 github_repo = "https://github.com/cdfoundation/CICD-Cybersecurity"
-github_branch= "main"
+github_branch = "main"
 
-# SEARCH CONFIGURATION - LUNR.JS (STATIC SITE SEARCH)
-# Enable Lunr.js offline search
+# Search
 offlineSearch = true
 offlineSearchMaxResults = 20
 offlineSearchSummaryLength = 200
 
-# Disable syntax highlighting with Prism (using Hugo's built-in)
 prism_syntax_highlighting = false
 
-# User interface configuration
+# UI
 [params.ui]
 breadcrumb_disable = false
 footer_about_enable = true
@@ -121,8 +127,8 @@ enable = false
 enable = false
 
 [params.links]
-[[params.links.developer]]
-	name = "GitHub"
-	url = "https://github.com/cdfoundation/CICD-Cybersecurity"
-	icon = "fab fa-github"
+  [[params.links.developer]]
+  name = "GitHub"
+  url = "https://github.com/cdfoundation/CICD-Cybersecurity"
+  icon = "fab fa-github"
   desc = "Development takes place here!"
