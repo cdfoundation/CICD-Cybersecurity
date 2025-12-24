@@ -1,5 +1,5 @@
 baseURL = "https://cicd-cybersecurity.netlify.app/"
-title = "CI/CD Cybersecurity SIG | CD Foundation"
+title = "CI/CD Cybersecurity Guide | CD Foundation"
 
 enableRobotsTXT = true
 enableGitInfo = true
@@ -58,7 +58,7 @@ anchor = "smart"
 [languages]
   [languages.en]
     contentDir = "content/en"
-    title = "CI/CD Cybersecurity SIG | CD Foundation"
+    title = "CI/CD Cybersecurity Guide | CD Foundation"
     languageName = "English"
     weight = 1
     [languages.en.params]
@@ -117,8 +117,10 @@ breadcrumb_disable = false
 footer_about_enable = true
 navbar_logo = true
 navbar_translucent_over_cover_disable = true
-sidebar_menu_compact = true
 sidebar_search_disable = false
+# CORRECTED SIDEBAR SETTINGS:
+sidebar_menu_compact = false
+sidebar_menu_foldable = false
 
 [params.ui.feedback]
 enable = false
