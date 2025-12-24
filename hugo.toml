@@ -1,5 +1,5 @@
 baseURL = "https://cicd-cybersecurity.netlify.app/"
-title = "CI/CD Cybersecurity SIG | CD Foundation"
+title = "CI/CD Cybersecurity Guide | CD Foundation"
 
 enableRobotsTXT = true
 
@@ -26,7 +26,7 @@ taxonomyPageHeader = ["tags", "categories"]
   title_separator = " | "
   description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
   keywords = ["CI/CD security", "DevSecOps", "cybersecurity", "continuous integration", "continuous delivery", "software security", "pipeline security", "NIST framework", "secure software development"]
-  author = "CD Foundation CI/CD Cybersecurity SIG"
+  author = "CD Foundation CI/CD Cybersecurity Guide"
   image = "/images/cicd-cybersecurity-og.png"
   twitter_card = "summary_large_image"
   twitter_site = "@CDeliveryFdn"
@@ -52,7 +52,7 @@ anchor = "smart"
 [languages]
   [languages.en]
     contentDir = "content/en"
-    title = "CI/CD Cybersecurity SIG | CD Foundation"
+    title = "CI/CD Cybersecurity Guide | CD Foundation"
     languageName = "English"
     weight = 1
     [languages.en.params]
@@ -78,7 +78,7 @@ anchor = "smart"
   [markup.highlight]
       style = "tango"
 
-# Output formats - UPDATED FOR SEARCH
+# Output formats
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "print", "RSS"]
@@ -111,8 +111,10 @@ breadcrumb_disable = false
 footer_about_enable = true
 navbar_logo = true
 navbar_translucent_over_cover_disable = true
-sidebar_menu_compact = true
 sidebar_search_disable = false
+# CORRECTED SIDEBAR SETTINGS:
+sidebar_menu_compact = false
+sidebar_menu_foldable = false
 
 [params.ui.feedback]
 enable = false

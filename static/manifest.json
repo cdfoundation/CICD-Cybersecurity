@@ -1,5 +1,5 @@
 {
-  "name": "CI/CD Cybersecurity SIG | CD Foundation",
+  "name": "CI/CD Cybersecurity Guide | CD Foundation",
   "short_name": "CI/CD Security",
   "description": "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices from the CD Foundation.",
   "start_url": "/",
@@ -34,7 +34,7 @@
       "src": "/images/cicd-cybersecurity-screenshot.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "label": "CI/CD Cybersecurity SIG Homepage"
+      "label": "CI/CD Cybersecurity Guide Homepage"
     }
   ]
 }
