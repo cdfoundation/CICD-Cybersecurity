@@ -15,8 +15,6 @@ CDF CI/CD Cybersecurity Special Interest Group (SIG)
 ## Proposed Governance
 CI/CD Technical Oversight Committee (TOC)
 
----
-
 ## Background and Context
 
 Over the past year, the CDF CI/CD Cybersecurity SIG has operated as an active working group focused on improving the security posture of modern continuous delivery pipelines. The SIG was formed in response to growing industry concern around software supply chain attacks, increasing regulatory pressure, and the expanding responsibilities placed on DevOps and platform engineering teams.
@@ -24,24 +22,17 @@ Over the past year, the CDF CI/CD Cybersecurity SIG has operated as an active wo
 During its first year, the SIG successfully delivered the **CI/CD Cybersecurity Guide**  
 https://cybersecurity.cd.foundation/
 
-The guide is a vendor-neutral, practitioner-focused resource that documents how security controls, tooling, and best practices integrate directly into CI/CD workflows. It reflects real-world operational patterns used by organizations running Jenkins, Tekton, GitOps workflows, and internal developer platforms.
+The guide is a vendor-neutral, practitioner-focused resource that documents how open-source security tooling integrates directly into CI/CD workflows based on industry standard frameworks. It reflects the use of open-source tooling that can be adopted in CI/CD pipelines used by organizations running Jenkins, Tekton, Shipwright, Spinnaker and internal developer platforms. The guide focuses on new OS tooling from the OpenSSF, Apache, and other OS foundations.  
 
 With the guide published and in active community use, the SIG believes the initiative has reached sufficient maturity, scope, and sustainability to progress into an official CDF project.
 
----
 
 ## Problem Statement
 
 [Full Overview](https://github.com/cdfoundation/CICD-Cybersecurity/blob/main/README.md)
 
 Why this Guide Now: 
-This guide helps DevOps engineers build security-compliant CI/CD pipelines by mapping new open-source automation tools to evolving security frameworks. As security standards evolve, pipeline updates are essential to ensure safer software development. This guide explores the intersection of security tooling and the CI/CD pipeline, identifying key security practices, tools, and strategies that align with accepted frameworks such as the Secure Software Development Framework and the NIST Cybersecurity Framework. This guide aligns framework-defined tasks with open-source tools to accomplish them.
-
-This CI/CD Cybersecurity Guide has been segmented into three 3 major chapters:
-
-- CI/CD Code and Prebuild - this section includes security tooling for the earliest points in the CI/CD workflow.
-- CI/CD Build and Deploy - this section covers security tooling for both the build step and deployment step, regardless of where the deployment is occurring (test or production).
-- CI/CD Post Deploy - security does not stop after the binaries have been deployed. This section covers continuous vulnerability management and Dynamic Application Security Testing (DAST).
+This guide helps DevOps engineers build security-compliant CI/CD pipelines by mapping new open-source automation tools to evolving security frameworks. As security standards evolve, pipeline updates are essential to ensure safer software development. This guide examines the intersection of security tooling and the CI/CD pipeline, highlighting key security practices, tools, and strategies that align with established frameworks, including the Secure Software Development Framework and the NIST Cybersecurity Framework. This guide aligns framework-defined tasks with open-source tools to facilitate their accomplishment.
 
 Modern software delivery environments face several challenges:
 
@@ -51,8 +42,6 @@ Modern software delivery environments face several challenges:
 - Organizations struggle to translate high-level security requirements into actionable CI/CD implementation patterns.
 
 There is a clear need for a foundation-owned, continuously maintained reference guide that aligns CI/CD security practices with open-source security tooling for the purpose of evolving delivery models.
-
----
 
 ## Project Scope
 
@@ -65,7 +54,6 @@ The CI/CD Cybersecurity Guide project will:
 - Offer architecture diagrams, workflow patterns, and implementation examples
 - Support education, adoption, and community contribution
 
----
 
 ## Non-Goals
 
@@ -76,7 +64,6 @@ This project will not:
 - Replace individual project documentation
 - Define new frameworks or guidelines
 
----
 
 ## Alignment with CDF Mission
 
@@ -87,8 +74,6 @@ This project directly supports the CDF mission by:
 - Promoting interoperability and shared implementation guidance
 - Supporting the long-term sustainability of CDF projects through secure adoption
 
----
-
 ## Project Deliverables
 
 - Versioned releases of the CI/CD Cybersecurity Guide
@@ -97,8 +82,6 @@ This project directly supports the CDF mission by:
 - Community contribution framework
 - Reference architectures and diagrams
 - Educational materials supporting CDF events and training
-
----
 
 ## Initial Roadmap (High-Level)
 
@@ -118,19 +101,16 @@ This project directly supports the CDF mission by:
 - Integration with CDF events and education
 - Regular content refresh aligned to industry changes
 
----
-
 ## Community and Sustainability
 
 The project will:
 
 - Operate under open governance
 - Welcome contributors across the CDF ecosystem
-- Maintain transparent roadmap planning
+- Maintain a transparent roadmap planning
 - Encourage participation from practitioners, platform engineers, and project maintainers
 - Provide continuity beyond the original SIG membership
 
----
 
 ## Success Metrics
 
@@ -140,7 +120,6 @@ The project will:
 - Community engagement and feedback
 - Alignment with evolving CI/CD and platform engineering practices
 
----
 
 ## Summary
 
