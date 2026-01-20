@@ -1,0 +1,8 @@
+{{ define "main" }}
+<div class="td-content">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+  {{ .Content }}
+  {{ partial "section-index.html" . }}
+</div>
+{{ end }}
