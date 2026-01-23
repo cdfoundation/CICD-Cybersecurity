@@ -32,7 +32,9 @@ With the guide published and in active community use, the SIG believes the initi
 [Full Overview](https://github.com/cdfoundation/CICD-Cybersecurity/blob/main/README.md)
 
 Why this Guide Now: 
-This guide helps DevOps engineers build security-compliant CI/CD pipelines by mapping new open-source automation tools to evolving security frameworks. As security standards evolve, pipeline updates are essential to ensure safer software development. This guide examines the intersection of security tooling and the CI/CD pipeline, highlighting key security practices, tools, and strategies that align with established frameworks, including the Secure Software Development Framework and the NIST Cybersecurity Framework. This guide aligns framework-defined tasks with open-source tools to facilitate their accomplishment.
+This guide helps DevOps engineers build security-compliant CI/CD pipelines by mapping new open-source automation tools to evolving security frameworks. As security standards evolve, pipeline updates are essential to ensure safer software development. This guide examines the intersection of security tooling and the CI/CD pipeline, highlighting key security practices, tools, and strategies that align with established frameworks, including the Secure Software Development Framework and the NIST Cybersecurity Framework. This guide aligns framework-defined tasks with open-source tools to facilitate their accomplishment, providing a shared orientation model for practitioners as CI/CD systems become more automated and interconnected.
+
+As CI/CD pipelines increasingly incorporate AI- and LLM-assisted workflows, delivery velocity and automation continue to accelerate, placing new pressure on verification, provenance, and control points within the pipeline. This guide treats AI as an accelerator of existing CI/CD patterns—not a separate domain—reinforcing the need for clear, framework-aligned security practices that help practitioners reason about risk as complexity increases.
 
 Modern software delivery environments face several challenges:
 
@@ -41,7 +43,7 @@ Modern software delivery environments face several challenges:
 - Platform engineering teams are increasingly responsible for embedding security guardrails into internal developer platforms.
 - Organizations struggle to translate high-level security requirements into actionable CI/CD implementation patterns.
 
-There is a clear need for a foundation-owned, continuously maintained reference guide that aligns CI/CD security practices with open-source security tooling for the purpose of evolving delivery models.
+There is a clear need for a foundation-owned, continuously maintained reference guide that aligns CI/CD security practices with open-source security tooling as delivery models continue to evolve.
 
 ## Project Scope
 
