@@ -7,7 +7,7 @@ CI/CD Cybersecurity Guide
 Documentation, guidance, and reference architecture project based on existing frameworks. First iteration focuses on the Secure Software Development Framework. 
 
 ## Proposed Maturity Level
-Sandbox (with intent to graduate)
+incubating (with intent to graduate)
 
 ## Proposing Group
 CDF CI/CD Cybersecurity Special Interest Group (SIG)
@@ -34,7 +34,7 @@ With the guide published and in active community use, the SIG believes the initi
 Why this Guide Now: 
 This guide helps DevOps engineers build security-compliant CI/CD pipelines by mapping new open-source automation tools to evolving security frameworks. As security standards evolve, pipeline updates are essential to ensure safer software development. This guide examines the intersection of security tooling and the CI/CD pipeline, highlighting key security practices, tools, and strategies that align with established frameworks, including the Secure Software Development Framework and the NIST Cybersecurity Framework. This guide aligns framework-defined tasks with open-source tools to facilitate their accomplishment, providing a shared orientation model for practitioners as CI/CD systems become more automated and interconnected.
 
-As CI/CD pipelines increasingly incorporate AI- and LLM-assisted workflows, delivery velocity and automation continue to accelerate, placing new pressure on verification, provenance, and control points within the pipeline. This guide treats AI as an accelerator of existing CI/CD patterns—not a separate domain—reinforcing the need for clear, framework-aligned security practices that help practitioners reason about risk as complexity increases.
+As CI/CD pipelines increasingly incorporate AI - and LLM-assisted workflows, delivery velocity and automation continue to accelerate, placing new pressure on verification, provenance, and control points within the pipeline. This guide treats AI as an accelerator of existing CI/CD patterns—not a separate domain—reinforcing the need for clear, framework-aligned security practices that help practitioners reason about risk as complexity increases.
 
 Modern software delivery environments face several challenges:
 
@@ -83,13 +83,12 @@ This project directly supports the CDF mission by:
 - Roadmap-driven content updates
 - Community contribution framework
 - Reference architectures and diagrams
-- Educational materials supporting CDF events and training
-
+  
 ## Initial Roadmap (High-Level)
 
 ### Phase 1
 - Transition guide to CDF project governance
-- Establish maintainers and contribution model
+- Establish maintainers and a contribution model
 - Stabilize structure and terminology
 - Define release cadence
 
@@ -100,7 +99,6 @@ This project directly supports the CDF mission by:
 
 ### Phase 3
 - Ongoing community-driven updates
-- Integration with CDF events and education
 - Regular content refresh aligned to industry changes
 
 ## Community and Sustainability
