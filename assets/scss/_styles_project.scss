@@ -2,6 +2,14 @@
   height: 40px;
 }
 
+.td-sidebar {
+  margin-bottom: 2rem;
+}
+
+#td-sidebar-menu {
+  height: calc(100vh - 6rem);
+}
+
 .td-sidebar-toc {
   position: sticky;
   top: 4rem;
