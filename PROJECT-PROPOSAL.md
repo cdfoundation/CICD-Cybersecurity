@@ -100,6 +100,11 @@ This project directly supports the CDF mission by:
 ### Phase 3
 - Ongoing community-driven updates
 - Regular content refresh aligned to industry changes
+- Build more features into the site.
+  - Advance searching / Tag/Filter System
+  - Seach History and Bookmarking
+  - Breadcrumbs
+  - Phase Dashboard Cards
 
 ## Community and Sustainability
 
