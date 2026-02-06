@@ -32,8 +32,6 @@ To satisfy SSDF PS.1 in a build and deploy context using open-source tools, the 
 
 - Restrict build system access and enforce role-based permissions, MFA, and least privilege for build servers
 
-
-
 <table style="width:100%">
   <tr>
     <th style="width: 30%">Tasks</th>
@@ -41,13 +39,15 @@ To satisfy SSDF PS.1 in a build and deploy context using open-source tools, the 
   </tr>
   <tr>
     <td rowspan="50">
-      <p>PS.1.1: Store all forms of code including source code, executable code, and configuration-as-code based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.</p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.1.1:</strong>
+        <p>Store all forms of code including source code, executable code, and configuration-as-code based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.</p>
+      </div>
     </td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://docs.sigstore.dev/cosign/"> cosign Sigstore</a>
-      </a>
       <p>Sign build outputs (binaries, containers, SBOMs) and create attestations; verify in CI before promotion.</p>
     </td>
   </tr>
@@ -81,82 +81,80 @@ To satisfy SSDF PS.1 in a build and deploy context using open-source tools, the 
       <p>Automatically sign task results (images, files) in Tekton pipelines and store attestations (e.g., in Rekor).</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/notaryproject/notation">Notation (CNCF Notary v2)</a>
       <p>Sign OCI artifacts (images, Helm charts) during build for later verification in registries and clusters.</p>
     </td>
   </tr>
- <tr>
+  <tr>
       <td>
       <a href="https://nixos.org/ ">Nix</a>
       <p>Lock inputs and make builds deterministic so unauthorized changes are detectable by hash/provenance mismatch.</p>
     </td>
   </tr>
   <tr>
-      <td>
+    <td>
       <a href="https://bazel.build/ ">Bazel</a>
       <p>Lock inputs and make builds deterministic so unauthorized changes are detectable by hash/provenance mismatch.</p>
     </td>
   </tr> 
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://grafeas.io/">Grafeas</a>
       <p>Persist signatures, SBOMs, and policy metadata to audit build integrity across services..</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://goharbor.io/">Harbor</a>
       <p>Enforce content trust, robot accounts, and policy on who can push/pull; require signed artifacts before release..</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/sigstore/policy-controller">Sigstore Policy Controller</a>
       <p>Admission controller that blocks unsigned/incorrectly signed images; enforces key/issuer/subject policies.</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://kyverno.io/">Kyverno </a>
       <p>Kubernetes policies that require image signatures, pin by digest, and forbid mutable tags in deployments.</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/open-policy-agent/gatekeeper">OPA Gatekeeper</a>
       <p>Gate deployments with custom policies (e.g., “only signed images from approved registries/namespaces”).</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/deislabs/ratify">Ratify</a>
       <p>Verifies OCI signatures/attestations (Cosign/Notation) at admission time and blocks anything that fails verification.</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/sse-secure-systems/connaisseur">Connaisseur</a>
       <p>Kubernetes admission controller dedicated to verifying container image signatures before scheduling.</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://docs.sigstore.dev/cosign/">Sigstore Cosign </a>
       <p>Verify signatures/attestations as a release gate in your CD pipeline prior to applying manifests.</p>
     </td>
   </tr>          
-  </table>
+</table>
     
-
 
 **PS.2**
 
 <strong>Provide a Mechanism for Verifying Software Release Integrity:</strong> Help software acquirers ensure that the software they acquire is legitimate and has not been tampered with. Make software integrity verification information available to software acquirers.
 
 <br>
-
 
 To satisfy SSDF PS.2 in a build and deploy context using open-source tools, the focus shifts to:
 
@@ -172,7 +170,6 @@ To satisfy SSDF PS.2 in a build and deploy context using open-source tools, the 
 
 - Admission control based on integrity
 
-
 <br>
 
 <table style="width:100%">
@@ -182,13 +179,15 @@ To satisfy SSDF PS.2 in a build and deploy context using open-source tools, the 
   </tr>
   <tr>
     <td rowspan="16">
-      PS.2.1: Make software integrity verification information available to software acquirers.
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.2.1:</strong> 
+        <p>Make software integrity verification information available to software acquirers.</p>
+      </div>
     </td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
     <td>
-      <a href="https://docs.sigstore.dev/cosign/"> cosign Sigstore</a>
-      </a>
+      <a href="https://docs.sigstore.dev/cosign/">Cosign Sigstore</a>
       <p>Sign binaries, container images, SBOMs, and attestations during build; supports keyless signing.</p>
     </td>
   </tr>
@@ -228,57 +227,55 @@ To satisfy SSDF PS.2 in a build and deploy context using open-source tools, the 
       <p>Create and publish checksums for release artifacts so recipients can manually or automatically verify integrity.</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://goharbor.io/">Harbor</a>
       <p>Enforce content trust; ensure only signed images are stored and distributed with policy on who can push/pull; require signed artifacts before release.</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/sigstore/policy-controller">Sigstore Policy Controller</a>
       <p>Kubernetes admission controller enforcing signature/provenance policies before deployment. Admission controller that blocks unsigned/incorrectly signed images; enforces key/issuer/subject policies.</p>
     </td>
   </tr>
   <tr>
-      <td>
+    <td>
       <a href="https://kyverno.io/">Kyverno</a>
       <p>Kubernetes policies that require image signatures, pin by digest, and forbid mutable tags in deployments. Validates signatures and digests for container images before they are deployed.</p>
     </td>
   </tr> 
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/open-policy-agent/gatekeeper">OPA Gatekeeper</a>
       <p>	Custom admission control to enforce artifact integrity and trusted signer policies.</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/deislabs/ratify">Ratify</a>
       <p>Pluggable verification framework for OCI registries/images; works with Cosign, Notation, in-toto.</p>
     </td>
   </tr>
- <tr>
-      <td>
+  <tr>
+    <td>
       <a href="https://github.com/sse-secure-systems/connaisseur">Connaisseur</a>
       <p>Kubernetes admission controller dedicated to signature verification and image trust policies.</p>
     </td>
   </tr>
- <tr>
+  <tr>
       <td>
       <a href="https://github.com/notaryproject/notation">Notation</a>
       <p>Signs OCI artifacts (containers, Helm charts) and verifies them prior to install or deployment.</p>
     </td>
   </tr>
   <tr>
-      <td>
+    <td>
       <a href="https://github.com/sigstore/cosign">Sigstore Cosign </a>
       <p>Used in CD pipelines or admission hooks to verify signatures and attestations match trusted keys/policies before promotion.</p>
     </td>
   </tr>                
-  </table> 
-
-    
+</table> 
 
 
 **PS.3**
@@ -287,14 +284,11 @@ To satisfy SSDF PS.2 in a build and deploy context using open-source tools, the 
 
 <br>
 
-
 To satisfy SSDF PS.3 in a build and deploy context using open-source tools, the focus shifts to:
 
 - Build: The emphasis is on capturing, storing, and securing every official release (source, binaries, SBOM, signatures, provenance) in immutable, versioned storage.
 
 - Deploy: The emphasis is on ensuring only those archived, protected releases are used in production with immutability, digest pinning, and signature/provenance verification as enforcement mechanisms.
-
-
 
 <table style="width:100%">
   <tr>
@@ -303,14 +297,19 @@ To satisfy SSDF PS.3 in a build and deploy context using open-source tools, the 
   </tr>
   <tr>
     <td rowspan="50">
-      <p>PS.3.1: Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.</p><br>
-      <p> PS.3.2: Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials [SBOM]).</p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.3.1:</strong>
+        <p>Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.3.2:</strong>
+        <p>Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials [SBOM]).</p>
+      </div>
     </td>
-    </tr>
-    <tr>
-     <td>
+  </tr>
+  <tr>
+    <td>
      <a href="https://git-scm.com/">Git (Release Tagging)</a>
-      </a>
       <p>Create immutable, signed tags for each release; preserves source snapshot for auditing</p>
     </td>
   </tr>
@@ -350,55 +349,52 @@ To satisfy SSDF PS.3 in a build and deploy context using open-source tools, the 
       <p>Sign release artifacts before archiving so integrity can be checked later.</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://kyverno.io/">Kyverno</a>
       <p>Enforce digest-pinned images to ensure deployments always match archived release versions.</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://github.com/open-policy-agent/gatekeeper">OPA Gatekeeper</a>
       <p>Policy enforcement to ensure only archived, approved artifacts are deployed.</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://github.com/deislabs/ratify">Ratify</a>
       <p>Verifies artifact signatures/attestations against archived release metadata before deployment..</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://github.com/sse-secure-systems/connaisseur">Connaisseur</a>
       <p>Admission controller that enforces deployment of only signed images from the archived se</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://rclone.org/">Backblaze B2 / Rclone (OSS integration)</a>
       <p>Long-term archival of deployed artifact versions for rollback or investigation.</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://slsa.dev/">SLSA Provenance</a> <a href="https://www.sigstore.dev/">+ Rekor</a>
       <p>Retain build provenance in a transparency log so deployed releases can be cross-verified with archived originals</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://github.com/kpcyrd/rebuilderd">rebuildered</a>
       <p>rebuilderd independently verifies binary packages can be reproduced from source, which is a strong mechanism for third-party component integrity/validation and for preserving/verifying release integrity evidence.</p>
      </td>
- </tr> 
-<tr>
+  </tr> 
+  <tr>
     <td>
       <a href="https://github.com/testifysec">TestifySec</a>
       <p>TestifySec’s approach is evidence/attestations/policy verification around builds; their Witness tool is used to create and verify attestations and enforce policies—i.e., provenance generation + policy verification.</p>
      </td>
   </tr>  
 </table>
-
-
-

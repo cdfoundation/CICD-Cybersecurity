@@ -36,11 +36,13 @@ To satisfy SSDF PS.1 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td rowspan="16">
-      <p>PS.1.1: Store all forms of code including source code, executable code, and configuration-as-code based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.</p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.1.1:</strong>
+        <p>Store all forms of code including source code, executable code, and configuration-as-code based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.</p>
+      </div>
     </td>
     <td>
       <a href="https://docs.sigstore.dev/cosign/"> Cosign Sigstore</a>
-      </a>
       <p>Sign and verify container images, binaries, and other artifacts.</p>
     </td>
   </tr>
@@ -110,13 +112,13 @@ To satisfy SSDF PS.1 in a post-deployment context using open-source tools, the f
       <p>Centralized authentication/authorization for artifact registries and CI/CD systems.</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://github.com/wazuh/wazuh">Wazuh</a>
       <p> SIEM platform that monitors access logs and alerts on anomalies.</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://ortelius.io">Ortelius Evidence Store</a>
       <p>Tracks which version of a service is deployed where, and links to its signed SBOM.</p>
@@ -134,16 +136,14 @@ To satisfy SSDF PS.1 in a post-deployment context using open-source tools, the f
       <p>Monitors components in deployed artifacts against CVE feeds.</p>
     </td>
   </tr>
-  </table>
+</table>
     
-
 
 **PS.2**
 
 <strong>Provide a Mechanism for Verifying Software Release Integrity:</strong> Help software acquirers ensure that the software they acquire is legitimate and has not been tampered with. Make software integrity verification information available to software acquirers.
 
 <br>
-
 
 To satisfy SSDF PS.2 in a post-deployment context using open-source tools, the focus shifts to:
 
@@ -152,7 +152,6 @@ To satisfy SSDF PS.2 in a post-deployment context using open-source tools, the f
 - Recording and publishing cryptographic verification data (signatures, hashes, attestations)
 
 - Ensuring acquirers can confirm that what they have matches the trusted, official release
-
 
 <br>
 
@@ -163,11 +162,13 @@ To satisfy SSDF PS.2 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td rowspan="17">
-      PS.2.1: Make software integrity verification information available to software acquirers.
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.2.1:</strong>
+        <p>Make software integrity verification information available to software acquirers.</p>
+      </div>
     </td>
     <td>
-      <a href="https://goharbor.io/"> Harbor</a>
-      </a>
+      <a href="https://goharbor.io/">Harbor</a>
       <p>Container registry with image retention policies, RBAC, and content trust.</p>
     </td>
   </tr>
@@ -207,36 +208,36 @@ To satisfy SSDF PS.2 in a post-deployment context using open-source tools, the f
       <p>Sign and verify tarballs, binaries, or SBOM files.</p>
     </td>
   </tr> 
-<tr>
+  <tr>
     <td>
       <a href="https://in-toto.io/">In-Toto</a>
       <p>Provide end-to-end build provenance verification.</p>
     </td>
-</tr>
-<tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://ortelius.io/">Ortelius</a>
       <p>Maps deployed services to specific versions and their SBOMs.</p>
     </td>
- </tr>
- <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://github.com/anchore/syft">Syft</a>
       <p>Generates SBOMs from deployed artifacts.</p>
     </td>
- </tr>
- <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://hoppr.dev/">Hoppr</a>
       <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
      </td>
- <tr>
+  <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency-Track</a>
       <p>Continuously monitors SBOMs for new CVEs in preserved releases.</p>
     </td>
- </tr> 
- <tr>
+  </tr> 
+  <tr>
     <td>
       <a href="https://aide.github.io/">AIDE (Advanced Intrusion Detection Environment)</a>
       <p>Filesystem integrity checker to detect changes in stored artifacts.</p>
@@ -260,14 +261,13 @@ To satisfy SSDF PS.2 in a post-deployment context using open-source tools, the f
       <p>Linux-level auditing for access to preserved release files.</p>
     </td>
   </tr>
-   <tr>
+  <tr>
     <td>
       <a href="https://www.keycloak.org/getting-started/getting-started-kube/">Kubernetes RBAC / Keycloak </a>
       <p>Restrict who can upload or modify artifacts in registries.</p>
     </td>
   </tr>
-  </table>
-    
+</table>
 
 
 **PS.3**
@@ -292,12 +292,17 @@ To satisfy SSDF PS.3 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td rowspan="13">
-      <p>PS.3.1: Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.</p><br>
-      <p> PS.3.2: Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials -SBOM).</p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.3.1:</strong>
+        <p>Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.3.2:</strong>
+        <p>Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials -SBOM).</p>
+      </div>
     </td>
     <td>
       <a href="https://github.com/anchore/syft/"> Syft</a>
-      </a>
       <p>Generate SBOMs from deployed containers, VMs, or file systems (SPDX & CycloneDX formats).</p>
     </td>
   </tr>
@@ -349,7 +354,7 @@ To satisfy SSDF PS.3 in a post-deployment context using open-source tools, the f
       <p>Version and track deployed services and their SBOMs; link them to environments and releases. API/UI access for sharing SBOM and component history for specific releases.</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://github.com/DependencyTrack/dependency-track">Dependency Track</a>
       <p>Continuously monitor preserved SBOMs for new CVEs.</p>

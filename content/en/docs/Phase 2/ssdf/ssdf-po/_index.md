@@ -37,11 +37,17 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
   </tr>
   <tr>
     <td rowspan="50">
-      <p>PO.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
-      <p>PO.1.2 Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time. </p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.1.1:</strong>
+        <p>Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p>
+      </div> 
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.1.2:</strong>
+        <p>Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time.</p>
+      </div>    
     </td>
-    </tr>
-   <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://www.openpolicyagent.org/"> Open Policy Agent</a>
       <p>General-purpose policy engine using Rego to enforce policies across services, CI/CD, and infrastructure.</p>
@@ -77,8 +83,7 @@ To satisfy SSDF PO.1 in a Build and Deploy context using open-source tools, the 
       <p>Scans container images, IaC, and SBOMs for vulnerabilities and misconfigurations before deployment.</p>
     </td>
   </tr>
-    </tr>
-     <tr>
+  <tr>
     <td>
       <a href="https://github.com/quay/clair">Clair</a>
       <p>Static analysis for container images to ensure they meet security requirements before push to registry.</p>
@@ -128,13 +133,22 @@ To satisfy SSDF PO.2 in a Build and Deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="50"
-      <p>PO.2.1: Create new roles and alter responsibilities for  existing roles as needed to encompass all parts of the SDLC. Periodically review and maintain the defined roles and responsibilities, updating them as needed.</p><br>
-      <p>PO.2.2: Provide role-based training for all personnel with responsibilities that contribute to secure development. Periodically review personnel proficiency and role-based training, and update the training as needed</p><br>
-      <p>PO.2.3: Obtain upper management or authorizing official commitment to secure development, and convey that commitment to all with development related roles and responsibilities.</p>
+    <td rowspan="50">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.2.1:</strong>
+        <p>Create new roles and alter responsibilities for  existing roles as needed to encompass all parts of the SDLC. Periodically review and maintain the defined roles and responsibilities, updating them as needed.</p><br>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.2.2:</strong>
+        <p>Provide role-based training for all personnel with responsibilities that contribute to secure development. Periodically review personnel proficiency and role-based training, and update the training as needed</p><br>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.2.3:</strong>
+        <p>Obtain upper management or authorizing official commitment to secure development, and convey that commitment to all with development related roles and responsibilities.</p>
+      </div>
     </td>
-   </tr>
-   <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://www.keycloak.org/">Keycloak</a>
       <p>Open-source identity and access management for enforcing RBAC in CI/CD pipelines and deployment tools.</p>
@@ -222,13 +236,21 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="50"
-      <p>PO.3.1: Specify which tools or tool types must or should be included in each toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p><br>
-      <p>PO.3.2: Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p><br>
-      <p>PO.3.3: Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization. </p>
+    <td rowspan="50">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.3.1:</strong>
+        <p>Specify which tools or tool types must or should be included in each toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p><br>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.3.2:</strong><p>Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p><br>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.3.3:</strong>
+        <p>Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization. </p>
+      </div>
     </td>
-   </tr>
-   <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://sigstore.dev/">Sigstore Cosign</a>
       <p>Signs and verifies build artifacts to prevent deploying tampered software.</p>
@@ -332,12 +354,18 @@ To satisfy SSDF PO.4 in a Build and Deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="50"
-      <p>PO.4.1: Define criteria for software security checks and track throughout the SDLC.</p><br>
-      <p>PO.4.2: Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p><br>
-   </td>
-   </tr>
-   <tr>
+    <td rowspan="50">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.4.1:</strong>
+        <p>Define criteria for software security checks and track throughout the SDLC.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.4.2:</strong>
+        <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p>
+      </div>
+    </td>
+  </tr>
+  <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
       <p>Automates open-source dependency scanning in builds to enforce consistent vulnerability detection.</p>
@@ -373,27 +401,25 @@ To satisfy SSDF PO.4 in a Build and Deploy context using open-source tools, the 
       <p>Automates compliance checks before deployment to ensure practices match organizational standards.</p>
     </td>
   </tr> 
- <tr>
+  <tr>
     <td>
       <a href="https://sigstore.dev/">Sigstore Cosign</a>
       <p>Standardizes artifact signing and verification so only trusted builds are deployed.</p>
     </td>
   </tr>   
- <tr>
+  <tr>
     <td>
       <a href="https://www.openpolicyagent.org/">Open Policy Agent (OPA)</a>
       <p>Enforces organization-wide deployment policies across all environments.</p>
     </td>
   </tr>   
- <tr>
+  <tr>
     <td>
       <a href="https://www.defectdojo.org/">DefectDojo</a>
       <p>Centralizes and standardizes vulnerability tracking and remediation workflows across builds.</p>
     </td>
   </tr>         
- </table>
-    
-
+</table>
 
 **PO.5**
 <strong>Implement and Maintain Secure Environments for Software Development:</strong> Ensure that all components of the environments for software development are strongly protected from internal and external threats to prevent compromises of the
@@ -411,7 +437,6 @@ To satisfy SSDF PO.5 in a Build and Deploy context using open-source tools, the 
 
 - Preventing malicious code or tampering in the software supply chain.
 
-
 <br>
 
 <table style="width:100%">
@@ -420,11 +445,17 @@ To satisfy SSDF PO.5 in a Build and Deploy context using open-source tools, the 
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="14"
-      <p>PO.5.1: PO.5.1: Separate and protect each environment involved in software development.</p><br>
-      <p>PO.5.2: Secure and harden development endpoints (i.e., endpoints for software designers, developers, testers, builders, etc.) to perform development-related tasks using a risk-based approach.</p><br>
+    <td rowspan="14">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+      <strong>PO.5.1:</strong>
+      <p>Separate and protect each environment involved in software development.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.5.2:</strong>
+        <p>Secure and harden development endpoints (i.e., endpoints for software designers, developers, testers, builders, etc.) to perform development-related tasks using a risk-based approach.</p>
+      </div>
     </td>
-   </tr>
+  </tr>
   <tr>
     <td>
       <a href="https://plugins.jenkins.io/configuration-as-code/">Jenkins Configuration as Code + Role Strategy Plugin</a>

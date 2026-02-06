@@ -35,14 +35,19 @@ To satisfy SSDF PO.1 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td rowspan="50">
-      <p>PO.1.1: Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p><br>
-      <p>PO.1.2 Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time. </p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.1.1:</strong>
+        <p>Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.1.2:</strong>
+        <p>Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time.</p>
+      </div>
     </td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://www.openpolicyagent.org/"> Open Policy Agent</a>
-      </a>
       <p>Supports definitions of security policies as code and enforce them in pipelines, CI/CD, and runtime.  Enforces runtime policies via integrations with Kubernetes, Terraform, and CI/CD platforms.</p>
     </td>
   </tr>
@@ -64,7 +69,7 @@ To satisfy SSDF PO.1 in a post-deployment context using open-source tools, the f
       <p> Maps security findings back to specific policy controls or regulatory frameworks.</p>
     </td>
   </tr>
-  </table>
+</table>
 
 
 **PO.2**
@@ -89,12 +94,20 @@ To satisfy SSDF PO.2 in a post-deployment context using open-source tools, the f
   </tr>
   <tr>
     <td rowspan="50">
-      <p>PO.2.1: Create new roles and alter responsibilities for existing roles as needed to encompass all parts of the SDLC. Periodically review and maintain the defined roles and responsibilities, updating them as needed.</p><br>
-      <p>PO.2.2: Provide role-based training for all personnel with responsibilities that contribute to secure development. Periodically review personnel proficiency and role-based training, and update the training as needed. </p><br>
-      <p>PO.2.3: Obtain upper management or authorizing official commitment to secure development, and convey that commitment to all with development related roles and  responsibilities. </p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.2.1:</strong><p>Create new roles and alter responsibilities for existing roles as needed to encompass all parts of the SDLC. Periodically review and maintain the defined roles and responsibilities, updating them as needed.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.2.2:</strong>
+        <p>Provide role-based training for all personnel with responsibilities that contribute to secure development. Periodically review personnel proficiency and role-based training, and update the training as needed.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.2.3:</strong>
+        <p>Obtain upper management or authorizing official commitment to secure development, and convey that commitment to all with development related roles and  responsibilities.</p>
+      </div>
     </td>
-   </tr>
-   <tr> 
+  </tr>
+  <tr> 
     <td>
       <a href="https://git-scm.com/">Git</a>
       <p>Tracks authorship and code reviewers, and tags releases and documents who triggered them. </p>
@@ -112,19 +125,19 @@ To satisfy SSDF PO.2 in a post-deployment context using open-source tools, the f
       <p>Lists service owners, on-call teams and escalation paths making post-deployment responsibility transparent across the organization.</p>
     </td>
   </tr>
- <tr>
+  <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
       <p>Track security findings and assign resolution responsibilities.</p>
     </td>
   </tr>
-<tr>
+  <tr>
     <td>
       <a href="https://kubernetes.io/blog/2019/08/06/opa-gatekeeper-policy-and-governance-for-kubernetes/">Kubernetes RBAC / OPA Gatekeepr</a>
       <p>Enforces access policies and role boundaries in runtime environments.</p>
     </td>
   </tr>
-<tr>
+  <tr>
     <td>
       <a href="https://argo-cd.readthedocs.io/en/stable/">ArgoCD</a>
       <p>Ensures only authorized commits/deployments affect production and logs every promotion and rollback.</p>
@@ -142,9 +155,7 @@ To satisfy SSDF PO.2 in a post-deployment context using open-source tools, the f
       <p>Alerts based on ownership/roles</p>
     </td>
   </tr>
-  </table>
-    
-
+</table>
 
 
 **PO.3**
@@ -163,7 +174,6 @@ To satisfy SSDF PO.3 in a post-deployment context using open-source tools, the f
 - Maintaining evidence that the toolchain’s outputs (e.g., SBOMs, scan reports) remain trustworthy and current.
 
 
-
 <br>
 
 <table style="width:100%">
@@ -172,13 +182,22 @@ To satisfy SSDF PO.3 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="50"
-      <p>PO.3.1: Specify which tools or tool types must or should be included in each  toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p><br>
-      <p>PO.3.2: Follow recommended security practices to deploy, operate, and maintain tools and toolchains. </p><br>
-      <p>PO.3.3: Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization. </p>
+    <td rowspan="50">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.3.1:</strong>
+        <p>Specify which tools or tool types must or should be included in each  toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.3.2:</strong>
+        <p>Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.3.3:</strong>
+        <p>Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization.</p>
+      </div>
     </td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency Track</a>
       <p>Continuously monitors SBOMs for newly disclosed CVEs in deployed software. </p>
@@ -196,19 +215,19 @@ To satisfy SSDF PO.3 in a post-deployment context using open-source tools, the f
       <p>Generates SBOMs from deployed container images or filesystems on-demand.</p>
     </td>
   </tr>
- <tr>
+  <tr>
     <td>
       <a href="https://trivy.dev/latest/">Trivy</a>
       <p> Post-deployment container, filesystem, and package vulnerability scanning; also generates SBOMs.</p>
     </td>
   </tr>
-<tr>
+  <tr>
     <td>
       <a href="https://github.com/quay/clair/">Clair</a>
       <p>Continuous scanning of container registries for vulnerabilities.</p>
     </td>
   </tr>
-<tr>
+  <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
       <p>Fast vulnerability scanner for container images and filesystems.</p>
@@ -235,7 +254,6 @@ To satisfy SSDF PO.3 in a post-deployment context using open-source tools, the f
   <tr>
   <td>
       <a href="https://www.openpolicyagent.org/"> Open Policy Agent</a>
-      </a>
       <p>Enforce security and compliance policies on deployed systems (e.g., Kubernetes clusters).</p>
     </td>
   </tr>
@@ -262,8 +280,7 @@ To satisfy SSDF PO.3 in a post-deployment context using open-source tools, the f
       <p>Track vulnerabilities and assign remediation tasks; integrate with scanners for continuous updates.</p>
     </td>
   </tr>
-  </table>
-
+</table>
 
 
 **PO.4**
@@ -282,7 +299,6 @@ To satisfy SSDF PO.4 in a post-deployment context using open-source tools, the f
 - Data is retrievable for audits, investigations, and compliance checks
 
 
-
 <br>
 
 <table style="width:100%">
@@ -291,12 +307,18 @@ To satisfy SSDF PO.4 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="50"
-      <p>PO.4.1: Define criteria for software security checks and track throughout the SDLC.</p><br>
-      <p>PO.4.2: Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p><br>
-   </td>
-   </tr>
-   <tr>
+    <td rowspan="50">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.4.1:</strong>
+        <p>Define criteria for software security checks and track throughout the SDLC.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.4.2:</strong>
+        <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p><br>
+      </div>
+    </td>
+  </tr>
+  <tr>
     <td>
       <a href="https://falco.org/">Falco</a>
       <p>Runtime security detection for containers and hosts; generates event logs for suspicious behavior.</p>
@@ -332,19 +354,19 @@ To satisfy SSDF PO.4 in a post-deployment context using open-source tools, the f
       <p>Generates SBOMs from deployed artifacts for ongoing monitoring./p>
     </td>
   </tr>
- <tr>
+  <tr>
     <td>
       <a href="https://www.open-scap.org/features/standards/">OpenSCAP</a>
       <p>Collects and stores compliance scan data.</p>
     </td>
   </tr>
-<tr>
+  <tr>
     <td>
       <a href="https://github.com/wazuh/wazuh">Wazuh SIEM</a>
       <p>SIEM with audit logging, threat detection, and compliance monitoring.</p>
     </td>
   </tr>
-<tr>
+  <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
       <p>Detects CVEs in deployed images and file systems.</p>
@@ -380,8 +402,7 @@ To satisfy SSDF PO.4 in a post-deployment context using open-source tools, the f
       <p>Stores and organizes security scan results; integrates with Trivy, Grype, and Dependency-Track.</p>
     </td>
   </tr>
-  </table>
-    
+</table>
 
 
 **PO.5**
@@ -407,12 +428,18 @@ To satisfy SSDF PO.5 in a post-deployment context using open-source tools, the f
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="50"
-      <p>PO.5.1: Separate and protect each environment involved in software development.</p><br>
-      <p>PO.5.2: Secure and harden development endpoints (i.e., endpoints for software designers, developers, testers, builders, etc.) to perform development-related tasks using a risk-based approach.</p><br>
-   </td>
-   </tr>
-   <tr>
+    <td rowspan="50">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.5.1:</strong>
+        <p>Separate and protect each environment involved in software development.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.5.2:</strong>
+        <p>Secure and harden development endpoints (i.e., endpoints for software designers, developers, testers, builders, etc.) to perform development-related tasks using a risk-based approach.</p>
+      </div>
+    </td>
+  </tr>
+  <tr>
     <td>
       <a href="https://www.inspec.io">Inspec</a>
       <p>Runs ongoing compliance scans against development and build servers; enforce CIS/NIST benchmarks.</p>
@@ -466,19 +493,19 @@ To satisfy SSDF PO.5 in a post-deployment context using open-source tools, the f
       <p>Container registry with built-in vulnerability scanning and RBAC.</p>
     </td>
   </tr>
- <tr>
+  <tr>
     <td>
       <a href="https://github.com/wazuh/wazuh">Wazuh SIEM</a>
       <p>Ingests infrastructure security logs and alerts on violations.</p>
     </td>
   </tr>
-  </tr>
+  <tr>
    <td>
       <a href="https://falco.org/">Falco</a>
       <p>Detect unauthorized activity in build/deployment clusters or runner nodes.</p>
     </td>
   </tr>
-<tr>
+  <tr>
     <td>
       <a href="https://github.com/prometheus/alertmanager">Prometheus + Alertmanager</a>
       <p>Monitor infrastructure security metrics and trigger notifications. </p>
@@ -496,5 +523,4 @@ To satisfy SSDF PO.5 in a post-deployment context using open-source tools, the f
       <p>Maintain an immutable, tamper-evident log of signed infrastructure configuration files.</p>
     </td>
   </tr>
-  </table>
-    
+</table>
