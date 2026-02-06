@@ -26,10 +26,14 @@ Organizations should produce well-secured software with minimal security vulnera
   </tr>
   <tr>
     <td rowspan="50">
-       <p>
-        PW.1.1: Use forms of risk modeling – such as threat modeling, attack modeling, or attack surface mapping – to help assess the security risk for the software.</p> </br>
-        <p>PW.1.2: Track and maintain the software’s security requirements, risks, and design decisions.</p></br>
-        <P>PW.1.3: Where appropriate, build in support for using standardized security features and services (e.g., enabling software to integrate with existing log management, identity management, access control, and vulnerability management systems) instead of creating proprietary implementations of security features and services.</p>
+      <strong>PW.1.1:</strong> 
+      <p>Use forms of risk modeling – such as threat modeling, attack modeling, or attack surface mapping – to help assess the security risk for the software.</p>
+      <br>
+      <strong>PW.1.2:</strong>
+      <p>Track and maintain the software’s security requirements, risks, and design decisions.</p>
+      <br>
+      <strong>PW.1.3:</strong>
+      <p>Where appropriate, build in support for using standardized security features and services (e.g., enabling software to integrate with existing log management, identity management, access control, and vulnerability management systems) instead of creating proprietary implementations of security features and services.</p>
     </td>
     <td>
       <a href="https://owasp.org/www-project-threat-dragon/">OWASP Threat Dragon</a>
@@ -89,8 +93,8 @@ Organizations should produce well-secured software with minimal security vulnera
   </tr>
   <tr>
     <td rowspan="50">
-        <p>
-        PW.2.1: Have 1) a qualified person (or people) who were not involved with the design and/or 2) automated processes instantiated in the toolchain review the software design to confirm and enforce that it meets all of the security requirements and satisfactorily addresses the identified risk information.
+        <strong>PW.2.1:</strong>
+        <p>Have (1) a qualified person (or people) who were not involved with the design and/or (2) automated processes instantiated in the toolchain review the software design to confirm and enforce that it meets all of the security requirements and satisfactorily addresses the identified risk information.
       </p>
     </td>
     <td>
@@ -174,13 +178,24 @@ Reuse Existing, Well-Secured Software When Feasible Instead of Duplicating Funct
   </tr>
   <tr>
     <td rowspan="50">
-      <p>
-        PW.4.1: Acquire and maintain well-secured software components (e.g., software libraries, modules, middleware, frameworks) from commercial, opensource, and other third-party developers for use by the organization’s software.<p><br>     
-        <p>PW.4.2: Create and maintain well-secured software components in-house following SDLC processes to meet common internal software development needs that cannot be better met by third-party software components.</p><br>
-        <p>PW.4.3: Moved to PW.4.4</p><br>   
-        <p>PW.4.4: Verify that acquired commercial, open-source, and all other third-party software components comply with the requirements, as defined by the organization, throughout their life cycles.</p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.4.1:</strong>
+        <p>Acquire and maintain well-secured software components (e.g., software libraries, modules, middleware, frameworks) from commercial, open-source, and other third-party developers for use by the organization’s software.<p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.4.2:</strong>
+        <p>Create and maintain well-secured software components in-house following SDLC processes to meet common internal software development needs that cannot be better met by third-party software components.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.4.3:</strong>
+        <p>Moved to PW.4.4</p>
+      </div>  
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.4.4:</strong>
+        <p>Verify that acquired commercial, open-source, and all other third-party software components comply with the requirements, as defined by the organization, throughout their life cycles.</p>
+      </div>
     </td>
-   </tr>
+  </tr>
    <tr> 
      <td>
       <a href="https://cyclonedx.org/">CycloneDX</a>
@@ -529,11 +544,17 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   </tr>
   <tr>
     <td rowspan="50">
-       <p>PW.6.1: Use compiler, interpreter, and build tools that offer features to improve executable security</p><br>
-       <p>PW.6.2: Determine which compiler, interpreter, and build tool features should be used and how each should be configured, then implement and use the approved configurations.</p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.6.1:</strong>
+        <p>Use compiler, interpreter, and build tools that offer features to improve executable security</p>
+      </div>       
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.6.2:</strong>
+        <p>Determine which compiler, interpreter, and build tool features should be used and how each should be configured, then implement and use the approved configurations.</p>
+      </div>
     </td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://sigstore.dev">Sigstore Cosign</a>
       <p>Signs and verifies the integrity/authenticity of source code and pre-built dependencies before compiling.</p>
@@ -598,11 +619,17 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   </tr>
   <tr>
     <td rowspan="50">
-       <p>PW.7.1 Determine whether code review (a person looks directly at the code to find issues) and/or code analysis (tools are used to find issues in code, either in a fully automated way or in conjunction with a person) should be used, as defined by the organization.</p><br>
-       <p>PW.7.2: Perform the code review and/or code analysis based on the organization’s secure coding standards, and record and triage all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.7.1:</strong>
+        <p>Determine whether code review (a person looks directly at the code to find issues) and/or code analysis (tools are used to find issues in code, either in a fully automated way or in conjunction with a person) should be used, as defined by the organization.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.7.2:</strong>
+        <p>Perform the code review and/or code analysis based on the organization’s secure coding standards, and record and triage all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p>
+      </div>  
     </td>
-   </tr>
-   <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
       <p>Scans project dependencies (e.g., Maven, npm, Python) against the NVD for known CVEs before build, enabling early remediation of vulnerable libraries.</p>
@@ -704,9 +731,15 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   </tr>
   <tr>
     <td rowspan="50">
-       <p>PW.8.1: Determine whether executable code testing should be performed to find vulnerabilities not identified by previous reviews, analysis, or testing and, if so, which types of testing should be used.</p><br>
-       <p>PW.8.2: Scope the testing, design the tests, perform the testing, and document the results, including recording and triaging all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p>
-    </td>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.8.1:</strong>
+        <p>Determine whether executable code testing should be performed to find vulnerabilities not identified by previous reviews, analysis, or testing and, if so, which types of testing should be used.</p>
+      </div> 
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.8.2:</strong>
+        <p>Scope the testing, design the tests, perform the testing, and document the results, including recording and triaging all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p>
+      </div>    
+</td>
    </tr>
    <tr>
     <td>
@@ -744,57 +777,57 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
       <p>General bug and vulnerability detection in Java code before build output.</p>
     </td>
   </tr>
+<tr>
+  <td>
+    <a href="https://codeql.github.com">GitHub CodeQL</a>
+    <p>Semantic code analysis to find vulnerabilities before build.</p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
+    <p>SCA tool that identifies vulnerable dependencies in manifests before packaging.</p>
+  </td>
+</tr> 
+<tr>
+  <td>
+    <a href="https://retirejs.github.io/retire.js/">Retire.js</a>
+    <p>Scans JavaScript and Node.js dependencies for known vulnerabilities before release.</p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <a href="https://github.com/anchore/grype">Grype</a>
+    <p>SSCA tool for scanning source code dependencies and base images pre-build for CVEs.</p>
+  </td>
+</tr> 
+<tr>
+  <td>
+    <a href="https://github.com/anchore/syft">Syft</a>
+    <p>Generates SBOMs from source code before build to verify component inventory.</p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <a href="https://kics.io">Checkmarx KICS</a>
+    <p>Scans Infrastructure-as-Code files for misconfigurations before deployment.</p>
+  </td>
+</tr>
  <tr>
-    <td>
-      <a href="https://codeql.github.com">GitHub CodeQL</a>
-      <p>Semantic code analysis to find vulnerabilities before build.</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
-      <p>SCA tool that identifies vulnerable dependencies in manifests before packaging.</p>
-    </td>
-  </tr> 
-  <tr>
-    <td>
-      <a href="https://retirejs.github.io/retire.js/">Retire.js</a>
-      <p>Scans JavaScript and Node.js dependencies for known vulnerabilities before release.</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/anchore/grype">Grype</a>
-      <p>SSCA tool for scanning source code dependencies and base images pre-build for CVEs.</p>
-    </td>
-  </tr> 
-  <tr>
-    <td>
-      <a href="https://github.com/anchore/syft">Syft</a>
-      <p>Generates SBOMs from source code before build to verify component inventory.</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://kics.io">Checkmarx KICS</a>
-      <p>Scans Infrastructure-as-Code files for misconfigurations before deployment.</p>
-    </td>
-  </tr>
-   <tr>
-    <td>
-      <a href="https://gitleaks.io">Gitleaks</a>
-      <p>Searches code and git history for secrets before build.</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://trufflesecurity.com">TruffleHog</a>
-      <p>Searches code and git history for secrets before build.</p>
-    </td>
-  </tr>
-  </table>
+  <td>
+    <a href="https://gitleaks.io">Gitleaks</a>
+    <p>Searches code and git history for secrets before build.</p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <a href="https://trufflesecurity.com">TruffleHog</a>
+    <p>Searches code and git history for secrets before build.</p>
+  </td>
+</tr>
+</table>
 
-  **PW.9** 
+**PW.9** 
 
 <strong>Configure Software to Have Secure Settings by Default:</strong> Help improve the security of the software at the time of installation to reduce the likelihood of the software being deployed with weak security settings, putting it at greater risk of compromise.
 
@@ -807,9 +840,15 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   </tr>
   <tr>
     <td rowspan="50">
-       <p>PW.9.1: Define a secure baseline by determining how to configure each setting that has an effect on security or a security-related setting so that the default  settings are secure and do not weaken the security functions provided by the platform, network infrastructure, or services.</p><br>
-       <p>PW.9.2: Implement the default settings (or groups of default settings, if  applicable), and document each setting for software administrators.</p>
-    </td>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.9.1:</strong>
+        <p>Define a secure baseline by determining how to configure each setting that has an effect on security or a security-related setting so that the default settings are secure and do not weaken the security functions provided by the platform, network infrastructure, or services.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PW.9.2:</strong>
+        <p>Implement the default settings (or groups of default settings, if  applicable), and document each setting for software administrators.</p>
+      </div>    
+</td>
    </tr>
    <tr>
     <td>

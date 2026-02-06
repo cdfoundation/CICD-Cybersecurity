@@ -57,12 +57,26 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
   <th style="width: 70%">Tools</th>
 </tr>
 <tr>
-  <td rowspan="3">
-    <strong>PO.3.1</strong>:
-    <p>Specify which tools or tool types must or should be included in each toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p>
-    <div style="height: 16px"></div>
-    <p style="font-style: italic">Use software factories and/or software templates to standardize the toolchain.</p>
-  </td>
+  <td rowspan="20">
+    <div style="padding-top: 8px; padding-bottom: 8px">
+      <strong>PO.3.1</strong>:
+      <p>Specify which tools or tool types must or should be included in each toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p>
+      <div style="height: 16px"></div>
+      <p style="font-style: italic">Use software factories and/or software templates to standardize the toolchain.</p>
+    </div>
+    <div style="padding-top: 8px; padding-bottom: 8px">
+      <strong>PO.3.2</strong>:
+      <p>Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p>
+      <div style="height: 16px"></div>
+      <p style="font-style: italic">Use code-based configuration for toolchains (e.g., pipelines-as-code, toolchains-as-code).</p>
+    </div>
+    <div style="padding-top: 8px; padding-bottom: 8px">
+      <strong>PO.3.3</strong>:
+      <p>Configure tools to generate artifacts of their support of secure software development practices as defined by the organization.</p>
+      <div style="height: 16px"></div>
+      <p style="font-style: italic">Use existing tooling (e.g., workflow tracking, issue tracking, value stream mapping) to create an audit trail of the secure development-related actions that are performed for continuous improvement purposes. Record security check approvals, rejections, and exception requests as part of the workflow and tracking system.</p>
+    </div>
+</td>
   <td>
     <p><a href="https://backstage.io/docs/features/software-templates/">Backstage Software Templates</a></p>
     <p>Backstage Software Templates are a scaffolding and standardization mechanism that help teams create new services, pipelines, and infrastructure in a consistent, compliant way. Backstage Software Templates let platform teams define golden paths for creating software components. A template captures best practices, required tooling, and organizational standards, then generates repositories, configs, and documentation automatically.</p>
@@ -81,12 +95,6 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
   </td>
 </tr>
 <tr>
-  <td rowspan="10">
-    <strong>PO.3.2</strong>:
-    <p>Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p>
-    <div style="height: 16px"></div>
-    <p style="font-style: italic">Use code-based configuration for toolchains (e.g., pipelines-as-code, toolchains-as-code).</p>
-  </td>
   <td>
     <p><a href="https://www.jenkins.io/solutions/pipeline/">Jenkins Jenkinsfile</a></p>
     <p>A Jenkins Jenkinsfile is a declarative or scripted definition of a CI/CD pipeline, written as code and stored directly in a source repository. A Jenkinsfile describes how software is built, tested, scanned, packaged, and deployed. Because it lives alongside the application code, it enables pipeline-as-code—versioned, reviewable, and auditable automation.</p>
@@ -186,12 +194,6 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
 </td>
 </tr>
 <tr>
-<td rowspan="7">
-  <strong>PO.3.3</strong>:
-  <p>Configure tools to generate artifacts of their support of secure software development practices as defined by the organization.</p>
-  <div style="height: 16px"></div>
-  <p style="font-style: italic">Use existing tooling (e.g., workflow tracking, issue tracking, value stream mapping) to create an audit trail of the secure development-related actions that are performed for continuous improvement purposes. Record security check approvals, rejections, and exception requests as part of the workflow and tracking system.</p>
-</td>
 <td>
   <p><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/">GitHub Issues</a></p><p>GitHub Issues is a built-in tracking system used to manage work, bugs, feature requests, and discussions directly within a GitHub repository.</p>
 </td>
@@ -241,11 +243,25 @@ Help ensure that the software resulting from the SDLC meets the organization’s
     <th style="width: 70%">Tools</th>
   </tr>
   <tr>
-    <td rowspan="2">
-      <strong>PO.4.1:</strong>
-      <p>Define criteria for software security checks and track throughout the SDLC.</p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">Add software security criteria to existing checks (e.g., the Definition of Done in agile SDLC methodologies).</p>
+    <td rowspan="6">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.4.1:</strong>
+        <p>Define criteria for software security checks and track throughout the SDLC.</p>
+        <div style="height: 16px"></div>
+        <p style="font-style: italic">Add software security criteria to existing checks (e.g., the Definition of Done in agile SDLC methodologies).</p>
+      </div>    
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.4.2:</strong>
+        <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p>
+        <div style="height: 16px"></div>
+        <p style="font-style: italic">Collect audit logs for code repositories.</p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PO.4.3:</strong>
+        <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p>
+        <div style="height: 16px"></div>
+        <p style="font-style: italic">Only allow authorized personnel to access the gathered information, and prevent any alteration or deletion of the information. Carefully manage the list of repository owners and organization owners who have the ability to view audit logs, delete organizations, and delete code repositories, and review the list annually.</p>
+      </div>
     </td>
     <td>
       <p><a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">GitHub Issue Templates</a></p><p>GitHub Issue Templates are predefined forms and guidelines that appear when someone opens a new issue in a repository. They help teams collect consistent, high-quality information for bugs, feature requests, security issues, or questions.</p>
@@ -258,17 +274,9 @@ Help ensure that the software resulting from the SDLC meets the organization’s
   </tr>
 
   <tr>
-    <td rowspan="2">
-      <strong>PO.4.2:</strong>
-      <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">Collect audit logs for code repositories.</p>
-    </td>
     <td>
       <p><strong>GitHub</strong></p>
-      <ul>
-        <li><a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization">Audit Logs</a></li>
-      </ul>
+      <p><a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization">Audit Logs</a></p>
     </td>
   </tr>
 
@@ -280,12 +288,6 @@ Help ensure that the software resulting from the SDLC meets the organization’s
   </tr>
 
   <tr>
-    <td rowspan="2">
-      <strong>PO.4.3:</strong>
-      <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">Only allow authorized personnel to access the gathered information, and prevent any alteration or deletion of the information. Carefully manage the list of repository owners and organization owners who have the ability to view audit logs, delete organizations, and delete code repositories, and review the list annually.</p>
-    </td>
     <td>
       <p><strong>GitHub</strong></p>
       <ul>

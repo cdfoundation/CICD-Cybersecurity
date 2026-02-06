@@ -191,15 +191,27 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
   </tr>
 
   <tr>
-    <td rowspan="5">
-      <strong>PS.3.1:</strong>
-      <p>
-        Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Store the release files, associated images, etc. in repositories following the organization’s established policy. Allow read-only access to them by necessary personnel and no access by anyone else.
-      </p>
+    <td rowspan="28">
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.3.1:</strong>
+        <p>
+          Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.
+        </p>
+        <div style="height: 16px"></div>
+        <p style="font-style: italic">
+          Store the release files, associated images, etc. in repositories following the organization’s established policy. Allow read-only access to them by necessary personnel and no access by anyone else.
+        </p>
+      </div>
+      <div style="padding-top: 8px; padding-bottom: 8px">
+        <strong>PS.3.2:</strong>
+        <p>
+          Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a Software Bill of Materials (SBOM)).
+        </p>
+        <div style="height: 16px"></div>
+        <p style="font-style: italic">
+          Make the provenance data available to software acquirers in accordance with the organization’s policies, preferably using standards-based formats.
+        </p>
+      </div>
     </td>
     <td>
       <a href="https://docs.github.com/en/get-started/learning-about-github/access-permissions-on-github/">Access Permissions on GitHub</a><p>Enforces SSDF role-based access control by restricting who can view, modify, or administer source code repositories.</p>
@@ -226,16 +238,6 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
     </td>
   </tr>
   <tr>
-    <td rowspan="23">
-      <strong>PS.3.2:</strong>
-      <p>
-        Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a Software Bill of Materials (SBOM)).
-      </p>
-      <div style="height: 16px"></div>
-      <p style="font-style: italic">
-        Make the provenance data available to software acquirers in accordance with the organization’s policies, preferably using standards-based formats.
-      </p>
-    </td>
     <td>
       <a href="https://github.com/aetheris-ai/aibom-generator/">AI SBOM Generator</a><p>Supports SSDF by automatically generating and maintaining accurate software bills of materials that improve component visibility and vulnerability traceability across the SDLC.</p>
     </td>
@@ -254,8 +256,10 @@ Preserve software releases in order to help identify, analyze, and eliminate vul
       <a href="https://spdx.dev/">SPDX</a><p>Provides an SSDF-compliant standard for documenting software components, licenses, and relationships to support supply-chain transparency and compliance.</p>
     </td>
   </tr>
-  <td>
+  <tr>
+    <td>
       <a href="https://openssf.org/projects/bomctl/">bomctl</a><p>Supports SSDF SBOM consumption by validating, querying, and managing SBOMs throughout build and release workflows.</p>
+    </td>  
   </tr>
   <tr>
     <td>
