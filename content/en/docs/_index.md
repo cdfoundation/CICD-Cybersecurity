@@ -2,7 +2,6 @@
 linkTitle: "Home"
 weight: 1
 layout: docs
-url: /
 ---
 
 ## Implementing Open Source Security Tooling into your CI/CD Pipeline ##

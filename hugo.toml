@@ -1,4 +1,4 @@
-baseURL = "https://cicd-cybersecurity.netlify.app/"
+baseURL = "https://cybersecurity.cd.foundation/"
 title = "CI/CD Cybersecurity Guide | CD Foundation"
 
 enableRobotsTXT = true
@@ -99,7 +99,7 @@ images = ["https://cd.foundation/wp-content/uploads/sites/78/2023/07/CDF-Home-So
 version_menu = "Releases"
 archived_version = false
 version = "0.0"
-url_latest_version = "https://cicd-cybersecurity.netlify.app"
+url_latest_version = "https://cybersecurity.cd.foundation"
 
 github_repo = "https://github.com/cdfoundation/CICD-Cybersecurity"
 github_branch = "main"
