@@ -5,11 +5,3 @@
 [build]
   command = "npm install postcss-cli && hugo"
   publish = "public"
-
-[build.environment]
-  HUGO_VERSION = "0.151.2"
-
-[[redirects]]
-  from = "/"
-  to = "/docs"
-  status = 301
