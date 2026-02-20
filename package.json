@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/google/docsy-example#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.24",
     "postcss": "^8.5.6",
-    "postcss-cli": "^8.3.1",
-    "@netlify/build": "35.5.10"
+    "postcss-cli": "^11.0.1",
+    "@netlify/build": "35.8.2"
   }
 }
