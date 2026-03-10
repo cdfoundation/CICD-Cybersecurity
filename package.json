@@ -23,6 +23,7 @@
     "@netlify/build": "35.8.2"
   },
   "overrides": {
-    "minimatch": "10.2.2"
+    "minimatch": "10.2.3",
+    "tar": "7.5.10"
   }
 }
