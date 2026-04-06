@@ -1,42 +1,42 @@
 ---
-title: "Phase 1: Code and Prebuild"
-linkTitle: "Code and Prebuild"
+title: "Fase 1: Código y Preconstrucción"
+linkTitle: "Código y Preconstrucción"
 weight: 20
 layout: docs
 description: >
-  Security Compliance for Code and Prebuild
+  Cumplimiento de seguridad para Código y Preconstrucción
 ---
 
-## Phase 1 - Code and Prebuild
+## Fase 1 - Código y Preconstrucción
 
-Integrating security into every stage of the Software Development Life Cycle (SDLC) is more critical than ever. The code and prebuild stage is foundational to creating secure, reliable, and high-performing applications. Failing to address vulnerabilities early can lead to costly fixes, data breaches, and reputational damage down the line.
+Integrar la seguridad en cada etapa del Ciclo de Vida del Desarrollo de Software (SDLC) es más crítico que nunca. La fase de código y preconstrucción es fundamental para crear aplicaciones seguras, confiables y de alto rendimiento. No abordar las vulnerabilidades de manera temprana puede derivar en correcciones costosas, filtraciones de datos y daños a la reputación a largo plazo.
 
-This section provides a comprehensive guide to the essential security tools that developers and DevOps teams should use during the code and prebuild phase to ensure vulnerabilities are identified and mitigated before they can cause harm. From Static Application Security Testing (SAST) to dependency scanning and secure CI/CD pipelines, the right tools can help you adopt a proactive approach to software security while maintaining development velocity. Following are guidelines from industry frameworks with suggested open source tooling needed to achieve the compliance goals. For example:
+Esta sección proporciona una guía completa de las herramientas de seguridad esenciales que los desarrolladores y los equipos de DevOps deben usar durante la fase de código y preconstrucción para garantizar que las vulnerabilidades se identifiquen y mitiguen antes de que puedan causar daño. Desde Pruebas de Seguridad de Aplicaciones Estáticas (SAST) hasta el escaneo de dependencias y pipelines de CI/CD seguros, las herramientas adecuadas pueden ayudarte a adoptar un enfoque proactivo de la seguridad del software mientras se mantiene la velocidad de desarrollo. A continuación, se presentan las pautas de los frameworks de la industria con las herramientas open source sugeridas necesarias para alcanzar los objetivos de cumplimiento. Por ejemplo:
 
--- Ensure source code integrity and provenance
+-- Garantizar la integridad y procedencia del código fuente
 
--- Prevent unauthorized access to repositories and pipelines
+-- Prevenir el acceso no autorizado a repositorios y pipelines
 
--- Detect insecure code patterns early - shift left
+-- Detectar patrones de código inseguro de manera temprana - shift left
 
--- Identify vulnerable open-source dependencies
+-- Identificar dependencias open-source vulnerables
 
--- Generate SBOMs as early as possible
+-- Generar SBOMs lo antes posible
 
--- Establish traceability from commit → artifact → deployment
+-- Establecer trazabilidad desde commit → artifact → deployment
 
-### Key Phase 1 Security Activities
+### Actividades Clave de Seguridad de la Fase 1
 
-Compliance for Code and Prebuild steps include:
+El cumplimiento en los pasos de Código y Preconstrucción incluye:
 
-|                                                       |                                                                                                                                       |
-|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <strong>ACTIVITY</strong>                          | <strong>PURPOSE</strong>                                    |
-| Repository Access Control                             | Prevent unauthorized code change                                     |
-| Commit Signing                                        | Establish software provenance |
-| Branch Protection                                     | Enforce peer review and policy                                   |
-| SAST                                                  | Detect insecure code patterns                                        |
-| Dependency Scanning                                   |Identify vulnerable libraries                     |
-| SBOM Generation                                       |Create early component visibility                  |
+|                                  |                                               |
+| -------------------------------- | --------------------------------------------- |
+| **ACTIVIDAD**                    | **PROPÓSITO**                                 |
+| Control de Acceso a Repositorios | Prevenir cambios de código no autorizados     |
+| Firma de Commits                 | Establecer la procedencia del software        |
+| Protección de Ramas              | Aplicar revisiones de pares y políticas       |
+| SAST                             | Detectar patrones de código inseguro          |
+| Escaneo de Dependencias          | Identificar librerías vulnerables             |
+| Generación de SBOM               | Crear visibilidad temprana de los componentes |
 
-Following are guidelines from industry frameworks with suggested open source tooling needed to achieve the compliance goals.
+A continuación, se presentan las pautas de los frameworks de la industria con las herramientas open source sugeridas para alcanzar los objetivos de cumplimiento.

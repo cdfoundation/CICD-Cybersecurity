@@ -1,159 +1,159 @@
 ---
-title: "1.1 Prepare the Organization (PO)"
-linkTitle: "1.1 Prepare the Organization (PO)"
+title: "1.1 Preparar la Organización (PO)"
+linkTitle: "1.1 Preparar la Organización (PO)"
 weight: 5
 layout: docs
 description: >
-  1.1 Prepare the Organization (PO) Phase 1 Tasks
+  1.1 Tareas de la Fase 1: Preparar la Organización (PO)
 ---
 
-## 1.1 Prepare the Organization (PO) for Code and Prebuild Tasks
+## 1.1 Preparar la Organización (PO) para las Tareas de Código y Preconstrucción
 
-Organizations should ensure that their people, processes, and technology are prepared to perform secure software development at the organization level. Many organizations will find some PO practices to also be applicable to subsets of their software development, like individual development groups or projects.
+Las organizaciones deben asegurarse de que su personal, procesos y tecnología estén preparados para llevar a cabo un desarrollo de software seguro a nivel organizacional. Muchas organizaciones encontrarán que algunas prácticas de PO también son aplicables a subconjuntos de su desarrollo de software, como grupos de desarrollo individuales o proyectos.
 
 <br>
 
-### PO.2 Implement Roles and Responsibilities
+### PO.2 Implementar Roles y Responsabilidades
 
-Ensure that everyone inside and outside of the organization involved in the SDLC is prepared to perform their SDLC-related roles and responsibilities throughout the SDLC.
+Asegúrate de que todas las personas, tanto dentro como fuera de la organización, involucradas en el SDLC estén preparadas para desempeñar sus roles y responsabilidades relacionados con el SDLC a lo largo de todo el ciclo de vida.
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="2">
       <strong>PO.2.1</strong>:
-      <p>Create new roles and alter responsibilities for existing roles as needed to encompass all parts of the SDLC. Periodically review and maintain the defined roles and responsibilities, updating them as needed.</p>
+      <p>Crear nuevos roles y modificar las responsabilidades de los roles existentes según sea necesario para abarcar todas las partes del SDLC. Revisar y mantener periódicamente los roles y responsabilidades definidos, actualizándolos según se requiera.</p>
       <div style="height: 16px"></div>
-      <p style="font-style: italic">Designate a group of individuals as the code owners for each project, and review the list annually.</p>
+      <p style="font-style: italic">Designar un grupo de individuos como propietarios del código para cada proyecto y revisar la lista anualmente.</p>
     </td>
     <td>
       <p><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners/">GitHub CODEOWNERS</a></p>
-      <p>GitHub CODEOWNERS is a repository feature that lets teams formally define who owns which parts of the codebase and who must review changes before they’re merged.</p>
+      <p>GitHub CODEOWNERS es una función del repositorio que permite a los equipos definir formalmente quién es responsable de qué partes del código y quién debe revisar los cambios antes de que se fusionen.</p>
     </td>
   </tr>
   <tr>
     <td>
       <p><a href="https://docs.gitlab.com/user/project/codeowners/">GitLab CODEOWNERS</a></p>
-      <p>GitLab CODEOWNERS is a repository feature that lets teams formally define who owns which parts of the codebase and who must review changes before they’re merged.</p>
+      <p>GitLab CODEOWNERS es una función del repositorio que permite a los equipos definir formalmente quién es responsable de qué partes del código y quién debe revisar los cambios antes de que se fusionen.</p>
     </td>
   </tr>
 </table>
+<br>
+
+### PO.3 Implementar Cadenas de Herramientas de Soporte
+
+Usa la automatización para reducir el esfuerzo humano y mejorar la precisión, reproducibilidad, usabilidad y exhaustividad de las prácticas de seguridad a lo largo del SDLC, además de proporcionar una forma de documentar y demostrar el uso de estas prácticas. Las cadenas de herramientas y las herramientas pueden usarse en diferentes niveles de la organización, como a nivel organizacional o específico de un proyecto, y pueden abordar una parte particular del SDLC, como un pipeline de construcción.
 
 <br>
 
-### PO.3 Implement Supporting Toolchains
-
-Use automation to reduce human effort and improve the accuracy, reproducibility, usability, and comprehensiveness of security practices throughout the SDLC, as well as provide a way to document and demonstrate the use of these practices. Toolchains and tools may be used at different levels of the organization, such as organization-wide or project-specific, and may address a particular part of the SDLC, like a build pipeline.
-
-<br>
 <table style="width:100%">
 <tr>
-  <th style="width: 30%">Tasks</th>
-  <th style="width: 70%">Tools</th>
+  <th style="width: 30%">Tareas</th>
+  <th style="width: 70%">Herramientas</th>
 </tr>
 <tr>
   <td rowspan="20">
     <div style="padding-top: 8px; padding-bottom: 8px">
       <strong>PO.3.1</strong>:
-      <p>Specify which tools or tool types must or should be included in each toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p>
+      <p>Especificar qué herramientas o tipos de herramientas deben o deberían incluirse en cada cadena de herramientas para mitigar los riesgos identificados, así como cómo se deben integrar entre sí los componentes de la cadena de herramientas.</p>
       <div style="height: 16px"></div>
-      <p style="font-style: italic">Use software factories and/or software templates to standardize the toolchain.</p>
+      <p style="font-style: italic">Usar fábricas de software y/o plantillas de software para estandarizar la cadena de herramientas.</p>
     </div>
     <div style="padding-top: 8px; padding-bottom: 8px">
       <strong>PO.3.2</strong>:
-      <p>Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p>
+      <p>Seguir las prácticas de seguridad recomendadas para desplegar, operar y mantener herramientas y cadenas de herramientas.</p>
       <div style="height: 16px"></div>
-      <p style="font-style: italic">Use code-based configuration for toolchains (e.g., pipelines-as-code, toolchains-as-code).</p>
+      <p style="font-style: italic">Usar configuración basada en código para las cadenas de herramientas (por ejemplo, pipelines-as-code, toolchains-as-code).</p>
     </div>
     <div style="padding-top: 8px; padding-bottom: 8px">
       <strong>PO.3.3</strong>:
-      <p>Configure tools to generate artifacts of their support of secure software development practices as defined by the organization.</p>
+      <p>Configurar las herramientas para generar artefactos que evidencien su soporte a las prácticas de desarrollo de software seguro definidas por la organización.</p>
       <div style="height: 16px"></div>
-      <p style="font-style: italic">Use existing tooling (e.g., workflow tracking, issue tracking, value stream mapping) to create an audit trail of the secure development-related actions that are performed for continuous improvement purposes. Record security check approvals, rejections, and exception requests as part of the workflow and tracking system.</p>
+      <p style="font-style: italic">Usar herramientas existentes (por ejemplo, seguimiento de workflows, seguimiento de incidencias, mapeo de flujo de valor) para crear un historial de auditoría de las acciones relacionadas con el desarrollo seguro que se realizan con fines de mejora continua. Registrar aprobaciones, rechazos y solicitudes de excepciones de chequeos de seguridad como parte del sistema de workflow y seguimiento.</p>
     </div>
 </td>
   <td>
     <p><a href="https://backstage.io/docs/features/software-templates/">Backstage Software Templates</a></p>
-    <p>Backstage Software Templates are a scaffolding and standardization mechanism that help teams create new services, pipelines, and infrastructure in a consistent, compliant way. Backstage Software Templates let platform teams define golden paths for creating software components. A template captures best practices, required tooling, and organizational standards, then generates repositories, configs, and documentation automatically.</p>
+    <p>Backstage Software Templates es un mecanismo de scaffolding y estandarización que ayuda a los equipos a crear nuevos servicios, pipelines e infraestructura de manera consistente y conforme. Permite a los equipos de plataforma definir rutas óptimas para crear componentes de software. Una plantilla captura buenas prácticas, herramientas requeridas y estándares organizacionales, generando automáticamente repositorios, configuraciones y documentación.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://konflux-ci.dev/">Konflux-ci software factory for Tekton</a></p>
-    <p>The Konflux software factory for Tekton is a secure, standardized CI build system that sits on top of Tekton to turn raw pipelines into a trusted software supply-chain factory. Konflux is Tekton with guardrails. Tekton provides the pipeline engine (tasks, pipelines, Kubernetes execution). Konflux adds the factory layer that enforces how those pipelines are allowed to run so the outputs can be trusted. Implements the <a href="https://in-toto.io/docs/what-is-in-toto/">in-toto</a> framework.</p>
+    <p>La fábrica de software Konflux para Tekton es un sistema CI seguro y estandarizado que se apoya en Tekton para convertir pipelines en una fábrica confiable de la cadena de suministro de software. Konflux añade una capa que garantiza cómo deben ejecutarse los pipelines para que sus resultados sean confiables. Implementa el framework <a href="https://in-toto.io/docs/what-is-in-toto/">in-toto</a>.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://cdevents.dev/">CDF CDEvents</a></p>
-    <p>CDEvents is a common specification for Continuous Delivery events, enabling interoperability in the complete software production ecosystem.</p>
+    <p>CDEvents es una especificación común para eventos de entrega continua, permitiendo interoperabilidad en todo el ecosistema de producción de software.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://www.jenkins.io/solutions/pipeline/">Jenkins Jenkinsfile</a></p>
-    <p>A Jenkins Jenkinsfile is a declarative or scripted definition of a CI/CD pipeline, written as code and stored directly in a source repository. A Jenkinsfile describes how software is built, tested, scanned, packaged, and deployed. Because it lives alongside the application code, it enables pipeline-as-code—versioned, reviewable, and auditable automation.</p>
+    <p>Un Jenkinsfile de Jenkins es una definición declarativa o scriptada de un pipeline CI/CD, escrita como código y almacenada en un repositorio de origen. Describe cómo se construye, prueba, escanea, empaqueta y despliega el software. Al residir junto al código de la aplicación, permite pipelines-as-code—automatización versionada, revisable y auditable.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://docs.github.com/en/actions/about-github-actions/understanding-github-actions">GitHub Actions (.github/workflows)</a></p>
-    <p>The GitHub Actions .github/workflows directory is the central location where CI/CD automation is defined as code for a GitHub repository. The directory contains YAML files that define workflows. Each workflow describes when automation should run and what jobs and steps are executed in response to repository events.</p>
+    <p>El directorio .github/workflows de GitHub Actions es el lugar central donde se define la automatización CI/CD como código para un repositorio GitHub. Contiene archivos YAML que describen workflows, cuándo deben ejecutarse y qué jobs y pasos se realizan ante eventos del repositorio.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://docs.gitlab.com/ci/pipelines/">GitLab CI/CD (.gitlab-ci.yml)</a></p>
-    <p>The GitLab CI/CD .gitlab-ci.yml file is the single, authoritative pipeline definition that tells GitLab how to build, test, secure, and deploy an application. .gitlab-ci.yml is a YAML-based, pipeline-as-code configuration file stored at the root of a repository. It defines what jobs run, in what order, and under which conditions whenever code changes occur.</p>
+    <p>El archivo .gitlab-ci.yml de GitLab CI/CD es la definición única y autorizada de un pipeline que indica cómo GitLab debe construir, probar, asegurar y desplegar una aplicación. Es un archivo YAML basado en pipelines-as-code ubicado en la raíz del repositorio, definiendo jobs, orden y condiciones cuando hay cambios de código.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://github.com/armory/dinghy/">Spinnaker Dinghy</a></p>
-    <p>Spinnaker Dinghy is a configuration-as-code service that lets teams define and manage Spinnaker deployment pipelines using Git, instead of clicking through the UI. Dinghy allows Spinnaker pipelines to be written as JSON or YAML files and stored in a source repository. When changes are committed, Dinghy automatically syncs those pipeline definitions into Spinnaker, keeping deployments consistent and versioned.</p>
+    <p>Spinnaker Dinghy es un servicio de configuración como código que permite a los equipos definir y gestionar pipelines de despliegue de Spinnaker usando Git en lugar de la interfaz. Los pipelines se escriben como JSON o YAML y se sincronizan automáticamente al hacer commit.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/ci_automation/">Argo CD</a></p>
-    <p>Argo CD is a GitOps-based continuous delivery tool for Kubernetes that automatically deploys and keeps applications in sync with what’s declared in Git. Argo CD treats Git as the single source of truth for Kubernetes applications. Instead of pushing deployments from a CI pipeline, Argo CD pulls desired state from Git and continuously reconciles running clusters to match it.</p>
+    <p>Argo CD es una herramienta GitOps de entrega continua para Kubernetes que despliega automáticamente y mantiene las aplicaciones sincronizadas con lo declarado en Git. Trata a Git como la única fuente de verdad.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://pipelinesascode.com/">Tekton Pipelines-as-Code</a></p>
-    <p>Tekton Pipelines-as-Code is a Git-driven way to define and run Tekton CI/CD pipelines directly from pull requests—treating pipelines as first-class code artifacts.</p>
+    <p>Tekton Pipelines-as-Code es una forma basada en Git de definir y ejecutar pipelines Tekton CI/CD directamente desde pull requests, tratando los pipelines como artefactos de código de primera clase.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://opentofu.org/">OpenTofu</a></p>
-    <p>OpenTofu is an open-source Infrastructure as Code (IaC) tool used to define, provision, and manage cloud and on-prem infrastructure using declarative configuration files.</p>
+    <p>OpenTofu es una herramienta open-source de Infrastructure as Code (IaC) usada para definir, provisionar y gestionar infraestructura cloud y on-prem mediante archivos de configuración declarativos.</p>
   </td>
 </tr>
 <tr>
   <td>
     <p><a href="https://konflux-ci.dev/docs/building/hermetic-builds/">Konflux-ci</a></p>
-    <p>Konflux is an open-source, cloud-native CI platform designed to produce trusted, reproducible, and verifiable software artifacts for modern software supply chains. It prioritizes build integrity, provenance, and repeatability, making it well-suited for regulated, enterprise, and critical-infrastructure environments.</p>
+    <p>Konflux es una plataforma CI open-source y cloud-native diseñada para producir artefactos de software confiables, reproducibles y verificables, priorizando integridad, procedencia y repetibilidad, ideal para entornos regulados y críticos.</p>
     <p><strong>Python:</strong>
       <a href="https://packaging.python.org/en/latest/specifications/pylock-toml/#pylock-toml-spec">
         pylock.toml
-      </a> (preferred, newest standard)
+      </a> (preferido, estándar más reciente)
     </p>
     <ul>
       <li>
-        <a href="https://docs.astral.sh/uv/pip/compile/">uv</a> — uses pylock.toml
+        <a href="https://docs.astral.sh/uv/pip/compile/">uv</a> — usa pylock.toml
       </li>
       <li>
-        <a href="https://github.com/conda/conda-lock/">conda-lock</a> — reproducible, less standard
+        <a href="https://github.com/conda/conda-lock/">conda-lock</a> — reproducible, menos estándar
       </li>
       <li>
-        <a href="https://pip.pypa.io/en/stable/cli/pip_freeze/">pip freeze</a> — not fully reproducible
+        <a href="https://pip.pypa.io/en/stable/cli/pip_freeze/">pip freeze</a> — no completamente reproducible
       </li>
     </ul>
     <p><strong>JavaScript:</strong></p>
@@ -161,7 +161,7 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
       <li>
         <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json">
           package-lock.json
-        </a> — use with
+        </a> — usar con
         <a href="https://docs.npmjs.com/cli/v9/commands/npm-ci">npm ci</a>
       </li>
       <li>
@@ -174,116 +174,127 @@ Use automation to reduce human effort and improve the accuracy, reproducibility,
     </p>
     <p><strong>C# / .NET:</strong>
       <a href="https://learn.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files#locking-dependencies">
-        NuGet lock files
+        Archivos lock de NuGet
       </a>,
       <a href="https://www.nuget.org/packages/DotNet.ReproducibleBuilds/">DotNet.ReproducibleBuilds</a>
     </p>
     <p><strong>C++:</strong> <a href="https://bazel.build/external/overview">Bazel</a></p>
     <p><strong>Rust:</strong> <a href="https://crates.io/">Cargo</a></p>
     <p><strong>Golang:</strong> <a href="https://go.dev/blog/rebuild">Go reproducible builds</a></p>
-    </td>
+  </td>
 </tr>
 <tr>
   <td>
-    <p><a href="https://getcomposer.org/">PHP Composer</a></p><p>Composer is the standard dependency manager for PHP, used to declare, install, and manage third-party libraries required by a PHP application. Composer lets developers define which PHP packages their project depends on and automatically resolves, downloads, and installs the correct versions. It ensures that every environment—developer laptops, CI systems, and production—uses the same dependency set.</p>
+    <p><a href="https://getcomposer.org/">PHP Composer</a></p>
+    <p>Composer es el gestor de dependencias estándar para PHP, usado para declarar, instalar y gestionar librerías de terceros requeridas por una aplicación PHP. Permite definir qué paquetes requiere el proyecto y automáticamente resuelve, descarga e instala las versiones correctas, asegurando consistencia en todos los entornos.</p>
   </td>
 </tr>
 <tr>
 <td>
-  <p><a href="https://slsa.dev/">SLSA Framework</a></p><p>The SLSA Framework (Supply-chain Levels for Software Artifacts) is a security framework that defines how to build software in a way that is verifiable, tamper-resistant, and trustworthy.</p>
+  <p><a href="https://slsa.dev/">SLSA Framework</a></p>
+  <p>El framework SLSA (Supply-chain Levels for Software Artifacts) es un marco de seguridad que define cómo construir software de forma verificable, resistente a manipulaciones y confiable.</p>
 </td>
 </tr>
 <tr>
 <td>
-  <p><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/">GitHub Issues</a></p><p>GitHub Issues is a built-in tracking system used to manage work, bugs, feature requests, and discussions directly within a GitHub repository.</p>
+  <p><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/">GitHub Issues</a></p>
+  <p>GitHub Issues es un sistema integrado de seguimiento usado para gestionar trabajo, errores, solicitudes de funcionalidades y discusiones directamente en un repositorio GitHub.</p>
 </td>
 </tr>
 <tr>
 <td>
-  <p><a href="https://docs.gitlab.com/topics/plan_and_track/">GitLab work tracking</a></p><p>GitLab Work Tracking is GitLab’s integrated system for planning, tracking, and managing work—from ideas and requirements to code, security fixes, and delivery. </p>
+  <p><a href="https://docs.gitlab.com/topics/plan_and_track/">GitLab work tracking</a></p>
+  <p>GitLab Work Tracking es el sistema integrado de GitLab para planificar, rastrear y gestionar trabajo—desde ideas y requerimientos hasta código, correcciones de seguridad y entrega.</p>
 </td>
 </tr>
 <tr>
 <td>
-  <p><a href="https://www.bugzilla.org/">Bugzilla</a></p><p>Bugzilla is an open-source bug tracking and issue management system used to report, track, and manage software defects and enhancement requests throughout the development lifecycle.</p>
+  <p><a href="https://www.bugzilla.org/">Bugzilla</a></p>
+  <p>Bugzilla es un sistema open-source de seguimiento de errores y gestión de incidencias usado para reportar, rastrear y gestionar defectos de software y solicitudes de mejora durante todo el ciclo de desarrollo.</p>
 </td>
 </tr>
 <tr>
 <td>
-  <p><a href="https://www.redmine.org/">Redmine</a></p><p>Redmine is an open-source project management and issue-tracking tool used by software teams to plan work, track bugs and tasks, and manage projects over time.</p>
+  <p><a href="https://www.redmine.org/">Redmine</a></p>
+  <p>Redmine es una herramienta open-source de gestión de proyectos y seguimiento de incidencias usada por equipos de software para planificar trabajo, rastrear bugs y tareas, y gestionar proyectos en el tiempo.</p>
 </td>
 </tr>
 <tr>
 <td>
-  <p><a href="https://mantisbt.org/">Mantis Bug Tracker</a></p><p>Mantis Bug Tracker (often called MantisBT) is an open-source, web-based bug and issue tracking system designed to be simple, fast, and lightweight.</p>
+  <p><a href="https://mantisbt.org/">Mantis Bug Tracker</a></p>
+  <p>Mantis Bug Tracker (o MantisBT) es un sistema open-source basado en web para seguimiento de errores e incidencias, diseñado para ser simple, rápido y ligero.</p>
 </td>
 </tr>
 <tr>
 <td>
-  <p><a href="https://trac.edgewall.org/">Trac</a></p><p>Trac is an open-source, web-based project management and issue-tracking system that tightly integrates tickets, a wiki, and source-code browsing. It’s known for being lightweight, text-centric, and developer-friendly.</p>
+  <p><a href="https://trac.edgewall.org/">Trac</a></p>
+  <p>Trac es un sistema open-source basado en web de gestión de proyectos y seguimiento de incidencias que integra tickets, wiki y navegación de código. Es conocido por ser ligero, centrado en texto y amigable para desarrolladores.</p>
 </td>
 </tr>
 <tr>
 <td>
-  <p><a href="https://in-toto.io/docs/what-is-in-toto/">in-toto framework</a></p><p>in-toto is an open-source framework for securing the software supply chain by cryptographically recording and verifying every step of how software is built, tested, and released.</p>
+  <p><a href="https://in-toto.io/docs/what-is-in-toto/">in-toto framework</a></p>
+  <p>in-toto es un framework open-source para asegurar la cadena de suministro de software registrando y verificando criptográficamente cada paso de cómo se construye, prueba y libera el software.</p>
 </td>
 </tr>
 </table>
 <br>
 
-### PO.4 Define and Use Criteria for Software Security Checks
+### PO.4 Definir y Usar Criterios para Chequeos de Seguridad del Software
 
-Help ensure that the software resulting from the SDLC meets the organization’s expectations by defining and using criteria for checking the software’s security during development.
+Ayuda a asegurar que el software resultante del SDLC cumpla con las expectativas de la organización definiendo y utilizando criterios para verificar la seguridad del software durante el desarrollo.
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="6">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.4.1:</strong>
-        <p>Define criteria for software security checks and track throughout the SDLC.</p>
+        <p>Definir criterios para los chequeos de seguridad del software y darles seguimiento durante todo el SDLC.</p>
         <div style="height: 16px"></div>
-        <p style="font-style: italic">Add software security criteria to existing checks (e.g., the Definition of Done in agile SDLC methodologies).</p>
+        <p style="font-style: italic">Agregar criterios de seguridad del software a los chequeos existentes (por ejemplo, la Definición de Hecho en metodologías ágiles del SDLC).</p>
       </div>    
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.4.2:</strong>
-        <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p>
+        <p>Implementar procesos, mecanismos, etc., para recopilar y proteger la información necesaria en apoyo de los criterios.</p>
         <div style="height: 16px"></div>
-        <p style="font-style: italic">Collect audit logs for code repositories.</p>
+        <p style="font-style: italic">Recopilar registros de auditoría de los repositorios de código.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.4.3:</strong>
-        <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p>
+        <p>Implementar procesos, mecanismos, etc., para recopilar y proteger la información necesaria en apoyo de los criterios.</p>
         <div style="height: 16px"></div>
-        <p style="font-style: italic">Only allow authorized personnel to access the gathered information, and prevent any alteration or deletion of the information. Carefully manage the list of repository owners and organization owners who have the ability to view audit logs, delete organizations, and delete code repositories, and review the list annually.</p>
+        <p style="font-style: italic">Permitir solo a personal autorizado el acceso a la información recopilada, y prevenir cualquier alteración o eliminación de la información. Gestionar cuidadosamente la lista de propietarios de repositorios y de la organización que tienen la capacidad de ver registros de auditoría, eliminar organizaciones y eliminar repositorios de código, y revisar la lista anualmente.</p>
       </div>
     </td>
     <td>
-      <p><a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">GitHub Issue Templates</a></p><p>GitHub Issue Templates are predefined forms and guidelines that appear when someone opens a new issue in a repository. They help teams collect consistent, high-quality information for bugs, feature requests, security issues, or questions.</p>
+      <p><a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">Plantillas de Issues de GitHub</a></p>
+      <p>Las Plantillas de Issues de GitHub son formularios y guías predefinidos que aparecen cuando alguien crea un nuevo issue en un repositorio. Ayudan a los equipos a recopilar información consistente y de alta calidad para errores, solicitudes de funcionalidades, problemas de seguridad o preguntas.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <p><a href="https://docs.gitlab.com/user/project/description_templates/">GitLab Description Templates</a></p><p>GitLab Description Templates are predefined Markdown templates that automatically populate the description field when someone creates a GitLab Issue, Merge Request (MR), or Epics.</p>
+      <p><a href="https://docs.gitlab.com/user/project/description_templates/">Plantillas de Descripción de GitLab</a></p>
+      <p>Las Plantillas de Descripción de GitLab son plantillas Markdown predefinidas que se completan automáticamente en el campo de descripción cuando alguien crea un Issue, Merge Request (MR) o Epic en GitLab.</p>
     </td>
   </tr>
 
   <tr>
     <td>
       <p><strong>GitHub</strong></p>
-      <p><a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization">Audit Logs</a></p>
+      <p><a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization">Registros de Auditoría</a></p>
     </td>
   </tr>
 
   <tr>
     <td>
       <p><strong>GitLab</strong></p>
-      <p><a href="https://docs.gitlab.com/user/compliance/audit_events/">Audit Logs</a></p>
+      <p><a href="https://docs.gitlab.com/user/compliance/audit_events/">Registros de Auditoría</a></p>
     </td>
   </tr>
 
@@ -291,8 +302,8 @@ Help ensure that the software resulting from the SDLC meets the organization’s
     <td>
       <p><strong>GitHub</strong></p>
       <ul>
-        <li><a href="https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization/">Roles in an Organization</a></li>
-        <li><a href="https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization">GitHub Repository Roles</a></li>
+        <li><a href="https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization/">Roles en una Organización</a></li>
+        <li><a href="https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization">Roles de Repositorio en GitHub</a></li>
       </ul>
     </td>
   </tr>
@@ -301,49 +312,51 @@ Help ensure that the software resulting from the SDLC meets the organization’s
     <td>
       <p><strong>GitLab</strong></p>
       <ul>
-        <li><a href="https://docs.gitlab.com/user/permissions/">Roles and Permissions</a></li>
+        <li><a href="https://docs.gitlab.com/user/permissions/">Roles y Permisos</a></li>
       </ul>
     </td>
   </tr>
 </table>
+<br>
+
+</table>
 
 <br>
 
-### PO.5 Implement and Maintain Secure Environments for Software Development
+### PO.5 Implementar y Mantener Entornos Seguros para el Desarrollo de Software
 
-Ensure that all components of the environments for software development are strongly protected from internal and external threats to prevent compromises of the environments or the software being developed or maintained within them. Examples of environments for software development include development, build, test, and distribution environments.
+Asegúrese de que todos los componentes de los entornos para el desarrollo de software estén fuertemente protegidos contra amenazas internas y externas para prevenir compromisos de los entornos o del software que se desarrolla o mantiene en ellos. Ejemplos de entornos para el desarrollo de software incluyen entornos de desarrollo, compilación, prueba y distribución.
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="2">
       <strong>PO.5.1:</strong>
-      <p>Separate and protect each environment involved in software development.</p>
+      <p>Separar y proteger cada entorno involucrado en el desarrollo de software.</p>
       <div style="height: 16px"></div>
-      <p style="font-style: italic">Require multifactor authentication, SSH keys, signed commits, and code change approvals for code repositories at the organization level.</p>
+      <p style="font-style: italic">Requerir autenticación multifactor, claves SSH, commits firmados y aprobaciones de cambios de código para los repositorios de código a nivel de organización.</p>
     </td>
     <td>
-      <p><strong>GitHub Organization Settings</strong></p>
+      <p><strong>Configuraciones de Organización en GitHub</strong></p>
       <ul>
-        <li><a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization">Requiring multifactor authentication</a></li>
-        <li><a href="https://docs.github.com/en/organizations/managing-organization-settings/managing-the-commit-signoff-policy-for-your-organization/">Requiring signed commits</a></li>
-        <li><a href="https://docs.github.com/en/organizations/managing-organization-settings/managing-pull-request-reviews-in-your-organization/">Requiring code change approvals and protecting the main branch</a></li>
+        <li><a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization">Requerir autenticación multifactor</a></li>
+        <li><a href="https://docs.github.com/en/organizations/managing-organization-settings/managing-the-commit-signoff-policy-for-your-organization/">Requerir commits firmados</a></li>
+        <li><a href="https://docs.github.com/en/organizations/managing-organization-settings/managing-pull-request-reviews-in-your-organization/">Requerir aprobaciones de cambios de código y proteger la rama principal</a></li>
       </ul>
     </td>
   </tr>
-
-  <tr>
+ <tr>
     <td>
       <p><strong>GitLab</strong></p>
       <ul>
-        <li><a href="https://docs.gitlab.com/security/two_factor_authentication/">Requiring multifactor authentication</a></li>
-        <li><a href="https://docs.gitlab.com/user/project/repository/push_rules/">Requiring signed commits via push rules</a></li>
-        <li><a href="https://docs.gitlab.com/user/project/repository/branches/protected/">Requiring code change approvals by protecting the main branch</a></li>
+        <li><a href="https://docs.gitlab.com/security/two_factor_authentication/">Requerir autenticación multifactor</a></li>
+        <li><a href="https://docs.gitlab.com/user/project/repository/push_rules/">Requerir commits firmados mediante reglas de push</a></li>
+        <li><a href="https://docs.gitlab.com/user/project/repository/branches/protected/">Requerir aprobaciones de cambios de código protegiendo la rama principal</a></li>
       </ul>
     </td>
   </tr>
@@ -351,4 +364,4 @@ Ensure that all components of the environments for software development are stro
 
 <br>
 
-> Note: _Securely configure code repository and CI/CD servers_ - this is a complex topic, beyond the scope of this document. _Securely configure development endpoints (i.e., developer laptops)_ - this is a complex topic, beyond the scope of this document.
+> Nota: _Configurar de manera segura los repositorios de código y los servidores CI/CD_ – este es un tema complejo, fuera del alcance de este documento. _Configurar de manera segura los endpoints de desarrollo (por ejemplo, laptops de los desarrolladores)_ – este es un tema complejo, fuera del alcance de este documento.

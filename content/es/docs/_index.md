@@ -1,5 +1,5 @@
 ---
-linkTitle: "Home"
+linkTitle: "Inicio"
 weight: 1
 layout: docs
 ---
