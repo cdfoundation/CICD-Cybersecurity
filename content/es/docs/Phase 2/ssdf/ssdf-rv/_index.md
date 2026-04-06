@@ -1,343 +1,333 @@
 ---
-title: "2.4 Respond to Vulnerabilities (RV)"
-linkTitle: "2.4 Respond to Vulnerabilities (RV)"
+title: "2.4 Responder a Vulnerabilidades (RV)"
+linkTitle: "2.4 Responder a Vulnerabilidades (RV)"
 weight: 8
 layout: docs
 description: >
- 2.4 Respond to Vulnerabilities (RV) for Build and Deploy CI/CD Steps
+  2.4 Responder a Vulnerabilidades (RV) en los pasos de Build y Deploy CI/CD
 ---
 
+### 2.4 Responder a Vulnerabilidades (RV) para Tareas de Build y Deploy
 
-
-### 2.4 Respond to Vulnerabilities (RV) for Build and Deploy Tasks
-
-Respond to Vulnerabilities (RV): Organizations should identify residual vulnerabilities
-in their software releases and respond appropriately to address those vulnerabilities and prevent similar ones from occurring in the future.
-
+Responder a Vulnerabilidades (RV): Las organizaciones deben identificar las vulnerabilidades residuales en sus versiones de software y responder adecuadamente para abordar dichas vulnerabilidades y prevenir que ocurran vulnerabilidades similares en el futuro.
 
 <br>
 
 **RV.1**
 
-<strong>Identify and Confirm Vulnerabilities on an Ongoing Basis: </strong> Help ensure that vulnerabilities are identified more quickly so that they can be remediated more quickly in accordance with risk, reducing the window of opportunity for attackers.
+<strong>Identificar y Confirmar Vulnerabilidades de Forma Continua:</strong> Ayuda a garantizar que las vulnerabilidades se identifiquen más rápidamente para que puedan ser remediadas de manera más ágil de acuerdo con el riesgo, reduciendo la ventana de oportunidad para los atacantes.
 
 <br>
 
-To satisfy SSDF RV.1 in a build and deploy context using open-source tools, the focus shifts to continuously gathering vulnerability intel (VDP + public sources), monitor components, and confirm issues across supported releases. 
+Para cumplir con SSDF RV.1 en un contexto de compilación y despliegue utilizando herramientas de código abierto, el enfoque se centra en recopilar continuamente información sobre vulnerabilidades (VDP + fuentes públicas), monitorear componentes y confirmar problemas en todas las versiones compatibles.
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.1.1:</strong>
-        <p>Gather information from software acquirers, users, and public sources on potential vulnerabilities in the software and third-party components that the software uses, and investigate all credible reports.</p>
+        <p>Recopilar información de adquirentes de software, usuarios y fuentes públicas sobre posibles vulnerabilidades en el software y componentes de terceros que utiliza, e investigar todos los reportes creíbles.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.1.2:</strong> 
-        <p>Review, analyze, and/or test the software’s code to identify or  confirm the presence of previously undetected vulnerabilities.</p>
+        <p>Revisar, analizar y/o probar el código del software para identificar o confirmar la presencia de vulnerabilidades previamente no detectadas.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.1.3:</strong>
-        <p>Have a policy that addresses vulnerability disclosure and remediation, and implement the roles, responsibilities, and processes needed to support that policy.</p>
+        <p>Tener una política que aborde la divulgación y remediación de vulnerabilidades, e implementar los roles, responsabilidades y procesos necesarios para respaldar esa política.</p>
       </div>
     </td>
   </tr>
    <tr>
       <td>
       <a href="https://github.com/google/osv-scanner">OSV-Scanner</a>
-      <p>Continuously scans manifests/locks against OSV; great for confirming new disclosures across all supported releases..</p>
+      <p>Escanea continuamente manifiestos/locks contra OSV; excelente para confirmar nuevas divulgaciones en todas las versiones soportadas.</p>
     </td> 
   </tr>
    <tr>
       <td>
       <a href="https://oretlius.io">Ortelius</a>
-      <p>Continuously synchronizes Software Bill of Material versions of built artifacts to OSV.dev reporting on vulnerabilities discovered post-build.</p>
+      <p>Sincroniza continuamente las versiones del Software Bill of Material de los artefactos construidos con OSV.dev, reportando vulnerabilidades descubiertas después de la compilación.</p>
     </td> 
   </tr>
 <tr>
       <td>
-      <a href="https://osv.dev">OSV Vulnerability Database</a>
-      <p>Queries the OSV.dev vulnerability database for open-source package CVEs.</p>
+      <a href="https://osv.dev">Base de Datos de Vulnerabilidades OSV</a>
+      <p>Consulta la base de datos de vulnerabilidades OSV.dev para CVEs de paquetes de código abierto.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>Scans container images and SBOMs for known vulnerabilities.</p>
+      <p>Escanea imágenes de contenedores y SBOMs en busca de vulnerabilidades conocidas.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://vulners.com">Vulners CLI/API</a>
-      <p>Aggregates multiple public vulnerability feeds.</p>
+      <p>Agrega múltiples fuentes públicas de vulnerabilidades.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://github.com/intel/cve-bin-tool">cve-bin-tool</a>
-      <p>Checks installed binaries for known CVEs.</p>
+      <p>Verifica binarios instalados en busca de CVEs conocidos.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://github.com/semgrep/semgrep">Semgrep</a>
-      <p>SAST for multiple languages; customizable rules. Run on merge to main branch.</p>
+      <p>SAST para múltiples lenguajes; reglas personalizables. Ejecutar al hacer merge en la rama principal.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://github.com/PyCQA/bandit">Bandit</a>
-      <p>Python security linting. Add to Python project build stage.</p>
+      <p>Lint de seguridad para Python. Agregar a la etapa de construcción de proyectos Python.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://www.sonarsource.com/products/sonarqube/">SonarQube Community Edition</a>
-      <p>SAST & quality checks. Run in build step; block deploy if high-severity issues found.</p>
+      <p>SAST y controles de calidad. Ejecutar en el paso de construcción; bloquear despliegue si se encuentran problemas de alta severidad.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://www.zaproxy.org">OWASP ZAP</a>
-      <p>DAST; quick passive scan on deployed staging app.</p>
+      <p>DAST; escaneo pasivo rápido en la aplicación de staging desplegada.</p>
     </td> 
   </tr>
 <tr>
       <td>
-      <a href="https://docs.github.com/en/code-security/">GitHub Security Policy</a>
-      <p>Public policy location for reporters.</p>
+      <a href="https://docs.github.com/en/code-security/">Política de Seguridad GitHub</a>
+      <p>Ubicación pública para reporteros.</p>
     </td> 
   </tr>
 <tr>
       <td>
-      <a href="https://disclose.io">Disclose.io templates</a>
-      <p>Vulnerability Disclosure Program.</p>
+      <a href="https://disclose.io">Plantillas Disclose.io</a>
+      <p>Programa de Divulgación de Vulnerabilidades.</p>
     </td> 
   </tr>
 <tr>
       <td>
-      <a href="https://github.com/ossf/oss-vulnerability-guide">OpenSSF Vulnerability Disclosure Guide</a>
-      <p>Playbook for implementing disclosure.</p>
+      <a href="https://github.com/ossf/oss-vulnerability-guide">Guía de Divulgación de Vulnerabilidades OpenSSF</a>
+      <p>Manual para implementar la divulgación.</p>
     </td> 
   </tr>
 
 </table>
-    
 
 **RV.2**
 
-<strong>Assess, Prioritize, and Remediate Vulnerabilities:</strong> Help ensure that
-vulnerabilities are remediated in accordance with risk to reduce the window of  opportunity for attackers.
+<strong>Evaluar, Priorizar y Remediar Vulnerabilidades:</strong> Ayuda a garantizar que las vulnerabilidades se remedien de acuerdo con el riesgo, reduciendo la ventana de oportunidad para los atacantes.
 
 <br>
 
-To satisfy SSDF RV.2 in a build and deploy context using open-source tools, the focus shifts to:
+Para cumplir con SSDF RV.2 en un contexto de compilación y despliegue usando herramientas de código abierto, el enfoque se centra en:
 
-- Recording each vulnerability
+- Registrar cada vulnerabilidad
 
-- Analyze risk (exploitability & impact)
+- Analizar el riesgo (explotabilidad e impacto)
 
-- Choose responses, publish advisories, and deliver remediations via trusted mechanisms; include temporary mitigations where needed.\
-
+- Elegir respuestas, publicar avisos y entregar remediaciones mediante mecanismos confiables; incluir mitigaciones temporales cuando sea necesario.
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.2.1:</strong>
-        <p>Analyze each vulnerability to gather sufficient information about risk to plan its remediation or other risk response.</p>
+        <p>Analizar cada vulnerabilidad para recopilar información suficiente sobre el riesgo y planificar su remediación u otra respuesta al riesgo.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.2.2:</strong>
-        <p>Plan and implement risk responses for vulnerabilities.</p>
+        <p>Planificar e implementar respuestas al riesgo para las vulnerabilidades.</p>
       </div>    
     </td>
   </tr>
     <tr>
       <td>
       <a href="https://github.com/guacsec/guac">GUAC</a>
-      <p>Aggregates SBOMs, attestations, and vulns to understand blast radius and prioritize fixes. </p>
+      <p>Agrega SBOMs, certificaciones y vulnerabilidades para entender el alcance y priorizar correcciones.</p>
     </td>
      <tr>
       <td>
       <a href="https://github.com/renovatebot/renovate">Renovate</a>
-      <p>Automates dependency upgrades/patch PRs with risk-aware policies.</p>
+      <p>Automatiza actualizaciones de dependencias/PRs de parches con políticas conscientes del riesgo.</p>
     </td> 
   </tr>
    <tr>
       <td>
       <a href="https://oretlius.io">Ortelius</a>
-      <p>Exposes the blast radius of each vulnerability across live environments.</p>
+      <p>Muestra el alcance de cada vulnerabilidad en los entornos en vivo.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://github.com/DefectDojo/django-DefectDojo">DefectDojo</a>
-      <p>Centralizes vulnerabilities from SAST/DAST/SCA tools; adds risk scoring.</p>
+      <p>Centraliza vulnerabilidades de herramientas SAST/DAST/SCA; agrega puntuación de riesgo.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://github.com/DependencyTrack/dependency-track">OWASP Dependency-Track</a>
-      <p>SBOM-based vuln tracking, includes CVSS scoring and metadata.</p>
+      <p>Seguimiento de vulnerabilidades basado en SBOM, incluye puntuación CVSS y metadatos.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://www.first.org/epss/">EPSS (Exploit Prediction Scoring System)</a>
-      <p>Rates probability of exploitation for CVEs (risk-based prioritization).</p>
+      <p>Evalúa la probabilidad de explotación para CVEs (priorización basada en riesgo).</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://vulners.com">Vulners API</a>
-      <p>Provides exploit links, PoCs, and additional context per CVE.</p>
+      <p>Proporciona enlaces de explotación, PoCs y contexto adicional por CVE.</p>
     </td> 
   </tr>
 <tr>
       <td>
-      <a href="https://www.first.org/cvss/calculator/">CVSS Calculator (FIRST)</a>
-      <p>Standardized impact scoring to support triage decisions.</p>
+      <a href="https://www.first.org/cvss/calculator/">Calculadora CVSS (FIRST)</a>
+      <p>Puntuación de impacto estandarizada para respaldar decisiones de triaje.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://sigstore.dev">Sigstore / Cosign</a>
-      <p>Sign remediated builds before deploying (trusted delivery mechanism).</p>
+      <p>Firma builds remediadas antes de desplegar (mecanismo de entrega confiable).</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://coreruleset.org">OWASP ModSecurity CRS</a>
-      <p>Temporary WAF rules to mitigate unpatched web vulns.</p>
+      <p>Reglas WAF temporales para mitigar vulnerabilidades web sin parchear.</p>
     </td> 
   </tr>
 <tr>
       <td>
       <a href="https://github.com/falcosecurity/falco">Falco</a>
-      <p>Runtime detection and mitigation for unpatched container/Kubernetes issues.</p>
+      <p>Detección y mitigación en tiempo de ejecución para problemas de contenedores/Kubernetes sin parchear.</p>
     </td> 
   </tr>
 </table>
-  
+
 <br>
 
 **RV.3**
 
-<p><strong>Analyze Vulnerabilities to Identify Their Root Causes: </strong> Help reduce the frequency of vulnerabilities in the future.</p><br>
+<p><strong>Analizar Vulnerabilidades para Identificar sus Causas Raíz: </strong> Ayuda a reducir la frecuencia de vulnerabilidades en el futuro.</p><br>
 
-<br>
+Para cumplir con SSDF RV.3 en un contexto de construcción y despliegue usando herramientas de código abierto, el enfoque se centra en:
 
-To satisfy SSDF RV.3 in a build and deploy context using open-source tools, the focus shifts to:
+- Capturar causas raíz y lecciones aprendidas
 
-- Capturing root causes & lessons learned
-
-- Detecting recurring patterns over time
-
+- Detectar patrones recurrentes a lo largo del tiempo
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.3.1:</strong>
-        <p>Analyze identified vulnerabilities to determine their root causes.</p>
+        <p>Analizar las vulnerabilidades identificadas para determinar sus causas raíz.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.3.2:</strong>
-        <p>Analyze the root causes over time to identify patterns, such as a particular secure coding practice not being followed consistently</p>
+        <p>Analizar las causas raíz a lo largo del tiempo para identificar patrones, como la falta de seguimiento consistente de una práctica de codificación segura específica.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.3.3:</strong>
-        <p>Review the software for similar vulnerabilities to eradicate a class of vulnerabilities, and proactively fix them rather than waiting for external reports.</p>
+        <p>Revisar el software para detectar vulnerabilidades similares, eliminar una clase de vulnerabilidades y corregirlas proactivamente en lugar de esperar informes externos.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.3.4:</strong>
-        <p>Review the SDLC process, and update it if appropriate to prevent (or reduce the likelihood of) the root cause recurring in updates to the software or in new software that is created.</p>
+        <p>Revisar el proceso SDLC y actualizarlo si es apropiado para prevenir (o reducir la probabilidad de) que la causa raíz se repita en actualizaciones del software o en nuevo software creado.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/semgrep/semgrep">Semgreps</a>
-      <p>Write org-specific rules to detect the root-cause pattern; scan repos to eradicate classes of bugs.</p>
+      <p>Escribir reglas específicas de la organización para detectar patrones de causa raíz; escanear repositorios para eliminar clases de errores.</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://codeql.github.com">CodeQL</a>
-      <p>Deep code queries to identify the precise coding constructs leading to vulns.</p>
+      <p>Consultas profundas de código para identificar los constructos de codificación precisos que conducen a vulnerabilidades.</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://www.sonarsource.com/products/sonarqube/downloads/">SonarQube CE</a>
-      <p>Provides issue traces, rule violations, and hotspots including root cause indicators.</p>
+      <p>Proporciona trazas de problemas, violaciones de reglas y puntos críticos, incluidos indicadores de causa raíz.</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://github.com/DefectDojo/django-DefectDojo">DefectDojo</a>
-      <p>Tracks vulns + metadata, allows attaching root cause notes per issue.</p>
+      <p>Realiza seguimiento de vulnerabilidades y metadatos, permite adjuntar notas de causa raíz por cada problema.</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://github.com/DependencyTrack/dependency-track">Dependency-Track</a>
-      <p>Long-term tracking of vulnerable components to see recurring dependency issues.</p>
+      <p>Seguimiento a largo plazo de componentes vulnerables para identificar problemas recurrentes de dependencias.</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://github.com/grafeas/grafeas">Grafeas</a>
-      <p>Metadata API for tracking security events across builds/releases.</p>
+      <p>API de metadatos para seguimiento de eventos de seguridad a través de builds/lanzamientos.</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://github.com/fkie-cad/cwe_checker">cwe-checker</a>
-      <p>Detects weakness patterns (CWEs) in binaries, useful for compiled artifacts.</p>
+      <p>Detecta patrones de debilidad (CWEs) en binarios, útil para artefactos compilados.</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://github.com/joernio/joern">Joern</a>
-      <p>Open-source code analysis platform for hunting bug patterns at scale.</p>
+      <p>Plataforma de análisis de código de código abierto para buscar patrones de errores a gran escala.</p>
     </td>
   </tr>
 <tr>
       <td>
-      <a href="https://owaspsamm.org">OpenSAMM (OWASP Software Assurance Maturity Model)</a>
-      <p>Framework to improve secure dev lifecycle practices.</p>
+      <a href="https://owaspsamm.org">OpenSAMM (Modelo de Madurez de Aseguramiento de Software OWASP)</a>
+      <p>Marco para mejorar las prácticas de ciclo de vida de desarrollo seguro.</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://github.com/ossf/scorecard">OpenSSF Scorecards</a>
-      <p>Automates repo security health checks (branch protection, dependency pinning, CI hardening).</p>
+      <p>Automatiza revisiones de seguridad de repositorios (protección de ramas, fijación de dependencias, endurecimiento de CI).</p>
     </td>
   </tr>
 <tr>
       <td>
       <a href="https://github.com/usnistgov/OSCAL">OSCAL (NIST)</a>
-      <p>Standard for documenting compliance + SDLC security improvements.</p>
+      <p>Estándar para documentar cumplimiento y mejoras de seguridad en el SDLC.</p>
     </td>
   </tr>
 <tr>
       <td>
-      <a href="https://github.com/ossf/allstar">Allstar (by OpenSSF)</a>
-      <p>Enforces security policies across GitHub orgs/repos.</p>
+      <a href="https://github.com/ossf/allstar">Allstar (por OpenSSF)</a>
+      <p>Aplica políticas de seguridad en organizaciones/repositorios de GitHub.</p>
     </td>
   </tr>
 </table>

@@ -1,363 +1,363 @@
 ---
-title: "2.3 Produce Well-Secured Software (PW)"
-linkTitle: "2.3 Produce Well-Secured Software (PW)"
+title: "2.3 Producir Software Bien Asegurado (PW)"
+linkTitle: "2.3 Producir Software Bien Asegurado (PW)"
 weight: 7
 layout: docs
 description: >
- 2.3 Produce Well-Secured Software (PW) in the Build and Deploy CI/CD Steps
+  2.3 Producir Software Bien Asegurado (PW) en los pasos de Build y Deploy de CI/CD
 ---
 
-### 2.3 Produce Well-Secured Software (PW) for Build and Deploy Tasks
+### 2.3 Producir Software Bien Asegurado (PW) para las Tareas de Build y Deploy
 
-Organizations should produce well-secured software with minimal security vulnerabilities in its releases.
+Las organizaciones deben producir software bien asegurado con mínimas vulnerabilidades de seguridad en sus versiones.
 
 <br>
 
 **PW.1**
 
-<strong>Design Software to Meet Security Requirements and Mitigate Security Risks: </strong> Identify and evaluate the security requirements for the software; determine what security risks the software is likely to face during operation and how the software’s design and architecture should mitigate those risks; and justify any cases where risk-based analysis indicates that security requirements should be relaxed or waived. Addressing security requirements and risks during software design (secure by design) is key for improving software security and also helps improve development efficiency.
+<strong>Diseñar Software para Cumplir Requisitos de Seguridad y Mitigar Riesgos de Seguridad:</strong> Identificar y evaluar los requisitos de seguridad del software; determinar qué riesgos de seguridad es probable que enfrente el software durante su operación y cómo el diseño y la arquitectura del software deberían mitigar esos riesgos; y justificar cualquier caso en el que el análisis basado en riesgos indique que los requisitos de seguridad deberían relajarse o omitirse. Abordar los requisitos y riesgos de seguridad durante el diseño del software (seguro por diseño) es clave para mejorar la seguridad del software y también contribuye a aumentar la eficiencia del desarrollo.
 
 <br>
 
-To satisfy SSDF PW.1 in a build and deploy context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PW.1 en un contexto de construcción y despliegue usando herramientas de código abierto, el enfoque se centra en:
 
-- Embedding security controls directly into the build process
+- Incrustar controles de seguridad directamente en el proceso de construcción
 
-- Validating that build outputs (binaries, containers, packages) are hardened and free from known design-level weaknesses
+- Validar que los resultados de la construcción (binarios, contenedores, paquetes) estén reforzados y libres de debilidades conocidas a nivel de diseño
 
-- Preserving traceability from design requirements to deployed artifacts
+- Preservar la trazabilidad desde los requisitos de diseño hasta los artefactos desplegados
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.1.1:</strong>
-        <p>Use forms of risk modeling, such as threat modeling, attack modeling, or attack surface mapping to help assess the security risk for the software.</p>
+        <p>Usar formas de modelado de riesgos, como modelado de amenazas, modelado de ataques o mapeo de superficie de ataque para ayudar a evaluar el riesgo de seguridad del software.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
-        <strong>PW.1.2:</strong><p>Track and maintain the software’s security requirements, risks, and design decisions.</p>
+        <strong>PW.1.2:</strong><p>Rastrear y mantener los requisitos de seguridad, riesgos y decisiones de diseño del software.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.1.3:</strong>
-        <p>Where appropriate, build in support for using standardized security features and services (e.g., enabling software to integrate with existing log management, identity management, access control, and vulnerability management systems) instead of creating proprietary implementations of security features and services.</p>
+        <p>Cuando sea apropiado, integrar soporte para el uso de funciones y servicios de seguridad estandarizados (por ejemplo, permitir que el software se integre con sistemas existentes de gestión de registros, gestión de identidades, control de acceso y gestión de vulnerabilidades) en lugar de crear implementaciones propietarias de funciones y servicios de seguridad.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/semgrep/semgrep">Semgrep</a>
-      <p> Prevents insecure code from being packaged and deployed.</p>
+      <p>Evita que código inseguro sea empaquetado y desplegado.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://aquasecurity.github.io/trivy">Trivy</a>
-      <p>Ensures that deployed artifacts align with secure baseline configurations</p>
+      <p>Asegura que los artefactos desplegados cumplan con configuraciones base seguras.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">Zap (Zed Attack Proxy)</a>
-      <p>Enforces approved component lists and security baselines before deployment.</p>
+      <p>Aplica listas de componentes aprobados y configuraciones base de seguridad antes del despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/syft">Syft</a>
-      <p>Generates SBOMs for deployed applications for ongoing monitoring.</p>
+      <p>Genera SBOMs para aplicaciones desplegadas para monitoreo continuo.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://dependencytrack.org">OWASP Dependency-Track</a>
-      <p>Enforces approved component lists and security baselines before deployment.</p>
+      <p>Aplica listas de componentes aprobados y configuraciones base de seguridad antes del despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>Focused vulnerability scanning for deployed artifacts.</p>
+      <p>Escaneo de vulnerabilidades enfocado en artefactos desplegados.</p>
    </td>
   </tr>
   <tr>
     <td>
       <a href="https://nixos.org">Nix</a>
-      <p>Guarantees that build artifacts match the security-approved design exactly, with no drift or environmental differences.</p>
+      <p>Garantiza que los artefactos de construcción coincidan exactamente con el diseño aprobado de seguridad, sin desviaciones ni diferencias ambientales.</p>
    </td>
   </tr>
   <tr>
     <td>
       <a href=" https://guix.gnu.org">GNU Guix</a>
-      <p>Ensures that all deployed artifacts are built from a traceable, verifiable environment that aligns with design security baselines.</p>
+      <p>Asegura que todos los artefactos desplegados se construyan desde un entorno trazable y verificable que cumpla con las bases de seguridad del diseño.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href=" https://bazel.build">Bazel</a>
-      <p>Enforces secure build rules, prevents unauthorized changes, and produces identical outputs across build agents.</p>
+      <p>Aplica reglas de construcción seguras, evita cambios no autorizados y produce resultados idénticos en todos los agentes de construcción.</p>
     </td>
   <tr>
     <td>
       <a href="https://reproducible-builds.org">Reproducible Builds Framework</a>
-      <p>Strengthens supply chain security by detecting unauthorized modifications between source and deployment.</p>
+      <p>Fortalece la seguridad de la cadena de suministro al detectar modificaciones no autorizadas entre el código fuente y el despliegue.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://github.com/chainguard-dev/apko">Apko (Chainguard)</a>
-      <p>Implements secure design principles like minimal attack surface and verified dependency selection.</p>
+      <p>Implementa principios de diseño seguro como superficie de ataque mínima y selección verificada de dependencias.</p>
    </td> 
  </tr>
   <tr>
     <td>
       <a href="https://www.sigstore.dev">Sigstore(Cosign,Fulcio, Rekor)</a>
-      <p> Ensures artifacts come from a trusted, verified build process and haven’t been altered.</p>
+      <p>Asegura que los artefactos provengan de un proceso de construcción confiable y verificado y que no hayan sido alterados.</p>
     </td> 
   </tr>
   <tr>
     <td>
       <a href="https://notaryproject.dev">Notary</a>
-      <p>Provides cryptographic assurance that deployed artifacts are authentic and untampered.</p>
+      <p>Proporciona garantía criptográfica de que los artefactos desplegados son auténticos y no han sido manipulados.</p>
     </td> 
   </tr>
   <tr>
     <td>
       <a href="https://in-toto.io">In-Toto</a>
-      <p>Enforces integrity and accountability across the entire build-to-deploy pipeline.</p>
+      <p>Aplica integridad y responsabilidad en toda la canalización de construcción y despliegue.</p>
    </td> 
  </tr>
   <tr>
     <td>
       <a href="https://theupdateframework.io">The Update Framework (TUF)</a>
-      <p>Protects the integrity of deployment and update distribution channels.</p>
+      <p>Protege la integridad de los canales de despliegue y distribución de actualizaciones.</p>
    </td> 
  </tr>
   <tr>
     <td>
       <a href="https://www.openssl.org">OpenSSL</a>
-      <p>Generate and manage keys for signing build artifacts. Implement TLS/SSL for secure communication between build agents and artifact repositories.</p>
+      <p>Genera y gestiona claves para firmar artefactos de construcción. Implementa TLS/SSL para comunicación segura entre agentes de construcción y repositorios de artefactos.</p>
    </td> 
  </tr>
   <tr>
     <td>
       <a href="https://gnupg.org/">GnuPG</a>
-      <p>Sign source code, commits, and build outputs and verify signatures before deploying artifacts.</p>
+      <p>Firma el código fuente, commits y resultados de construcción y verifica las firmas antes de desplegar artefactos.</p>
     </td> 
   </tr> 
   <tr>
     <td>
       <a href="https://www.bouncycastle.org/">Bouncy Castle</a>
-      <p>Embed cryptographic signing and verification into Java/.NET build pipelines.</p>
+      <p>Incorpora firma y verificación criptográfica en pipelines de construcción Java/.NET.</p>
    </td> 
  </tr> 
   <tr>
     <td>
       <a href="https://keylime.dev/">Keylime</a>
-      <p>Validate that deployment environments meet hardware-based integrity requirements before deployment.</p>
+      <p>Valida que los entornos de despliegue cumplan los requisitos de integridad basados en hardware antes del despliegue.</p>
    </td> 
   </tr> 
   <tr>
     <td>
       <a href="https://attest.org/">Ethereum Attestation Service (EAS)</a>
-      <p>Publish cryptographic attestations of build provenance or deployment approvals and provide a decentralized, tamper-proof audit log of artifact trust data.</p>
+      <p>Publica atestaciones criptográficas de procedencia de construcción o aprobaciones de despliegue y proporciona un registro de auditoría descentralizado e inalterable de los datos de confianza de los artefactos.</p>
    </td> 
   </tr> 
   <tr>
     <td>
       <a href="https://kyverno.io/">Kyverno</a>
-      <p>Enforce secure deployment design policies (e.g., approved base images, disallowed configurations).</p>
+      <p>Aplica políticas de diseño de despliegue seguro (por ejemplo, imágenes base aprobadas, configuraciones no permitidas).</p>
     </td> 
   </tr> 
   <tr>
     <td>
       <a href="https://www.openpolicyagent.org/">OPA</a>
-      <p>Enforce security design requirements at build time (e.g., dependency approval, CVE thresholds). Apply consistent policy enforcement from build pipelines to runtime.</p>
+      <p>Aplica los requisitos de diseño de seguridad en tiempo de construcción (por ejemplo, aprobación de dependencias, umbrales de CVE). Aplica políticas consistentes desde la construcción hasta el tiempo de ejecución.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href=" https://spiffe.io/">SPIFFE/SPIRE</a>
-      <p>Ensure that deployed workloads meet security requirements for mutual authentication and zero trust and bind workload identity to build-time provenance for deployment integrity.</p>
+      <p>Asegura que las cargas de trabajo desplegadas cumplan con los requisitos de seguridad para autenticación mutua y confianza cero, y vincula la identidad de la carga de trabajo con la procedencia en tiempo de construcción para garantizar la integridad del despliegue.</p>
    </td>
   </tr>
   <tr>
     <td>
       <a href="https://hermetoproject.github.io/hermeto/">Hermeto</a>
-      <p>Pre-fetches dependencies for hermetic builds, generates SBOMs, and ensures reproducible builds with explicit dependency tracking and verifiable checksums.</p>
+      <p>Pre-descarga dependencias para construcciones herméticas, genera SBOMs y asegura construcciones reproducibles con seguimiento explícito de dependencias y checksums verificables.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://owasp.org/www-project-threat-dragon/">OWASP Threat Dragon</a>
-       <p>Embeds threat models into CI/CD, ensuring security requirements are tied to architectural components before build. (Meets PW.1.1 and PW.1.2) </p>
+       <p>Incorpora modelos de amenazas en CI/CD, asegurando que los requisitos de seguridad estén vinculados a los componentes arquitectónicos antes de la construcción. (Cumple PW.1.1 y PW.1.2) </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-amass/">OWASP Amass</a>
-      <p>Helps to refine security requirements around network exposure and asset inventory. (Meets PW.1.1) </p>
+      <p>Ayuda a refinar los requisitos de seguridad relacionados con la exposición de la red y el inventario de activos. (Cumple PW.1.1) </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://cairis.org/index.html">CAIRIS</a>
-       <p>Integrates security requirements into system models, which can then be validated in build & deploy. (Meets PW.1.1) </p>
+       <p>Integra los requisitos de seguridad en los modelos del sistema, que luego pueden ser validados en la construcción y despliegue. (Cumple PW.1.1) </p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://threagile.io/">Threagile</a>
-        <p>Embeds threat models into CI/CD, ensuring security requirements are tied to architectural components before build. (Meets PW.1.1)</p>
+        <p>Incorpora modelos de amenazas en CI/CD, asegurando que los requisitos de seguridad estén vinculados a los componentes arquitectónicos antes de la construcción. (Cumple PW.1.1)</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://open-needs.org/">Open-Needs</a>
-      <p>Requirements management tool for defining, tracking, and validating security requirements. Documents security requirements and links them to commits and build outputs.(Meets PW.1.1 and PW.1.2)</p>
+      <p>Herramienta de gestión de requisitos para definir, rastrear y validar requisitos de seguridad. Documenta los requisitos de seguridad y los vincula a commits y resultados de construcción. (Cumple PW.1.1 y PW.1.2)</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://rmtoo.florath.net/">rmtoo</a>
-          <p>Requirements management tool using plain text and version control for traceability. Supports traceability from design through build, ensuring requirements are carried into final artifacts.(Meets PW.1.2)</p>
+          <p>Herramienta de gestión de requisitos usando texto plano y control de versiones para trazabilidad. Soporta trazabilidad desde el diseño hasta la construcción, asegurando que los requisitos se reflejen en los artefactos finales. (Cumple PW.1.2)</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.openrmf.io/">OpenRMF® OSS</a>
-      <p>Open-source compliance and risk management framework tool for tracking RMF (NIST 800-37) controls. Security requirements map to formal compliance controls that can be verified in build & deploy artifacts. (Meets PW1.2) </p>
+      <p>Herramienta de marco de trabajo de cumplimiento y gestión de riesgos de código abierto para rastrear controles RMF (NIST 800-37). Los requisitos de seguridad se mapean a controles de cumplimiento formales que pueden verificarse en artefactos de construcción y despliegue. (Cumple PW.1.2) </p>
     </td>
   </tr>
 </table>
-    
 
 **PW.2**
 
-<strong>Review the Software Design to Verify Compliance with Security Requirements and Risk Information:</strong>Help ensure that the software will meet the security requirements and satisfactorily address the identified risk information.
+<strong>Revisar el Diseño del Software para Verificar Cumplimiento con los Requisitos de Seguridad y la Información de Riesgos:</strong> Ayuda a garantizar que el software cumpla con los requisitos de seguridad y aborde satisfactoriamente la información de riesgos identificada.
 
 <br>
 
-To satisfy SSDF PW.2 in a the build and deploy context using open-source tools, the is:
+Para satisfacer SSDF PW.2 en un contexto de construcción y despliegue usando herramientas de código abierto, se enfoca en:
 
-- Validating security architecture decisions before deploying
+- Validar las decisiones de arquitectura de seguridad antes del despliegue
 
-- Reviewing IaC and CI/CD configs to ensure they meet security baselines
+- Revisar las configuraciones de IaC y CI/CD para asegurar que cumplan con las bases de seguridad
 
-- Enforcing design rules automatically in build pipelines
+- Aplicar automáticamente reglas de diseño en los pipelines de construcción
 
-- Catching misconfigurations and security gaps before release
+- Detectar configuraciones incorrectas y brechas de seguridad antes del lanzamiento
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.2.1:</strong>
-        <p>Have (1) a qualified person (or people) who were not involved with the design and/or (2) automated processes instantiated in the toolchain review the software design to confirm and enforce that it meets all of the security requirements and satisfactorily addresses the identified risk information.</p>
+        <p>Contar con (1) una persona calificada (o personas) que no haya participado en el diseño y/o (2) procesos automatizados en la cadena de herramientas que revisen el diseño del software para confirmar y asegurar que cumple con todos los requisitos de seguridad y aborda satisfactoriamente la información de riesgos identificada.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.openpolicyagent.org/">OPA</a>
-      <p>Automated design compliance gate in CI/CD</p>
+      <p>Control automatizado de cumplimiento de diseño en CI/CD</p>
     </td> 
   </tr>
   <tr>
     <td>
       <a href="https://kyverno.io/">Kyverno</a>
-      <p>Validates deployment configurations match approved security architecture.</p>
+      <p>Valida que las configuraciones de despliegue coincidan con la arquitectura de seguridad aprobada.</p>
     </td> 
   </tr>  
   <tr>
     <td>
       <a href="https://www.checkov.io">Checkov</a>
-      <p>Enforce network segmentation rules, encryption requirements, and secure defaults.</p>
+      <p>Aplica reglas de segmentación de red, requisitos de cifrado y configuraciones seguras por defecto.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://kics.io">KICS (Keeping Infrastructure as Code Secure)</a>
-      <p>Adds IaC review automation to the build process.</p>
-  </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/semgrep/semgrep/">Semgrep</a>
-      <p>Automated code review for alignment with security design requirements.</p>
+      <p>Agrega automatización de revisión de IaC al proceso de construcción.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://aquasecurity.github.io/trivy">Trivy (Config Scanning)</a>
-      <p>Config compliance verification before deploying.</p>
+      <a href="https://github.com/semgrep/semgrep/">Semgrep</a>
+      <p>Revisión automatizada de código para asegurar alineación con los requisitos de diseño de seguridad.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://aquasecurity.github.io/trivy">Trivy (Escaneo de Configuración)</a>
+      <p>Verificación de cumplimiento de configuraciones antes del despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://threatspec.org">ThreatSpec</a>
-      <p>Ensures threat model-driven design requirements are implemented.</p>
+      <p>Garantiza que los requisitos de diseño impulsados por el modelo de amenazas estén implementados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/lyft/cartography">Cartography</a>
-      <p>Post-build/pre-deploy architecture verification. Detect deviations from intended architecture.</p>
+      <p>Verificación de arquitectura post-construcción/pre-despliegue. Detecta desviaciones respecto a la arquitectura prevista.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://kube-score.com">kube-score</a>
-      <p>Review Kubernetes manifests for design compliance before deployment.Ensures pod security settings match approved deployment designs.</p>
+      <p>Revisa los manifiestos de Kubernetes para cumplimiento de diseño antes del despliegue. Asegura que la configuración de seguridad de los pods coincida con los diseños aprobados.</p>
     </td>
   </tr>   
   <tr>
     <td>
       <a href="https://github.com/dependabot">Dependabot</a>
-      <p>Automated dependency update PRs with vulnerability alerts. Helps verify dependencies meet security requirements (e.g., no known CVEs, minimum versions). </p>
+      <p>PRs automatizados de actualización de dependencias con alertas de vulnerabilidades. Ayuda a verificar que las dependencias cumplan los requisitos de seguridad (p. ej., sin CVEs conocidos, versiones mínimas).</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.openrmf.io/">OpenRMF</a>
-      <p>Open Risk Management Framework tracking tool. Can map design-level security requirements to NIST 800-53 controls and verify those controls are implemented in build configs. </p>
+      <p>Herramienta de seguimiento del Marco de Gestión de Riesgos. Puede mapear los requisitos de seguridad a nivel de diseño a controles NIST 800-53 y verificar que dichos controles estén implementados en las configuraciones de construcción.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://eslint.org/">ESLint</a>
-      <p>Runs in CI/CD pipelines or as a pre-commit hook to block merges if code violates the approved security or architectural rules before build.</p>
+      <p>Se ejecuta en pipelines CI/CD o como pre-commit hook para bloquear merges si el código viola las reglas de seguridad o arquitectura aprobadas antes de la construcción.</p>
+    </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>SBOM-driven vulnerability scanner for images/filesystems. Validates that dependencies in the build match security baselines and are free from disallowed components. </p>
+      <p>Escáner de vulnerabilidades basado en SBOM para imágenes/sistemas de archivos. Verifica que las dependencias en la construcción cumplan con las bases de seguridad y estén libres de componentes no permitidos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/quay/clair">Clair</a>
-      <p>Static vulnerability analysis for container images. Confirms final images meet design security requirements before deployment. </p>
+      <p>Análisis estático de vulnerabilidades para imágenes de contenedor. Confirma que las imágenes finales cumplan con los requisitos de seguridad de diseño antes del despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://terrasolid.com/products/terrascan/">Terrascan</a>
-      <p>IaC scanning and policy enforcement (OPA-based). Enforces approved security design in Terraform, Kubernetes, Docker, and AWS CloudFormation configs before deploy.  </p>
+      <p>Escaneo de IaC y aplicación de políticas (basado en OPA). Aplica el diseño de seguridad aprobado en configuraciones de Terraform, Kubernetes, Docker y AWS CloudFormation antes del despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.gerritcodereview.com/">Gerrit</a>
-      <p>Code review and approval workflow tool. Enforces human review against design and security requirements before merge to release branches.  </p>
-  </td>
+      <p>Herramienta de flujo de trabajo para revisión y aprobación de código. Garantiza revisión humana contra los requisitos de diseño y seguridad antes de fusionar a las ramas de lanzamiento.</p>
+    </td>
   </tr>   
  </table>
 
@@ -365,915 +365,913 @@ To satisfy SSDF PW.2 in a the build and deploy context using open-source tools, 
 
 **PW.4**
 
-<p><strong>Reuse Existing, Well-Secured Software When Feasible Instead of Duplicating Functionality :</strong> Lower the costs of software development, expedite software development, and decrease the likelihood of introducing additional security vulnerabilities into the software by reusing software modules and services that have already had their security posture checked. This is particularly important for software that implements security functionality, such as cryptographic modules and protocols.</p><br>
-<p> Note: PW.3 moved to PW.4 </p>
+<p><strong>Reutilizar software existente, bien asegurado, cuando sea factible en lugar de duplicar funcionalidades:</strong> Reduce los costos de desarrollo de software, acelera el desarrollo y disminuye la probabilidad de introducir vulnerabilidades de seguridad adicionales al reutilizar módulos y servicios de software que ya han sido verificados en cuanto a su postura de seguridad. Esto es particularmente importante para software que implementa funcionalidades de seguridad, como módulos y protocolos criptográficos.</p><br>
+<p> Nota: PW.3 se movió a PW.4 </p>
 
 <br>
 
-To satisfy SSDF PW.4 in a build and deploy context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PW.4 en un contexto de build y deploy usando herramientas de código abierto, el enfoque se desplaza a:
 
-- Baking secure defaults into application code, containers, and deployment manifests
+- Incorporar valores predeterminados seguros en el código de la aplicación, contenedores y manifiestos de despliegue
 
-- Removing insecure, legacy, or unnecessary features from build artifacts
+- Eliminar funciones inseguras, obsoletas o innecesarias de los artefactos de build
 
-- Automatically applying baseline security settings during deployment
+- Aplicar automáticamente configuraciones de seguridad base durante el despliegue
 
-- Enforcing hardening standards before release
+- Hacer cumplir estándares de hardening antes del lanzamiento
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
-        <strong>PW.4.1:</strong><p>Acquire and maintain well-secured software components (e.g., software libraries, modules, middleware, frameworks) from commercial, open-source, and other third-party developers for use by the organization’s software.</p>
+        <strong>PW.4.1:</strong>
+        <p>Adquirir y mantener componentes de software bien asegurados (por ejemplo, bibliotecas de software, módulos, middleware, frameworks) de desarrolladores comerciales, de código abierto y otros terceros para su uso en el software de la organización.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.4.2:</strong>
-        <p>Create and maintain well-secured software components in-house following SDLC processes to meet common internal software development needs that cannot be better met by third-party software components.</p>
-        </div>
+        <p>Crear y mantener componentes de software bien asegurados internamente siguiendo procesos SDLC para satisfacer necesidades internas de desarrollo de software que no pueden ser mejor atendidas por componentes de software de terceros.</p>
+      </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
-        <strong>PW.4.3:</strong> 
-        <p>Moved to PW.1.3</p>
+        <strong>PW.4.3:</strong>
+        <p>Movido a PW.1.3</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.4.4:</strong>
-        <p>Verify that acquired commercial, open-source, and all other third-party software components comply with the requirements, as defined by the organization, throughout their life cycles.</p>
+        <p>Verificar que los componentes de software comerciales, de código abierto y de terceros cumplan con los requisitos definidos por la organización durante todo su ciclo de vida.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://kyverno.io">Kyverno</a>
-      <p>Ensures manifests meet secure baseline defaults before deployment.</p>
+      <p>Garantiza que los manifiestos cumplan con los valores predeterminados seguros antes del despliegue.</p>
    </td> 
   </tr> 
   <tr>
     <td>
       <a href="https://www.openpolicyagent.org/">OPA</a>
-      <p>Validates default configurations meet security requirements.</p>
+      <p>Valida que las configuraciones predeterminadas cumplan con los requisitos de seguridad.</p>
    </td> 
   </tr>
   <tr>
     <td>
       <a href="https://www.checkov.io">Checkovn</a>
-      <p>Detects and blocks insecure defaults in Terraform, Helm, or CloudFormation before release.</p>
+      <p>Detecta y bloquea valores predeterminados inseguros en Terraform, Helm o CloudFormation antes del lanzamiento.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://kics.io">KICS (Keeping Infrastructure as Code Secure)</a>
-      <p>Validates hardened defaults in cloud infrastructure provisioning.</p>
+      <p>Valida los valores predeterminados fortalecidos en la provisión de infraestructura en la nube.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://aquasecurity.github.io/trivy">Trivy</a>
-      <p>Automated config compliance check during CI/CD.</p>
+      <p>Verificación automatizada de cumplimiento de configuraciones durante CI/CD.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://cisecurity.org/cis-cat-lite"> CIS-CAT Lite</a>
-      <p>Automates compliance testing for secure defaults.</p>
+      <p>Automatiza pruebas de cumplimiento para valores predeterminados seguros.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/dev-sec">DevSec Hardening Framework</a>
-      <p> Bakes hardened defaults into container or VM images before release.</p>
+      <p>Incorpora valores predeterminados fortalecidos en imágenes de contenedor o VM antes del lanzamiento.</p>
    </td>
   </tr>
   <tr>
     <td>
       <a href="https://kube-score.com">kube-score</a>
-      <p>Pre-deployment validation of secure defaults in manifests.</p>
+      <p>Validación previa al despliegue de valores predeterminados seguros en manifiestos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.open-scap.org">OpenSCAP </a>
-      <p>Ensures deployed OS images meet hardened defaults.</p>
+      <p>Garantiza que las imágenes del sistema operativo desplegadas cumplan con los valores predeterminados fortalecidos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://cyclonedx.org/">CycloneDX</a>
-      <p>SBOM format for documenting exact components/configurations in final build; helps verify secure defaults are present.</p>
+      <p>Formato SBOM para documentar componentes/configuraciones exactas en el build final; ayuda a verificar que los valores predeterminados seguros estén presentes.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/opensbom-generator/spdx-sbom-generator">SPDX</a>
-      <p>SBOM standard to record all components, licenses, and provenance; can confirm inclusion of hardened dependencies.</p>
+      <p>Estándar SBOM para registrar todos los componentes, licencias y procedencia; puede confirmar la inclusión de dependencias fortalecidas.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://artifacthub.io/">ArtifactHub</a>
-      <p>Catalog of verified Helm charts, OLM operators, etc.; can enforce use of curated, secure-by-default packages.</p>
+      <p>Catálogo de Helm charts, operadores OLM, etc., verificados; puede hacer cumplir el uso de paquetes seguros por defecto.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://jfrog.com/community/download-artifactory-oss/">JFrog Artifactory OSS</a>
-      <p>Repository manager for storing signed, verified artifacts with access controls.</p>
+      <p>Gestor de repositorios para almacenar artefactos firmados y verificados con controles de acceso.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.sonatype.com/products/nexus-community-edition-download">Sonartype Nexus OSS</a>
-      <p>Host artifacts and enforce policy checks before they’re promoted.</p>
+      <p>Hospeda artefactos y hace cumplir comprobaciones de políticas antes de su promoción.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://goharbor.io/">Harbor</a>
-      <p>OCI registry with vulnerability scanning, content signing, and policy enforcement for images.</p>
+      <p>Registro OCI con escaneo de vulnerabilidades, firma de contenido y aplicación de políticas para imágenes.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://docs.gitlab.com/ee/user/project/repository/signed_commits/">GitLab Signing</a>
-      <p>Commit/tag signing in GitLab CE for provenance.</p>
+      <p>Firma de commits/tags en GitLab CE para verificar procedencia.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://codeql.github.com/">GitHub CodeQL</a>
-      <p>Detects code patterns violating security requirements.</p>
+      <p>Detecta patrones de código que violan los requisitos de seguridad.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.aquasec.com/products/trivy/">AquaSec Trivy</a>
-      <p>Scans container images, IaC, and configs for insecure defaults.</p>
+      <p>Escanea imágenes de contenedores, IaC y configuraciones para valores predeterminados inseguros.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://openssf.org/projects/allstar/">Allstar</a>
-      <p>GitHub App enforcing security policies in repos.</p>
+      <p>App de GitHub que aplica políticas de seguridad en repositorios.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-samm/">OWASP SAMM</a>
-      <p>Security maturity model to guide secure default practices.</p>
+      <p>Modelo de madurez de seguridad para guiar prácticas de valores predeterminados seguros.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS</a>
-      <p>Application security requirements to verify secure defaults.</p>
+      <p>Requisitos de seguridad de aplicaciones para verificar valores predeterminados seguros.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-defectdojo/">OWASP Defectdojo</a>
-      <p>Central vulnerability tracking; ensures issues found in builds are fixed before release.</p>
+      <p>Rastreo central de vulnerabilidades; garantiza que los problemas encontrados en builds se solucionen antes del lanzamiento.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
-      <p>Detects known-vulnerable dependencies in builds.</p>
+      <p>Detecta dependencias conocidas vulnerables en los builds.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://about.gitea.com/">Gitea</a>
-      <p>Self-hosted Git service with signing/policy support.</p>
+      <p>Servicio Git autohospedado con soporte de firma y políticas.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://about.gitlab.com/">GitLab (Community Edition)</a>
-      <p>Git platform with signing, scanning, CI/CD policy integration.</p>
+      <p>Plataforma Git con firma, escaneo e integración de políticas CI/CD.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://docs.pytest.org/en/stable/index.html">Pytest</a>
-      <p>Automated testing to confirm defaults work.</p>
+      <p>Pruebas automatizadas para confirmar que los valores predeterminados funcionen.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.selenium.dev/">Selenium</a>
-      <p>Functional/UI test automation to verify secure settings.</p>
+      <p>Automatización de pruebas funcionales/UI para verificar configuraciones seguras.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://playwright.dev/">Playwright</a>
-      <p>Functional/UI test automation to verify secure settings.</p>
+      <p>Automatización de pruebas funcionales/UI para verificar configuraciones seguras.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">OWASP ZAP</a>
-      <p>DAST scanner to verify app defaults are not exploitable.</p>
+      <p>Escáner DAST para verificar que los valores predeterminados de la aplicación no sean explotables.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://testng.org/">TestNG</a>
-      <p>	Java test framework for security/functional checks</p>
+      <p>Framework de pruebas Java para comprobaciones de seguridad/funcionales.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://cucumber.io/">Cucumber</a>
-      <p>BDD framework for verifying functional + security requirements.</p>
+      <p>Framework BDD para verificar requisitos funcionales y de seguridad.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/quay/clair">Clair</a>
-      <p>Image vulnerability scanner for OCI registries.</p>
+      <p>Escáner de vulnerabilidades de imágenes para registros OCI.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>SBOM-driven vuln scanner for builds and images</p>
+      <p>Escáner de vulnerabilidades basado en SBOM para builds e imágenes.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
-      <p>Detects insecure code patterns/defaults in Python.</p>
+      <a href="https://github.com/PyCQA/bandit">Bandit para Python</a>
+      <p>Detecta patrones de código y valores predeterminados inseguros en Python.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://semgrep.dev/">Semgrep</a>
-      <p>Finds policy-violating patterns in code.</p>
+      <p>Encuentra patrones que violan políticas en el código.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://brakemanscanner.org/">Brakeman</a>
-      <p>Detects Rails-specific security issues/defaults.</p>
+      <p>Detecta problemas de seguridad y valores predeterminados específicos de Rails.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://gitleaks.io/">Gitleaks</a>
-      <p>Detects secrets in code (prevents default creds exposure).</p>
+      <p>Detecta secretos en el código (previene exposición de credenciales predeterminadas).</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://trufflesecurity.com/">TruffleHog</a>
-      <p>Finds secrets in repos/history to avoid insecure defaults.</p>
+      <p>Encuentra secretos en repositorios/historial para evitar valores predeterminados inseguros.</p>
      </td> 
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
-      <p>Detects known-vulnerable dependencies in builds.></p>
+      <p>Detecta dependencias conocidas vulnerables en los builds.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://oss-review-toolkit.github.io/ort/">OSS Review Toolkit (ORT)</a>
-      <p>Automates license/security checks; blocks noncompliant components.</p>
+      <p>Automatiza verificaciones de licencias/seguridad; bloquea componentes no conformes.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://fossa.com/">FOSSA (Community Edition)</a>
-      <p>License/dependency scanning; ensures compliance with default policies.</p>
+      <p>Escaneo de licencias/dependencias; garantiza cumplimiento con políticas predeterminadas.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://scancode-toolkit.readthedocs.io/en/stable/">ScanCode Toolkit</a>
-      <p>Detects license, copyright, and security metadata in artifacts.</p>
+      <p>Detecta licencias, derechos de autor y metadatos de seguridad en los artefactos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/tern-tools/tern">Tern</a>
-      <p>Container image inspection for dependency/component details.</p>
+      <p>Inspección de imágenes de contenedor para detalles de dependencias/componentes.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://openpolicyagent.org/">Open Policy Agent (OPA)</a>
-      <p>Policy-as-code for build & deploy; blocks insecure defaults in configs/manifests.</p>
+      <p>Política como código para build & deploy; bloquea valores predeterminados inseguros en configuraciones/manifiestos.</p>
   </td>
   </tr>
  <tr>
     <td>
-      <a href="https://github.com/kpcyrd/rebuilderd">rebuildered</a>
-      <p>rebuilderd independently verifies binary packages can be reproduced from source, which is a strong mechanism for third-party component integrity/validation and for preserving/verifying release integrity evidence.</p>
+      <a href="https://github.com/kpcyrd/rebuilderd">rebuilderd</a>
+      <p>rebuilderd verifica de manera independiente que los paquetes binarios puedan reproducirse desde la fuente, lo que es un mecanismo sólido para la integridad/validación de componentes de terceros y para preservar/verificar evidencia de integridad de lanzamientos.</p>
      </td>
      </tr>
+</table>
 
 </table>
 
 **PW.5**
 
-<strong>Create Source Code by Adhering to Secure Coding Practices:</strong> Decrease the number of security vulnerabilities in the software, and reduce costs by minimizing vulnerabilities introduced during source code creation that meet or exceed organization-defined vulnerability severity criteria.
+<strong>Crear Código Fuente Siguiendo Prácticas de Codificación Segura:</strong> Disminuir el número de vulnerabilidades de seguridad en el software y reducir costos minimizando las vulnerabilidades introducidas durante la creación del código fuente que cumplan o superen los criterios de severidad de vulnerabilidades definidos por la organización.
 
 <br>
 
-To satisfy SSDF PW.5 in a build and deploy context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PW.5 en un contexto de construcción y despliegue utilizando herramientas de código abierto, el enfoque se desplaza a:
 
-- Software artifacts are stored in secure, controlled repositories.
+- Los artefactos de software se almacenan en repositorios seguros y controlados.
 
-- Only approved, verified builds get stored and deployed.
+- Solo se almacenan y despliegan compilaciones aprobadas y verificadas.
 
-- Repository access is restricted and auditable.
+- El acceso a los repositorios está restringido y es auditable.
 
-- Provenance and integrity checks are enforced before artifacts are accepted or deployed.
-
+- Se aplican verificaciones de procedencia e integridad antes de que los artefactos sean aceptados o desplegados.
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.5.1:</strong>
-        <p>Follow all secure coding practices that are appropriate to the development languages and environment to meet the organization’s requirements.</p>
+        <p>Sigue todas las prácticas de codificación segura que sean apropiadas para los lenguajes de desarrollo y el entorno para cumplir con los requisitos de la organización.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://jfrog.com/community/download-artifactory-oss/">Artifactory Community Edition</a>
-      <p>Acts as the central trusted artifact repository.</p>
+      <p>Funciona como el repositorio central de artefactos confiable.</p>
    </td>
   </tr>
    <tr>
     <td>
       <a href="https://www.sonatype.com/products/nexus-repository">Nexus Repository OSS</a>
-      <p>Acts as the central trusted artifact repository.</p>
+      <p>Funciona como el repositorio central de artefactos confiable.</p>
    </td>
   </tr>
   <tr>
     <td>
       <a href="https://goharbor.io">Harbor</a>
-      <p>Acts as the central trusted artifact repository.</p>
+      <p>Funciona como el repositorio central de artefactos confiable.</p>
    </td>
   </tr> 
   <tr>
     <td>
       <a href="https://www.sigstore.dev">Sigstore(Cosign,Fulcio, Rekor)</a>
-      <p>Ensures repository contents are authentic and tamper-free.</p>
+      <p>Garantiza que el contenido del repositorio sea auténtico y no haya sido alterado.</p>
     </td> 
   </tr> 
     <tr>
       <td>
       <a href="https://quay.github.io/clair/">Clair </a>
-      <p>Ensures stored artifacts meet vulnerability requirements before deployment</p>
+      <p>Asegura que los artefactos almacenados cumplan los requisitos de vulnerabilidad antes del despliegue.</p>
   </td>
   </tr>
   <tr>
       <td>
       <a href="https://in-toto.io">In-Toto</a>
-      <p>Enforces provenance checks at repository ingestion.</p>
+      <p>Aplica verificaciones de procedencia al ingresar artefactos al repositorio.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://theupdateframework.io">The Update Framework (TUF)</a>
-      <p>Protects against repository and update tampering.</p>
+      <p>Protege contra la manipulación del repositorio y de las actualizaciones.</p>
   </td>
   </tr> 
   <tr>
     <td>
       <a href="https://notaryproject.dev">Notary (v2)</a>
-      <p>Controls supply chain intake and internal artifact storage.</p>
+      <p>Controla la entrada en la cadena de suministro y el almacenamiento interno de artefactos.</p>
     </td>
   </tr>
     <tr>
     <td>
       <a href="https://tekton.dev/docs/chains">Tekton Chains </a>
-      <p>Ties repository artifacts back to secure build pipelines.</p>
+      <p>Relaciona los artefactos del repositorio con pipelines de compilación seguros.</p>
     </td>
   </tr>
 
   <tr>
     <td>
       <a href="https://semgrep.dev/">Semgrep</a>
-      <p>	Runs as part of the CI pipeline to automatically scan code for security flaws, policy violations, and unsafe patterns before artifacts are built. Supports rule-as-code to enforce secure build policies.</p>
+      <p>Se ejecuta como parte de la pipeline CI para escanear automáticamente el código en busca de fallas de seguridad, violaciones de políticas y patrones inseguros antes de construir los artefactos. Soporta reglas como código para aplicar políticas de compilación segura.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
-      <p>Python-focused static analyzer that checks for insecure functions, weak crypto, and common security issues before packaging or deployment.</p>
+      <a href="https://github.com/PyCQA/bandit">Bandit para Python</a>
+      <p>Analizador estático enfocado en Python que revisa funciones inseguras, criptografía débil y problemas de seguridad comunes antes del empaquetado o despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://findbugs.sourceforge.net/">FindBugs</a>
-      <p>Legacy Java static analysis; can be used to flag known insecure code patterns before build. Superseded by SpotBugs.</p>
+      <p>Análisis estático legado de Java; puede usarse para señalar patrones de código inseguros conocidos antes de la compilación. Ha sido reemplazado por SpotBugs.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://spotbugs.readthedocs.io/">SpotBugs</a>
-      <p>Modern replacement for FindBugs. Java bytecode scanner to enforce safe code practices before compiling final artifacts.</p>
+      <p>Reemplazo moderno de FindBugs. Escáner de bytecode de Java para aplicar prácticas de código seguro antes de compilar los artefactos finales.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube</a>
-      <p>Comprehensive SAST platform; can be integrated in CI/CD to enforce quality gates, stopping builds that fail security rules.</p>
+      <p>Plataforma SAST completa; puede integrarse en CI/CD para aplicar gates de calidad, deteniendo compilaciones que incumplan reglas de seguridad.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">OWASP ZAP</a>
-      <p>Runs against built/staged applications in pre-deployment environments to detect exploitable vulnerabilities, ensuring no insecure version is promoted.</p>
+      <p>Se ejecuta contra aplicaciones construidas/etapas en entornos previos al despliegue para detectar vulnerabilidades explotables, asegurando que no se promueva ninguna versión insegura.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Arachni/arachni">Arachni</a>
-      <p>Web application vulnerability scanner that can be part of a build’s QA stage to ensure secure release readiness.</p>
+      <p>Escáner de vulnerabilidades de aplicaciones web que puede formar parte de la etapa de QA de la compilación para asegurar que el lanzamiento sea seguro.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
-      <p>Scans for known-vulnerable dependencies in the build, blocking insecure versions from being deployed.</p>
+      <p>Escanea dependencias conocidas como vulnerables en la compilación, bloqueando versiones inseguras para su despliegue.</p>
     </td>
   </tr>
  </table>
-    
+
 **PW.6**
 
-<strong>Configure the Compilation, Interpreter, and Build Processes to Improve Executable Security:</strong> Decrease the number of security vulnerabilities in the software and reduce costs by eliminating vulnerabilities before testing occurs.
+<strong>Configurar los Procesos de Compilación, Intérprete y Construcción para Mejorar la Seguridad de los Ejecutables:</strong> Disminuir la cantidad de vulnerabilidades de seguridad en el software y reducir costos al eliminar vulnerabilidades antes de que ocurran las pruebas.
 
 <br>
 
-To satisfy SSDF PW.6 in a build and deploy context using open-source tools, the focus shifts to make security testing continuous and automatic so every build and every deployment candidate is evaluated against a security bar, with evidence captured for audit and release gates.:
+Para cumplir con SSDF PW.6 en un contexto de compilación y despliegue usando herramientas de código abierto, el enfoque se centra en hacer que las pruebas de seguridad sean continuas y automáticas, de modo que cada build y cada candidato a despliegue se evalúe frente a un estándar de seguridad, con evidencia capturada para auditoría y puertas de liberación:
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.6.1:</strong>
-        <p>Use compiler, interpreter, and build tools that offer features to improve executable security.</p>
+        <p>Usar compiladores, intérpretes y herramientas de construcción que ofrezcan funciones para mejorar la seguridad de los ejecutables.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.6.2:</strong>
-        <p>Determine which compiler, interpreter, and build tool features should be used and how each should be configured, then implement and use the approved configurations.</p>
+        <p>Determinar qué funciones de compilador, intérprete y herramientas de construcción deben usarse y cómo deben configurarse, luego implementar y usar las configuraciones aprobadas.</p>
       </div>
     </td>
   </tr>
   <tr>
       <td>
       <a href="https://github.com/semgrep/semgrep">Semgrep</a>
-      <p>Fast rule-based SAST with CI integration.</p>
+      <p>SAST rápido basado en reglas con integración CI.</p>
     </td>
   </tr>
   <tr>
       <td>
       <a href="https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/">SonarQube Community</a>
-      <p>General code quality + basic security rules.</p>
+      <p>Calidad general de código + reglas básicas de seguridad.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://bandit.readthedocs.io/en/latest/">Bandit</a>
-      <p>Python SAST linters.</p>
+      <p>Linters SAST para Python.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/golangci/golangci-lint/">Gosec</a>
-      <p>Go SAST linters.</p>
+      <p>Linters SAST para Go.</p>
     </td>
   </tr>
   <tr>
       <td>
       <a href="https://github.com/cookpad/brakeman-linter-action">Brakeman</a>
-      <p>Rails SAST linters.</p>
+      <p>Linters SAST para Rails.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://find-sec-bugs.github.io/">FindSecBugs</a>
-      <p>Java SAST linters.</p>
+      <p>Linters SAST para Java.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://trivy.dev/latest/">Trivy</a>
-      <p>Vulnerability scan images/filesystems against SBOMs.</p>
+      <p>Escaneo de vulnerabilidades en imágenes/sistemas de archivos contra SBOMs.</p>
    </td>
   </tr>
    <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>Vulnerability scan images/filesystems against SBOMs.</p>
+      <p>Escaneo de vulnerabilidades en imágenes/sistemas de archivos contra SBOMs.</p>
    </td>
   </tr> 
   <tr>
     <td>
       <a href="https://github.com/anchore/syft">Syft</a>
-      <p>Generate SBOMs (SPDX/CycloneDX) during build.</p>
+      <p>Genera SBOMs (SPDX/CycloneDX) durante la construcción.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency Track</a>
-      <p>Continuous SBOM monitoring and alerting post-build./p>
+      <p>Monitoreo continuo de SBOM y alertas post-build.</p>
     </td>
  </tr>
   <tr>
     <td>
       <a href="https://github.com/gitleaks/gitleaks">Gitleaks</a>
-      <p> Block commits/builds that contain secrets; run in CI and as pre-commit hooks.</p>
+      <p>Bloquea commits/builds que contengan secretos; ejecutarse en CI y como pre-commit hooks.</p>
     </td>
   </tr>
    <tr>
     <td>
       <a href="https://reproducible-builds.org">Reproducible Builds</a>
-      <p>Provides methods, guidelines, and supporting tools for deterministic builds, ensuring integrity and verifiability of source-to-binary outputs.</p>
+      <p>Proporciona métodos, guías y herramientas de apoyo para builds deterministas, asegurando integridad y verificabilidad de los outputs de fuente a binario.</p>
     </td>
   </tr> 
    <tr>
     <td>
       <a href="https://bazel.build">Bazel</a>
-      <p>Build system with hermetic (sandboxed) execution and explicit dependency tracking, preventing hidden or unverified dependencies.</p>
+      <p>Sistema de construcción con ejecución hermética (sandbox) y seguimiento explícito de dependencias, previniendo dependencias ocultas o no verificadas.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://mesonbuild.com">Meson</a>
-      <p>High-speed, deterministic build system that supports reproducibility and strict configuration-as-code.</p>
+      <p>Sistema de construcción de alta velocidad y determinista que soporta reproducibilidad y configuración estricta como código.</p>
     </td>
   </tr>  
   <tr>
     <td>
       <a href="https://maven.apache.org">Apache Maven</a>
-      <p>Enforces controlled dependency resolution and supports reproducible builds for Java and JVM-based projects.</p>
+      <p>Aplica resolución controlada de dependencias y soporta builds reproducibles para proyectos Java y basados en JVM.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://www.yoctoproject.org">Yocto Project</a>
-      <p>Creates reproducible, controlled build environments for embedded Linux images, preventing environmental drift.</p>
+      <p>Crea entornos de build reproducibles y controlados para imágenes Linux embebidas, previniendo desviaciones ambientales.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://source.android.com">AOSP Build System</a>
-      <p>Uses prebuilt toolchains and sandboxed environments for secure, reproducible Android builds.</p>
+      <p>Usa toolchains preconstruidos y entornos sandbox para builds Android seguros y reproducibles.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://hermetoproject.github.io/hermeto/">Hermeto</a>
-      <p>CLI tool for pre-fetching dependencies to support hermetic builds, generating SBOMs, and ensuring network-isolated container builds with reproducible dependency management.</p>
+      <p>Herramienta CLI para pre-descarga de dependencias, soporta builds herméticos, genera SBOMs y asegura builds de contenedores aislados de red con gestión reproducible de dependencias.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://hoppr.dev/">Hoppr</a>
-      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+      <p>Kit de utilidades SBOM / cadena de suministro—procesamiento de SBOM y movimiento de “materiales” de la cadena de suministro alineado a la recolección/mantenimiento/compartición de la procedencia.</p>
     </td>
   </tr>
 </table>
-    
+ 
 **PW.7**
 
-<strong>Review and/or Analyze Human-Readable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements:</strong> Help identify vulnerabilities so that they can be corrected before the software is released to prevent exploitation. Using automated methods lowers the effort and resources needed to detect vulnerabilities. Human-readable code includes source code, scripts, and any other form of code that an organization deems human readable.
+<strong>Revisar y/o Analizar Código Legible por Humanos para Identificar Vulnerabilidades y Verificar Cumplimiento con los Requisitos de Seguridad:</strong> Ayuda a identificar vulnerabilidades para que puedan corregirse antes de que el software sea liberado y evitar su explotación. Usar métodos automatizados reduce el esfuerzo y los recursos necesarios para detectar vulnerabilidades. El código legible por humanos incluye código fuente, scripts y cualquier otra forma de código que la organización considere legible por humanos.
 
 <br>
 
-To satisfy SSDF PW.7 in a build and deploy context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PW.7 en un contexto de build y deploy usando herramientas de código abierto, el enfoque se centra en:
 
-- Running automated code scanning in CI
+- Ejecutar escaneos automatizados de código en CI
 
-- Ensuring manual/peer review requirements are enforced before merging to release branches
+- Asegurar que los requisitos de revisión manual o por pares se cumplan antes de fusionar a las ramas de release
 
-- Verifying code matches security policies defined earlier in PW.1 and validated in PW.2- Capturing audit evidence that review was completed before build artifacts are promoted
-
+- Verificar que el código cumpla con las políticas de seguridad definidas anteriormente en PW.1 y validadas en PW.2, capturando evidencia de auditoría de que la revisión se completó antes de promover los artefactos de build
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.7.1:</strong>
-        <p>Determine whether code review (a person looks directly at the code to find issues) and/or code analysis (tools are used to find issues in code, either in a fully automated way or in conjunction with a person) should be used, as defined by the organization.</p>
+        <p>Determinar si se debe utilizar revisión de código (una persona revisa directamente el código para encontrar problemas) y/o análisis de código (se utilizan herramientas para encontrar problemas en el código, ya sea de manera completamente automatizada o en conjunto con una persona), según lo definido por la organización.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.7.2:</strong>
-        <p>Perform the code review and/or code analysis based on the organization’s secure coding standards, and record and triage all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p> 
+        <p>Realizar la revisión y/o análisis de código basándose en los estándares de codificación segura de la organización, y registrar y clasificar todos los problemas detectados y las recomendaciones de corrección en el flujo de trabajo del equipo de desarrollo o en el sistema de seguimiento de incidencias.</p> 
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://semgrep.dev">Semgrep</a>
-      <p>Runs automatically in CI before building deployment artifact.
+      <p>Se ejecuta automáticamente en CI antes de construir el artefacto de despliegue.</p>
     </td>
   </tr>
   <tr>
-      <td>
+    <td>
       <a href="https://www.sonarqube.org">SonarQube Community Edition</a>
-      <p>Integrates with CI/CD to enforce clean code before release
-      </td>
+      <p>Se integra con CI/CD para garantizar código limpio antes del release.</p>
+    </td>
   </tr>
   <tr>
     <td>
       <a href="https://codeql.github.com">CodeQL</a>
-      <p>Detect SQL injection, XSS, or unsafe deserialization patterns in codebase.</p>
+      <p>Detecta inyecciones SQL, XSS o patrones de deserialización insegura en la base de código.</p>
     </td>
- </tr>
- <tr>
-    <td>
-      <a href="https://gitleaks.io">GitLeaks</a>
-      <p>Protects against secret leakage in deployed artifacts</p>
-  </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com">GitHub</a> and <a href="https://gitlab.com">GitLab</a>
-      <p>Require two reviewers for any code changes in security-critical modules.</p>
-  </td>
+      <a href="https://gitleaks.io">GitLeaks</a>
+      <p>Protege contra la filtración de secretos en los artefactos desplegados.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com">GitHub</a> y <a href="https://gitlab.com">GitLab</a>
+      <p>Requiere dos revisores para cualquier cambio en módulos críticos de seguridad.</p>
+    </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a> 
-      <p>Provides verifiable audit trail for security review completion.</p>
-   </td>
+      <p>Proporciona un registro verificable de auditoría para la finalización de la revisión de seguridad.</p>
+    </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.sigstore.dev">Sigstore Cosign</a> 
-      <p>Provides verifiable audit trail for security review completion.</p>
-  </td>
+      <p>Proporciona un registro verificable de auditoría para la finalización de la revisión de seguridad.</p>
+    </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a>
-      <p>Continuously scans dependencies in each build for new CVEs. Can run on every commit or nightly in CI/CD.</p>
+      <p>Escanea continuamente las dependencias en cada build para nuevos CVEs. Puede ejecutarse en cada commit o de forma nocturna en CI/CD.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">OWASP ZAP</a>
-      <p>Can be automated in CI/CD to re-test staging environments for vulnerabilities as new code is deployed.</p>
+      <p>Puede automatizarse en CI/CD para re-probar entornos de staging en busca de vulnerabilidades a medida que se despliega nuevo código.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://retirejs.github.io/">Retire.js</a>
-      <p>Focused on JavaScript libraries; detects newly disclosed vulnerabilities in frontend/back-end packages during builds.</p>
+      <p>Enfocado en bibliotecas JavaScript; detecta vulnerabilidades recién divulgadas en paquetes frontend/back-end durante los builds.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://fossa.com/product/open-source-vulnerability-management">Fossa</a>
-      <p>Scans dependencies for vulnerabilities and license issues, integrating with builds to catch new findings.</p>
+      <p>Escanea dependencias en busca de vulnerabilidades y problemas de licencias, integrándose con los builds para capturar nuevos hallazgos.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PyCQA/bandit">Bandit for Python</a>
-      <p>Runs in CI/CD for Python projects to catch newly introduced security issues.</p>
+      <a href="https://github.com/PyCQA/bandit">Bandit para Python</a>
+      <p>Se ejecuta en CI/CD para proyectos Python para detectar problemas de seguridad recién introducidos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Checkmarx/kics">Checkmarx KICS</a>
-      <p>Detecting Known Vulnerabilities – Compares IaC components and configurations against known security best practices and compliance frameworks (CIS Benchmarks, NIST, PCI-DSS).</p>
+      <p>Detección de vulnerabilidades conocidas – Compara componentes y configuraciones de IaC contra buenas prácticas de seguridad y marcos de cumplimiento conocidos (CIS Benchmarks, NIST, PCI-DSS).</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/danmar/cppcheck">Cppcheck for C++</a>
-      <p>Re-scans C/C++ code after every build to ensure no new issues were introduced.</p>
+      <a href="https://github.com/danmar/cppcheck">Cppcheck para C++</a>
+      <p>Re-escanea código C/C++ después de cada build para asegurar que no se introdujeron nuevos problemas.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/find-sec-bugs/find-sec-bugs">FindSecBugs</a>
-      <p>Extension to SpotBugs that catches security flaws in Java bytecode continuously during the build cycle.</p>
+      <p>Extensión de SpotBugs que detecta fallas de seguridad en bytecode Java continuamente durante el ciclo de build.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://codeql.github.com/">GitHub CodeQL</a>
-      <p>Performs continuous security queries on code with each pull request or scheduled scan.</p>
+      <p>Realiza consultas de seguridad continuas en el código con cada pull request o escaneo programado.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://pmd.github.io/">PMD</a>
-      <p>Runs code quality and security rule checks on every commit/build.</p>
+      <p>Ejecuta revisiones de calidad de código y reglas de seguridad en cada commit/build.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://spotbugs.github.io/">SpotBugs</a>
-      <p>Java static analysis integrated into the build pipeline for continuous vulnerability detection.</p>
+      <p>Análisis estático de Java integrado en la pipeline de build para detección continua de vulnerabilidades.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://danger.systems/js/">Danger JS</a>
-      <p>Automates security-related PR review rules, preventing unsafe code from merging.</p>
-  </td>
+      <p>Automatiza reglas de revisión de PR relacionadas con seguridad, evitando que código inseguro se fusione.</p>
+    </td>
   </tr>
- </table>
+</table>
 
 <br>
-
 
 **PW.8**
 
-<strong>Test Executable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements:</strong> Help identify vulnerabilities so that they can be corrected before the software is released in order to prevent exploitation. Using automated methods lowers the effort and resources needed to detect vulnerabilities and improves traceability and repeatability. Executable code includes binaries, directly executed bytecode and source code,
-and any other form of code that an organization deems executable.
+<strong>Probar Código Ejecutable para Identificar Vulnerabilidades y Verificar el Cumplimiento con los Requisitos de Seguridad:</strong> Ayuda a identificar vulnerabilidades para que puedan ser corregidas antes de que el software sea liberado, con el fin de prevenir su explotación. El uso de métodos automatizados reduce el esfuerzo y los recursos necesarios para detectar vulnerabilidades y mejora la trazabilidad y la repetibilidad. El código ejecutable incluye binarios, bytecode ejecutado directamente, código fuente y cualquier otra forma de código que la organización considere ejecutable.
 
 <br>
 
-To satisfy SSDF PW.8 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PW.8 en un contexto post-despliegue usando herramientas de código abierto, el enfoque se centra en:
 
-- Running security tests against the final artifact in staging or pre-deployment environments
+- Ejecutar pruebas de seguridad contra el artefacto final en entornos de staging o pre-despliegue
 
-- Validating runtime configuration, dependencies, and permissions of the artifact
+- Validar la configuración en tiempo de ejecución, dependencias y permisos del artefacto
 
-- Ensuring compliance with security baselines at the executable level
+- Asegurar el cumplimiento con las bases de seguridad a nivel ejecutable
 
-- Capturing evidence of artifact test results for compliance gates
+- Capturar evidencia de los resultados de las pruebas de los artefactos para los gates de cumplimiento
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="8">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.8.1:</strong>
-        <p>Determine whether executable code testing should be performed to find  vulnerabilities not identified by previous reviews, analysis, or testing and, if so, which types of testing should be used.</p>
+        <p>Determinar si se debe realizar pruebas de código ejecutable para encontrar vulnerabilidades no identificadas por revisiones, análisis o pruebas previas y, de ser así, qué tipos de pruebas deben utilizarse.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.8.2:</strong>
-        <p>Scope the testing, design the tests, perform the testing, and document the results, including recording and triaging all discovered issues and recommended remediations in the development team’s workflow or issue tracking system.</p>
+        <p>Definir el alcance de las pruebas, diseñarlas, ejecutarlas y documentar los resultados, incluyendo el registro y la clasificación de todos los problemas encontrados y las remediaciones recomendadas en el flujo de trabajo del equipo de desarrollo o en el sistema de seguimiento de incidencias.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://trivy.dev/latest/">Trivy</a>
-      <p>Run as a CI step after image build, before push to registry</p>
+      <p>Ejecutar como un paso de CI después de construir la imagen, antes de subir al registro</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>Confirms that final executable meets vulnerability thresholds.</p>
+      <p>Confirma que el ejecutable final cumple con los umbrales de vulnerabilidad.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/syft">Syft</a>
-      <p> Feeds SBOM into SCA tools like Dependency-Track for ongoing monitoring</p> 
+      <p>Alimenta SBOM en herramientas SCA como Dependency-Track para monitoreo continuo</p> 
+  </tr>
   <tr>
     <td>
       <a href="https://www.open-scap.org/features/standards/">OpenSCAP</a>
-      <p>Ensures final artifact matches secure configuration requirements.</p>
+      <p>Asegura que el artefacto final cumpla con los requisitos de configuración segura.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://cisecurity.org/cis-cat-lite">CIS-CAT Lite</a>
-      <p>Baseline enforcement step before promotion to production.</p>
+      <p>Paso de aplicación de línea base antes de la promoción a producción.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">Zap (Zed Attack Proxy)</a>
-      <p>Pre-release runtime security testing.</p>
-  </td>
+      <p>Pruebas de seguridad en tiempo de ejecución antes del lanzamiento.</p>
+    </td>
   </tr>
   <tr>
     <td>
-      <a href="https://in-toto.io"> In-toto</a> + <a href=" https://www.sigstore.dev">Sigstore Cosign Attestations</a>
-      <p>Provides verifiable evidence for compliance and audits.</p>
-  </td>
+      <a href="https://in-toto.io">In-toto</a> + <a href="https://www.sigstore.dev">Sigstore Cosign Attestations</a>
+      <p>Proporciona evidencia verificable para cumplimiento y auditorías.</p>
+    </td>
   </tr> 
 </table>
-    
 
 **PW.9**
 
-<strong>Configure Software to Have Secure Settings by Default: </strong> Help improve the  security of the software at the time of installation to reduce the likelihood of the software being deployed with weak security settings, putting it at greater risk of compromise.
+<strong>Configurar el Software para Tener Configuraciones Seguras por Defecto:</strong> Ayuda a mejorar la seguridad del software en el momento de la instalación para reducir la probabilidad de que se despliegue con configuraciones de seguridad débiles, exponiéndolo a un mayor riesgo de compromiso.
 
 <br>
 
-To satisfy SSDF PW.9 in a build and deploy context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PW.9 en un contexto de compilación y despliegue usando herramientas de código abierto, el enfoque se centra en:
 
-- Embedding secure configs into container images, binaries, and IaC
+- Incrustar configuraciones seguras en imágenes de contenedor, binarios e IaC
 
-- Removing insecure or unused features before packaging
+- Eliminar funciones inseguras o no utilizadas antes de empaquetar
 
-- Applying security baselines (CIS, STIG, NIST) in the build process
+- Aplicar líneas base de seguridad (CIS, STIG, NIST) en el proceso de compilación
 
-- Validating those defaults as part of CI/CD
+- Validar esos valores por defecto como parte de CI/CD
 
-- Preventing insecure defaults from slipping into release candidates
+- Evitar que valores por defecto inseguros lleguen a los candidatos de lanzamiento
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="11">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.9.1:</strong>
-        <p>Define a secure baseline by determining how to configure each setting that has an effect on security or a security-related setting so that the default settings are secure and do not weaken the security functions provided by the platform, network infrastructure, or services.</p>
+        <p>Definir una línea base segura determinando cómo configurar cada ajuste que tenga un efecto sobre la seguridad o un ajuste relacionado con seguridad, de manera que los valores predeterminados sean seguros y no debiliten las funciones de seguridad proporcionadas por la plataforma, infraestructura de red o servicios.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PW.9.2:</strong>
-        <p>Implement the default settings (or groups of default settings, if  applicable), and document each setting for software administrators.</p>
+        <p>Implementar los valores predeterminados (o grupos de valores predeterminados, si aplica), y documentar cada ajuste para los administradores de software.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/dev-sec">DevSec Hardening Framework</a>
-      <p>Automates baseline hardening during image creation.</p>
+      <p>Automatiza el endurecimiento de la línea base durante la creación de imágenes.</p>
    </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/chainguard-dev/apko">Chainguard Apko</a>
-      <p> Produces secure-by-default container images.</p>
+      <p>Produce imágenes de contenedor seguras por defecto.</p>
     </td>
   </tr> 
   <tr>
     <td>
-      <a href=" https://aquasecurity.github.io/trivy/"> Trivy</a>
-      <p>CI gate to block insecure defaults from being built/deployed.</p>
+      <a href=" https://aquasecurity.github.io/trivy/">Trivy</a>
+      <p>Punto de control en CI para bloquear valores predeterminados inseguros antes de ser compilados/desplegados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.checkov.io">Checkov</a>
-      <p>Prevents insecure IaC defaults from reaching deployment.</p>
+      <p>Evita que los valores predeterminados inseguros de IaC lleguen al despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://kics.io"> KICS</a>
-      <p>Prevents insecure IaC defaults from reaching deployment.</p>
+      <a href="https://kics.io">KICS</a>
+      <p>Evita que los valores predeterminados inseguros de IaC lleguen al despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.open-scap.org/">OpenSCAP</a>
-      <p>Produces compliance evidence before artifact promotion.</p>
+      <p>Genera evidencia de cumplimiento antes de la promoción de artefactos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.sigstore.dev">Sigstore Cosign</a> + <a href="https://in-toto.io">In-Toto</a>
-      <p>Ensures only hardened, verified artifacts can be deployed.</p>
+      <p>Asegura que solo se puedan desplegar artefactos endurecidos y verificados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://cisecurity.org/cis-cat-lite/">CIS-CAT Lite</a>
-      <p>Verify hardened defaults match CIS requirements before release.</p>
+      <p>Verifica que los valores predeterminados endurecidos cumplan con los requisitos de CIS antes del lanzamiento.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://kyverno.io"> Kyverno</a>
-      <p>Policy enforcement for manifests and configs at build time.</p>
+      <a href="https://kyverno.io">Kyverno</a>
+      <p>Aplicación de políticas para manifiestos y configuraciones durante la compilación.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.openpolicyagent.org/">OPA Conftest</a>
-      <p>Codifies secure defaults as enforceable CI/CD policies.</p>
+      <p>Codifica valores predeterminados seguros como políticas aplicables en CI/CD.</p>
     </td>
   </tr>  
 </table>

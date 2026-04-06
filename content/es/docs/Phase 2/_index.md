@@ -1,55 +1,49 @@
 ---
-title: "Phase 2: Build and Deploy"
-linkTitle: "Build and Deploy"
+title: "Fase 2: Compilar y Desplegar"
+linkTitle: "Compilar y Desplegar"
 weight: 40
 layout: docs
 description: >
-  Security Compliance for Build and Deploy
+  Cumplimiento de seguridad en las fases de compilación y despliegue
 ---
-## Phase 2 - Build and Deploy
 
-As software moves from development to production, the build and deploy stages play a pivotal role in maintaining the integrity, security, and provenance of your application. Phase 2 covers security controls and practices applied during the build and deployment stages of the CI/CD pipeline. These controls ensure that software artifacts are created, verified, and released in a trusted, repeatable, and policy-enforced manner before reaching runtime environments. Phase 2 focuses on preventing compromised or non-compliant artifacts from being deployed, establishing trust in the software supply chain before software enters live environments.
+## Fase 2 - Compilar y Desplegar
 
+A medida que el software avanza desde el desarrollo hasta producción, las etapas de compilación y despliegue juegan un papel crucial en mantener la integridad, seguridad y procedencia de tu aplicación. La Fase 2 cubre los controles y prácticas de seguridad aplicados durante las etapas de compilación y despliegue del pipeline de CI/CD. Estos controles aseguran que los artefactos de software sean creados, verificados y liberados de manera confiable, repetible y bajo políticas establecidas antes de llegar a los entornos de ejecución. La Fase 2 se enfoca en prevenir que artefactos comprometidos o no conformes sean desplegados, estableciendo confianza en la cadena de suministro de software antes de que este llegue a entornos en producción.
 
-Specifically, Phase 2 includes:
+Específicamente, la Fase 2 incluye:
 
--- Securing build environments and CI runners to prevent tampering
+-- Asegurar los entornos de compilación y los runners de CI para prevenir manipulaciones
 
--- Reproducible and verifiable builds
+-- Compilaciones reproducibles y verificables
 
--- Artifact integrity, signing, and provenance tracking
+-- Integridad de los artefactos, firma y seguimiento de procedencia
 
--- Build-time vulnerability and configuration analysis
+-- Análisis de vulnerabilidades y configuraciones durante la compilación
 
--- Enforcement of security and compliance policies during builds
+-- Aplicación de políticas de seguridad y cumplimiento durante la compilación
 
--- Secure container image creation and validation
+-- Creación y validación segura de imágenes de contenedores
 
--- Controlled deployment workflows with automated gates and approvals
+-- Flujos de despliegue controlados con puertas automáticas y aprobaciones
 
--- Recording deployment metadata required for post-deployment visibility
+-- Registro de metadatos de despliegue necesarios para visibilidad post-despliegue
 
-### Key Phase 2 Security Activities
+### Actividades clave de seguridad en la Fase 2
 
-Compliance for Build and Deploy steps include:
+El cumplimiento en los pasos de Compilación y Despliegue incluye:
 
+[//]: # "- Compilaciones Reproducibles y Determinísticas - Garantizar que los artefactos de software puedan ser verificados y reproducidos de forma independiente para prevenir manipulaciones."
+[//]: # "- Detección Automática de Amenazas y Aplicación de Cumplimiento - Integrar análisis de seguridad continuo para detectar configuraciones incorrectas, vulnerabilidades y dependencias no autorizadas antes del despliegue."
+[//]: # "- Despliegues con Políticas Enforzadas - Aplicar políticas de seguridad verificables asegurando que solo software conforme y certificado llegue a producción."
+[//]: # "- Atestación Criptográfica - Utilizar firmas digitales y pruebas criptográficas para verificar la autenticidad e integridad de compilaciones y despliegues."
 
-[//]: # (- Reproducible and Deterministic Builds - Ensure that software artifacts can be independently verified and reproduced to prevent tampering.)
+|                                                               |                                                                                                                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compilaciones Reproducibles y Determinísticas                 | Garantizar que los artefactos de software puedan ser verificados y reproducidos de forma independiente para prevenir manipulaciones.                    |
+| Detección Automática de Amenazas y Aplicación de Cumplimiento | Integrar análisis de seguridad continuo para detectar configuraciones incorrectas, vulnerabilidades y dependencias no autorizadas antes del despliegue. |
+| Despliegues con Políticas Enforzadas                          | Aplicar políticas de seguridad verificables asegurando que solo software conforme y certificado llegue a producción.                                    |
+| Entornos de Ejecución Confiables (TEEs)                       | Asegurar los entornos de compilación contra manipulaciones usando entornos de ejecución respaldados por hardware.                                       |
+| Atestación Criptográfica                                      | Utilizar firmas digitales y pruebas criptográficas para verificar la autenticidad e integridad de compilaciones y despliegues.                          |
 
-[//]: # (- Automated Threat Detection and Compliance Enforcement - Integrate continuous security analysis to detect misconfigurations, vulnerabilities, and unauthorized dependencies before deployment.)
-
-[//]: # (- Policy-Enforced Deployments - Enforce verifiable security policies ensuring only compliant, attested software reaches production.)
-
-[//]: # (- Trusted Execution Environments &#40;TEEs&#41; - Secure build environments against tampering using hardware-backed execution environments.)
-
-[//]: # (- Cryptographic Attestation- Use digital signatures and cryptographic proofs to verify the authenticity and integrity of builds and deployments.)
-
-|                                                       |                                                                                                                                       |
-|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Reproducible and Deterministic Builds                 | Ensure that software artifacts can be independently verified and reproduced to prevent tampering.                                     |
-| Automated Threat Detection and Compliance Enforcement | Integrate continuous security analysis to detect misconfigurations, vulnerabilities, and unauthorized dependencies before deployment. |
-| Policy-Enforced Deployments                           | Enforce verifiable security policies ensuring only compliant, attested software reaches production.                                   |
-| Trusted Execution Environments (TEEs)                 | Secure build environments against tampering using hardware-backed execution environments.                                             |
-| Cryptographic Attestation                             | Use digital signatures and cryptographic proofs to verify the authenticity and integrity of builds and deployments.                   |
-
-Following are guidelines from industry frameworks with suggested open source tooling needed to achieve the compliance goals.
+A continuación, se presentan las directrices de marcos de referencia de la industria con herramientas open source sugeridas necesarias para lograr los objetivos de cumplimiento.
