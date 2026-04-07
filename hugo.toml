@@ -5,6 +5,7 @@ enableRobotsTXT = true
 enableGitInfo = true
 
 # Language settings
+contentDir = "content/en"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
@@ -57,23 +58,22 @@ anchor = "smart"
 # Language configuration
 [languages]
   [languages.en]
-    contentDir = "content/en"
-    title = "CI/CD Cybersecurity Guide | CD Foundation"
     languageName = "English"
     weight = 1
-    time_format_default = "2026.03.14"
-    time_format_blog = "2026.03.14"
     [languages.en.params]
+      title = "CI/CD Cybersecurity Guide | CD Foundation"
       description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
+      time_format_default = "2026.03.14"
+      time_format_blog = "2026.03.14"
   [languages.es]
     contentDir = "content/es"
-    title = "Guía de ciberseguridad para CI/CD | Fundación CD"
     languageName = "Español"
     weight = 2
-    time_format_default = "03.14.2026"
-    time_format_blog = "03.14.2026"
     [languages.es.params]
+      title = "Guía de ciberseguridad para CI/CD | Fundación CD"
       description = "Incorpora la ciberseguridad en tus pipelines de CI/CD con salvaguardas estándar de la industria. Aprende las mejores prácticas de DevSecOps, herramientas de seguridad y marcos para el ciclo de vida del desarrollo de software seguro."
+      time_format_default = "03.14.2026"
+      time_format_blog = "03.14.2026"
 
 # Docsy theme
 [module]
