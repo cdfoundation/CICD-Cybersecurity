@@ -1,526 +1,511 @@
 ---
-title: "3.1 Prepare the Organization (PO)"
-linkTitle: "3.1 Prepare the Organization (PO)"
+title: "3.1 Preparar la Organización (PO)"
+linkTitle: "3.1 Preparar la Organización (PO)"
 weight: 5
 layout: docs
 description: >
- 3.1 Prepare the Organization (PO) Post Deploy CI/CD Steps
+  3.1 Preparar la Organización (PO) Pasos Post Despliegue CI/CD
 ---
 
+### 3.1 Preparar la Organización (PO) Tareas Post Despliegue
 
-### 3.1 Prepare the Organization (PO) Post Deploy Tasks
-Organizations should ensure that their people, processes, and technology are prepared to perform secure software development at the organization level. Many organizations will find some PO practices to also be applicable to subsets of their software development, like individual development groups or projects.
+Las organizaciones deben asegurar que sus personas, procesos y tecnología estén preparadas para realizar desarrollo de software seguro a nivel organizacional. Muchas organizaciones encontrarán que algunas prácticas PO también son aplicables a subconjuntos de su desarrollo de software, como grupos de desarrollo individuales o proyectos.
 
 <br>
 
 **PO.1**
-<strong>Define Security Requirements for Software Development</strong>: Ensure that security requirements for software development are known at all times so that they can be taken into account throughout the SDLC and duplication of effort can be minimized because the requirements information can be collected once and shared. This includes requirements from internal sources (e.g., the organization’s policies, business objectives, and risk  management strategy) and external sources (e.g., applicable laws and regulations).
+<strong>Definir Requisitos de Seguridad para el Desarrollo de Software</strong>: Asegurar que los requisitos de seguridad para el desarrollo de software sean conocidos en todo momento para que puedan ser considerados durante todo el SDLC y minimizar la duplicación de esfuerzos, ya que la información de los requisitos puede recopilarse una vez y compartirse. Esto incluye requisitos de fuentes internas (p. ej., políticas de la organización, objetivos de negocio y estrategia de gestión de riesgos) y fuentes externas (p. ej., leyes y regulaciones aplicables).
 
 <br>
 
-To satisfy SSDF PO.1 in a post-deployment context using open-source tools, the focus shifts from just defining to:
+Para cumplir con SSDF PO.1 en un contexto post-despliegue usando herramientas de código abierto, el enfoque se desplaza de solo definir a:
 
-- Maintaining and enforcing PO tasks in live systems.
-
-- Making task requirements visible and traceable across deployed environments.
-
-- Auditing and updating methods and procedures as internal and external policies change.
+- Mantener y aplicar las tareas PO en sistemas en producción.
+- Hacer que los requisitos de las tareas sean visibles y trazables en todos los entornos desplegados.
+- Auditar y actualizar métodos y procedimientos a medida que cambian las políticas internas y externas.
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.1.1:</strong>
-        <p>Identify and document all security requirements for the organization’s software development infrastructures and processes, and maintain the requirements over time.</p>
+        <p>Identificar y documentar todos los requisitos de seguridad para las infraestructuras y procesos de desarrollo de software de la organización, y mantener dichos requisitos a lo largo del tiempo.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.1.2:</strong>
-        <p>Identify and document all security requirements for organization-developed  software to meet, and maintain the requirements over time.</p>
+        <p>Identificar y documentar todos los requisitos de seguridad que el software desarrollado por la organización debe cumplir, y mantener dichos requisitos a lo largo del tiempo.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.openpolicyagent.org/"> Open Policy Agent</a>
-      <p>Supports definitions of security policies as code and enforce them in pipelines, CI/CD, and runtime.  Enforces runtime policies via integrations with Kubernetes, Terraform, and CI/CD platforms.</p>
+      <p>Soporta definiciones de políticas de seguridad como código y las aplica en pipelines, CI/CD y en tiempo de ejecución. Aplica políticas en tiempo de ejecución mediante integraciones con Kubernetes, Terraform y plataformas CI/CD.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.inspec.io">InspecLog</a>
-      <p> Periodically audits deployed environments against internal and external security standards.</p>
+      <p>Audita periódicamente los entornos desplegados contra estándares de seguridad internos y externos.</p>
     </td>
   </tr>
-   <tr>
+  <tr>
     <td>
       <a href="https://Ortelius.io">Ortelius Evidence Store</a>
-      <p> Associate and version security requirement metadata per service and deployment, enabling continuous visibility.</p>
+      <p>Asocia y versiona metadatos de requisitos de seguridad por servicio y despliegue, habilitando visibilidad continua.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
-      <p> Maps security findings back to specific policy controls or regulatory frameworks.</p>
+      <p>Relaciona hallazgos de seguridad con controles de políticas específicas o marcos regulatorios.</p>
     </td>
   </tr>
 </table>
 
-
 **PO.2**
-<strong>Implement Roles and Responsibilities:</strong> Ensure that everyone inside and outside of the organization involved in the SDLC is prepared to perform their SDLC-related roles and responsibilities throughout the SDLC.
+<strong>Implementar Roles y Responsabilidades:</strong> Asegurar que todos, dentro y fuera de la organización, involucrados en el SDLC estén preparados para desempeñar sus roles y responsabilidades relacionadas con el SDLC durante todo el ciclo de vida.
 
 <br>
 
-To satisfy SSDF PO.2 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PO.2 en un contexto post-despliegue usando herramientas de código abierto, el enfoque se desplaza a:
 
-- Defining and assigning roles for who is responsible for remediation and runtime configurations. 
-
-- Maintaining evidence of what was deployed, who deployed it, and impact across all software assets.
-
-- Ensuring security and patch management with restricted post-deployment actions.
+- Definir y asignar roles para quienes son responsables de la remediación y configuraciones en tiempo de ejecución.
+- Mantener evidencia de qué se desplegó, quién lo desplegó y el impacto sobre todos los activos de software.
+- Asegurar la seguridad y gestión de parches con acciones restringidas post-despliegue.
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
-        <strong>PO.2.1:</strong><p>Create new roles and alter responsibilities for existing roles as needed to encompass all parts of the SDLC. Periodically review and maintain the defined roles and responsibilities, updating them as needed.</p>
+        <strong>PO.2.1:</strong><p>Crear nuevos roles y modificar responsabilidades de roles existentes según sea necesario para abarcar todas las partes del SDLC. Revisar y mantener periódicamente los roles y responsabilidades definidos, actualizándolos según sea necesario.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.2.2:</strong>
-        <p>Provide role-based training for all personnel with responsibilities that contribute to secure development. Periodically review personnel proficiency and role-based training, and update the training as needed.</p>
+        <p>Proporcionar capacitación basada en roles para todo el personal con responsabilidades que contribuyan al desarrollo seguro. Revisar periódicamente la competencia del personal y la capacitación basada en roles, y actualizar la formación según sea necesario.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.2.3:</strong>
-        <p>Obtain upper management or authorizing official commitment to secure development, and convey that commitment to all with development related roles and  responsibilities.</p>
+        <p>Obtener el compromiso de la alta dirección o autoridad autorizante para el desarrollo seguro, y comunicar ese compromiso a todos los roles y responsabilidades relacionados con el desarrollo.</p>
       </div>
     </td>
   </tr>
   <tr> 
     <td>
       <a href="https://git-scm.com/">Git</a>
-      <p>Tracks authorship and code reviewers, and tags releases and documents who triggered them. </p>
+      <p>Rastrea autoría y revisores de código, etiqueta releases y documenta quién los disparó.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://Ortelius.io">Ortelius Evidence Store</a>
-      <p>Associates deployed services with responsible individuals or teams, with historical record of changes, deployments and roles. </p>
+      <p>Asocia servicios desplegados con individuos o equipos responsables, manteniendo un historial de cambios, despliegues y roles.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.cncf.io/projects/backstage/">Backstage</a>
-      <p>Lists service owners, on-call teams and escalation paths making post-deployment responsibility transparent across the organization.</p>
+      <p>Lista propietarios de servicios, equipos on-call y rutas de escalamiento, haciendo transparente la responsabilidad post-despliegue en toda la organización.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
-      <p>Track security findings and assign resolution responsibilities.</p>
+      <p>Rastrea hallazgos de seguridad y asigna responsabilidades de resolución.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://kubernetes.io/blog/2019/08/06/opa-gatekeeper-policy-and-governance-for-kubernetes/">Kubernetes RBAC / OPA Gatekeepr</a>
-      <p>Enforces access policies and role boundaries in runtime environments.</p>
+      <a href="https://kubernetes.io/blog/2019/08/06/opa-gatekeeper-policy-and-governance-for-kubernetes/">Kubernetes RBAC / OPA Gatekeeper</a>
+      <p>Aplica políticas de acceso y límites de roles en entornos de ejecución.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://argo-cd.readthedocs.io/en/stable/">ArgoCD</a>
-      <p>Ensures only authorized commits/deployments affect production and logs every promotion and rollback.</p>
+      <p>Garantiza que solo los commits/despliegues autorizados afecten producción y registra cada promoción y rollback.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://falco.org/">Falco</a>
-      <p>Detects unauthorized activity at runtime.</p>
+      <p>Detecta actividad no autorizada en tiempo de ejecución.</p>
     </td>
   </tr>
-    <tr>
+  <tr>
     <td>
       <a href="https://prometheus.io/docs/alerting/latest/alertmanager/">Prometheus + Alertmanager</a>
-      <p>Alerts based on ownership/roles</p>
+      <p>Alertas basadas en propiedad/roles.</p>
     </td>
   </tr>
 </table>
 
-
 **PO.3**
-<strong>Implement Supporting Toolchains:</strong> Use automation to reduce human effort and improve the accuracy, reproducibility, usability, and comprehensiveness of security practices throughout the SDLC, as well as provide a way
-to document and demonstrate the use of these practices. Toolchains and tools may be used at different levels of the organization, such as organization-wide or project-specific, and may address a particular part of the SDLC, like a
-build pipeline.
+<strong>Implementar Cadenas de Herramientas de Soporte:</strong> Usar automatización para reducir el esfuerzo humano y mejorar la precisión, reproducibilidad, usabilidad y cobertura de las prácticas de seguridad durante todo el SDLC, así como proporcionar una forma de documentar y demostrar el uso de estas prácticas. Las cadenas de herramientas y herramientas pueden usarse en distintos niveles de la organización, como a nivel organizacional o por proyecto, y pueden abordar partes específicas del SDLC, como un pipeline de compilación.
 
 <br>
 
-To satisfy SSDF PO.3 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PO.3 en un contexto post-despliegue usando herramientas de código abierto, el enfoque se desplaza a:
 
-- Ensuring toolchains support vulnerability detection, SBOM tracking, compliance, and policy enforcement to function after release.
-
-- Keeping automation tooling secure, updated, and integrated with the live environment.
-
-- Maintaining evidence that the toolchain’s outputs (e.g., SBOMs, scan reports) remain trustworthy and current.
-
+- Asegurar que las cadenas de herramientas soporten detección de vulnerabilidades, seguimiento de SBOMs, cumplimiento y aplicación de políticas para funcionar después del despliegue.
+- Mantener la seguridad, actualización e integración de las herramientas de automatización en el entorno en vivo.
+- Mantener evidencia de que los outputs de la cadena de herramientas (e.g., SBOMs, reportes de escaneo) siguen siendo confiables y actuales.
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.3.1:</strong>
-        <p>Specify which tools or tool types must or should be included in each  toolchain to mitigate identified risks, as well as how the toolchain components are to be integrated with each other.</p>
+        <p>Especificar qué herramientas o tipos de herramientas deben incluirse en cada cadena de herramientas para mitigar riesgos identificados, así como cómo se integrarán los componentes entre sí.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.3.2:</strong>
-        <p>Follow recommended security practices to deploy, operate, and maintain tools and toolchains.</p>
+        <p>Seguir prácticas de seguridad recomendadas para desplegar, operar y mantener herramientas y cadenas de herramientas.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.3.3:</strong>
-        <p>Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization.</p>
+        <p>Configurar herramientas para generar artefactos que respalden las prácticas de desarrollo seguro definidas por la organización.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency Track</a>
-      <p>Continuously monitors SBOMs for newly disclosed CVEs in deployed software. </p>
+      <p>Monitorea continuamente SBOMs para CVEs recién divulgados en el software desplegado.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://Ortelius.io">Ortelius Evidence Store</a>
-      <p> Maintains a historical record of deployed software, components, and their SBOMs; links to owners for accountability. </p>
+      <p>Mantiene un registro histórico de software desplegado, componentes y sus SBOMs; vincula con propietarios para responsabilidad.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/syft/">Syft</a>
-      <p>Generates SBOMs from deployed container images or filesystems on-demand.</p>
+      <p>Genera SBOMs de imágenes de contenedores o sistemas de archivos desplegados bajo demanda.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://trivy.dev/latest/">Trivy</a>
-      <p> Post-deployment container, filesystem, and package vulnerability scanning; also generates SBOMs.</p>
+      <p>Escaneo de vulnerabilidades post-despliegue en contenedores, sistemas de archivos y paquetes; también genera SBOMs.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/quay/clair/">Clair</a>
-      <p>Continuous scanning of container registries for vulnerabilities.</p>
+      <p>Escaneo continuo de registries de contenedores para vulnerabilidades.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>Fast vulnerability scanner for container images and filesystems.</p>
+      <p>Escáner rápido de vulnerabilidades para imágenes de contenedores y sistemas de archivos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://in-toto.io/">In-Toto</a>
-      <p>Validates that deployed artifacts match the cryptographic attestations from the build process.</p>
-    </td>
-  </tr>
-    <tr>
-    <td>
-      <a href="https://github.com/sigstore/cosign">Sigstore cosign</a>
-      <p>Verifies signatures of deployed artifacts; ensures they match approved builds.</p>
-    </td>
-  </tr>
-      <tr>
-    <td>
-      <a href="https://github.com/sigstore/rekor">Sigstore Rekor</a>
-      <p>Provides a public, immutable log for signatures and provenance data.</p>
+      <p>Valida que los artefactos desplegados coincidan con las certificaciones criptográficas del proceso de construcción.</p>
     </td>
   </tr>
   <tr>
-  <td>
+    <td>
+      <a href="https://github.com/sigstore/cosign">Sigstore Cosign</a>
+      <p>Verifica firmas de artefactos desplegados; asegura que coincidan con builds aprobados.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/sigstore/rekor">Sigstore Rekor</a>
+      <p>Proporciona un registro público e inmutable para firmas y datos de procedencia.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://www.openpolicyagent.org/"> Open Policy Agent</a>
-      <p>Enforce security and compliance policies on deployed systems (e.g., Kubernetes clusters).</p>
+      <p>Aplica políticas de seguridad y cumplimiento en sistemas desplegados (e.g., clusters de Kubernetes).</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.inspec.io">Inspec</a>
-      <p>Audit deployed infrastructure and applications against security baselines and compliance requirements.</p>
+      <p>Audita la infraestructura y aplicaciones desplegadas contra líneas base de seguridad y requisitos de cumplimiento.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/TheHive-Project/TheHive">The Hive</a> <p>Incident response platform for post-deployment security events. </p>
+      <a href="https://github.com/TheHive-Project/TheHive">The Hive</a>
+      <p>Plataforma de respuesta a incidentes para eventos de seguridad post-despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://konflux-ci.dev/">Konflux-ci software factory for Tekton</a>
-      <p>Implements the <a href="https://in-toto.io/docs/what-is-in-toto/">In-toto framework</a> using pipelines-as-code for supply chain security validation</p>
+      <p>Implementa el <a href="https://in-toto.io/docs/what-is-in-toto/">framework In-toto</a> usando pipelines-as-code para validación de seguridad de la cadena de suministro.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
-      <p>Track vulnerabilities and assign remediation tasks; integrate with scanners for continuous updates.</p>
+      <p>Rastrea vulnerabilidades y asigna tareas de remediación; integra con escáneres para actualizaciones continuas.</p>
     </td>
   </tr>
 </table>
 
-
 **PO.4**
-<strong>Define and Use Criteria for Software Security Checks:</strong> Help ensure that the software resulting from the SDLC meets the organization’s expectations by defining and using criteria for checking the software’s security during development.
+<strong>Definir y Usar Criterios para Revisiones de Seguridad del Software:</strong> Ayuda a garantizar que el software resultante del SDLC cumpla con las expectativas de la organización al definir y usar criterios para verificar la seguridad del software durante el desarrollo.
 
 <br>
 
-To satisfy SSDF PO.4 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PO.4 en un contexto post-despliegue usando herramientas de código abierto, el enfoque se desplaza a:
 
-- Ensuring that security data continues to be collected after release.
+- Asegurarse de que los datos de seguridad continúen recopilándose después del lanzamiento.
 
-- Logs, SBOMs, and scan results are preserved and tamper-resistant.
+- Que los logs, SBOMs y resultados de escaneos se conserven y sean resistentes a manipulaciones.
 
-- Data is safeguarded to prevent unauthorized access or modification.
+- Proteger los datos para evitar accesos o modificaciones no autorizadas.
 
-- Data is retrievable for audits, investigations, and compliance checks
-
+- Que los datos sean recuperables para auditorías, investigaciones y verificaciones de cumplimiento.
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.4.1:</strong>
-        <p>Define criteria for software security checks and track throughout the SDLC.</p>
+        <p>Definir criterios para revisiones de seguridad del software y darles seguimiento durante todo el SDLC.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.4.2:</strong>
-        <p>Implement processes, mechanisms, etc. to gather and safeguard the necessary information in support of the criteria.</p><br>
+        <p>Implementar procesos, mecanismos, etc., para recopilar y proteger la información necesaria en apoyo de los criterios.</p><br>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://falco.org/">Falco</a>
-      <p>Runtime security detection for containers and hosts; generates event logs for suspicious behavior.</p>
+      <p>Detección de seguridad en tiempo de ejecución para contenedores y hosts; genera logs de eventos para comportamientos sospechosos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Neo23x0/auditd">AuditD</a>
-      <p> Captures system-level security events for Linux. </p>
+      <p>Captura eventos de seguridad a nivel de sistema en Linux.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/osquery/osquery">OSQuery</a>
-      <p> Endpoint telemetry and configuration monitoring. </p>
+      <p>Telemetría de endpoints y monitoreo de configuración.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://grafana.com/docs/loki/latest/get-started/overview/">Prometheus and Loki</a>
-      <p> Collect and store metrics and logs in a queryable format.</p>
+      <a href="https://grafana.com/docs/loki/latest/get-started/overview/">Prometheus y Loki</a>
+      <p>Recopila y almacena métricas y logs en un formato consultable.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://Ortelius.io">Ortelius Evidence Store</a>
-      <p>Maintains versioned SBOMs linked to each deployment. </p>
+      <p>Mantiene SBOMs versionadas vinculadas a cada despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/syft/">Syft</a>
-      <p>Generates SBOMs from deployed artifacts for ongoing monitoring./p>
+      <p>Genera SBOMs a partir de artefactos desplegados para monitoreo continuo.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.open-scap.org/features/standards/">OpenSCAP</a>
-      <p>Collects and stores compliance scan data.</p>
+      <p>Recopila y almacena datos de escaneos de cumplimiento.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/wazuh/wazuh">Wazuh SIEM</a>
-      <p>SIEM with audit logging, threat detection, and compliance monitoring.</p>
+      <p>SIEM con registro de auditoría, detección de amenazas y monitoreo de cumplimiento.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>Detects CVEs in deployed images and file systems.</p>
+      <p>Detecta vulnerabilidades CVE en imágenes y sistemas de archivos desplegados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://in-toto.io/">In-Toto</a>
-      <p>Validates that deployed artifacts match the cryptographic attestations from the build process.</p>
+      <p>Valida que los artefactos desplegados coincidan con las certificaciones criptográficas del proceso de construcción.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/sigstore/rekor">Sigstore Rekor</a>
-      <p>Provides a public, immutable log for signatures and provenance data.</p>
+      <p>Proporciona un registro público e inmutable para firmas y datos de procedencia.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.inspec.io">Inspec</a>
-      <p>Audit deployed infrastructure and applications against security baselines and compliance requirements.</p>
+      <p>Audita infraestructura y aplicaciones desplegadas contra estándares de seguridad y cumplimiento.</p>
     </td>
   </tr>
-   <tr>
+  <tr>
     <td>
       <a href="https://trivy.dev/latest/">Trivy</a>
-      <p>Continuous vulnerability scanning + SBOM generation for running systems.</p>
+      <p>Escaneo continuo de vulnerabilidades y generación de SBOM para sistemas en ejecución.</p>
     </td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
-      <p>Stores and organizes security scan results; integrates with Trivy, Grype, and Dependency-Track.</p>
+      <p>Almacena y organiza resultados de escaneos de seguridad; integra con Trivy, Grype y Dependency-Track.</p>
     </td>
   </tr>
 </table>
 
-
 **PO.5**
-<strong>Implement and Maintain Secure Environments for Software Development:</strong> Ensure that all components of the environments for software development are strongly protected from internal and external threats to prevent compromises of the
-environments or the software being developed or maintained within them. Examples of environments for software development include development, build, test, and distribution environments.
+<strong>Implementar y Mantener Entornos Seguros para el Desarrollo de Software:</strong> Asegurar que todos los componentes de los entornos de desarrollo estén fuertemente protegidos contra amenazas internas y externas para prevenir compromisos del entorno o del software desarrollado o mantenido en ellos. Ejemplos de entornos incluyen desarrollo, construcción, prueba y distribución.
 
 <br>
 
-To satisfy SSDF PO.5 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PO.5 en un contexto post-despliegue usando herramientas de código abierto, el enfoque se desplaza a:
 
-- The security requirements for your development infrastructure are still relevant and enforced after software is released.
+- Los requisitos de seguridad de la infraestructura de desarrollo siguen siendo relevantes y aplicables después del lanzamiento del software.
 
-- Your build, deployment, and monitoring environments remain hardened and compliant.
+- Los entornos de construcción, despliegue y monitoreo permanecen endurecidos y conformes.
 
-- You continuously validate that your development infrastructure hasn’t drifted from its secure baseline.
-
+- Se valida continuamente que la infraestructura de desarrollo no se haya desviado de su línea base segura.
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.5.1:</strong>
-        <p>Separate and protect each environment involved in software development.</p>
+        <p>Separar y proteger cada entorno involucrado en el desarrollo de software.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.5.2:</strong>
-        <p>Secure and harden development endpoints (i.e., endpoints for software designers, developers, testers, builders, etc.) to perform development-related tasks using a risk-based approach.</p>
+        <p>Proteger y reforzar los endpoints de desarrollo (diseñadores, desarrolladores, testers, constructores, etc.) para realizar tareas relacionadas con el desarrollo usando un enfoque basado en riesgos.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.inspec.io">Inspec</a>
-      <p>Runs ongoing compliance scans against development and build servers; enforce CIS/NIST benchmarks.</p>
+      <p>Ejecuta escaneos de cumplimiento continuos en servidores de desarrollo y construcción; aplica benchmarks CIS/NIST.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.open-scap.org/features/standards/">OpenSCAP</a>
-      <p>Check infrastructure against defined security baselines.</p>
+      <p>Verifica la infraestructura contra estándares de seguridad definidos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/osquery/osquery">OSQuery</a>
-      <p> Monitor build and deployment nodes for unauthorized changes.</p>
+      <p>Monitorea nodos de construcción y despliegue en busca de cambios no autorizados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/aquasecurity/kube-bench">Kube-bench</a>
-      <p>Validates Kubernetes-based build/test clusters meet CIS benchmarks.</p>
+      <p>Valida que clusters de Kubernetes para construcción/pruebas cumplan benchmarks CIS.</p>
     </td>
   </tr>
-   <tr>
+  <tr>
     <td>
       <a href="https://github.com/open-policy-agent/gatekeeper">Open Policy Agent - GateKeeper</a>
-      <p>Enforce rules for infrastructure configuration (Kubernetes, Terraform, CI/CD).</p>
+      <p>Aplica reglas para la configuración de infraestructura (Kubernetes, Terraform, CI/CD).</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://kyverno.io/">Kyverno</a>
-      <p>Kubernetes-native policy enforcement for cluster security./p>
+      <p>Aplicación de políticas nativas de Kubernetes para la seguridad del cluster.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.jenkins.io/">Jenkins</a>
-      <p> Hardened CI/CD pipelines with access controls and audit logs. </p>
+      <p>Endurece pipelines CI/CD con controles de acceso y logs de auditoría.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/sonatype/nexus-public">Nexus Repository OSS </a>
-      <p> Securely store build artifacts post-deployment; apply access controls.</p>
+      <a href="https://github.com/sonatype/nexus-public">Nexus Repository OSS</a>
+      <p>Almacena artefactos de construcción de forma segura post-despliegue; aplica controles de acceso.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/goharbor/harbor">Harbor </a>
-      <p>Container registry with built-in vulnerability scanning and RBAC.</p>
+      <a href="https://github.com/goharbor/harbor">Harbor</a>
+      <p>Registro de contenedores con escaneo de vulnerabilidades y RBAC incorporados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/wazuh/wazuh">Wazuh SIEM</a>
-      <p>Ingests infrastructure security logs and alerts on violations.</p>
+      <p>Ingesta logs de seguridad de infraestructura y alerta sobre violaciones.</p>
     </td>
   </tr>
   <tr>
-   <td>
+    <td>
       <a href="https://falco.org/">Falco</a>
-      <p>Detect unauthorized activity in build/deployment clusters or runner nodes.</p>
+      <p>Detecta actividad no autorizada en clusters o nodos de construcción/despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/prometheus/alertmanager">Prometheus + Alertmanager</a>
-      <p>Monitor infrastructure security metrics and trigger notifications. </p>
+      <p>Monitorea métricas de seguridad y genera notificaciones ante incidentes.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://in-toto.io/">In-Toto</a>
-      <p>Validates that deployed artifacts match the cryptographic attestations from the build process.</p>
+      <p>Valida que los artefactos desplegados coincidan con las certificaciones criptográficas del proceso de construcción.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/sigstore/rekor">Sigstore Rekor</a>
-      <p>Maintain an immutable, tamper-evident log of signed infrastructure configuration files.</p>
+      <p>Mantiene un registro inmutable y a prueba de manipulaciones de archivos de configuración firmados.</p>
     </td>
   </tr>
 </table>

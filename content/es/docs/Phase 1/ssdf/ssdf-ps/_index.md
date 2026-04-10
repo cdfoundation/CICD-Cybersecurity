@@ -178,7 +178,7 @@ Ayuda a los adquirentes de software a asegurarse de que el software que adquiere
 
 <br>
 
-### Archivar y Proteger Cada Versión de Software
+### PS.3 Archivar y Proteger Cada Versión de Software
 
 Conservar las versiones de software para ayudar a identificar, analizar y eliminar vulnerabilidades descubiertas en el software después de su lanzamiento.
 

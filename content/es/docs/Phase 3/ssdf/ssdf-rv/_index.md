@@ -1,281 +1,273 @@
 ---
-title: "3.4 Respond to Vulnerabilities (RV)"
-linkTitle: "3.4 Respond to Vulnerabilities (RV)"
+title: "3.4 Responder a Vulnerabilidades (RV)"
+linkTitle: "3.4 Responder a Vulnerabilidades (RV)"
 weight: 8
 layout: docs
 description: >
- 3.4 Respond to Vulnerabilities (RV) in the Post-Deploy CI/CD Steps
+  3.4 Responder a Vulnerabilidades (RV) en los pasos CI/CD post-despliegue
 ---
 
+### 3.4 Responder a Vulnerabilidades (RV) Tareas posteriores al despliegue
 
-### 3.4 Respond to Vulnerabilities (RV) Post Deploy Tasks
-
-Respond to Vulnerabilities (RV): Organizations should identify residual vulnerabilities
-in their software releases and respond appropriately to address those vulnerabilities and prevent similar ones from occurring in the future.
-
+Responder a Vulnerabilidades (RV): Las organizaciones deben identificar vulnerabilidades residuales en sus versiones de software y responder de manera adecuada para abordarlas y prevenir que ocurran nuevamente en el futuro.
 
 <br>
 
 **RV.1**
 
-<strong>Identify and Confirm Vulnerabilities on an Ongoing Basis: </strong> Help ensure that vulnerabilities are identified more quickly so that they can be remediated more quickly in accordance with risk, reducing the window of opportunity for attackers.
+<strong>Identificar y confirmar vulnerabilidades de forma continua: </strong> Ayudar a garantizar que las vulnerabilidades se identifiquen más rápidamente para que puedan ser remediadas con mayor rapidez de acuerdo con el riesgo, reduciendo la ventana de oportunidad para los atacantes.
 
 <br>
 
-To satisfy SSDF RV.1 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF RV.1 en un contexto posterior al despliegue usando herramientas de código abierto, el enfoque cambia a:
 
-- Continuously scanning live environments for new vulnerabilities
+- Escaneo continuo de entornos en vivo para detectar nuevas vulnerabilidades
 
-- Correlating detected vulnerabilities to deployed components and SBOM data
+- Correlación de vulnerabilidades detectadas con componentes desplegados y datos SBOM
 
-- Validating whether vulnerabilities are exploitable in the specific environment
+- Validación de si las vulnerabilidades son explotables en el entorno específico
 
-- Prioritizing remediation based on severity, exploitability, and operational impact
-
+- Priorización de la remediación según severidad, explotabilidad e impacto operativo
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="50">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.1.1:</strong>
-        <p>Gather information from software acquirers, users, and public sources on potential vulnerabilities in the software and third-party components that the software uses, and investigate all credible reports.</p>
+        <p>Recopilar información de adquirentes de software, usuarios y fuentes públicas sobre posibles vulnerabilidades en el software y componentes de terceros, e investigar todos los reportes creíbles.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.1.2:</strong>
-        <p>Review, analyze, and/or test the software’s code to identify or  confirm the presence of previously undetected vulnerabilities.</p>
+        <p>Revisar, analizar y/o probar el código del software para identificar o confirmar la presencia de vulnerabilidades previamente no detectadas.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.1.3:</strong>
-        <p>Have a policy that addresses vulnerability disclosure and remediation, and implement the roles, responsibilities, and processes needed to support that policy.</p>
+        <p>Contar con una política de divulgación y remediación de vulnerabilidades, e implementar los roles, responsabilidades y procesos necesarios para dar soporte a dicha política.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://dependencytrack.org">OWASP Dependency Track</a>
-      <p> Integrates with live SBOMs to detect and alert on vulnerabilities after release.</p>
+      <p>Se integra con SBOMs en vivo para detectar y alertar vulnerabilidades después del despliegue.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://ortelius.io">Ortelius</a>
-      <p>Links detected vulnerabilities directly to deployed service versions for traceability.</p>
+      <p>Vincula las vulnerabilidades detectadas directamente con versiones desplegadas del servicio para trazabilidad.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
-      <p>Central vulnerability management hub with metrics and tracking.</p>
+      <p>Centro de gestión de vulnerabilidades con métricas y seguimiento.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://aquasecurity.github.io/trivy">Trivy</a>
-      <p>Identify vulnerabilities in images already deployed in Kubernetes or Docker environments.</p>
+      <p>Identifica vulnerabilidades en imágenes ya desplegadas en entornos Kubernetes o Docker.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://github.com/anchore/grype">Grype</a>
-      <p>Works with Syft-generated SBOMs to continuously check for new CVEs.</p>
-   </td>
+      <p>Funciona con SBOMs generados por Syft para comprobar continuamente nuevos CVEs.</p>
+    </td>
   </tr> 
   <tr>
     <td>
       <a href="https://www.open-scap.org/">OpenSCAP</a>
-      <p>Provide scheduled compliance scans alongside vulnerability checks.</p>
+      <p>Proporciona escaneos programados de cumplimiento junto con escaneos de vulnerabilidades.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/openvex">VEX (Vulnerability Exploitability eXchange) + OpenVEX</a>
-      <p>Helps teams prioritize remediation by filtering out non-exploitable vulnerabilities.</p>
+      <p>Ayuda a los equipos a priorizar la remediación filtrando vulnerabilidades no explotables.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/syft">Syft</a>
-      <p>MFeed live SBOMs into scanners like Dependency-Track or Grype.</p>
+      <p>Genera SBOMs en vivo para ser consumidos por herramientas como Dependency-Track o Grype.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://hoppr.dev/">Hoppr</a>
-      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+      <p>Kit de herramientas de cadena de suministro y SBOM que permite gestionar y mover artefactos de procedencia.</p>
     </td>
   </tr>
 </table>
-    
 
 **RV.2**
 
-<strong>Assess, Prioritize, and Remediate Vulnerabilities:</strong> Help ensure that
-vulnerabilities are remediated in accordance with risk to reduce the window of  opportunity for attackers.
+<strong>Evaluar, priorizar y remediar vulnerabilidades:</strong> Ayudar a garantizar que las vulnerabilidades sean remediadas de acuerdo con el riesgo para reducir la ventana de oportunidad para los atacantes.
 
 <br>
 
-To satisfy SSDF RV.2 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF RV.2 en un contexto posterior al despliegue usando herramientas de código abierto, el enfoque cambia a:
 
-- Determining which vulnerabilities matter most in the deployed context
+- Determinar qué vulnerabilidades son más relevantes en el entorno desplegado
 
-- Using exploitability, business impact, and compliance requirements for prioritization
+- Usar explotabilidad, impacto de negocio y requisitos de cumplimiento para la priorización
 
-- Executing timely remediation or mitigation actions in live environments
+- Ejecutar acciones de remediación o mitigación de manera oportuna en entornos en vivo
 
-- Tracking remediation status to closure with audit-ready records
+- Rastrear el estado de remediación hasta su cierre con registros auditables
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="8">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.2.1:</strong>
-        <p>Analyze each vulnerability to gather sufficient information about risk to plan its remediation or other risk response.</p>
+        <p>Analizar cada vulnerabilidad para obtener suficiente información de riesgo para planificar su remediación u otra respuesta de riesgo.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.2.2:</strong>
-        <p>Plan and implement risk responses for vulnerabilities.</p>     
+        <p>Planificar e implementar respuestas de riesgo para vulnerabilidades.</p>     
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
-      <p>Centralizes risk scoring, workflow management, and reporting for remediation progress.</p>
+      <p>Centraliza la puntuación de riesgo, la gestión de flujos de trabajo y el seguimiento del progreso de remediación.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://dependencytrack.org">OWASP Dependency Track</a>
-      <p>Provides real-time vulnerability prioritization and integrates with issue tracking systems.</p>
+      <p>Proporciona priorización de vulnerabilidades en tiempo real e integración con sistemas de seguimiento de issues.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://ortelius.io">Ortelius</a>
-      <p>Enables environment-specific remediation prioritization and impact assessment.</p>
+      <p>Permite priorización y evaluación de impacto de vulnerabilidades según el entorno desplegado.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.jenkins.io">Jenkins</a> + <a href="https://www.openpolicyagent.org">OPA (Open Policy Agent)</a>
-      <p>Enforce remediation SLAs and automate rollouts of fixed versions.</p>
+      <p>Aplicación de SLAs de remediación y automatización del despliegue de versiones corregidas.</p>
     </td>
   </tr> 
   <tr>
     <td>
-      <a href="https://github.com/anchore/grype">Trivy</a> + <a href="https://github.com/anchore/grype">Grype</a>
-      <p>Continuous scanning plus integration with CI/CD to push patched artifacts.</p>
+      <a href="https://github.com/anchore/trivy">Trivy</a> + <a href="https://github.com/anchore/grype">Grype</a>
+      <p>Escaneo continuo e integración con CI/CD para promover artefactos parcheados.</p>
     </td>
   </tr> 
   <tr>
     <td>
-      <a href="https://www.github.com">GitHub/GitLab Issues + Automation Bots</a>
-      <p>Ensures no vulnerability is left without a tracked remediation action.</p>
+      <a href="https://www.github.com">GitHub/GitLab Issues + bots de automatización</a>
+      <p>Asegura que ninguna vulnerabilidad quede sin una acción de remediación rastreada.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/aquasecurity/kube-bench ">Kubebench</a> + <a href="https://falco.org ">Falco (Runtime Security)</a>
-      <p>Provides real-time signals to prioritize operational security fixes.</p>
+      <a href="https://github.com/aquasecurity/kube-bench">Kube-bench</a> + <a href="https://falco.org">Falco (seguridad en runtime)</a>
+      <p>Proporciona señales en tiempo real para priorizar correcciones de seguridad operativa.</p>
     </td>
   </tr>
 </table>
-  
-<br>
 
 **RV.3**
 
-<p><strong>Analyze Vulnerabilities to Identify Their Root Causes: </strong> Help reduce the frequency of vulnerabilities in the future.</p><br>
+<p><strong>Analizar vulnerabilidades para identificar sus causas raíz:</strong> Ayudar a reducir la frecuencia de vulnerabilidades en el futuro.</p><br>
 
 <br>
 
-To satisfy SSDF RV.3 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF RV.3 en un contexto posterior al despliegue usando herramientas de código abierto, el enfoque cambia a:
 
-- Determining whether it originated in coding, dependencies, build processes, or deployment configurations
+- Determinar si la vulnerabilidad se originó en el código, dependencias, procesos de build o configuraciones de despliegue
 
-- Documenting lessons learned to prevent recurrence
+- Documentar lecciones aprendidas para evitar recurrencias
 
-- Feeding analysis results back into security requirements, pipelines, and developer training
+- Retroalimentar los resultados hacia los requisitos de seguridad, pipelines y capacitación de desarrolladores
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="9">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.3.1:</strong>
-        <p>Analyze identified vulnerabilities to determine their root causes.</p>
+        <p>Analizar las vulnerabilidades identificadas para determinar sus causas raíz.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.3.2:</strong>
-        <p>Analyze the root causes over time to identify patterns, such as a particular secure coding practice not being followed consistently.</p>
+        <p>Analizar las causas raíz a lo largo del tiempo para identificar patrones, como la falta de adopción consistente de prácticas seguras de codificación.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.3.3:</strong>
-        <p>Review the software for similar vulnerabilities to eradicate a class of vulnerabilities, and proactively fix them rather than waiting for external reports.</p>
+        <p>Revisar el software para vulnerabilidades similares y eliminar clases completas de vulnerabilidades de forma proactiva, en lugar de esperar reportes externos.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>RV.3.4:</strong>
-        <p>Review the SDLC process, and update it if appropriate to prevent (or reduce the likelihood of) the root cause recurring in updates to the software or in new software that is created.</p>
+        <p>Revisar el proceso SDLC y actualizarlo si es necesario para evitar la recurrencia de la causa raíz en futuras versiones del software o en nuevo desarrollo.</p>
       </div>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://ortelius.io">Ortelius</a>
-      <p>Supports forensic analysis by tracking when and where a vulnerable component entered the system.</p>
+      <p>Soporta análisis forense rastreando cuándo y dónde un componente vulnerable ingresó al sistema.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.defectdojo.org">DefectDojo</a>
-      <p>Maintains historical data to identify trends in vulnerability origins.</p>
+      <p>Mantiene datos históricos para identificar tendencias en el origen de vulnerabilidades.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://github.com">GitHub</a>
-      <p>Supports forensic traceability and accountability in root cause analysis.</p>
+      <p>Soporta trazabilidad forense y análisis de responsabilidad en la causa raíz.</p>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/anchore/syft ">Syft</a> + <a href="https://dependencytrack.org">Dependency Track</a>
-      <p>Enables version-diff SBOM analysis for root cause investigations.</p>
+      <a href="https://github.com/anchore/syft">Syft</a> + <a href="https://dependencytrack.org">OWASP Dependency Track</a>
+      <p>Permite análisis de diferencias de SBOM para investigaciones de causa raíz.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://semgrep.dev">Semgrep</a>
-      <p>Assists in determining whether vulnerabilities stem from code-level issues.</p>
+      <p>Ayuda a determinar si las vulnerabilidades provienen de problemas a nivel de código.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.open-scap.org">OpenSCAP</a>
-      <p>Enables root cause mapping to configuration weaknesses.</p>
+      <p>Permite mapear la causa raíz hacia debilidades de configuración del sistema.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://aquasecurity.github.io/trivy">Trivy</a> + <a href="https://github.com/anchore/grype">Grype</a>
-      <p> Provides temporal context for root cause timelines.</p>
+      <p>Proporciona contexto temporal para análisis de líneas de tiempo de la causa raíz.</p>
     </td>
   </tr> 
   <tr>
     <td>
-      <a href=" https://osquery.io">OSQuery</a>
-      <p>Supports deep inspection during vulnerability forensics.</p>
+      <a href="https://osquery.io">osquery</a>
+      <p>Soporta inspección profunda durante análisis forense de vulnerabilidades.</p>
     </td>
   </tr>
 </table>

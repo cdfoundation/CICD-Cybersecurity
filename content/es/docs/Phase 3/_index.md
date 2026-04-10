@@ -1,49 +1,46 @@
 ---
-title: "Phase 3: Post Deploy"
-linkTitle: "Post Deploy"
+title: "Fase 3: Post-Despliegue"
+linkTitle: "Post-Despliegue"
 weight: 45
 layout: docs
 description: >
-  Security Compliance for Post Deploy
+  Cumplimiento de Seguridad para Post-Despliegue
 ---
-## Phase 3 - Post Deploy
 
-Phase 3, Post Deploy, extends CI/CD cybersecurity beyond deployment into live, running systems. While earlier phases focus on preventing vulnerabilities from entering the pipeline, Phase 3 assumes that risk continues after release. New vulnerabilities are disclosed daily, configurations drift, and threat actors target production environments directly.
+## Fase 3 - Post-Despliegue
 
-The Phase 3 primary focus is on continuous visibility, post-deployment detection and response to vulnerabilities running on live systems.It ensures organizations can identify which running systems are affected when new vulnerabilities emerge, detect malicious or anomalous behavior at runtime, and respond quickly to minimize operational and security impact. Phase 3 establishes the feedback loop that connects production reality back to development and security teams, enabling continuous improvement across the software delivery lifecycle. In scope for this phase includes:
+La Fase 3, Post-Despliegue, extiende la ciberseguridad de CI/CD más allá del despliegue hacia sistemas en producción activos. Mientras que las fases anteriores se enfocan en prevenir que las vulnerabilidades ingresen al pipeline, la Fase 3 asume que el riesgo continúa después del lanzamiento. Nuevas vulnerabilidades se divulgan diariamente, las configuraciones pueden desviarse y los actores maliciosos atacan directamente los entornos de producción.
 
--- Continuous vulnerability detection for deployed applications, services, containers, and infrastructure
+El enfoque principal de la Fase 3 es la visibilidad continua, la detección y respuesta post-despliegue de vulnerabilidades en sistemas activos. Garantiza que las organizaciones puedan identificar qué sistemas en ejecución se ven afectados cuando surgen nuevas vulnerabilidades, detectar comportamientos maliciosos o anómalos en tiempo de ejecución y responder rápidamente para minimizar el impacto operativo y de seguridad. La Fase 3 establece un bucle de retroalimentación que conecta la realidad de producción con los equipos de desarrollo y seguridad, permitiendo la mejora continua a lo largo del ciclo de entrega de software. Dentro del alcance de esta fase se incluyen:
 
--- Runtime and post-deployment security monitoring
+-- Detección continua de vulnerabilidades para aplicaciones, servicios, contenedores e infraestructura desplegada
 
--- Dynamic Application Security Testing (DAST) against running systems
+-- Monitoreo de seguridad en tiempo de ejecución y post-despliegue
 
--- Integration of vulnerability intelligence feeds and alerts
+-- Pruebas de Seguridad Dinámica de Aplicaciones (DAST) sobre sistemas en ejecución
 
--- Incident detection, alerting, and response workflows
+-- Integración de feeds de inteligencia de vulnerabilidades y alertas
 
--- Measurement of security performance (e.g., MTTD, MTTR)
+-- Detección de incidentes, alertas y flujos de trabajo de respuesta
 
--- Feedback mechanisms that inform remediation and future development
+-- Medición del desempeño de seguridad (por ejemplo, MTTD, MTTR)
 
+-- Mecanismos de retroalimentación que informan la remediación y el desarrollo futuro
 
+### Actividades Clave de Seguridad en Fase 3
 
-### Key Phase 3 Security Activities
+El cumplimiento de los pasos Post-Despliegue incluye:
 
-Compliance for Post-Deploy steps include:
+|                                               |                                                   |
+| --------------------------------------------- | ------------------------------------------------- |
+| <strong>ACTIVIDAD</strong>                    | <strong>PROPÓSITO</strong>                        |
+| Detección de anomalías en tiempo de ejecución | Detectar ataques en producción                    |
+| Escaneo DAST                                  | Encontrar vulnerabilidades en tiempo de ejecución |
+| Integración de feeds de vulnerabilidades      | Actualizar continuamente los datos CVE            |
+| Alertas y Respuesta                           | Clasificar y responder                            |
 
-|                                                       |                                                                                                                                       |
-|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <strong>ACTIVITY</strong>                          | <strong>PURPOSE</strong>                                    |
-| Runtime anomaly detection                             | Detect production attacks                                     |
-| DAST scanning                                       | Find runtime vulnerabilities |
-| Vulnerability feed integration                         | Continuously update CVE data                                   |
-| Alerting & Response                                                  | Triage and respond                                        |
+A continuación, se presentan las directrices de marcos de referencia de la industria con herramientas de código abierto sugeridas para lograr los objetivos de cumplimiento.
 
-Following are guidelines from industry frameworks with suggested open source tooling needed to achieve the compliance goals.
+### Marcos de Referencia de la Industria
 
-
-
-### Industry Frameworks
-
-Following are guidelines from industry frameworks with suggested open source tooling needed to achieve the compliance goals.
+Se presentan las directrices de marcos de referencia de la industria con herramientas de código abierto sugeridas para alcanzar los objetivos de cumplimiento.

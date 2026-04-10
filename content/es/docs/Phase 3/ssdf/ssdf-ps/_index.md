@@ -1,381 +1,380 @@
 ---
-title: "3.2 Protect the Software (PS)"
-linkTitle: "3.2 Protect the Software (PS)"
+title: "3.2 Proteger el Software (PS)"
+linkTitle: "3.2 Proteger el Software (PS)"
 weight: 6
 layout: docs
 description: >
- 3.2 Protect the Software (PS) Post Deploy CI/CD Steps
+  3.2 Proteger el Software (PS) Pasos Post Deploy CI/CD
 ---
 
-### 3.2 Protect the Software (PS) for Post Deploy Tasks
-Protect the Software (PS): Organizations should protect all components of their
-software from tampering and unauthorized access.
+### 3.2 Proteger el Software (PS) para Tareas Post Deploy
+
+Proteger el Software (PS): Las organizaciones deben proteger todos los componentes de su
+software contra manipulaciones y accesos no autorizados.
 
 <br>
 
 **PS.1**
 
-<strong>Protect All Forms of Code from Unauthorized Access and Tampering </strong>: Help prevent unauthorized changes to code, both inadvertent and intentional, which could circumvent or negate the intended security characteristics of the software. For code that is not intended to be publicly accessible, this helps prevent theft of the software and may make it more difficult or time-consuming for attackers to find vulnerabilities in the software.
+<strong>Proteger Todas las Formas de Código contra Accesos No Autorizados y Manipulación </strong>: Ayuda a prevenir cambios no autorizados en el código, tanto inadvertidos como intencionales, que podrían eludir o anular las características de seguridad previstas del software. Para el código que no está destinado a ser accesible públicamente, esto ayuda a prevenir el robo del software y puede dificultar o retrasar que los atacantes encuentren vulnerabilidades en el software.
 
 <br>
 
-To satisfy SSDF PS.1 in a post-deployment context using open-source tools, the focus shifts from just defining to:
+Para cumplir con SSDF PS.1 en un contexto post-despliegue usando herramientas open-source, el enfoque se desplaza de solo definir a:
 
-- Protecting deployed artifacts (binaries, containers, scripts, configs) from being altered in production
+- Proteger los artefactos desplegados (binarios, contenedores, scripts, configuraciones) para que no sean alterados en producción
 
-- Ensuring post-deployment code integrity is verifiable at any time
+- Asegurar que la integridad del código post-despliegue sea verificable en cualquier momento
 
-- Maintaining secure storage, transport, and retrieval of code and artifacts
+- Mantener almacenamiento, transporte y recuperación de código y artefactos seguros
 
-- Keeping an audit trail for all modifications and access
+- Mantener un registro de auditoría para todas las modificaciones y accesos
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="16">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PS.1.1:</strong>
-        <p>Store all forms of code including source code, executable code, and configuration-as-code based on the principle of least privilege so that only authorized personnel, tools, services, etc. have access.</p>
+        <p>Almacenar todas las formas de código incluyendo código fuente, código ejecutable y configuración como código según el principio de menor privilegio, de modo que solo personal, herramientas o servicios autorizados tengan acceso.</p>
       </div>
     </td>
     <td>
       <a href="https://docs.sigstore.dev/cosign/"> Cosign Sigstore</a>
-      <p>Sign and verify container images, binaries, and other artifacts.</p>
+      <p>Firmar y verificar imágenes de contenedores, binarios y otros artefactos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://docs.sigstore.dev/logging/overview/">Rekor Sigstore</a>
-      <p> Immutable public transparency log for signatures and metadata.</p>
+      <p>Registro público inmutable para firmas y metadatos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://in-toto.io">In-Toto</a>
-      <p>End-to-end supply chain verification to ensure deployed artifacts came from trusted sources.</p>
+      <p>Verificación de cadena de suministro de extremo a extremo para asegurar que los artefactos desplegados provienen de fuentes confiables.</p>
     </td>
   </tr>
     <tr>
     <td>
       <a href="https://www.gnupg.org/">Gnu Privacy GuardG</a>
-      <p>Sign and verify any file type, including tarballs and configuration files.</p>
+      <p>Firmar y verificar cualquier tipo de archivo, incluyendo tarballs y archivos de configuración.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://goharbor.io/">Harbor</a>
-      <p> Container registry with built-in vulnerability scanning, content signing, and RBAC.</p>
+      <p>Registro de contenedores con escaneo de vulnerabilidades integrado, firma de contenido y RBAC.</p>
     </td>
   </tr>
   <tr>
       <td>
       <a href="https://github.com/sonatype/nexus-public">Sonatype Nexus OSS</a>
-      <p> Secure artifact repository with access controls.</p>
+      <p>Repositorio seguro de artefactos con controles de acceso.</p>
     </td>
   </tr>
   <tr>
       <td>
       <a href="https://github.com/jfrog/charts/blob/master/stable/artifactory-oss/README.md">JFrog Artifactory OSS</a>
-      <p>Manages binary repositories with fine-grained permissions.</p>
+      <p>Gestión de repositorios binarios con permisos granulares.</p>
     </td>
   </tr>
   <tr>
       <td>
       <a href="https://github.com/Tripwire/tripwire-open-source">Tripwire OSS</a>
-      <p>Monitors filesystem for unauthorized changes.</p>
+      <p>Monitorea el sistema de archivos para detectar cambios no autorizados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://aide.github.io/">AIDE (Advanced Intrusion Detection Environment) </a>
-      <p>Creates a baseline of files and detects alterations.</p>
+      <p>Crea una línea base de archivos y detecta alteraciones.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://falco.org/">Falco</a>
-      <p>Detects suspicious activity in Kubernetes or container environments, including file changes.</p>
+      <p>Detecta actividad sospechosa en entornos de Kubernetes o contenedores, incluyendo cambios de archivos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://open-policy-agent.github.io/gatekeeper/website/docs/install/">Kubernetes RBAC + OPA Gatekeeper</a>
-      <p>Enforces role-based policies for container image deployment.</p>
+      <p>Aplica políticas basadas en roles para el despliegue de imágenes de contenedores.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/keycloak/keycloak">Keycloak</a>
-      <p>Centralized authentication/authorization for artifact registries and CI/CD systems.</p>
+      <p>Autenticación/autorización centralizada para registros de artefactos y sistemas CI/CD.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://github.com/wazuh/wazuh">Wazuh</a>
-      <p> SIEM platform that monitors access logs and alerts on anomalies.</p>
+      <p>Plataforma SIEM que monitorea registros de acceso y alerta sobre anomalías.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://ortelius.io">Ortelius Evidence Store</a>
-      <p>Tracks which version of a service is deployed where, and links to its signed SBOM.</p>
+      <p>Rastrea qué versión de un servicio se despliega dónde y la vincula con su SBOM firmado.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://github.com/anchore/syft">Syft</a>
-      <p>Generates SBOMs for deployed artifacts for later verification.</p>
+      <p>Genera SBOMs para artefactos desplegados para verificación posterior.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency-Track</a>
-      <p>Monitors components in deployed artifacts against CVE feeds.</p>
+      <p>Monitorea componentes en artefactos desplegados frente a feeds de CVE.</p>
     </td>
   </tr>
 </table>
-    
+
 
 **PS.2**
 
-<strong>Provide a Mechanism for Verifying Software Release Integrity:</strong> Help software acquirers ensure that the software they acquire is legitimate and has not been tampered with. Make software integrity verification information available to software acquirers.
+<strong>Proporcionar un Mecanismo para Verificar la Integridad del Software:</strong> Ayuda a los adquirentes de software a asegurarse de que el software que adquieren es legítimo y no ha sido manipulado. Hacer que la información de verificación de integridad del software esté disponible para los adquirentes.
 
 <br>
 
-To satisfy SSDF PS.2 in a post-deployment context using open-source tools, the focus shifts to:
+Para cumplir con SSDF PS.2 en un contexto post-despliegue usando herramientas open-source, el enfoque se desplaza a:
 
-- Keeping exact copies of every release artifact (binaries, containers, configs, SBOMs)
+- Mantener copias exactas de cada artefacto de lanzamiento (binarios, contenedores, configuraciones, SBOMs)
 
-- Recording and publishing cryptographic verification data (signatures, hashes, attestations)
+- Registrar y publicar datos de verificación criptográfica (firmas, hashes, certificaciones)
 
-- Ensuring acquirers can confirm that what they have matches the trusted, official release
+- Asegurar que los adquirentes puedan confirmar que lo que tienen coincide con la versión oficial y confiable
 
 <br>
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="17">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PS.2.1:</strong>
-        <p>Make software integrity verification information available to software acquirers.</p>
+        <p>Hacer que la información de verificación de integridad del software esté disponible para los adquirentes.</p>
       </div>
     </td>
     <td>
       <a href="https://goharbor.io/">Harbor</a>
-      <p>Container registry with image retention policies, RBAC, and content trust.</p>
+      <p>Registro de contenedores con políticas de retención de imágenes, RBAC y confianza de contenido.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/sonatype/nexus-public">Sonatype Nexus OSS</a>
-      <p>Artifact repository for storing binaries and dependencies.</p>
+      <p>Repositorio de artefactos para almacenar binarios y dependencias.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/jfrog/charts/blob/master/stable/artifactory-oss/README.md">JFrog Artifactory OSS</a>
-      <p>Binary management with retention and access control.</p>
+      <p>Gestión de binarios con retención y control de acceso.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/">GitHub</a>
-      <p>Tag and store release binaries, SBOMs, and checksums.</p>
+      <p>Etiquetar y almacenar binarios de lanzamiento, SBOMs y checksums.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/sigstore/cosign">Sigstore cosign</a>
-      <p>Sign and verify container images, SBOMs, and other artifacts.</p>
+      <p>Firmar y verificar imágenes de contenedores, SBOMs y otros artefactos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/sigstore/rekor">Sigstore Rekor</a>
-      <p>Immutable transparency log for all signed artifacts and metadata.</p>
+      <p>Registro de transparencia inmutable para todos los artefactos y metadatos firmados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.gnupg.org/">Gnu Privacy Guard</a>
-      <p>Sign and verify tarballs, binaries, or SBOM files.</p>
+      <p>Firmar y verificar tarballs, binarios o archivos SBOM.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://in-toto.io/">In-Toto</a>
-      <p>Provide end-to-end build provenance verification.</p>
+      <p>Proporcionar verificación de procedencia de construcción de extremo a extremo.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://ortelius.io/">Ortelius</a>
-      <p>Maps deployed services to specific versions and their SBOMs.</p>
+      <p>Mapea servicios desplegados a versiones específicas y sus SBOMs.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/anchore/syft">Syft</a>
-      <p>Generates SBOMs from deployed artifacts.</p>
+      <p>Genera SBOMs a partir de artefactos desplegados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://hoppr.dev/">Hoppr</a>
-      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+      <p>Kit de utilidades SBOM / cadena de suministro: procesamiento de SBOM y movimiento de “materiales” de la cadena de suministro alineados a recolección/mantenimiento/compartición de procedencia.</p>
      </td>
   <tr>
     <td>
       <a href="https://owasp.org/www-project-dependency-track/">OWASP Dependency-Track</a>
-      <p>Continuously monitors SBOMs for new CVEs in preserved releases.</p>
+      <p>Monitorea continuamente SBOMs para nuevos CVEs en versiones preservadas.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://aide.github.io/">AIDE (Advanced Intrusion Detection Environment)</a>
-      <p>Filesystem integrity checker to detect changes in stored artifacts.</p>
+      <p>Comprobador de integridad del sistema de archivos para detectar cambios en artefactos almacenados.</p>
     </td>
   </tr>
    <tr>
     <td>
       <a href="https://github.com/Tripwire/tripwire-open-source">Tripwire OSS</a>
-      <p>Baseline and monitor stored release directories for modifications.</p>
+      <p>Establecer línea base y monitorear directorios de lanzamiento almacenados para modificaciones.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/wazuh/wazuh">Wazuh</a>
-      <p>SIEM that audits artifact repository activity.</p>
+      <p>SIEM que audita la actividad del repositorio de artefactos.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.redhat.com/en/blog/configure-linux-auditing-auditd">AuditD</a>
-      <p>Linux-level auditing for access to preserved release files.</p>
+      <p>Auditoría a nivel Linux para accesos a archivos de lanzamiento preservados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.keycloak.org/getting-started/getting-started-kube/">Kubernetes RBAC / Keycloak </a>
-      <p>Restrict who can upload or modify artifacts in registries.</p>
+      <p>Restringir quién puede subir o modificar artefactos en los registros.</p>
     </td>
   </tr>
 </table>
 
-
 **PS.3**
 
-<strong> Archive and Protect Each Software Release:</strong> Preserve software releases in order to help identify, analyze, and eliminate vulnerabilities discovered in the software after release.
+<strong>Archivar y Proteger Cada Lanzamiento de Software:</strong> Preservar los lanzamientos de software para ayudar a identificar, analizar y eliminar vulnerabilidades descubiertas en el software después de su liberación.
 
 <br>
 
+Para cumplir con SSDF PS.3 en un contexto post-despliegue usando herramientas open-source, el enfoque se desplaza a:
 
-To satisfy SSDF PS.3 in a post-deployment context using open-source tools, the focus shifts to:
+- Mantener un registro a prueba de manipulaciones de cada componente de software en cada lanzamiento
 
-- Keeping a tamper-proof record of every software component in each release
+- Asegurar que los datos de procedencia permanezcan accesibles para auditorías, investigaciones y respuesta a vulnerabilidades
 
-- Ensuring provenance data remains accessible for audits, investigations, and vulnerability response
-
-- Allowing acquirers and downstream users to independently verify the origin and integrity of every component
+- Permitir a adquirentes y usuarios finales verificar de manera independiente el origen e integridad de cada componente
 
 <table style="width:100%">
   <tr>
-    <th style="width: 30%">Tasks</th>
-    <th style="width: 70%">Tools</th>
+    <th style="width: 30%">Tareas</th>
+    <th style="width: 70%">Herramientas</th>
   </tr>
   <tr>
     <td rowspan="13">
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PS.3.1:</strong>
-        <p>Securely archive the necessary files and supporting data (e.g., integrity verification information, provenance data) to be retained for each software release.</p>
+        <p>Archivar de manera segura los archivos y datos de soporte necesarios (por ejemplo, información de verificación de integridad, datos de procedencia) para retenerlos para cada lanzamiento de software.</p>
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PS.3.2:</strong>
-        <p>Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials -SBOM).</p>
+        <p>Recopilar, proteger, mantener y compartir los datos de procedencia de todos los componentes de cada lanzamiento de software (por ejemplo, en un bill of materials -SBOM).</p>
       </div>
     </td>
     <td>
       <a href="https://github.com/anchore/syft/"> Syft</a>
-      <p>Generate SBOMs from deployed containers, VMs, or file systems (SPDX & CycloneDX formats).</p>
+      <p>Genera SBOMs desde contenedores, VMs o sistemas de archivos desplegados (formatos SPDX & CycloneDX).</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://trivy.dev/latest/">Trivy </a>
-      <p>Create SBOMs and scan for vulnerabilities in deployed systems.</p>
+      <p>Crear SBOMs y escanear vulnerabilidades en sistemas desplegados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://in-toto.io/">In-Toto</a>
-      <p>Record build steps and supply chain metadata as signed “link” files.</p>
+      <p>Registrar pasos de construcción y metadatos de la cadena de suministro como archivos “link” firmados.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/sigstore/cosign/">Cosign Attest</a>
-      <p>Capture build and deployment provenance as signed attestations.</p>
+      <p>Capturar procedencia de construcción y despliegue como certificaciones firmadas.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://www.gnupg.org/">Gnu Privacy Guard</a>
-      <p>Sign SBOMs and metadata for offline or private distribution.</p>
+      <p>Firmar SBOMs y metadatos para distribución offline o privada.</p>
     </td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/sigstore/rekor/">Rekor</a>
-      <p>Store signatures and attestations in an immutable, public transparency log.</p>
+      <p>Almacenar firmas y certificaciones en un registro público e inmutable.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://github.com/Tripwire/tripwire-open-source">Tripwire OSS</a>
-      <p>Detect unauthorized changes in locally stored provenance archives.</p>
+      <p>Detectar cambios no autorizados en archivos de procedencia almacenados localmente.</p>
     </td>
   </tr>  
   <tr>
     <td>
       <a href="https://aide.github.io/">AIDE (Advanced Intrusion Detection Environment)</a>
-      <p>Detect unauthorized changes in locally stored provenance archives.</p>
+      <p>Detectar cambios no autorizados en archivos de procedencia almacenados localmente.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://ortelius.io/">Ortelius Evidence Store</a>
-      <p>Version and track deployed services and their SBOMs; link them to environments and releases. API/UI access for sharing SBOM and component history for specific releases.</p>
+      <p>Versionar y rastrear servicios desplegados y sus SBOMs; vincularlos a entornos y lanzamientos. Acceso API/UI para compartir historial de SBOM y componentes de lanzamientos específicos.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://github.com/DependencyTrack/dependency-track">Dependency Track</a>
-      <p>Continuously monitor preserved SBOMs for new CVEs.</p>
+      <p>Monitorear continuamente SBOMs preservados para nuevos CVEs.</p>
     </td>
   </tr> 
   <tr>
     <td>
       <a href="https://goharbor.io/">Harbor</a>
-      <p>Attach SBOMs and signatures to container images in a registry.</p>
+      <p>Adjuntar SBOMs y firmas a imágenes de contenedores en un registro.</p>
     </td>
   </tr>
    <tr>
     <td>
       <a href="https://cyclonedx.org/capabilities/bomlink/">CycloneDX BOM Portal (OSS)</a>
-      <p>Host and validate SBOMs in a web-accessible interface.</p>
+      <p>Alojar y validar SBOMs en una interfaz web accesible.</p>
      </td>
   </tr>
   <tr>
     <td>
       <a href="https://hoppr.dev/">Hoppr</a>
-      <p>Hoppr is an SBOM / supply-chain utility kit—SBOM processing and movement of supply-chain “materials” aligns to provenance collection/maintenance/sharing.</p>
+      <p>Kit de utilidades SBOM / cadena de suministro—procesamiento de SBOM y movimiento de “materiales” de la cadena de suministro alineados a recolección/mantenimiento/compartición de procedencia.</p>
      </td>
   </tr>
 </table>
