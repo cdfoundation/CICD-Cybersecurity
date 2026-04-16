@@ -5,8 +5,9 @@ enableRobotsTXT = true
 enableGitInfo = true
 
 # Language settings
+contentDir = "content/en"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 [taxonomies]
 tag = "tags"
@@ -57,20 +58,22 @@ anchor = "smart"
 # Language configuration
 [languages]
   [languages.en]
-    contentDir = "content/en"
-    title = "CI/CD Cybersecurity Guide | CD Foundation"
     languageName = "English"
     weight = 1
     [languages.en.params]
+      title = "CI/CD Cybersecurity Guide | CD Foundation"
       description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
-
+      time_format_default = "2026.03.14"
+      time_format_blog = "2026.03.14"
   [languages.es]
     contentDir = "content/es"
-    title = "Guía de Ciberseguridad CI/CD | CD Foundation"
     languageName = "Español"
     weight = 2
     [languages.es.params]
-      description = "Incorpora la ciberseguridad en tus pipelines CI/CD con prácticas estándar de la industria. Aprende DevSecOps, herramientas de seguridad y frameworks para un ciclo de vida de desarrollo de software seguro."
+      title = "Guía de ciberseguridad para CI/CD | Fundación CD"
+      description = "Incorpora la ciberseguridad en tus pipelines de CI/CD con salvaguardas estándar de la industria. Aprende las mejores prácticas de DevSecOps, herramientas de seguridad y marcos para el ciclo de vida del desarrollo de software seguro."
+      time_format_default = "03.14.2026"
+      time_format_blog = "03.14.2026"
 
 # Docsy theme
 [module]
@@ -86,7 +89,7 @@ proxy = "direct"
   [[module.imports]]
   path = "github.com/google/docsy/dependencies"
 
-# GOLDMARK CONFIG — THIS FIXES THE <pre> ISSUE
+# 🔑 GOLDMARK CONFIG — THIS FIXES THE <pre> ISSUE
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -116,6 +119,7 @@ github_branch = "main"
 offlineSearch = true
 offlineSearchMaxResults = 20
 offlineSearchSummaryLength = 200
+
 prism_syntax_highlighting = false
 
 # UI
@@ -125,6 +129,7 @@ footer_about_enable = true
 navbar_logo = true
 navbar_translucent_over_cover_disable = true
 sidebar_search_disable = false
+# CORRECTED SIDEBAR SETTINGS:
 sidebar_menu_compact = false
 sidebar_menu_foldable = false
 
