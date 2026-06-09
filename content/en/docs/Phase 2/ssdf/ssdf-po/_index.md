@@ -246,7 +246,7 @@ To satisfy SSDF PO.3 in a Build and Deploy context using open-source tools, the 
       </div>
       <div style="padding-top: 8px; padding-bottom: 8px">
         <strong>PO.3.3:</strong>
-        <p>Configure tools to generate artifacts6 of their support of secure software development practices as defined by the organization. </p>
+        <p>Configure tools to generate artifacts of their support of secure software development practices as defined by the organization.</p>
       </div>
     </td>
   </tr>
