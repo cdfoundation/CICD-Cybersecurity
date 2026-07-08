@@ -23,6 +23,7 @@
   },
   "overrides": {
     "minimatch": "10.2.3",
-    "tar": "7.5.15"
+    "tar": "7.5.19",
+    "@opentelemetry/core": "2.9.0"
   }
 }
