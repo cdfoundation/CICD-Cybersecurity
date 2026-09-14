@@ -22,8 +22,11 @@
     "@netlify/build": "35.8.2"
   },
   "overrides": {
+    "esbuild": "0.28.2",
+    "fast-uri": "3.1.7",
     "minimatch": "10.2.3",
+    "@opentelemetry/core": "2.9.0",
     "tar": "7.5.22",
-    "@opentelemetry/core": "2.9.0"
+    "toml": "5.0.0"
   }
 }
