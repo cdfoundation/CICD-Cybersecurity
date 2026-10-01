@@ -10,7 +10,7 @@
   <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
     {{- /**/ -}}
     <span class="navbar-brand__logo navbar-logo">
-      <img class="navbar-brand__raven" src="{{ "images/raven-pipeline-security-logo.jpg" | relURL }}" alt="Raven Pipeline Security" width="160" height="40">
+      <img class="navbar-brand__raven" src="{{ "images/raven-pipeline-security-logo.jpg" | relURL }}" alt="" width="160" height="40">
       {{- if ne .Site.Params.ui.navbar_logo false -}}
         {{ with resources.Get "icons/logo.svg" -}}
           {{ ( . | minify).Content | safeHTML -}}
