@@ -1,7 +1,7 @@
 # Contributing to Raven Pipeline Security
 
 ## Dockerfile and Docker Compose alternative
-Please note that the Dockerfile and Docker Compose instructions are currently supported for Raven Pipeline Security, so that serves an alternative to the steps below where the dependencies are installed locally on your machine.
+Please note that the Dockerfile and Docker Compose instructions are currently supported for Raven Pipeline Security, so that serves an alternative to the steps below where the dependencies are installed locally on your machine. The image provides Hugo Extended 0.167.0, the same version Netlify uses.
 
 ## Get Started with Local Development
 If you are running Raven Pipeline Security locally, you can build the site, index its pages for search, and preview the site in your browser:
