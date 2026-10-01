@@ -1,5 +1,37 @@
+.navbar-brand__logo.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+}
+
 .navbar-brand__logo.navbar-logo > svg {
   height: 40px;
+  width: auto;
+  flex-shrink: 1;
+}
+
+.navbar-brand__raven {
+  height: 40px;
+  width: auto;
+  flex-shrink: 1;
+  object-fit: contain;
+}
+
+.navbar-brand__name {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand__logo.navbar-logo {
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+
+  .navbar-brand__logo.navbar-logo > svg,
+  .navbar-brand__raven {
+    height: 28px;
+  }
 }
 
 .td-sidebar {

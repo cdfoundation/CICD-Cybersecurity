@@ -1,5 +1,5 @@
 baseURL = "https://cybersecurity.cd.foundation/"
-title = "CI/CD Cybersecurity Guide | CD Foundation"
+title = "Raven Pipeline Security | CD Foundation"
 
 enableRobotsTXT = true
 enableGitInfo = true
@@ -33,8 +33,8 @@ keywords = [
   "NIST framework",
   "secure software development"
 ]
-author = "CD Foundation CI/CD Cybersecurity SIG"
-image = "/images/cicd-cybersecurity-og.png"
+author = "CD Foundation"
+image = "/images/raven-pipeline-security-logo.jpg"
 twitter_card = "summary_large_image"
 twitter_site = "@CDeliveryFdn"
 
@@ -47,8 +47,13 @@ pygmentsStyle = "tango"
 # Image processing
 [imaging]
 resampleFilter = "CatmullRom"
-quality = 75
 anchor = "smart"
+  [imaging.jpeg]
+  quality = 75
+  [imaging.webp]
+  quality = 75
+  [imaging.avif]
+  quality = 75
 
 # Analytics
 [services]
@@ -58,19 +63,19 @@ anchor = "smart"
 # Language configuration
 [languages]
   [languages.en]
-    languageName = "English"
+    label = "English"
     weight = 1
     [languages.en.params]
-      title = "CI/CD Cybersecurity Guide | CD Foundation"
+      title = "Raven Pipeline Security | CD Foundation"
       description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
       time_format_default = "2026.03.14"
       time_format_blog = "2026.03.14"
   [languages.es]
     contentDir = "content/es"
-    languageName = "Español"
+    label = "Español"
     weight = 2
     [languages.es.params]
-      title = "Guía de ciberseguridad para CI/CD | Fundación CD"
+      title = "Raven Pipeline Security | Fundación CD"
       description = "Incorpora la ciberseguridad en tus pipelines de CI/CD con salvaguardas estándar de la industria. Aprende las mejores prácticas de DevSecOps, herramientas de seguridad y marcos para el ciclo de vida del desarrollo de software seguro."
       time_format_default = "03.14.2026"
       time_format_blog = "03.14.2026"
@@ -81,7 +86,7 @@ proxy = "direct"
 
   [module.hugoVersion]
   extended = true
-  min = "0.99.0"
+  min = "0.167.0"
 
   [[module.imports]]
   path = "github.com/google/docsy"
