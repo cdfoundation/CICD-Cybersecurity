@@ -64,9 +64,9 @@ anchor = "smart"
 [languages]
   [languages.en]
     label = "English"
+    title = "Raven Pipeline Security | CD Foundation"
     weight = 1
     [languages.en.params]
-      title = "Raven Pipeline Security | CD Foundation"
       description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
       time_format_default = "2026.03.14"
       time_format_blog = "2026.03.14"
@@ -89,9 +89,9 @@ anchor = "smart"
   [languages.es]
     contentDir = "content/es"
     label = "Español"
+    title = "Raven Pipeline Security | Fundación CD"
     weight = 2
     [languages.es.params]
-      title = "Raven Pipeline Security | Fundación CD"
       description = "Incorpora la ciberseguridad en tus pipelines de CI/CD con salvaguardas estándar de la industria. Aprende las mejores prácticas de DevSecOps, herramientas de seguridad y marcos para el ciclo de vida del desarrollo de software seguro."
       time_format_default = "03.14.2026"
       time_format_blog = "03.14.2026"
