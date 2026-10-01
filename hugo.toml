@@ -70,6 +70,22 @@ anchor = "smart"
       description = "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices, security tools, and frameworks for secure software development lifecycle."
       time_format_default = "2026.03.14"
       time_format_blog = "2026.03.14"
+    [[languages.en.menus.main]]
+      name = "Guide"
+      url = "/docs/"
+      weight = 10
+    [[languages.en.menus.main]]
+      name = "OpenSSF Baseline"
+      url = "/openssf-baseline/"
+      weight = 20
+    [[languages.en.menus.main]]
+      name = "NIST AI RMF"
+      url = "/nist-ai-rmf/"
+      weight = 30
+    [[languages.en.menus.main]]
+      name = "Cyber Resilience Act"
+      url = "/cyber-resilience-act/"
+      weight = 40
   [languages.es]
     contentDir = "content/es"
     label = "Español"
@@ -79,6 +95,22 @@ anchor = "smart"
       description = "Incorpora la ciberseguridad en tus pipelines de CI/CD con salvaguardas estándar de la industria. Aprende las mejores prácticas de DevSecOps, herramientas de seguridad y marcos para el ciclo de vida del desarrollo de software seguro."
       time_format_default = "03.14.2026"
       time_format_blog = "03.14.2026"
+    [[languages.es.menus.main]]
+      name = "Guía"
+      url = "/es/docs/"
+      weight = 10
+    [[languages.es.menus.main]]
+      name = "OpenSSF Baseline"
+      url = "/es/openssf-baseline/"
+      weight = 20
+    [[languages.es.menus.main]]
+      name = "NIST AI RMF"
+      url = "/es/nist-ai-rmf/"
+      weight = 30
+    [[languages.es.menus.main]]
+      name = "Reglamento de Ciberresiliencia"
+      url = "/es/cyber-resilience-act/"
+      weight = 40
 
 # Docsy theme
 [module]

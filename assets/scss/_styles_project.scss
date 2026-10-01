@@ -19,7 +19,12 @@
 }
 
 .navbar-brand__name {
-  display: none;
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 @media (max-width: 767px) {
@@ -31,6 +36,10 @@
   .navbar-brand__logo.navbar-logo > svg,
   .navbar-brand__raven {
     height: 28px;
+  }
+
+  .navbar-brand__name {
+    font-size: 0.75rem;
   }
 }
 
@@ -134,4 +143,45 @@
     padding-top: 42px;
     padding-bottom: 42px;
   }
+}
+
+.landing-main {
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+}
+
+.landing-page {
+  max-width: 1100px;
+}
+
+.landing-logo {
+  display: block;
+  margin: 0 auto 1.75rem;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+.landing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0 1rem;
+}
+
+.landing-card {
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bs-body-bg, #fff);
+}
+
+.landing-card h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+.landing-card__also {
+  margin-bottom: 0;
+  font-size: 0.95rem;
 }

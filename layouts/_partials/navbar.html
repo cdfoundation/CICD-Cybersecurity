@@ -16,6 +16,7 @@
           {{ ( . | minify).Content | safeHTML -}}
         {{ end -}}
       {{ end -}}
+      <span class="navbar-brand__name">Raven Pipeline Security</span>
     </span>
     {{- /**/ -}}
   </a>
@@ -31,9 +32,10 @@
           {{ $active = or $active ( $.IsDescendant .) -}}
           {{ $href = .RelPermalink -}}
         {{ else -}}
-          {{ $href = .URL | relLangURL -}}
+          {{ $href = .URL -}}
         {{ end -}}
-        {{ $isExternal := ne $baseURL.Host (urls.Parse .URL).Host -}}
+        {{ $parsedURL := urls.Parse .URL -}}
+        {{ $isExternal := and $parsedURL.IsAbs (ne $baseURL.Host $parsedURL.Host) -}}
         <a {{/**/ -}}
           class="nav-link {{- if $active }} active {{- end }}" {{/**/ -}}
           href="{{ $href }}"
