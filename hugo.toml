@@ -72,19 +72,19 @@ anchor = "smart"
       time_format_blog = "2026.03.14"
     [[languages.en.menus.main]]
       name = "Guide"
-      url = "/docs/"
+      pageRef = "/docs"
       weight = 10
     [[languages.en.menus.main]]
       name = "OpenSSF Baseline"
-      url = "/openssf-baseline/"
+      pageRef = "/openssf-baseline"
       weight = 20
     [[languages.en.menus.main]]
       name = "NIST AI RMF"
-      url = "/nist-ai-rmf/"
+      pageRef = "/nist-ai-rmf"
       weight = 30
     [[languages.en.menus.main]]
       name = "Cyber Resilience Act"
-      url = "/cyber-resilience-act/"
+      pageRef = "/cyber-resilience-act"
       weight = 40
   [languages.es]
     contentDir = "content/es"
@@ -97,19 +97,19 @@ anchor = "smart"
       time_format_blog = "03.14.2026"
     [[languages.es.menus.main]]
       name = "Guía"
-      url = "/es/docs/"
+      pageRef = "/docs"
       weight = 10
     [[languages.es.menus.main]]
       name = "OpenSSF Baseline"
-      url = "/es/openssf-baseline/"
+      pageRef = "/openssf-baseline"
       weight = 20
     [[languages.es.menus.main]]
       name = "NIST AI RMF"
-      url = "/es/nist-ai-rmf/"
+      pageRef = "/nist-ai-rmf"
       weight = 30
     [[languages.es.menus.main]]
       name = "Reglamento de Ciberresiliencia"
-      url = "/es/cyber-resilience-act/"
+      pageRef = "/cyber-resilience-act"
       weight = 40
 
 # Docsy theme
