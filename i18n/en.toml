@@ -1,0 +1,5 @@
+[theme_toggle_to_dark]
+other = "Switch to dark mode"
+
+[theme_toggle_to_light]
+other = "Switch to light mode"
