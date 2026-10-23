@@ -128,6 +128,8 @@ breadcrumb_disable = false
 footer_about_enable = true
 navbar_logo = true
 navbar_translucent_over_cover_disable = true
+# Docsy v0.13 dark-mode switch; see: https://github.com/google/docsy/blob/v0.13.0/layouts/_partials/navbar.html
+showLightDarkModeMenu = true
 sidebar_search_disable = false
 # CORRECTED SIDEBAR SETTINGS:
 sidebar_menu_compact = false

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "CDF CI/CD Cybersecurity Guide",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test tests/theme-toggle.test.mjs tests/dark-mode.test.mjs",
+    "test:unit": "node --test tests/theme-toggle.test.mjs tests/dark-mode.test.mjs",
+    "test:integration": "node --test tests/build-output.test.mjs",
+    "test:all": "npm run test:unit && npm run test:integration"
   },
   "repository": {
     "type": "git",

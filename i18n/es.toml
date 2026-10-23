@@ -1,0 +1,5 @@
+[theme_toggle_to_dark]
+other = "Cambiar a modo oscuro"
+
+[theme_toggle_to_light]
+other = "Cambiar a modo claro"

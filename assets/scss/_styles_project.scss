@@ -103,3 +103,54 @@
     padding-bottom: 42px;
   }
 }
+
+/* THEME TOGGLE */
+// NOTE: PR #106 also modifies this file from the same base: it adds .navbar-brand__* rules at the
+// top and .landing-* rules at the end. Both PRs append at end-of-file, so git reports a content
+// conflict here. Resolve by keeping BOTH blocks, then manually verify that the Raven navbar
+// brand and the theme toggle render together (light + dark, desktop + 375px mobile).
+.td-navbar__light-dark-menu {
+  display: flex;
+  align-items: center;
+}
+
+.td-theme-toggle {
+  // Match the other navbar links (e.g. the language menu) in every Bootstrap .btn state.
+  // Do NOT use `color: inherit`: the navbar sets no `color`, so it inherits <body>'s
+  // --bs-body-color (#212529 in light mode) and the outline icon renders near-black.
+  --bs-btn-color: var(--bs-nav-link-color);
+  --bs-btn-hover-color: var(--bs-nav-link-hover-color);
+  --bs-btn-active-color: var(--bs-nav-link-hover-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .375rem .5rem;
+  color: var(--bs-btn-color);
+  line-height: 1;
+  background: none;
+  border: none;
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+.td-theme-toggle__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: currentColor;
+  fill: none;
+}
+
+.td-theme-toggle__icon--sun {
+  display: none;
+}
+
+html[data-bs-theme="dark"] .td-theme-toggle__icon--sun {
+  display: inline-block;
+}
+
+html[data-bs-theme="dark"] .td-theme-toggle__icon--moon {
+  display: none;
+}
