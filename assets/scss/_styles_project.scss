@@ -184,6 +184,8 @@
 .landing-card__also {
   margin-bottom: 0;
   font-size: 0.95rem;
+}
+
 /* THEME TOGGLE */
 // NOTE: PR #106 also modifies this file from the same base: it adds .navbar-brand__* rules at the
 // top and .landing-* rules at the end. Both PRs append at end-of-file, so git reports a content
