@@ -1,12 +1,12 @@
-# CI/CD Cybersecurity Guide Overview
+# Raven Pipeline Security Overview
 
 [Website](https://cicd-cybersecurity.netlify.app/)
 
-Continuous Integration and Continuous Delivery (CI/CD) pipelines are critical touchpoints where code-level vulnerabilities, container security, and vulnerability remediation efforts converge in modern software development. As security demands rise across the software lifecycle—from code to cloud—CI/CD teams are increasingly tasked with embedding cybersecurity guardrails directly into their processes. This Guide is dedicated to advancing security tooling within CI/CD pipelines, with a focus on defining DevSecOps best practices and developing frameworks for secure pipeline implementation from code to cloud.
+Continuous Integration and Continuous Delivery (CI/CD) pipelines are critical touchpoints where code-level vulnerabilities, container security, and vulnerability remediation efforts converge in modern software development. As security demands rise across the software lifecycle—from code to cloud—CI/CD teams are increasingly tasked with embedding cybersecurity guardrails directly into their processes. This project is dedicated to advancing security tooling within CI/CD pipelines, with a focus on defining DevSecOps best practices and developing frameworks for secure pipeline implementation from code to cloud.
 
-The CD Foundation’s CI/CD Cybersecurity Guide (Special Interest Group) aims to address this challenge by advancing security tooling within CI/CD pipelines. This Guide will identify open-source DevSecOps tools aligned with established secure software development frameworks, integrating them into existing pipelines to ensure end-to-end security from code to cloud
+The CD Foundation’s Raven Pipeline Security project aims to address this challenge by advancing security tooling within CI/CD pipelines. This project will identify open-source DevSecOps tools aligned with established secure software development frameworks, integrating them into existing pipelines to ensure end-to-end security from code to cloud
 
-This Guide will develop a guide to help DevOps engineers build security-compliant CI/CD pipelines by mapping new open-source security automation tools to evolving security frameworks. As security standards evolve, pipeline updates are essential to ensure safer software development. The Guide will explore the intersection of security tooling and the CI/CD pipeline, identifying key security practices, tools, and strategies that align with accepted frameworks such as the Secure Software Development Framework and the NIST Cybersecurity Framework. This Guide will align framework-defined tasks with open-source tools to accomplish them.
+This project will develop a guide to help DevOps engineers build security-compliant CI/CD pipelines by mapping new open-source security automation tools to evolving security frameworks. As security standards evolve, pipeline updates are essential to ensure safer software development. The project will explore the intersection of security tooling and the CI/CD pipeline, identifying key security practices, tools, and strategies that align with accepted frameworks such as the Secure Software Development Framework and the NIST Cybersecurity Framework. This project will align framework-defined tasks with open-source tools to accomplish them.
 
 ## Why This Guide Is Needed
 
@@ -17,7 +17,7 @@ The evolution of CI/CD pipelines is crucial to address these mounting security c
 
 ## Guide Goals and Objectives
 
-The CI/CD Cybersecurity Guide aims to:
+Raven Pipeline Security aims to:
 
 - Support Framework Compliance: Identify and map open source security tools to established secure software development frameworks and standards for integration into CI/CD pipelines.
 
@@ -30,12 +30,12 @@ Collaborate with Industry Leaders:
 Partner with CNCF, OpenSSF, and other relevant communities to drive adoption of standardized security practices and foster cross-industry collaboration.
 ## Scope of Work
 
-The Guide will undertake the following key activities:
+The project will undertake the following key activities:
 - Map and document tool to framework ‘tasks’, playbooks, and guidelines for securely integrating security tooling within CI/CD.
 - Provide recommendations for securing pipelines used in AI and LLM deployments.
 - Identify gaps in current CI/CD security tooling and collaborate with the community to address these gaps.
 - Review and enhance existing security recommendations tailored specifically to CI/CD pipelines.
-- The Guide will consider guidelines from work previously completed, including:
+- The project will consider guidelines from work previously completed, including:
   - [The NIST Secure Software Development Framework](https://www.cisa.gov/resources-tools/resources/nist-sp-800-218-secure-software-development-framework-v11-recommendations-mitigating-risk-software)
   - [IBM’s X-Force Threat Landscape Report](https://www.ibm.com/reports/threat-intelligence)
   - [The NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
@@ -84,7 +84,7 @@ The effort should be open to all involved in the field of CI/CD, AI, and Securit
 
 ## New Members
 
-Membership to the CDF CI/CD Cybersecurity Guide is open to the public and self-declared.
+Membership to Raven Pipeline Security is open to the public and self-declared.
 
 New members are advised to:
 
@@ -105,10 +105,10 @@ New members are advised to:
 
 # Governance
 
-CI/CD Cybersecurity is a [CDF Special Interest Group](https://github.com/cdfoundation/toc/tree/master/sigs).
-Governance details for this Guide can be found [here](https://github.com/cdfoundation/CICD-Cybersecurity#governance)
+Raven Pipeline Security is a CDF project.
+Governance details for this project can be found [here](https://github.com/cdfoundation/CICD-Cybersecurity#governance)
 
 # Disclaimer
-The CI/CD Cybersecurity Guide provided in this repository is meant to serve as a reference point. Users are strongly encouraged to review these recommendations to fit their specific project security requirements and organizational standards.
+Raven Pipeline Security provided in this repository is meant to serve as a reference point. Users are strongly encouraged to review these recommendations to fit their specific project security requirements and organizational standards.
 
 By using this guide, you agree to do so at your own risk and discretion. The Continuous Delivery Foundation and Linux Foundation shall not be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this guide, even if advised of the possibility of such damage.

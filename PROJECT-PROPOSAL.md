@@ -1,11 +1,11 @@
-# CDF Project Proposal: CI/CD Cybersecurity Guide
+# CDF Project Proposal: Raven Pipeline Security
 
 ## Project Name
-CI/CD Cybersecurity Guide
+Raven Pipeline Security
 
 ## Project Proposal
 
-The CI/CD Cybersecurity Guide is an open-source reference framework that maps security controls and open-source security tooling across the Continuous Integration and Continuous Delivery lifecycle. The guide helps organizations implement secure-by-design CI/CD pipelines aligned with recognized frameworks such as NIST SSDF, Executive Order 14028, SLSA, Cybersecurity Resiliency Act (CRA), and emerging software supply-chain assurance expectations.
+Raven Pipeline Security is an open-source reference framework that maps security controls and open-source security tooling across the Continuous Integration and Continuous Delivery lifecycle. The guide helps organizations implement secure-by-design CI/CD pipelines aligned with recognized frameworks such as NIST SSDF, Executive Order 14028, SLSA, Cybersecurity Resiliency Act (CRA), and emerging software supply-chain assurance expectations.
 
 The project provides:
 - a structured mapping of security practices across pipeline stages
@@ -14,12 +14,12 @@ The project provides:
 - vendor-neutral recommendations
 - practitioner-focused adoption guidance
 
-The CI/CD Cybersecurity Guide addresses a major industry gap: while many organizations deploy CI/CD pipelines, few have a clear framework for securing them end-to-end. The project is intended to become the authoritative security reference architecture for CI/CD pipelines within the Continuous Delivery Foundation ecosystem.
+Raven Pipeline Security addresses a major industry gap: while many organizations deploy CI/CD pipelines, few have a clear framework for securing them end-to-end. The project is intended to become the authoritative security reference architecture for CI/CD pipelines within the Continuous Delivery Foundation ecosystem.
 
 ## Project Description
 (What it does, why it is valuable, origin and history)
 
-The CI/CD Cybersecurity Guide provides a lifecycle-based security reference model for modern CI/CD environments. It organizes security controls across pipeline phases, including:
+Raven Pipeline Security provides a lifecycle-based security reference model for modern CI/CD environments. It organizes security controls across pipeline phases, including:
 
 - source control protection
 - build integrity
@@ -42,16 +42,16 @@ The guide maps open-source tools—including CDF-hosted projects, to security co
 
 ## Background and Context
 
-Over the past year, the CDF CI/CD Cybersecurity SIG has operated as an active working group focused on improving the security posture of modern continuous delivery pipelines. The SIG was formed in response to growing industry concern around software supply chain attacks, increasing regulatory pressure, and the expanding responsibilities placed on DevOps and platform engineering teams.
+Over the past year, this work started as a CDF SIG and operated as an active working group focused on improving the security posture of modern continuous delivery pipelines. That SIG was formed in response to growing industry concern around software supply chain attacks, increasing regulatory pressure, and the expanding responsibilities placed on DevOps and platform engineering teams.
 
-During its first year, the SIG successfully delivered the **CI/CD Cybersecurity Guide**  
+During its first year, the working group successfully delivered **Raven Pipeline Security**  
 https://cybersecurity.cd.foundation/
 
-The guide is a vendor-neutral, practitioner-focused resource that documents how open-source security tooling integrates directly into CI/CD workflows based on industry-standard frameworks. It reflects the use of open-source tooling that can be adopted in CI/CD pipelines used by organizations running Jenkins, Tekton, Shipwright, Spinnaker and internal developer platforms. The guide focuses on new OS tooling from the OpenSSF, Apache, and other OS foundations.  
+The project is a vendor-neutral, practitioner-focused resource that documents how open-source security tooling integrates directly into CI/CD workflows based on industry-standard frameworks. It reflects the use of open-source tooling that can be adopted in CI/CD pipelines used by organizations running Jenkins, Tekton, Shipwright, Spinnaker and internal developer platforms. The project focuses on new OS tooling from the OpenSSF, Apache, and other OS foundations.  
 
-With the guide published and in active community use, the SIG believes the initiative has reached sufficient maturity, scope, and sustainability to progress into an official CDF project.
+With the guide published and in active community use, the community believes the initiative has reached sufficient maturity, scope, and sustainability to progress into an official CDF project.
 
-The CI/CD Cybersecurity Guide originated within the Continuous Delivery Foundation CI/CD Cybersecurity SIG as a collaborative effort to:
+Raven Pipeline Security originated as a CDF SIG and is now a CDF project, as a collaborative effort to:
 
 - document pipeline security requirements
 - align CDF ecosystem tooling with SSDF requirements
@@ -84,7 +84,7 @@ There is a clear need for a foundation-owned, continuously maintained reference 
 
 ## Project Scope
 
-The CI/CD Cybersecurity Guide project will:
+The Raven Pipeline Security project will:
 
 - Maintain and evolve the existing cybersecurity.cd.foundation content
 - Provide practical guidance for securing CI/CD systems and internal developer platforms
@@ -108,7 +108,7 @@ This project will not:
 
 The Continuous Delivery Foundation’s mission includes improving software delivery practices through open collaboration, interoperability, and education.
 
-The CI/CD Cybersecurity Guide directly supports this mission by:
+Raven Pipeline Security directly supports this mission by:
 
 - improving trust in CI/CD pipelines
 - accelerating adoption of secure continuous delivery practices
@@ -127,7 +127,7 @@ Incubating (with intent to graduate)
 - [SIG Page](https://cd.foundation/cybersecurity/)
 
 ## Proposing Group
-CDF CI/CD Cybersecurity Special Interest Group (SIG)
+Raven Pipeline Security (a CDF project)
 
 ## Proposed TOC Sponsor
 Tracy Ragan and Steve Taylor
@@ -141,7 +141,7 @@ The project adopts the Continuous Delivery Foundation Code of Conduct:
 
 https://github.com/cdfoundation/community/blob/main/CODE_OF_CONDUCT.md
 
-## CI/CD Cyberseucrity Guide License
+## Raven Pipeline Security License
 
 [Apache](https://github.com/cdfoundation/CICD-Cybersecurity/blob/main/LICENSE)
 
@@ -186,11 +186,11 @@ Netlify for hosting the Guide's webpage. (estimated cost $10 monthly)
 
 Chairperson: Kate Scarcella (https://www.linkedin.com/in/k8scarcellaexodus/)
 
-The CI/CD Cybersecurity Guide operates under the governance of the Continuous Delivery Foundation (CDF) CI/CD Cybersecurity SIG, using a consensus-driven open governance model to guide its evolution and direction. Major updates to the guide are proposed and refined through SIG discussions, implemented through pull requests, and validated via contributor review cycles, with Technical Oversight Committee (TOC) involvement where appropriate. This collaborative process ensures transparency in decision-making, maintains vendor neutrality, and reinforces strong community ownership of the project as it grows within the CDF ecosystem.
+Raven Pipeline Security operates under the governance of the Continuous Delivery Foundation (CDF) as a CDF project, using a consensus-driven open governance model to guide its evolution and direction. Major updates to the project are proposed and refined through community discussions, implemented through pull requests, and validated via contributor review cycles, with Technical Oversight Committee (TOC) involvement where appropriate. This collaborative process ensures transparency in decision-making, maintains vendor neutrality, and reinforces strong community ownership of the project as it grows within the CDF ecosystem.
 
 ## Project Deliverables
 
-- Versioned releases of the CI/CD Cybersecurity Guide
+- Versioned releases of Raven Pipeline Security
 - Maintained website and documentation repository
 - Roadmap-driven content updates
 - Community contribution framework
@@ -238,8 +238,8 @@ The project will:
 - Alignment with evolving CI/CD and platform engineering practices
 
 
-## CI/CD Cybersecurity Community
-The CI/CD Cybersecurity community meets bi-weekly for an overall project status meeting.  Guide content, format, and expansion are the topics of these meetings. 
+## Raven Pipeline Security Community
+The Raven Pipeline Security community meets bi-weekly for an overall project status meeting.  Guide content, format, and expansion are the topics of these meetings. 
 
 - [General Meeting Minutes](https://docs.google.com/document/d/1DXgvzQzMRqvvryB_W0Te4foA0Loh5WvwKojEEa7W0ak/edit?usp=sharing)
 - [Meeting Recordings Youtube](https://www.youtube.com/watch?v=Q8m067Z35uE&list=PL2KXbZ9-EY9TIHn457fyjjrUcM5fSszy8)
@@ -248,7 +248,7 @@ The CI/CD Cybersecurity community meets bi-weekly for an overall project status 
 ## Guide Disclaimer - On first page of guide: 
 
 Disclaimer
-This CI/CD Cybersecurity Guide is meant to serve as a reference point. Users are strongly encouraged to review these recommendations to fit their specific project security requirements and organizational standards. By using this guide, you agree to do so at your own risk and discretion. The Continuous Delivery Foundation and the Linux Foundation shall not be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this guide, even if advised of the possibility of such damage.
+Raven Pipeline Security is meant to serve as a reference point. Users are strongly encouraged to review these recommendations to fit their specific project security requirements and organizational standards. By using this guide, you agree to do so at your own risk and discretion. The Continuous Delivery Foundation and the Linux Foundation shall not be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this guide, even if advised of the possibility of such damage.
 
 
 

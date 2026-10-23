@@ -1,6 +1,6 @@
 {
-  "name": "CI/CD Cybersecurity Guide | CD Foundation",
-  "short_name": "CI/CD Security",
+  "name": "Raven Pipeline Security | CD Foundation",
+  "short_name": "Raven Security",
   "description": "Embed cybersecurity into your CI/CD pipelines with industry-standard safeguards. Learn DevSecOps best practices from the CD Foundation.",
   "start_url": "/",
   "display": "standalone",
@@ -34,7 +34,7 @@
       "src": "/images/cicd-cybersecurity-screenshot.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "label": "CI/CD Cybersecurity Guide Homepage"
+      "label": "Raven Pipeline Security Homepage"
     }
   ]
 }

@@ -1,14 +1,33 @@
 # Use Alpine Linux version 3.21 as the base image (version pinned on the 25th of February 2025)
 FROM alpine:3.21
 
+# Must stay equal to HUGO_VERSION in netlify.toml. Netlify installs the extended edition for that version.
+ARG HUGO_VERSION=0.167.0
+ARG TARGETARCH
+
 # Update package repository and install required packages:
-# - git: for version control
-# - go: for the Go programming language
-# - hugo: for static site generation
-RUN apk update && apk add --no-cache \
-    git \
-    go \
-    hugo
+# - ca-certificates, curl: download the official Hugo release
+# - git: for version control and Hugo modules
+# - go: for Hugo modules
+# - libc6-compat, libstdc++: the upstream extended binary is not a musl build
+# Then install Hugo Extended from the official release (Alpine's packaged Hugo is older than the module minimum).
+RUN set -euxo pipefail; \
+    apk update && apk add --no-cache \
+        ca-certificates \
+        curl \
+        git \
+        go \
+        libc6-compat \
+        libstdc++; \
+    cd /tmp; \
+    curl -fsSL -o "hugo_extended_${HUGO_VERSION}_linux-${TARGETARCH}.tar.gz" \
+        "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${TARGETARCH}.tar.gz"; \
+    curl -fsSL -o checksums.txt \
+        "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_checksums.txt"; \
+    grep "hugo_extended_${HUGO_VERSION}_linux-${TARGETARCH}.tar.gz" checksums.txt | sha256sum -c -; \
+    tar -xzf "hugo_extended_${HUGO_VERSION}_linux-${TARGETARCH}.tar.gz" -C /usr/local/bin hugo; \
+    rm -f "hugo_extended_${HUGO_VERSION}_linux-${TARGETARCH}.tar.gz" checksums.txt; \
+    hugo version
 
 # Create the site directory
 RUN mkdir -p /site

@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage"
+    {{- with .Site.Language.Direction }} dir="{{ . }}" {{- end -}}
+    {{ with .Site.Language.Name }} lang="{{ . }}" {{- end }} {{/**/ -}}
+    class="no-js"
+    {{- $darkMode := partialCached "dark-mode-config.html" "dark-mode-global" -}}
+    {{- if $darkMode.enable }} data-theme-init{{ end }}>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=/docs/">
-    <link rel="canonical" href="/docs/">
-    <title>Redirecting…</title>
+    {{ partial "head.html" . }}
   </head>
-  <body>
-    <p>Redirecting to <a href="/docs/">/docs/</a>…</p>
+  <body class="td-{{ .Kind }} td-home{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    <div class="container-fluid td-outer">
+      <main role="main" class="td-main landing-main">
+        <div class="container landing-page td-content">
+          {{ .Content }}
+        </div>
+      </main>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
   </body>
 </html>
