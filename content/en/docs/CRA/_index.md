@@ -4,16 +4,6 @@ weight: 3
 layout: docs
 ---
 
-<div style="text-align:center;margin-top:100px;">
-<img src="/images/underconstruction.jpg" alt="Under construction" height="360px" width="500px" />
-<br>
-   <br><h2 class="text-center" style="color:red; font-size: 3rem;">We Need Your Help</h2>
-</div>
-
-Do you have expertise, or want to learn about this phase of the Cyber Resilience Act? Join the CDF CI/CD Cybersecurity Project and become a contributor.
-
-Learn more at [CI/CD Cyber Security](https://cd.foundation/cybersecurity/)
-
 
 # The Cyber Reslience Act (CRA) - Overview
 

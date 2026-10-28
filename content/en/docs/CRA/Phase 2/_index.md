@@ -8,19 +8,12 @@ description: >
 ---
 
 
-# Under Construction
-
-<div style="text-align:center;margin-top:100px;">
-<img src="/images/underconstruction.jpg" alt="Under construction" height="360px" width="500px" />
-<br>
-   <br><h2 class="text-center" style="color:red; font-size: 3rem;">We Need Your Help</h2>
-</div>
-
-Do you have expertise, or want to learn about this phase of the Cyber Resilience Act? Join the CDF CI/CD Cybersecurity Project and become a contributor.
-
-Learn more at [CI/CD Cyber Security](https://cd.foundation/cybersecurity/)
-
 ##  Achieving Build and Deploy Tasks of the The Cyber Reslience Act 
 
-This chapter will focus specifically on open-source DevSecOps tooling and practices related to Build and Deploy actions of the CI/CD pipeline to achieve tasks defined by the SThe Cyber Reslience Act.
+The European Union Cyber Resilience Act (CRA) establishes cybersecurity requirements for products with digital elements throughout their lifecycle. During Build and Deploy, organizations should validate product security, generate and maintain Software Bills of Materials (SBOMs), protect software artifact integrity, and collect the technical evidence necessary to demonstrate compliance.
+
+This phase focuses on ensuring that software releases satisfy applicable cybersecurity requirements before they are distributed or placed on the market. By integrating security testing, vulnerability scanning, SBOM generation, artifact verification, and evidence collection into CI/CD workflows, organizations can identify security weaknesses, prevent the release of insecure artifacts, and establish traceability between source code, builds, releases, and deployed products.
+
+The following activities map CRA requirements to actionable CI/CD practices and suggested open-source tools. The tools are illustrative and are not mandated by the regulation.
+
 

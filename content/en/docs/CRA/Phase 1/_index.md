@@ -7,21 +7,14 @@ description: >
   The Cyber Reslience Act Tasks related to Code and Prebuild: Phase 1
 ---
 
-# Under Construction
-
-<div style="text-align:center;margin-top:100px;">
-<img src="/images/underconstruction.jpg" alt="Under construction" height="360px" width="500px" />
-<br>
-   <br><h2 class="text-center" style="color:red; font-size: 3rem;">We Need Your Help</h2>
-</div>
-
-Do you have expertise, or want to learn about this phase of the Cyber Resilience Act? Join the CDF CI/CD Cybersecurity Project and become a contributor.
-
-Learn more at [CI/CD Cyber Security](https://cd.foundation/cybersecurity/)
-
 
 ## Achieving Code and Prebuild Tasks of the Cyber Resilence Act
 
-This chapter will focuses specifically on open source DevSecOps tooling and practices related to Code and Prebuild actions of the CI/CD pipeline to achieve tasks defined by the Cyber Resilence Act.
+The European Union Cyber Resilience Act (CRA) establishes cybersecurity requirements for products with digital elements throughout their lifecycle. During Code and Prebuild, organizations should incorporate cybersecurity risk assessments, secure-by-design principles, third-party dependency reviews, and vulnerability disclosure planning into their software development practices.
+
+This phase focuses on preventing security vulnerabilities before software enters the build pipeline. By integrating CRA-aligned practices into developer workflows, organizations can identify risks earlier, reduce dependency exposure, and establish the processes needed to maintain product security after deployment.
+
+The following activities map CRA requirements to actionable CI/CD practices and suggested open-source tools. The tools are illustrative and are not mandated by the regulation.
+ 
 
 
