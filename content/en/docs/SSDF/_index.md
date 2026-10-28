@@ -1,5 +1,5 @@
 ---
-linkTitle: "SSDF"
+linkTitle: "Secure Software Development Framework"
 weight: 2
 layout: docs
 ---

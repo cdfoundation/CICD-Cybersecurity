@@ -1,5 +1,5 @@
 ---
-linkTitle: "CRA"
+linkTitle: "Cyber Resilience Act"
 weight: 3
 layout: docs
 ---

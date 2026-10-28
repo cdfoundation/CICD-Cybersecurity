@@ -1,6 +1,6 @@
 ---
-title: "Phase 2 Tasks"
-linkTitle: "Phase 2 Tasks"
+title: "Build and Deploy Tasks"
+linkTitle: "Build and Deploy Tasks"
 weight: 4
 layout: docs
 description: >
