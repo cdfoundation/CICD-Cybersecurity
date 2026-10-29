@@ -1,10 +1,10 @@
 ---
-title: "Security Risk Assessment - Code and Pre-build"
+title: "Security Risk Assessment - Code and Prebuild"
 linkTitle: "Security Risk Assessment"
 weight: 5
 layout: docs
 description: >
- Security Risk Assessment for Code and Pre-build Activities
+ Security Risk Assessment for Code and Prebuild Activities
 ---
 
 ## CRA Security Risk Assessment - Phase 1: Code and Prebuild

@@ -1,10 +1,10 @@
 ---
-title: "Secure-by-Design Requirements - Code and Pre-build"
+title: "Secure-by-Design Requirements - Code and Prebuild"
 linkTitle: "Secure-by-Design Requirements"
 weight: 6
 layout: docs
 description: >
- Secure-by-Design Requirements for Code and Pre-build Activities
+ Secure-by-Design Requirements for Code and Prebuild Activities
 ---
 
 ### Secure-by-Design Requirements - Phase 1: Code and Prebuild

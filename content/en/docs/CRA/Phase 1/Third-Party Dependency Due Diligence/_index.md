@@ -1,10 +1,10 @@
 ---
-title: "Third-Party Dependency Due Diligence - Code and Pre-Build"
+title: "Third-Party Dependency Due Diligence - Code and Prebuild"
 linkTitle: "Third-Party Dependency Due Diligence"
 weight: 7
 layout: docs
 description: >
- Third-Party Dependency Due Diligence for Code and Pre-build Activities
+ Third-Party Dependency Due Diligence for Code and Prebuild Activities
 ---
 
 ### Third-Party Dependency Due Diligence - Phase 1: Code and Prebuild

@@ -71,7 +71,7 @@ To satisfy SSDF RV.1 in a code and prebuild context using open-source tools, the
   <tr>
       <td>
       <a href="https://github.com/aquasecurity/trivy">Trivy</a>
-      <p>Can source/lockfiles and IaC before build. All-in-one SCA + IaC misconfig checks pre-build.</p>
+      <p>Can source/lockfiles and IaC before build. All-in-one SCA + IaC misconfig checks Prebuild.</p>
     </td> 
   </tr>
   <tr>

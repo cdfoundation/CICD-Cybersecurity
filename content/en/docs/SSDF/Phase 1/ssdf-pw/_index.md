@@ -638,7 +638,7 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   <tr>
     <td>
       <a href="https://www.zaproxy.org/">OWASP ZAP</a>
-      <p>Primarily a dynamic application security testing (DAST) tool, but in a pre-build sense, it’s not generally used — can be run against local development builds for early runtime flaw detection. Limited PW.7 pre-build applicability.</p>
+      <p>Primarily a dynamic application security testing (DAST) tool, but in a Prebuild sense, it’s not generally used — can be run against local development builds for early runtime flaw detection. Limited PW.7 Prebuild applicability.</p>
     </td>
   </tr>
   <tr>
@@ -703,7 +703,7 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   <tr>
     <td>
       <a href="https://spotbugs.github.io/">SpotBugs</a>
-      <p>Static analysis for Java bytecode; detects bug patterns and potential vulnerabilities pre-build (when run on compiled class files in CI before packaging).</p>
+      <p>Static analysis for Java bytecode; detects bug patterns and potential vulnerabilities Prebuild (when run on compiled class files in CI before packaging).</p>
     </td>
   </tr>
   <tr>
@@ -756,7 +756,7 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   <tr>
     <td>
       <a href="https://find-sec-bugs.github.io">FindSecBugs</a>
-      <p>Security plugin for SpotBugs to detect vulnerabilities in Java/Scala/Groovy code pre-build.</p>
+      <p>Security plugin for SpotBugs to detect vulnerabilities in Java/Scala/Groovy code Prebuild.</p>
     </td>
   </tr>
   <tr>
@@ -798,7 +798,7 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
 <tr>
   <td>
     <a href="https://github.com/anchore/grype">Grype</a>
-    <p>SSCA tool for scanning source code dependencies and base images pre-build for CVEs.</p>
+    <p>SSCA tool for scanning source code dependencies and base images Prebuild for CVEs.</p>
   </td>
 </tr> 
 <tr>
@@ -859,7 +859,7 @@ Security: </strong> Decrease the number of security vulnerabilities in the softw
   <tr>
     <td>
       <a href="https://www.openpolicyagent.org">Open Policy Agent (OPA)</a>
-      <p>Policy-as-code engine to enforce secure configuration rules in pre-build pipelines.</p>
+      <p>Policy-as-code engine to enforce secure configuration rules in Prebuild pipelines.</p>
     </td>
   </tr>
   <tr>

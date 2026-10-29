@@ -69,7 +69,7 @@ Para cumplir con SSDF RV.1 en un contexto de código y prebuild usando herramien
   <tr>
       <td>
       <a href="https://github.com/aquasecurity/trivy">Trivy</a>
-      <p>Escanea archivos fuente/lockfiles e IaC antes de construir. SCA todo-en-uno + comprobaciones de configuración incorrecta de IaC pre-build.</p>
+      <p>Escanea archivos fuente/lockfiles e IaC antes de construir. SCA todo-en-uno + comprobaciones de configuración incorrecta de IaC Prebuild.</p>
     </td> 
   </tr>
   <tr>

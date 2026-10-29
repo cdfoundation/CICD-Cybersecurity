@@ -1,10 +1,10 @@
 ---
-title: "Compliance Evidence Summary - Code and Pre-build"
+title: "Compliance Evidence Summary - Code and Prebuild"
 linkTitle: "Compliance Evidence Summary"
 weight: 10
 layout: docs
 description: >
- Compliance Evidence Summary for Code and Pre-build Activities
+ Compliance Evidence Summary for Code and Prebuild Activities
 ---
 
 ### Compliance Evidence Summary - Phase 1: Code and Prebuild
