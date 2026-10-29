@@ -1,7 +1,7 @@
 ---
 title: "Build and Deploy Tasks"
 linkTitle: "Build and Deploy Tasks"
-weight: 4
+weight: 14
 layout: docs
 description: >
  Secure Software Development Framework and Build/Deploy CI/CD Steps: Phase 2

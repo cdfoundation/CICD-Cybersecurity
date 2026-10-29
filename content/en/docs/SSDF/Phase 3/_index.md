@@ -1,7 +1,7 @@
 ---
 title: "Post Deployment Tasks"
 linkTitle: "Post Deployment Tasks"
-weight: 4
+weight: 16
 layout: docs
 description: >
  Secure Software Development Framework Post Build CI/CD Steps: Phase 3

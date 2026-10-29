@@ -1,7 +1,7 @@
 ---
 title: "Code and Prebuild Tasks"
 linkTitle: "Code and Prebuild Tasks"
-weight: 4
+weight: 11
 layout: docs
 description: >
   Secure Software Development Framework Tasks related to Code and Prebuild: Phase 1
