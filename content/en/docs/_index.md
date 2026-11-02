@@ -4,7 +4,22 @@ weight: 1
 layout: docs
 ---
 
-# Implementing Open-Source Security and AI Tooling in Your CI/CD Pipeline
+
+<div style="text-align: center; width: 100%;">
+
+  <img
+    src="/images/cicd-cybersecurityguide-notext-logo.png"
+    alt="CI/CD Cybersecurity Guide"
+    style="display: block; margin: 0 auto 20px auto; width: 360px; max-width: 100%; height: auto;"
+  />
+
+  <h1 style="text-align: center; margin-bottom: 30px;">
+    CI/CD Cybersecurity Guide
+  </h1>
+
+</div>
+
+## Implementing Open-Source Security and AI Tooling in Your CI/CD Pipeline
 
 Securing the Continuous Integration and Continuous Delivery (CI/CD) pipeline is essential to building resilient software. As development practices evolve to include AI-generated code, autonomous agents, and AI-powered applications, DevOps teams must address new security challenges alongside traditional software supply chain risks.
 
