@@ -161,3 +161,11 @@ The following resources provide further guidance on cybersecurity frameworks, se
 This CI/CD Cybersecurity Guide is meant to serve as a reference point. Users are strongly encouraged to review these recommendations to fit their specific project security requirements and organizational standards.
 
 By using this guide, you agree to do so at your own risk and discretion. The Continuous Delivery Foundation and the Linux Foundation shall not be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this guide, even if advised of the possibility of such damage.
+
+This project is hosted by the [Continuous Delivery Foundation](https://cd.foundation/).
+
+<img
+    src="/images/cdf-stacked-color.png"
+    alt="Continuous Delivery Foundation"
+    style="display: block; margin: 0 auto 20px auto; width: 360px; max-width: 100%; height: auto;"
+  />
