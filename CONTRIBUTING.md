@@ -24,3 +24,6 @@ If you are running the CI/CD Cybersecurity Guide locally, you can build the site
    ```
    Now the Hugo development server is running.
 6. Open the address `http://localhost:1313` in your web browser to load the CI/CD Cybersecurity Guide homepage. You can now make changes to the source files, and those changes will be live-reloaded in your browser.
+
+## Suggest and Edit Without Local Development
+You can suggest and edit without rebuilding the site. Directly from the guide, there is a right hand menu option that allows you to edit the files directly from Git. This will create a PR for you edits. 
