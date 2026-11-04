@@ -25,11 +25,14 @@
     "@netlify/build": "35.8.2"
   },
   "overrides": {
+    "deepmerge": "4.1.2",
     "esbuild": "0.28.2",
-    "fast-uri": "3.1.7",
-    "minimatch": "10.2.3",
+    "fast-uri": "4.2.3",
+    "glob": "14.0.3",
+    "minimatch": "11.0.3",
     "@opentelemetry/core": "2.9.0",
     "tar": "7.5.22",
-    "toml": "5.0.0"
+    "toml": "5.0.1",
+    "zod": "4.6.7"
   }
 }
