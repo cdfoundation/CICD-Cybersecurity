@@ -95,7 +95,7 @@ New members are advised to:
 * Go through the README.md document.
 * Submit a PR to add yourself to the members list.
 * Regularly join the Guide Meetings.
-* Contribute to the Documentation [CICD-cybersecurity.netlify.app](https://cicd-cybersecurity.netlify.app/docs/)
+* Contribute to the Documentation [CICD-cybersecurity.netlify.app](https://cicd-cybersecurity.netlify.app/)
 * Here are various ways to get involved:
   * Share your thoughts by joining the meetings or by posting to maillist.
   * Present a project the community you are part of is working on.
