@@ -81,6 +81,7 @@ The effort should be open to all involved in the field of CI/CD, AI, and Securit
 * Minyi Chen ([@minyihc](https://github.com/minyihc)), Fidelity Investments
 * Rajiv Singh ([@iamrajiv](https://github.com/iamrajiv)), A.P. Moller - Maersk
 * Christine Belzie ([@CBID2](https://github.com/CBID2)), Open Source Contributor
+* Nicolas Villalobos ([@nsvillalobos](https://github.com/nsvillalobos)), Security Engineer
 
 ## New Members
 
@@ -94,7 +95,7 @@ New members are advised to:
 * Go through the README.md document.
 * Submit a PR to add yourself to the members list.
 * Regularly join the Guide Meetings.
-* Contribute to the Documentation [CICD-cybersecurity.netlify.app](https://cicd-cybersecurity.netlify.app/community/)
+* Contribute to the Documentation [CICD-cybersecurity.netlify.app](https://cicd-cybersecurity.netlify.app/)
 * Here are various ways to get involved:
   * Share your thoughts by joining the meetings or by posting to maillist.
   * Present a project the community you are part of is working on.
